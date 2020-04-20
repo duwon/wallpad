@@ -1,0 +1,500 @@
+\hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0}{}\doxysection{L\+CD 제어 함수}
+\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0}\index{LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaa53c9d40f3aa552a9974cd55ac510cb3}{L\+C\+D\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em L\+CD 초기화 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga6a405abda5e830f0f33dacfd21ec1e51}{L\+C\+D\+\_\+\+Get\+X\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em L\+C\+D의 가로 크기 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaadafb98eeb93c99b8468d36e406ac90e}{L\+C\+D\+\_\+\+Get\+Y\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em L\+C\+D의 세로 크기 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga8e3dca6342e3dd739edbec8a23488e56}{L\+C\+D\+\_\+\+Set\+X\+Size}} (uint32\+\_\+t image\+Width\+Pixels)
+\begin{DoxyCompactList}\small\item\em L\+C\+D의 가로 크기 설정 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga320415ea9b549dd0a4fa2452bde4565c}{L\+C\+D\+\_\+\+Set\+Y\+Size}} (uint32\+\_\+t image\+Height\+Pixels)
+\begin{DoxyCompactList}\small\item\em L\+C\+D의 세로 크기 설정 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga13a46d9d0387d7dfa97167fc30e064d2}{L\+C\+D\+\_\+\+Layer\+Init}} (uint16\+\_\+t Layer\+Index, uint32\+\_\+t F\+B\+\_\+\+Address)
+\begin{DoxyCompactList}\small\item\em R\+G\+B565 format L\+CD Layer 초기화 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga0568836139e5177b6ce37e470e255c77}{L\+C\+D\+\_\+\+Set\+Transparency}} (uint32\+\_\+t Layer\+Index, uint8\+\_\+t Transparency)
+\begin{DoxyCompactList}\small\item\em 레이어의 투명도 설정 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaf1420ea7b39dd570d4d6edbf789f7640}{L\+C\+D\+\_\+\+Select\+Layer}} (uint32\+\_\+t Layer\+Index)
+\begin{DoxyCompactList}\small\item\em L\+CD 레이어 선택 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga31a4bb3bde55452bbb8370f5d935e41d}{L\+C\+D\+\_\+\+Set\+Text\+Color}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em 픽셀 또는 폰트 색상 설정 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaaab8858f03c8bce1aaef2ca960c9009f}{L\+C\+D\+\_\+\+Get\+Text\+Color}} (void)
+\begin{DoxyCompactList}\small\item\em 현재 설정된 픽셀 또는 폰트 색상 읽어오기 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaeca000116f289bc36b8892a6c64164dd}{L\+C\+D\+\_\+\+Set\+Back\+Color}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em 배경 생삭 설정 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga8047c26258565d29a4cbd5d4d831a87e}{L\+C\+D\+\_\+\+Get\+Back\+Color}} (void)
+\begin{DoxyCompactList}\small\item\em 현재 설정된 L\+CD 배경 색상 읽어오기 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaf7865c8fa0299567a0bebeca881ace45}{L\+C\+D\+\_\+\+Set\+Back\+Image}} (uint32\+\_\+t Background\+Image\+Address)
+\begin{DoxyCompactList}\small\item\em 배경 이미지 설정. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga637234711335cb3a4306841ae5db4cf7}{L\+C\+D\+\_\+\+Draw\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t R\+G\+B\+\_\+\+Code)
+\begin{DoxyCompactList}\small\item\em L\+C\+D에 1픽셀 표시 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga29dd5609c60845657a8fb6e64b9ecca9}{L\+C\+D\+\_\+\+Draw\+Picture}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t $\ast$p\+Address, uint16\+\_\+t Xsize, uint16\+\_\+t Ysize, uint16\+\_\+t Color\+\_\+\+Alpha0)
+\begin{DoxyCompactList}\small\item\em L\+CD 그림 표시 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga9bf87417ff2e3e2a6a35729dfafc1725}{L\+C\+D\+\_\+\+Erase\+Picture}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t $\ast$p\+Address, uint16\+\_\+t Xsize, uint16\+\_\+t Ysize)
+\begin{DoxyCompactList}\small\item\em L\+CD 그림 삭제 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaa500186c114aaea3dd6cdc11d306617e}{L\+C\+D\+\_\+\+Display\+Char}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t Ascii)
+\begin{DoxyCompactList}\small\item\em L\+C\+D에 문자 표시 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga57c922bb916d5ae0c3a0b4f8744a6e4b}{L\+C\+D\+\_\+\+Display\+String}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t $\ast$Text)
+\begin{DoxyCompactList}\small\item\em L\+C\+D에 문자열 표시 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gae57144a5b4342ddd500fb50018123dc6}{L\+C\+D\+\_\+\+Clear}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em L\+CD 표시된 색상 전체 변경 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga894808277b202630f4bf26be941fdb4e}{sound\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em 사운드 초기화 함수. 인터럽트 시작 및 D\+AC 설정 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga62b7eb28a066b82ef3155bd14520369d}{play\+Sound}} (uint8\+\_\+t $\ast$sound\+Addr, uint32\+\_\+t sound\+Len)
+\begin{DoxyCompactList}\small\item\em 사운드 재생 설정 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga998cf4b1f88c20705801d100dc084b43}{sound\+Timer\+Callback}} (T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$htim)
+\begin{DoxyCompactList}\small\item\em 사운드 재생을 위한 8000Hz 인터럽트 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gae57144a5b4342ddd500fb50018123dc6}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gae57144a5b4342ddd500fb50018123dc6}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_Clear@{LCD\_Clear}}
+\index{LCD\_Clear@{LCD\_Clear}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_Clear()}{LCD\_Clear()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Color }\end{DoxyParamCaption})}
+
+
+
+L\+CD 표시된 색상 전체 변경 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Color} & R\+G\+B565 생상 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaa500186c114aaea3dd6cdc11d306617e}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaa500186c114aaea3dd6cdc11d306617e}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_DisplayChar@{LCD\_DisplayChar}}
+\index{LCD\_DisplayChar@{LCD\_DisplayChar}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_DisplayChar()}{LCD\_DisplayChar()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Display\+Char (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint8\+\_\+t}]{Ascii }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D에 문자 표시 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & X 위치 \\
+\hline
+{\em Ypos} & Y 위치 \\
+\hline
+{\em Ascii} & 표시 할 문자 -\/ 아스키 코드표 참조 0x20$\sim$0x7E \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga57c922bb916d5ae0c3a0b4f8744a6e4b}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga57c922bb916d5ae0c3a0b4f8744a6e4b}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_DisplayString@{LCD\_DisplayString}}
+\index{LCD\_DisplayString@{LCD\_DisplayString}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_DisplayString()}{LCD\_DisplayString()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Display\+String (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint8\+\_\+t $\ast$}]{Text }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D에 문자열 표시 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & X 위치 (pixel) \\
+\hline
+{\em Ypos} & Y 위치 (pixel) ~\newline
+ \\
+\hline
+{\em Text} & 표시 할 문자열 시작 메모리 주소 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga29dd5609c60845657a8fb6e64b9ecca9}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga29dd5609c60845657a8fb6e64b9ecca9}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_DrawPicture@{LCD\_DrawPicture}}
+\index{LCD\_DrawPicture@{LCD\_DrawPicture}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawPicture()}{LCD\_DrawPicture()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Draw\+Picture (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t $\ast$}]{p\+Address,  }\item[{uint16\+\_\+t}]{Xsize,  }\item[{uint16\+\_\+t}]{Ysize,  }\item[{uint16\+\_\+t}]{Color\+\_\+\+Alpha0 }\end{DoxyParamCaption})}
+
+
+
+L\+CD 그림 표시 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & 시작 X 위치 \\
+\hline
+{\em Ypos} & 시작 Y 위치 \\
+\hline
+{\em p\+Address} & 그림 시작 주소 \\
+\hline
+{\em Xsize} & 표시할 그림 가로축 크기 px \\
+\hline
+{\em Ysize} & 표시할 그림 세로축 크기 px \\
+\hline
+{\em Color\+\_\+\+Alpha0} & 표시 할 그림의 뒷 배경 제거 색상. R\+G\+B565 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga637234711335cb3a4306841ae5db4cf7}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga637234711335cb3a4306841ae5db4cf7}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_DrawPixel@{LCD\_DrawPixel}}
+\index{LCD\_DrawPixel@{LCD\_DrawPixel}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawPixel()}{LCD\_DrawPixel()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Draw\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{R\+G\+B\+\_\+\+Code }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D에 1픽셀 표시 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & X 좌표 \\
+\hline
+{\em Ypos} & Y 좌표 \\
+\hline
+{\em R\+G\+B\+\_\+\+Code} & R\+G\+B565 색상 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga9bf87417ff2e3e2a6a35729dfafc1725}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga9bf87417ff2e3e2a6a35729dfafc1725}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_ErasePicture@{LCD\_ErasePicture}}
+\index{LCD\_ErasePicture@{LCD\_ErasePicture}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_ErasePicture()}{LCD\_ErasePicture()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Erase\+Picture (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t $\ast$}]{p\+Address,  }\item[{uint16\+\_\+t}]{Xsize,  }\item[{uint16\+\_\+t}]{Ysize }\end{DoxyParamCaption})}
+
+
+
+L\+CD 그림 삭제 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & 시작 X 위치 \\
+\hline
+{\em Ypos} & 시작 Y 위치 \\
+\hline
+{\em Xsize} & 삭제 할 그림 가로축 크기 px \\
+\hline
+{\em Ysize} & 삭제 할 그림 세로축 크기 px \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga8047c26258565d29a4cbd5d4d831a87e}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga8047c26258565d29a4cbd5d4d831a87e}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_GetBackColor@{LCD\_GetBackColor}}
+\index{LCD\_GetBackColor@{LCD\_GetBackColor}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_GetBackColor()}{LCD\_GetBackColor()}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+C\+D\+\_\+\+Get\+Back\+Color (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+현재 설정된 L\+CD 배경 색상 읽어오기 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em R\+G\+B565} & 색상 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaaab8858f03c8bce1aaef2ca960c9009f}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaaab8858f03c8bce1aaef2ca960c9009f}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_GetTextColor@{LCD\_GetTextColor}}
+\index{LCD\_GetTextColor@{LCD\_GetTextColor}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_GetTextColor()}{LCD\_GetTextColor()}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+C\+D\+\_\+\+Get\+Text\+Color (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+현재 설정된 픽셀 또는 폰트 색상 읽어오기 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em R\+G\+B565} & 색상 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga6a405abda5e830f0f33dacfd21ec1e51}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga6a405abda5e830f0f33dacfd21ec1e51}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_GetXSize@{LCD\_GetXSize}}
+\index{LCD\_GetXSize@{LCD\_GetXSize}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_GetXSize()}{LCD\_GetXSize()}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+C\+D\+\_\+\+Get\+X\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D의 가로 크기 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+CD} & X size \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaadafb98eeb93c99b8468d36e406ac90e}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaadafb98eeb93c99b8468d36e406ac90e}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_GetYSize@{LCD\_GetYSize}}
+\index{LCD\_GetYSize@{LCD\_GetYSize}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_GetYSize()}{LCD\_GetYSize()}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+C\+D\+\_\+\+Get\+Y\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D의 세로 크기 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+CD} & Y size \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaa53c9d40f3aa552a9974cd55ac510cb3}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaa53c9d40f3aa552a9974cd55ac510cb3}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_Init@{LCD\_Init}}
+\index{LCD\_Init@{LCD\_Init}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_Init()}{LCD\_Init()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+L\+CD 초기화 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga13a46d9d0387d7dfa97167fc30e064d2}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga13a46d9d0387d7dfa97167fc30e064d2}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_LayerInit@{LCD\_LayerInit}}
+\index{LCD\_LayerInit@{LCD\_LayerInit}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_LayerInit()}{LCD\_LayerInit()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Layer\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Layer\+Index,  }\item[{uint32\+\_\+t}]{F\+B\+\_\+\+Address }\end{DoxyParamCaption})}
+
+
+
+R\+G\+B565 format L\+CD Layer 초기화 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & 레이어 0 or 1 (기본 0) \\
+\hline
+{\em F\+B\+\_\+\+Address} & 레이어 프레임 버퍼 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaf1420ea7b39dd570d4d6edbf789f7640}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaf1420ea7b39dd570d4d6edbf789f7640}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_SelectLayer@{LCD\_SelectLayer}}
+\index{LCD\_SelectLayer@{LCD\_SelectLayer}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_SelectLayer()}{LCD\_SelectLayer()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Select\+Layer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index }\end{DoxyParamCaption})}
+
+
+
+L\+CD 레이어 선택 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & 0 또는 1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaeca000116f289bc36b8892a6c64164dd}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaeca000116f289bc36b8892a6c64164dd}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_SetBackColor@{LCD\_SetBackColor}}
+\index{LCD\_SetBackColor@{LCD\_SetBackColor}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetBackColor()}{LCD\_SetBackColor()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Set\+Back\+Color (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Color }\end{DoxyParamCaption})}
+
+
+
+배경 생삭 설정 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Color} & R\+G\+B565 색상 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaf7865c8fa0299567a0bebeca881ace45}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_gaf7865c8fa0299567a0bebeca881ace45}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_SetBackImage@{LCD\_SetBackImage}}
+\index{LCD\_SetBackImage@{LCD\_SetBackImage}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetBackImage()}{LCD\_SetBackImage()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Set\+Back\+Image (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Background\+Image\+Address }\end{DoxyParamCaption})}
+
+
+
+배경 이미지 설정. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Background\+Image} & 배경으로 설정 할 이미지 포인터 (480x272 크기 사용$\ast$) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga31a4bb3bde55452bbb8370f5d935e41d}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga31a4bb3bde55452bbb8370f5d935e41d}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_SetTextColor@{LCD\_SetTextColor}}
+\index{LCD\_SetTextColor@{LCD\_SetTextColor}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetTextColor()}{LCD\_SetTextColor()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Set\+Text\+Color (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Color }\end{DoxyParamCaption})}
+
+
+
+픽셀 또는 폰트 색상 설정 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Color} & R\+G\+B565 색상 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga0568836139e5177b6ce37e470e255c77}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga0568836139e5177b6ce37e470e255c77}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_SetTransparency@{LCD\_SetTransparency}}
+\index{LCD\_SetTransparency@{LCD\_SetTransparency}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetTransparency()}{LCD\_SetTransparency()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Set\+Transparency (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{uint8\+\_\+t}]{Transparency }\end{DoxyParamCaption})}
+
+
+
+레이어의 투명도 설정 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & 레이어 0 or 1 (기본 0) \\
+\hline
+{\em Transparency} & 투명도 0$\sim$255까지 입력 가능 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga8e3dca6342e3dd739edbec8a23488e56}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga8e3dca6342e3dd739edbec8a23488e56}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_SetXSize@{LCD\_SetXSize}}
+\index{LCD\_SetXSize@{LCD\_SetXSize}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetXSize()}{LCD\_SetXSize()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Set\+X\+Size (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{image\+Width\+Pixels }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D의 가로 크기 설정 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+Width\+Pixels} & \+: 이미지 가로 크기 (Pixels) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga320415ea9b549dd0a4fa2452bde4565c}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga320415ea9b549dd0a4fa2452bde4565c}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_SetYSize@{LCD\_SetYSize}}
+\index{LCD\_SetYSize@{LCD\_SetYSize}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetYSize()}{LCD\_SetYSize()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Set\+Y\+Size (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{image\+Height\+Pixels }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D의 세로 크기 설정 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+Height\+Pixels} & \+: 이미지 세로 크기 (Pixels) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga62b7eb28a066b82ef3155bd14520369d}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga62b7eb28a066b82ef3155bd14520369d}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!playSound@{playSound}}
+\index{playSound@{playSound}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{playSound()}{playSound()}}
+{\footnotesize\ttfamily void play\+Sound (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{sound\+Addr,  }\item[{uint32\+\_\+t}]{sound\+Len }\end{DoxyParamCaption})}
+
+
+
+사운드 재생 설정 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sound\+Addr} & 사운드 메모리 시작 주소 \\
+\hline
+{\em sound\+Len} & 샘플레이트 $\ast$ 시간(초) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga894808277b202630f4bf26be941fdb4e}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga894808277b202630f4bf26be941fdb4e}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!soundInit@{soundInit}}
+\index{soundInit@{soundInit}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{soundInit()}{soundInit()}}
+{\footnotesize\ttfamily void sound\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+사운드 초기화 함수. 인터럽트 시작 및 D\+AC 설정 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga998cf4b1f88c20705801d100dc084b43}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0_ga998cf4b1f88c20705801d100dc084b43}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!soundTimerCallback@{soundTimerCallback}}
+\index{soundTimerCallback@{soundTimerCallback}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{soundTimerCallback()}{soundTimerCallback()}}
+{\footnotesize\ttfamily void sound\+Timer\+Callback (\begin{DoxyParamCaption}\item[{T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$}]{htim }\end{DoxyParamCaption})}
+
+
+
+사운드 재생을 위한 8000Hz 인터럽트 
+
+
+\begin{DoxyParams}{Parameters}
+{\em htim} & 타이머 인터럽트 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

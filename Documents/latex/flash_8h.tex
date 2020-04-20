@@ -1,0 +1,201 @@
+\hypertarget{flash_8h}{}\doxysection{C\+:/\+Users/duwon/\+Documents/\+Git\+Hub/\+L\+C\+D/\+User/flash.h 파일 참조}
+\label{flash_8h}\index{C:/Users/duwon/Documents/GitHub/LCD/User/flash.h@{C:/Users/duwon/Documents/GitHub/LCD/User/flash.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\newline
+flash.\+h에 대한 include 의존 그래프
+% FIG 0
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:
+% FIG 1
+\doxysubsection*{데이터 구조}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_n25qxx__t}{N25qxx\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{flash_8h_a0a4c11784fcf7cb41c0329b680371c1b}{\+\_\+\+F\+L\+A\+S\+H\+\_\+\+S\+PI}}~hspi2
+\item 
+\#define \mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+S\+\_\+\+G\+P\+IO}}~F\+L\+A\+S\+H\+\_\+\+C\+S\+\_\+\+G\+P\+I\+O\+\_\+\+Port
+\item 
+\#define \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+S\+\_\+\+P\+IN}}~F\+L\+A\+S\+H\+\_\+\+C\+S\+\_\+\+Pin
+\item 
+\#define \mbox{\hyperlink{flash_8h_aa7812a3cde99515ba52d1bec814bdfe0}{\+\_\+\+F\+L\+A\+S\+H\+\_\+\+D\+E\+B\+UG}}~0
+\end{DoxyCompactItemize}
+\doxysubsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656}{F\+L\+A\+S\+H\+\_\+\+I\+D\+\_\+t}} \{ \newline
+\mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a87665c30aebba5654fe86b20e9878e92}{N25\+Q10}} =1, 
+\mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a92f1a942af5053af9173d0bcd7306743}{N25\+Q20}}, 
+\mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a4b341528dd165356df1f2d28291a47ba}{N25\+Q40}}, 
+\mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656ac1fbfd9c6245402e70d36b9ea1f8cc85}{N25\+Q80}}, 
+\newline
+\mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a53157d866cf954ba92940047f40c3f9e}{N25\+Q16}}, 
+\mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a17fff14858b8d5e63955bfbf28eb0960}{N25\+Q32}}, 
+\mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a144a02867e32e9d36fa6818ee51c72cb}{N25\+Q64}}, 
+\mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a43adbbfda9c2f37e0801ea99fe75be86}{N25\+Q128}}, 
+\newline
+\mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25\+Q256}}, 
+\mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a71c3026d30d4317387eab4195be199e7}{N25\+Q512}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6d9adef64b426a95d339d30ba2fb4502}{Flash\+Init}} (void)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa570d1a31702991962d7c7578261b08b}{N25qxx\+\_\+\+Erase\+Chip}} (void)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gab1d460ca2b17e2d27b388186ba854b95}{N25qxx\+\_\+\+Erase\+Sector}} (uint32\+\_\+t Sector\+Addr)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaee5c95875b0aa9462b25909709678f2f}{N25qxx\+\_\+\+Erase\+Block}} (uint32\+\_\+t Block\+Addr)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa488bfa18b71099cf65103c55d8379da}{N25qxx\+\_\+\+Page\+To\+Sector}} (uint32\+\_\+t Page\+Address)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa2c38fb79f2c1470cbf11a16b735d28b}{N25qxx\+\_\+\+Page\+To\+Block}} (uint32\+\_\+t Page\+Address)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga24c5d9d113618e3706eeb75942216f56}{N25qxx\+\_\+\+Sector\+To\+Block}} (uint32\+\_\+t Sector\+Address)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga473318dbd3d70e328cc2502e65f1e525}{N25qxx\+\_\+\+Sector\+To\+Page}} (uint32\+\_\+t Sector\+Address)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gab2ca26fb93915fc3baa32001ed779dba}{N25qxx\+\_\+\+Block\+To\+Page}} (uint32\+\_\+t Block\+Address)
+\item 
+bool \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gab8bcf0e76a947af377e8d754705730a8}{N25qxx\+\_\+\+Is\+Empty\+Page}} (uint32\+\_\+t Page\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Check\+\_\+up\+\_\+to\+\_\+\+Page\+Size)
+\item 
+bool \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga5fdecfae212fabe66e2839c38dfe32e2}{N25qxx\+\_\+\+Is\+Empty\+Sector}} (uint32\+\_\+t Sector\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Check\+\_\+up\+\_\+to\+\_\+\+Sector\+Size)
+\item 
+bool \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga0a0063747b5fd8498112f460963e0ef3}{N25qxx\+\_\+\+Is\+Empty\+Block}} (uint32\+\_\+t Block\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Check\+\_\+up\+\_\+to\+\_\+\+Block\+Size)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gadb33cbdf325d2f42f3e029d6dc4940dc}{N25qxx\+\_\+\+Write\+Byte}} (uint8\+\_\+t p\+Buffer, uint32\+\_\+t Bytes\+\_\+\+Address)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gac879b1c4aa62de3088b1a6892eeede7b}{N25qxx\+\_\+\+Write\+Page}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Page\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Write\+\_\+up\+\_\+to\+\_\+\+Page\+Size)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6325fd02972cddf4e70eac7b948bfd76}{N25qxx\+\_\+\+Write\+Sector}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Sector\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Write\+\_\+up\+\_\+to\+\_\+\+Sector\+Size)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga8f716002a41434542164d42c7bbf8d85}{N25qxx\+\_\+\+Write\+Block}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Block\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Write\+\_\+up\+\_\+to\+\_\+\+Block\+Size)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga87141d4e01520326f047f9bbdff4a530}{N25qxx\+\_\+\+Read\+Byte}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Bytes\+\_\+\+Address)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaf4ef9ab394f7b1e60d90804c8db9acce}{N25qxx\+\_\+\+Read\+Bytes}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Read\+Addr, uint32\+\_\+t Num\+Byte\+To\+Read)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gacbedf786bfd7f44edc623039f55bfff2}{N25qxx\+\_\+\+Read\+Page}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Page\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Read\+\_\+up\+\_\+to\+\_\+\+Page\+Size)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga7970ddcd1b95f89589898d6ca409cf47}{N25qxx\+\_\+\+Read\+Sector}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Sector\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Read\+\_\+up\+\_\+to\+\_\+\+Sector\+Size)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga42214a329e32106095eff0e1b9011fa2}{N25qxx\+\_\+\+Read\+Block}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Block\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Read\+\_\+up\+\_\+to\+\_\+\+Block\+Size)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga566627fe296ea66e4a5b52de9a62f31d}{Flash\+\_\+write\+Image}} (uint8\+\_\+t $\ast$fb\+Address, int num\+Image)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6627b0fcd392586cbfa10e52727cbe29}{Flash\+\_\+read\+Image}} (uint8\+\_\+t $\ast$fb\+Address, int num\+Image)
+\end{DoxyCompactItemize}
+\doxysubsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_n25qxx__t}{N25qxx\+\_\+t}} \mbox{\hyperlink{flash_8h_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}\label{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}} 
+\index{flash.h@{flash.h}!\_FLASH\_CS\_GPIO@{\_FLASH\_CS\_GPIO}}
+\index{\_FLASH\_CS\_GPIO@{\_FLASH\_CS\_GPIO}!flash.h@{flash.h}}
+\doxysubsubsection{\texorpdfstring{\_FLASH\_CS\_GPIO}{\_FLASH\_CS\_GPIO}}
+{\footnotesize\ttfamily \#define \+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+S\+\_\+\+G\+P\+IO~F\+L\+A\+S\+H\+\_\+\+C\+S\+\_\+\+G\+P\+I\+O\+\_\+\+Port}
+
+\mbox{\Hypertarget{flash_8h_a5ef56be7d2387303c41656671951350a}\label{flash_8h_a5ef56be7d2387303c41656671951350a}} 
+\index{flash.h@{flash.h}!\_FLASH\_CS\_PIN@{\_FLASH\_CS\_PIN}}
+\index{\_FLASH\_CS\_PIN@{\_FLASH\_CS\_PIN}!flash.h@{flash.h}}
+\doxysubsubsection{\texorpdfstring{\_FLASH\_CS\_PIN}{\_FLASH\_CS\_PIN}}
+{\footnotesize\ttfamily \#define \+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+S\+\_\+\+P\+IN~F\+L\+A\+S\+H\+\_\+\+C\+S\+\_\+\+Pin}
+
+\mbox{\Hypertarget{flash_8h_aa7812a3cde99515ba52d1bec814bdfe0}\label{flash_8h_aa7812a3cde99515ba52d1bec814bdfe0}} 
+\index{flash.h@{flash.h}!\_FLASH\_DEBUG@{\_FLASH\_DEBUG}}
+\index{\_FLASH\_DEBUG@{\_FLASH\_DEBUG}!flash.h@{flash.h}}
+\doxysubsubsection{\texorpdfstring{\_FLASH\_DEBUG}{\_FLASH\_DEBUG}}
+{\footnotesize\ttfamily \#define \+\_\+\+F\+L\+A\+S\+H\+\_\+\+D\+E\+B\+UG~0}
+
+\mbox{\Hypertarget{flash_8h_a0a4c11784fcf7cb41c0329b680371c1b}\label{flash_8h_a0a4c11784fcf7cb41c0329b680371c1b}} 
+\index{flash.h@{flash.h}!\_FLASH\_SPI@{\_FLASH\_SPI}}
+\index{\_FLASH\_SPI@{\_FLASH\_SPI}!flash.h@{flash.h}}
+\doxysubsubsection{\texorpdfstring{\_FLASH\_SPI}{\_FLASH\_SPI}}
+{\footnotesize\ttfamily \#define \+\_\+\+F\+L\+A\+S\+H\+\_\+\+S\+PI~hspi2}
+
+
+
+\doxysubsection{열거형 타입 문서화}
+\mbox{\Hypertarget{flash_8h_a08a0f5fb10b1858f10fecc768c61a656}\label{flash_8h_a08a0f5fb10b1858f10fecc768c61a656}} 
+\index{flash.h@{flash.h}!FLASH\_ID\_t@{FLASH\_ID\_t}}
+\index{FLASH\_ID\_t@{FLASH\_ID\_t}!flash.h@{flash.h}}
+\doxysubsubsection{\texorpdfstring{FLASH\_ID\_t}{FLASH\_ID\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656}{F\+L\+A\+S\+H\+\_\+\+I\+D\+\_\+t}}}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N25Q10@{N25Q10}!flash.h@{flash.h}}\index{flash.h@{flash.h}!N25Q10@{N25Q10}}}\mbox{\Hypertarget{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a87665c30aebba5654fe86b20e9878e92}\label{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a87665c30aebba5654fe86b20e9878e92}} 
+N25\+Q10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N25Q20@{N25Q20}!flash.h@{flash.h}}\index{flash.h@{flash.h}!N25Q20@{N25Q20}}}\mbox{\Hypertarget{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a92f1a942af5053af9173d0bcd7306743}\label{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a92f1a942af5053af9173d0bcd7306743}} 
+N25\+Q20&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N25Q40@{N25Q40}!flash.h@{flash.h}}\index{flash.h@{flash.h}!N25Q40@{N25Q40}}}\mbox{\Hypertarget{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a4b341528dd165356df1f2d28291a47ba}\label{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a4b341528dd165356df1f2d28291a47ba}} 
+N25\+Q40&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N25Q80@{N25Q80}!flash.h@{flash.h}}\index{flash.h@{flash.h}!N25Q80@{N25Q80}}}\mbox{\Hypertarget{flash_8h_a08a0f5fb10b1858f10fecc768c61a656ac1fbfd9c6245402e70d36b9ea1f8cc85}\label{flash_8h_a08a0f5fb10b1858f10fecc768c61a656ac1fbfd9c6245402e70d36b9ea1f8cc85}} 
+N25\+Q80&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N25Q16@{N25Q16}!flash.h@{flash.h}}\index{flash.h@{flash.h}!N25Q16@{N25Q16}}}\mbox{\Hypertarget{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a53157d866cf954ba92940047f40c3f9e}\label{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a53157d866cf954ba92940047f40c3f9e}} 
+N25\+Q16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N25Q32@{N25Q32}!flash.h@{flash.h}}\index{flash.h@{flash.h}!N25Q32@{N25Q32}}}\mbox{\Hypertarget{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a17fff14858b8d5e63955bfbf28eb0960}\label{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a17fff14858b8d5e63955bfbf28eb0960}} 
+N25\+Q32&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N25Q64@{N25Q64}!flash.h@{flash.h}}\index{flash.h@{flash.h}!N25Q64@{N25Q64}}}\mbox{\Hypertarget{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a144a02867e32e9d36fa6818ee51c72cb}\label{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a144a02867e32e9d36fa6818ee51c72cb}} 
+N25\+Q64&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N25Q128@{N25Q128}!flash.h@{flash.h}}\index{flash.h@{flash.h}!N25Q128@{N25Q128}}}\mbox{\Hypertarget{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a43adbbfda9c2f37e0801ea99fe75be86}\label{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a43adbbfda9c2f37e0801ea99fe75be86}} 
+N25\+Q128&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N25Q256@{N25Q256}!flash.h@{flash.h}}\index{flash.h@{flash.h}!N25Q256@{N25Q256}}}\mbox{\Hypertarget{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}\label{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}} 
+N25\+Q256&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N25Q512@{N25Q512}!flash.h@{flash.h}}\index{flash.h@{flash.h}!N25Q512@{N25Q512}}}\mbox{\Hypertarget{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a71c3026d30d4317387eab4195be199e7}\label{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a71c3026d30d4317387eab4195be199e7}} 
+N25\+Q512&\\
+\hline
+
+\end{DoxyEnumFields}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19   \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a87665c30aebba5654fe86b20e9878e92}{N25Q10}}=1,}
+\DoxyCodeLine{20   \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a92f1a942af5053af9173d0bcd7306743}{N25Q20}},}
+\DoxyCodeLine{21   \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a4b341528dd165356df1f2d28291a47ba}{N25Q40}},}
+\DoxyCodeLine{22   \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656ac1fbfd9c6245402e70d36b9ea1f8cc85}{N25Q80}},}
+\DoxyCodeLine{23   \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a53157d866cf954ba92940047f40c3f9e}{N25Q16}},}
+\DoxyCodeLine{24   \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a17fff14858b8d5e63955bfbf28eb0960}{N25Q32}},}
+\DoxyCodeLine{25   \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a144a02867e32e9d36fa6818ee51c72cb}{N25Q64}},}
+\DoxyCodeLine{26   \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a43adbbfda9c2f37e0801ea99fe75be86}{N25Q128}},}
+\DoxyCodeLine{27   \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}},}
+\DoxyCodeLine{28   \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a71c3026d30d4317387eab4195be199e7}{N25Q512}},}
+\DoxyCodeLine{29   }
+\DoxyCodeLine{30 \}\mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656}{FLASH\_ID\_t}};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{변수 문서화}
+\mbox{\Hypertarget{flash_8h_a0f391b7aa73a7fa57cbb69d21c91bc65}\label{flash_8h_a0f391b7aa73a7fa57cbb69d21c91bc65}} 
+\index{flash.h@{flash.h}!N25qxx@{N25qxx}}
+\index{N25qxx@{N25qxx}!flash.h@{flash.h}}
+\doxysubsubsection{\texorpdfstring{N25qxx}{N25qxx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_n25qxx__t}{N25qxx\+\_\+t}} N25qxx}
+

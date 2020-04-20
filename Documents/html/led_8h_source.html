@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>생활정보기: C:/Users/duwon/Documents/GitHub/LCD/User/led.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">생활정보기
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">led.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="led_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LED_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LED_H__ 1</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;main.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define LEDn    5</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="led_8h.html#ab4be2480bf7d44d52aab1190a65a733c">   11</a></span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecd">   12</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdadac6477842247cab1a8c02c65f431b44">   14</a></span>&#160;  <a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdadac6477842247cab1a8c02c65f431b44">LED1</a> = 0,</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecda8379bbaa96d151e6adac488b2a147b7a">   15</a></span>&#160;  <a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecda8379bbaa96d151e6adac488b2a147b7a">LED2</a>,</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecda5dec293e081e0fc78369c842fab8452b">   16</a></span>&#160;  <a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecda5dec293e081e0fc78369c842fab8452b">LED3</a>,</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdad60e39b8d1701d30aa64f80343217342">   17</a></span>&#160;  <a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdad60e39b8d1701d30aa64f80343217342">LED4</a>,</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdaf4ea6611b98f83a6e1ec4ce823bf9217">   18</a></span>&#160;  <a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdaf4ea6611b98f83a6e1ec4ce823bf9217">LED5</a>,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;} <a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecd">Led_TypeDef</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#gad39b20626424b24cf847a9b35186776b">LED_On</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecd">Led_TypeDef</a> Led);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#ga1c0c731197851cdf2b2ac63deedfad25">LED_Off</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecd">Led_TypeDef</a> Led);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#gaa33fbaa898acf10b4d46171b086eab92">LED_Toggle</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecd">Led_TypeDef</a> Led);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_html_gad39b20626424b24cf847a9b35186776b"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#gad39b20626424b24cf847a9b35186776b">LED_On</a></div><div class="ttdeci">void LED_On(Led_TypeDef Led)</div><div class="ttdoc">Turns selected LED On.</div><div class="ttdef"><b>Definition:</b> led.c:33</div></div>
+<div class="ttc" id="aled_8h_html_aa059704b7ca945eb9c1e7f2c3d03fecd"><div class="ttname"><a href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecd">Led_TypeDef</a></div><div class="ttdeci">Led_TypeDef</div><div class="ttdef"><b>Definition:</b> led.h:13</div></div>
+<div class="ttc" id="aled_8h_html_aa059704b7ca945eb9c1e7f2c3d03fecda5dec293e081e0fc78369c842fab8452b"><div class="ttname"><a href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecda5dec293e081e0fc78369c842fab8452b">LED3</a></div><div class="ttdeci">@ LED3</div><div class="ttdef"><b>Definition:</b> led.h:16</div></div>
+<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_html_gaa33fbaa898acf10b4d46171b086eab92"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#gaa33fbaa898acf10b4d46171b086eab92">LED_Toggle</a></div><div class="ttdeci">void LED_Toggle(Led_TypeDef Led)</div><div class="ttdoc">Toggles the selected LED.</div><div class="ttdef"><b>Definition:</b> led.c:57</div></div>
+<div class="ttc" id="aled_8h_html_aa059704b7ca945eb9c1e7f2c3d03fecdad60e39b8d1701d30aa64f80343217342"><div class="ttname"><a href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdad60e39b8d1701d30aa64f80343217342">LED4</a></div><div class="ttdeci">@ LED4</div><div class="ttdef"><b>Definition:</b> led.h:17</div></div>
+<div class="ttc" id="aled_8h_html_aa059704b7ca945eb9c1e7f2c3d03fecdaf4ea6611b98f83a6e1ec4ce823bf9217"><div class="ttname"><a href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdaf4ea6611b98f83a6e1ec4ce823bf9217">LED5</a></div><div class="ttdeci">@ LED5</div><div class="ttdef"><b>Definition:</b> led.h:18</div></div>
+<div class="ttc" id="aled_8h_html_aa059704b7ca945eb9c1e7f2c3d03fecda8379bbaa96d151e6adac488b2a147b7a"><div class="ttname"><a href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecda8379bbaa96d151e6adac488b2a147b7a">LED2</a></div><div class="ttdeci">@ LED2</div><div class="ttdef"><b>Definition:</b> led.h:15</div></div>
+<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_html_ga1c0c731197851cdf2b2ac63deedfad25"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#ga1c0c731197851cdf2b2ac63deedfad25">LED_Off</a></div><div class="ttdeci">void LED_Off(Led_TypeDef Led)</div><div class="ttdoc">Turns selected LED Off.</div><div class="ttdef"><b>Definition:</b> led.c:45</div></div>
+<div class="ttc" id="aled_8h_html_aa059704b7ca945eb9c1e7f2c3d03fecdadac6477842247cab1a8c02c65f431b44"><div class="ttname"><a href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdadac6477842247cab1a8c02c65f431b44">LED1</a></div><div class="ttdeci">@ LED1</div><div class="ttdef"><b>Definition:</b> led.h:14</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

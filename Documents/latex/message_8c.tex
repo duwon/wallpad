@@ -1,0 +1,94 @@
+\hypertarget{message_8c}{}\doxysection{C\+:/\+Users/duwon/\+Documents/\+Git\+Hub/\+L\+C\+D/\+User/message.c 파일 참조}
+\label{message_8c}\index{C:/Users/duwon/Documents/GitHub/LCD/User/message.c@{C:/Users/duwon/Documents/GitHub/LCD/User/message.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}usart.\+h\char`\"{}}\newline
+message.\+c에 대한 include 의존 그래프
+% FIG 0
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{message_8c_ac040eb6679fed6e591776425aa7abd9d}{P\+U\+T\+C\+H\+A\+R\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE}}~int fputc(int \mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}}, F\+I\+LE $\ast$f)
+\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{message_8c_ae494a9643f29b87d6d81e5264e60e57b}{H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Rx\+Cplt\+Callback}} (U\+A\+R\+T\+\_\+\+Handle\+Type\+Def $\ast$huart)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT RX 인터럽트 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga9b8e356f7ac4e4ba929f0e782e50329e}{message\+Init}} (void)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga4c554787dc5196e18c0d2f5eab6a5254}{put\+Byte\+To\+Buffer}} (volatile \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} $\ast$buffer, uint8\+\_\+t \mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}})
+\begin{DoxyCompactList}\small\item\em U\+A\+RT 버퍼 1Byte 저장 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_gac6432ce1f2fa79fd11b6aee1254ed39c}{get\+Byte\+From\+Buffer}} (volatile \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} $\ast$buffer, uint8\+\_\+t $\ast$\mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}})
+\begin{DoxyCompactList}\small\item\em Get the Byte From Buffer object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{message_8c_a6b71e3c5cd86d6941c8f4a8beb1b354f}{P\+U\+T\+C\+H\+A\+R\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE}}
+\item 
+return \mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{message_8c_ac040eb6679fed6e591776425aa7abd9d}\label{message_8c_ac040eb6679fed6e591776425aa7abd9d}} 
+\index{message.c@{message.c}!PUTCHAR\_PROTOTYPE@{PUTCHAR\_PROTOTYPE}}
+\index{PUTCHAR\_PROTOTYPE@{PUTCHAR\_PROTOTYPE}!message.c@{message.c}}
+\doxysubsubsection{\texorpdfstring{PUTCHAR\_PROTOTYPE}{PUTCHAR\_PROTOTYPE}}
+{\footnotesize\ttfamily \#define P\+U\+T\+C\+H\+A\+R\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE~int fputc(int \mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}}, F\+I\+LE $\ast$f)}
+
+
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{message_8c_ae494a9643f29b87d6d81e5264e60e57b}\label{message_8c_ae494a9643f29b87d6d81e5264e60e57b}} 
+\index{message.c@{message.c}!HAL\_UART\_RxCpltCallback@{HAL\_UART\_RxCpltCallback}}
+\index{HAL\_UART\_RxCpltCallback@{HAL\_UART\_RxCpltCallback}!message.c@{message.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_UART\_RxCpltCallback()}{HAL\_UART\_RxCpltCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle\+Type\+Def $\ast$}]{huart }\end{DoxyParamCaption})}
+
+
+
+U\+A\+RT RX 인터럽트 
+
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25   \textcolor{keywordflow}{if} (huart-\/>Instance == USART1)}
+\DoxyCodeLine{26   \{}
+\DoxyCodeLine{27     HAL\_UART\_Receive\_DMA(huart, (uint8\_t *)\&\mbox{\hyperlink{message_8h_aed1d3430d79be36c0a24bc410a75fd78}{uart3Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}}, 1);}
+\DoxyCodeLine{28   \}}
+\DoxyCodeLine{29   \textcolor{keywordflow}{if} (huart-\/>Instance == USART3)}
+\DoxyCodeLine{30   \{}
+\DoxyCodeLine{31       HAL\_UART\_Receive\_DMA(huart, (uint8\_t *)\&\mbox{\hyperlink{message_8h_ac8100bb141db19912399a3c1bd92b2ed}{uart1Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}}, 1);}
+\DoxyCodeLine{32   \}}
+\DoxyCodeLine{33 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{변수 문서화}
+\mbox{\Hypertarget{message_8c_a0523c05685d59544dca911cb6a3db77d}\label{message_8c_a0523c05685d59544dca911cb6a3db77d}} 
+\index{message.c@{message.c}!ch@{ch}}
+\index{ch@{ch}!message.c@{message.c}}
+\doxysubsubsection{\texorpdfstring{ch}{ch}}
+{\footnotesize\ttfamily return ch}
+
+\mbox{\Hypertarget{message_8c_a6b71e3c5cd86d6941c8f4a8beb1b354f}\label{message_8c_a6b71e3c5cd86d6941c8f4a8beb1b354f}} 
+\index{message.c@{message.c}!PUTCHAR\_PROTOTYPE@{PUTCHAR\_PROTOTYPE}}
+\index{PUTCHAR\_PROTOTYPE@{PUTCHAR\_PROTOTYPE}!message.c@{message.c}}
+\doxysubsubsection{\texorpdfstring{PUTCHAR\_PROTOTYPE}{PUTCHAR\_PROTOTYPE}}
+{\footnotesize\ttfamily P\+U\+T\+C\+H\+A\+R\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE}
+
+{\bfseries 초기값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  HAL\_UART\_Transmit(\&huart3, (uint8\_t *)\&\mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}}, 1, 0xFFFF)}
+
+\end{DoxyCode}

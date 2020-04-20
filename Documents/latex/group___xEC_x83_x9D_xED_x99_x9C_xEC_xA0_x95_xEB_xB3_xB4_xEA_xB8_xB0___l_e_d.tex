@@ -1,0 +1,104 @@
+\hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d}{}\doxysection{L\+ED 제어 함수}
+\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d}\index{LED 제어 함수@{LED 제어 함수}}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gad39b20626424b24cf847a9b35186776b}{L\+E\+D\+\_\+\+On}} (\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecd}{Led\+\_\+\+Type\+Def}} Led)
+\begin{DoxyCompactList}\small\item\em Turns selected L\+ED On. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_ga1c0c731197851cdf2b2ac63deedfad25}{L\+E\+D\+\_\+\+Off}} (\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecd}{Led\+\_\+\+Type\+Def}} Led)
+\begin{DoxyCompactList}\small\item\em Turns selected L\+ED Off. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gaa33fbaa898acf10b4d46171b086eab92}{L\+E\+D\+\_\+\+Toggle}} (\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecd}{Led\+\_\+\+Type\+Def}} Led)
+\begin{DoxyCompactList}\small\item\em Toggles the selected L\+ED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_ga1c0c731197851cdf2b2ac63deedfad25}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_ga1c0c731197851cdf2b2ac63deedfad25}} 
+\index{LED 제어 함수@{LED 제어 함수}!LED\_Off@{LED\_Off}}
+\index{LED\_Off@{LED\_Off}!LED 제어 함수@{LED 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LED\_Off()}{LED\_Off()}}
+{\footnotesize\ttfamily void L\+E\+D\+\_\+\+Off (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecd}{Led\+\_\+\+Type\+Def}}}]{Led }\end{DoxyParamCaption})}
+
+
+
+Turns selected L\+ED Off. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Led} & Specifies the Led to be set off. This parameter can be one of following parameters\+: \begin{DoxyItemize}
+\item L\+E\+D\+\_\+\+R\+DY \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{47   HAL\_GPIO\_WritePin(\mbox{\hyperlink{led_8c_a1127c0cf12e4ec7a66f2a64cd7407218}{LED\_PORT}}[Led], \mbox{\hyperlink{led_8c_a51722a2d3aff3970f123a94ac62b908f}{LED\_PIN}}[Led], GPIO\_PIN\_RESET); }
+\DoxyCodeLine{48 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gad39b20626424b24cf847a9b35186776b}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gad39b20626424b24cf847a9b35186776b}} 
+\index{LED 제어 함수@{LED 제어 함수}!LED\_On@{LED\_On}}
+\index{LED\_On@{LED\_On}!LED 제어 함수@{LED 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LED\_On()}{LED\_On()}}
+{\footnotesize\ttfamily void L\+E\+D\+\_\+\+On (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecd}{Led\+\_\+\+Type\+Def}}}]{Led }\end{DoxyParamCaption})}
+
+
+
+Turns selected L\+ED On. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Led} & Specifies the Led to be set on. This parameter can be one of following parameters\+: \begin{DoxyItemize}
+\item L\+E\+D\+\_\+\+R\+DY \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35   HAL\_GPIO\_WritePin(\mbox{\hyperlink{led_8c_a1127c0cf12e4ec7a66f2a64cd7407218}{LED\_PORT}}[Led], \mbox{\hyperlink{led_8c_a51722a2d3aff3970f123a94ac62b908f}{LED\_PIN}}[Led], GPIO\_PIN\_SET); }
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gaa33fbaa898acf10b4d46171b086eab92}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gaa33fbaa898acf10b4d46171b086eab92}} 
+\index{LED 제어 함수@{LED 제어 함수}!LED\_Toggle@{LED\_Toggle}}
+\index{LED\_Toggle@{LED\_Toggle}!LED 제어 함수@{LED 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LED\_Toggle()}{LED\_Toggle()}}
+{\footnotesize\ttfamily void L\+E\+D\+\_\+\+Toggle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecd}{Led\+\_\+\+Type\+Def}}}]{Led }\end{DoxyParamCaption})}
+
+
+
+Toggles the selected L\+ED. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Led} & Specifies the Led to be toggled. This parameter can be one of following parameters\+: \begin{DoxyItemize}
+\item L\+E\+D\+\_\+\+R\+DY \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58 \{}
+\DoxyCodeLine{59   HAL\_GPIO\_TogglePin(\mbox{\hyperlink{led_8c_a1127c0cf12e4ec7a66f2a64cd7407218}{LED\_PORT}}[Led], \mbox{\hyperlink{led_8c_a51722a2d3aff3970f123a94ac62b908f}{LED\_PIN}}[Led]);}
+\DoxyCodeLine{60 \}}
+
+\end{DoxyCode}

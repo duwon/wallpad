@@ -1,0 +1,7 @@
+digraph "N25qxx_t"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{N25qxx_t\n|+ ID\l+ UniqID\l+ PageSize\l+ PageCount\l+ SectorSize\l+ SectorCount\l+ BlockSize\l+ BlockCount\l+ CapacityInKiloByte\l+ StatusRegister1\l+ StatusRegister2\l+ StatusRegister3\l+ Lock\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}

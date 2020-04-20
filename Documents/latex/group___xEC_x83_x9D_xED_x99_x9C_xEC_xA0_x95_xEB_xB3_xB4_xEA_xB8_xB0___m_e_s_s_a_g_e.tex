@@ -1,0 +1,108 @@
+\hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e}{}\doxysection{U\+A\+RT 패킷 송수신}
+\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e}\index{UART 패킷 송수신@{UART 패킷 송수신}}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga9b8e356f7ac4e4ba929f0e782e50329e}{message\+Init}} (void)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga4c554787dc5196e18c0d2f5eab6a5254}{put\+Byte\+To\+Buffer}} (volatile \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} $\ast$buffer, uint8\+\_\+t \mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}})
+\begin{DoxyCompactList}\small\item\em U\+A\+RT 버퍼 1Byte 저장 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_gac6432ce1f2fa79fd11b6aee1254ed39c}{get\+Byte\+From\+Buffer}} (volatile \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} $\ast$buffer, uint8\+\_\+t $\ast$\mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}})
+\begin{DoxyCompactList}\small\item\em Get the Byte From Buffer object \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_gac6432ce1f2fa79fd11b6aee1254ed39c}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_gac6432ce1f2fa79fd11b6aee1254ed39c}} 
+\index{UART 패킷 송수신@{UART 패킷 송수신}!getByteFromBuffer@{getByteFromBuffer}}
+\index{getByteFromBuffer@{getByteFromBuffer}!UART 패킷 송수신@{UART 패킷 송수신}}
+\doxysubsubsection{\texorpdfstring{getByteFromBuffer()}{getByteFromBuffer()}}
+{\footnotesize\ttfamily bool get\+Byte\+From\+Buffer (\begin{DoxyParamCaption}\item[{volatile \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} $\ast$}]{buffer,  }\item[{uint8\+\_\+t $\ast$}]{ch }\end{DoxyParamCaption})}
+
+
+
+Get the Byte From Buffer object 
+
+
+\begin{DoxyParams}{매개변수}
+{\em \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}}} & \+: 버퍼 구조체 포인터 \\
+\hline
+{\em ch} & \+: 리턴받을 1byte 포인터 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true \+: 데이터가 있으면 
+
+false \+: 버퍼에 데이터가 없으면 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73 \{}
+\DoxyCodeLine{74   \textcolor{keywordtype}{bool} error;}
+\DoxyCodeLine{75   \textcolor{keywordflow}{if} (buffer-\/>count != 0U) \textcolor{comment}{/* 버퍼에 데이터가 있으면 */}}
+\DoxyCodeLine{76   \{}
+\DoxyCodeLine{77     *\mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}} = buffer-\/>buff[buffer-\/>out]; \textcolor{comment}{/* 버퍼에서 1Byte 읽음 */}}
+\DoxyCodeLine{78     buffer-\/>buff[buffer-\/>out++] = 0;}
+\DoxyCodeLine{79     buffer-\/>count-\/-\/;                     \textcolor{comment}{/* 버퍼에 저장된 데이터 갯수 1 감소 */}}
+\DoxyCodeLine{80     \textcolor{keywordflow}{if} (buffer-\/>out == \mbox{\hyperlink{message_8h_a0d57378e32bf8278011460740bc29f7f}{UART\_BUFFER\_SIZE}}) \textcolor{comment}{/* 끝 인덱스가 버퍼의 끝이면 */}}
+\DoxyCodeLine{81     \{}
+\DoxyCodeLine{82       buffer-\/>out = 0; \textcolor{comment}{/* 끝 인덱스를 0부터 다시 시작 */}}
+\DoxyCodeLine{83     \}}
+\DoxyCodeLine{84     error = \textcolor{keyword}{true};}
+\DoxyCodeLine{85   \}}
+\DoxyCodeLine{86   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{87   \{}
+\DoxyCodeLine{88     error = \textcolor{keyword}{false}; \textcolor{comment}{/* 버퍼에 데이터가 없으면 false 리턴 */}}
+\DoxyCodeLine{89   \}}
+\DoxyCodeLine{90   \textcolor{keywordflow}{return} error;}
+\DoxyCodeLine{91 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga9b8e356f7ac4e4ba929f0e782e50329e}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga9b8e356f7ac4e4ba929f0e782e50329e}} 
+\index{UART 패킷 송수신@{UART 패킷 송수신}!messageInit@{messageInit}}
+\index{messageInit@{messageInit}!UART 패킷 송수신@{UART 패킷 송수신}}
+\doxysubsubsection{\texorpdfstring{messageInit()}{messageInit()}}
+{\footnotesize\ttfamily void message\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41     HAL\_UART\_Transmit\_DMA(\&huart3, (uint8\_t *)\&\mbox{\hyperlink{message_8h_aed1d3430d79be36c0a24bc410a75fd78}{uart3Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}}, 1); \textcolor{comment}{/* UART DMA 인터럽트 시작 */}}
+\DoxyCodeLine{42     HAL\_UART\_Transmit\_DMA(\&huart1, (uint8\_t *)\&\mbox{\hyperlink{message_8h_ac8100bb141db19912399a3c1bd92b2ed}{uart1Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}}, 1);}
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga4c554787dc5196e18c0d2f5eab6a5254}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga4c554787dc5196e18c0d2f5eab6a5254}} 
+\index{UART 패킷 송수신@{UART 패킷 송수신}!putByteToBuffer@{putByteToBuffer}}
+\index{putByteToBuffer@{putByteToBuffer}!UART 패킷 송수신@{UART 패킷 송수신}}
+\doxysubsubsection{\texorpdfstring{putByteToBuffer()}{putByteToBuffer()}}
+{\footnotesize\ttfamily void put\+Byte\+To\+Buffer (\begin{DoxyParamCaption}\item[{volatile \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} $\ast$}]{buffer,  }\item[{uint8\+\_\+t}]{ch }\end{DoxyParamCaption})}
+
+
+
+U\+A\+RT 버퍼 1Byte 저장 
+
+
+\begin{DoxyParams}{매개변수}
+{\em \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}}} & \+: 버퍼 구조체 포인터 \\
+\hline
+{\em ch} & \+: 버퍼에 저장 할 값 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52 \{}
+\DoxyCodeLine{53   \textcolor{keywordflow}{if} (buffer-\/>count != \mbox{\hyperlink{message_8h_a0d57378e32bf8278011460740bc29f7f}{UART\_BUFFER\_SIZE}}) \textcolor{comment}{/* 데이터가 버퍼에 가득 찼으면 ERROR 리턴 */}}
+\DoxyCodeLine{54   \{}
+\DoxyCodeLine{55     buffer-\/>buff[buffer-\/>in++] = \mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}};    \textcolor{comment}{/* 버퍼에 1Byte 저장 */}}
+\DoxyCodeLine{56     buffer-\/>count++;                    \textcolor{comment}{/* 버퍼에 저장된 갯수 1 증가 */}}
+\DoxyCodeLine{57     \textcolor{keywordflow}{if} (buffer-\/>in == \mbox{\hyperlink{message_8h_a0d57378e32bf8278011460740bc29f7f}{UART\_BUFFER\_SIZE}}) \textcolor{comment}{/* 시작 인덱스가 버퍼의 끝이면 */}}
+\DoxyCodeLine{58     \{}
+\DoxyCodeLine{59       buffer-\/>in = 0; \textcolor{comment}{/* 시작 인덱스를 0부터 다시 시작 */}}
+\DoxyCodeLine{60     \}}
+\DoxyCodeLine{61   \}}
+\DoxyCodeLine{62 \}}
+
+\end{DoxyCode}

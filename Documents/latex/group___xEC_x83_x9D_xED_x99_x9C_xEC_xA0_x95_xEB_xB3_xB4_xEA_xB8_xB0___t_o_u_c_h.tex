@@ -1,0 +1,111 @@
+\hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h}{}\doxysection{터치 읽기 함수}
+\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h}\index{터치 읽기 함수@{터치 읽기 함수}}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_gabbe30f7ec3b196cb56de0be8e057c15e}{touch\+Write\+Reg\+Data}} (uint8\+\_\+t reg, uint8\+\_\+t data)
+\item 
+static uint8\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_ga099084b7ee4f2eb8b309fbfbd48dd8c7}{touch\+Read\+Reg\+Data}} (uint8\+\_\+t reg)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_gae38e9d631b156b3d7f04c8af00db5540}{touch\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em 터치 초기화 \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_ga88144ebcf10a44777798ed68515798c9}{get\+Touch\+Value}} (void)
+\begin{DoxyCompactList}\small\item\em 터치센서의 값 읽기 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_ga88144ebcf10a44777798ed68515798c9}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_ga88144ebcf10a44777798ed68515798c9}} 
+\index{터치 읽기 함수@{터치 읽기 함수}!getTouchValue@{getTouchValue}}
+\index{getTouchValue@{getTouchValue}!터치 읽기 함수@{터치 읽기 함수}}
+\doxysubsubsection{\texorpdfstring{getTouchValue()}{getTouchValue()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Touch\+Value (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+터치센서의 값 읽기 
+
+
+\begin{DoxyRetVals}{반환값}
+{\em 터치} & 값 \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75   \textcolor{keywordflow}{return} \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_ga099084b7ee4f2eb8b309fbfbd48dd8c7}{touchReadRegData}}(0x25);}
+\DoxyCodeLine{76 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_gae38e9d631b156b3d7f04c8af00db5540}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_gae38e9d631b156b3d7f04c8af00db5540}} 
+\index{터치 읽기 함수@{터치 읽기 함수}!touchInit@{touchInit}}
+\index{touchInit@{touchInit}!터치 읽기 함수@{터치 읽기 함수}}
+\doxysubsubsection{\texorpdfstring{touchInit()}{touchInit()}}
+{\footnotesize\ttfamily void touch\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+터치 초기화 
+
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{51   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_gabbe30f7ec3b196cb56de0be8e057c15e}{touchWriteRegData}}(0x04, 0x08); \textcolor{comment}{/* 소프트웨어 리셋 */}}
+\DoxyCodeLine{52   HAL\_Delay(100);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54   \textcolor{comment}{//for (int i = 0; i < 0x16; i++)}}
+\DoxyCodeLine{55   \textcolor{comment}{//\{}}
+\DoxyCodeLine{56   \textcolor{comment}{//  printf("\%x \%x\(\backslash\)r\(\backslash\)n", i, touchReadRegData(i));}}
+\DoxyCodeLine{57   \textcolor{comment}{//\}}}
+\DoxyCodeLine{58   \textcolor{comment}{//}}
+\DoxyCodeLine{59   \textcolor{comment}{//touchWriteRegData(0x00, 0xFF);}}
+\DoxyCodeLine{60   \textcolor{comment}{//touchWriteRegData(0x01, 0xFF);}}
+\DoxyCodeLine{61   \textcolor{comment}{//touchWriteRegData(0x02, 0xFF);}}
+\DoxyCodeLine{62   \textcolor{comment}{//touchWriteRegData(0x03, 0x05);}}
+\DoxyCodeLine{63   \textcolor{comment}{//touchWriteRegData(0x04, 0x13);}}
+\DoxyCodeLine{64   \textcolor{comment}{//touchWriteRegData(0x05, 0x00);}}
+\DoxyCodeLine{65   \textcolor{comment}{//touchWriteRegData(0x06, 0x00);}}
+\DoxyCodeLine{66   \textcolor{comment}{//touchWriteRegData(0x07, 0x00);}}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_ga099084b7ee4f2eb8b309fbfbd48dd8c7}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_ga099084b7ee4f2eb8b309fbfbd48dd8c7}} 
+\index{터치 읽기 함수@{터치 읽기 함수}!touchReadRegData@{touchReadRegData}}
+\index{touchReadRegData@{touchReadRegData}!터치 읽기 함수@{터치 읽기 함수}}
+\doxysubsubsection{\texorpdfstring{touchReadRegData()}{touchReadRegData()}}
+{\footnotesize\ttfamily static uint8\+\_\+t touch\+Read\+Reg\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37   uint8\_t rxData[2] = \{}
+\DoxyCodeLine{38       0,}
+\DoxyCodeLine{39   \};}
+\DoxyCodeLine{40   HAL\_I2C\_Master\_Transmit(\&hi2c2, 0xD2, \&reg, 1, 10000);}
+\DoxyCodeLine{41   HAL\_I2C\_Master\_Receive(\&hi2c2, 0xD2, rxData, 2, 10000);}
+\DoxyCodeLine{42   \textcolor{keywordflow}{return} rxData[0];}
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_gabbe30f7ec3b196cb56de0be8e057c15e}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_gabbe30f7ec3b196cb56de0be8e057c15e}} 
+\index{터치 읽기 함수@{터치 읽기 함수}!touchWriteRegData@{touchWriteRegData}}
+\index{touchWriteRegData@{touchWriteRegData}!터치 읽기 함수@{터치 읽기 함수}}
+\doxysubsubsection{\texorpdfstring{touchWriteRegData()}{touchWriteRegData()}}
+{\footnotesize\ttfamily static void touch\+Write\+Reg\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{30   uint8\_t txData[2] = \{reg, data\};}
+\DoxyCodeLine{31   HAL\_I2C\_Master\_Transmit(\&hi2c2, 0xD2, txData, 2, 10000);}
+\DoxyCodeLine{32   HAL\_Delay(1);}
+\DoxyCodeLine{33 \}}
+
+\end{DoxyCode}

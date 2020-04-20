@@ -1,0 +1,314 @@
+\hypertarget{lcd_8h}{}\doxysection{C\+:/\+Users/duwon/\+Documents/\+Git\+Hub/\+L\+C\+D/\+User/lcd.h 파일 참조}
+\label{lcd_8h}\index{C:/Users/duwon/Documents/GitHub/LCD/User/lcd.h@{C:/Users/duwon/Documents/GitHub/LCD/User/lcd.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+lcd.\+h에 대한 include 의존 그래프
+% FIG 0
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:
+% FIG 1
+\doxysubsection*{데이터 구조}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_c_d___draw_prop_type_def}{L\+C\+D\+\_\+\+Draw\+Prop\+Type\+Def}}
+\end{DoxyCompactItemize}
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a03f08faebee92aa36fbcbf4cf77b5173}{M\+A\+X\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+N\+U\+M\+B\+ER}}~((uint32\+\_\+t)2)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a5fa41785a8748c49b61639f4ddd8610b}{L\+T\+D\+C\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+L\+A\+Y\+ER}}~((uint32\+\_\+t)0) /$\ast$ Layer 0 $\ast$/
+\item 
+\#define \mbox{\hyperlink{lcd_8h_abce6a3e4f22835ff690f563ff366ffcf}{L\+C\+D\+\_\+\+F\+B\+\_\+\+S\+T\+A\+R\+T\+\_\+\+A\+D\+D\+R\+E\+SS}}~((uint32\+\_\+t)0x\+C0000000)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a7246e715a8e53f519569b649e6ce733d}{L\+C\+D\+\_\+\+OK}}~((uint8\+\_\+t)0x00)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_ac639f5b04db49abc3ad579c3ae342adb}{L\+C\+D\+\_\+\+E\+R\+R\+OR}}~((uint8\+\_\+t)0x01)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a68e1235b7ce21c42f5c85e22d9331e0a}{L\+C\+D\+\_\+\+T\+I\+M\+E\+O\+UT}}~((uint8\+\_\+t)0x02)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a5647ec8a40b49d6662226601eb9eb452}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+UE}}~((uint32\+\_\+t)0x\+F\+F0000\+FF)
+\begin{DoxyCompactList}\small\item\em L\+CD color ~\newline
+ \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lcd_8h_aaee512e5955e0ed1bf67c7a3bc76fc53}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+R\+E\+EN}}~((uint32\+\_\+t)0x\+F\+F00\+F\+F00)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_af125d28a3cd79b94a81fc572990f300e}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+ED}}~((uint32\+\_\+t)0x\+F\+F\+F\+F0000)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a5a921cf0f9febd5de4fa3c40cda4dd7d}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+Y\+AN}}~((uint32\+\_\+t)0x\+F\+F00\+F\+F\+FF)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_ad65d67388318c734a32cdfb7a5935f59}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+G\+E\+N\+TA}}~((uint32\+\_\+t)0x\+F\+F\+F\+F00\+FF)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a11062db6ba403700019e98a8b7c56f18}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+Y\+E\+L\+L\+OW}}~((uint32\+\_\+t)0x\+F\+F\+F\+F\+F\+F00)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a347a89173e8bfce09a85beea805ee202}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+B\+L\+UE}}~((uint32\+\_\+t)0x\+F\+F8080\+FF)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a9d4e0fc799fada640cccf87cbf7d89ce}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+G\+R\+E\+EN}}~((uint32\+\_\+t)0x\+F\+F80\+F\+F80)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_af03b9162384eeefe4381927c28e5ef1c}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+R\+ED}}~((uint32\+\_\+t)0x\+F\+F\+F\+F8080)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_af33fd44a04804e04e93b0d341d89d813}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+C\+Y\+AN}}~((uint32\+\_\+t)0x\+F\+F80\+F\+F\+FF)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_aa1f38c83f7a484fe440eb9ef0122f7f1}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+M\+A\+G\+E\+N\+TA}}~((uint32\+\_\+t)0x\+F\+F\+F\+F80\+FF)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_aaaea2b5bd2d8b6fd01187f61e80e5820}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+Y\+E\+L\+L\+OW}}~((uint32\+\_\+t)0x\+F\+F\+F\+F\+F\+F80)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a67921b0000a7f8890d660a8725edbc19}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+D\+A\+R\+K\+B\+L\+UE}}~((uint32\+\_\+t)0x\+F\+F000080)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a4d604eacac3f85176b721eb590689ee0}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+D\+A\+R\+K\+G\+R\+E\+EN}}~((uint32\+\_\+t)0x\+F\+F008000)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a12d859a7de90215057fee241f1b67eb6}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+D\+A\+R\+K\+R\+ED}}~((uint32\+\_\+t)0x\+F\+F800000)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_af9e9a56d88620375c5826fb0a56381f8}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+D\+A\+R\+K\+C\+Y\+AN}}~((uint32\+\_\+t)0x\+F\+F008080)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a795752bdd0506d1a8cd1ad5e2c35f93e}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+D\+A\+R\+K\+M\+A\+G\+E\+N\+TA}}~((uint32\+\_\+t)0x\+F\+F800080)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a49fdaac69765cd63a68d30cc753b77fb}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+D\+A\+R\+K\+Y\+E\+L\+L\+OW}}~((uint32\+\_\+t)0x\+F\+F808000)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_acc49fc5e78780bc38a49d2ce30f02da0}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+TE}}~((uint32\+\_\+t)0x\+F\+F\+F\+F\+F\+F\+FF)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a1fe85812ee1d9975211e1bd329664afc}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+G\+R\+AY}}~((uint32\+\_\+t)0x\+F\+F\+D3\+D3\+D3)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a424fdb50026cdfc18a287b01965983f0}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+R\+AY}}~((uint32\+\_\+t)0x\+F\+F808080)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_aed58783a24f35617da7c12b1053bcbbf}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+D\+A\+R\+K\+G\+R\+AY}}~((uint32\+\_\+t)0x\+F\+F404040)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a5a28392f0f4fc236e038a15fe468ce1b}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+CK}}~((uint32\+\_\+t)0x\+F\+F000000)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_ab6ed75970fe02ebf907864cfe8e112ad}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+R\+O\+WN}}~((uint32\+\_\+t)0x\+F\+F\+A52\+A2A)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a5da26295a6c0a7af2095b2579ce7c0f9}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+O\+R\+A\+N\+GE}}~((uint32\+\_\+t)0x\+F\+F\+F\+F\+A500)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a4b140f901775e4563eea22ea0885e834}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT}}~((uint32\+\_\+t)0x\+F\+F000000)
+\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaa53c9d40f3aa552a9974cd55ac510cb3}{L\+C\+D\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em L\+CD 초기화 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga13a46d9d0387d7dfa97167fc30e064d2}{L\+C\+D\+\_\+\+Layer\+Init}} (uint16\+\_\+t Layer\+Index, uint32\+\_\+t F\+B\+\_\+\+Address)
+\begin{DoxyCompactList}\small\item\em R\+G\+B565 format L\+CD Layer 초기화. 초기값 0 Layer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf1420ea7b39dd570d4d6edbf789f7640}{L\+C\+D\+\_\+\+Select\+Layer}} (uint32\+\_\+t Layer\+Index)
+\begin{DoxyCompactList}\small\item\em L\+CD 레이어 선택. 초기값 0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8e3dca6342e3dd739edbec8a23488e56}{L\+C\+D\+\_\+\+Set\+X\+Size}} (uint32\+\_\+t image\+Width\+Pixels)
+\begin{DoxyCompactList}\small\item\em L\+C\+D의 가로 크기 설정. 초기값 480px \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga320415ea9b549dd0a4fa2452bde4565c}{L\+C\+D\+\_\+\+Set\+Y\+Size}} (uint32\+\_\+t image\+Height\+Pixels)
+\begin{DoxyCompactList}\small\item\em L\+C\+D의 세로 크기 설정. 초기값 272px \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga0568836139e5177b6ce37e470e255c77}{L\+C\+D\+\_\+\+Set\+Transparency}} (uint32\+\_\+t Layer\+Index, uint8\+\_\+t Transparency)
+\begin{DoxyCompactList}\small\item\em 레이어의 투명도 설정. 기본값 255 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga29dd5609c60845657a8fb6e64b9ecca9}{L\+C\+D\+\_\+\+Draw\+Picture}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t $\ast$p\+Address, uint16\+\_\+t \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}, uint16\+\_\+t \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}, uint16\+\_\+t Color\+\_\+\+Alpha0)
+\begin{DoxyCompactList}\small\item\em L\+CD 그림 표시 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga9bf87417ff2e3e2a6a35729dfafc1725}{L\+C\+D\+\_\+\+Erase\+Picture}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t $\ast$p\+Address, uint16\+\_\+t \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}, uint16\+\_\+t \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}})
+\begin{DoxyCompactList}\small\item\em L\+CD 그림 삭제 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga31a4bb3bde55452bbb8370f5d935e41d}{L\+C\+D\+\_\+\+Set\+Text\+Color}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em 픽셀 또는 폰트 색상 설정 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaeca000116f289bc36b8892a6c64164dd}{L\+C\+D\+\_\+\+Set\+Back\+Color}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em 배경 생삭 설정 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf7865c8fa0299567a0bebeca881ace45}{L\+C\+D\+\_\+\+Set\+Back\+Image}} (uint32\+\_\+t Background\+Image\+Address)
+\begin{DoxyCompactList}\small\item\em 배경 이미지 설정. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaa500186c114aaea3dd6cdc11d306617e}{L\+C\+D\+\_\+\+Display\+Char}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t Ascii)
+\begin{DoxyCompactList}\small\item\em L\+C\+D에 문자 표시 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga57c922bb916d5ae0c3a0b4f8744a6e4b}{L\+C\+D\+\_\+\+Display\+String}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t $\ast$Text)
+\begin{DoxyCompactList}\small\item\em L\+C\+D에 문자열 표시 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gae57144a5b4342ddd500fb50018123dc6}{L\+C\+D\+\_\+\+Clear}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em L\+CD 표시된 색상 전체 변경 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8de8fec410906e9a34e4416739402216}{L\+C\+D\+\_\+\+Display\+Num\+Picture}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t Num)
+\begin{DoxyCompactList}\small\item\em L\+C\+D에 그림 숫자 출력 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{lcd_8h_a5a28392f0f4fc236e038a15fe468ce1b}\label{lcd_8h_a5a28392f0f4fc236e038a15fe468ce1b}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_BLACK@{LCD\_COLOR\_BLACK}}
+\index{LCD\_COLOR\_BLACK@{LCD\_COLOR\_BLACK}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_BLACK}{LCD\_COLOR\_BLACK}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+CK~((uint32\+\_\+t)0x\+F\+F000000)}
+
+\mbox{\Hypertarget{lcd_8h_a5647ec8a40b49d6662226601eb9eb452}\label{lcd_8h_a5647ec8a40b49d6662226601eb9eb452}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_BLUE@{LCD\_COLOR\_BLUE}}
+\index{LCD\_COLOR\_BLUE@{LCD\_COLOR\_BLUE}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_BLUE}{LCD\_COLOR\_BLUE}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+UE~((uint32\+\_\+t)0x\+F\+F0000\+FF)}
+
+
+
+L\+CD color ~\newline
+ 
+
+\mbox{\Hypertarget{lcd_8h_ab6ed75970fe02ebf907864cfe8e112ad}\label{lcd_8h_ab6ed75970fe02ebf907864cfe8e112ad}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_BROWN@{LCD\_COLOR\_BROWN}}
+\index{LCD\_COLOR\_BROWN@{LCD\_COLOR\_BROWN}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_BROWN}{LCD\_COLOR\_BROWN}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+R\+O\+WN~((uint32\+\_\+t)0x\+F\+F\+A52\+A2A)}
+
+\mbox{\Hypertarget{lcd_8h_a5a921cf0f9febd5de4fa3c40cda4dd7d}\label{lcd_8h_a5a921cf0f9febd5de4fa3c40cda4dd7d}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_CYAN@{LCD\_COLOR\_CYAN}}
+\index{LCD\_COLOR\_CYAN@{LCD\_COLOR\_CYAN}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_CYAN}{LCD\_COLOR\_CYAN}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+Y\+AN~((uint32\+\_\+t)0x\+F\+F00\+F\+F\+FF)}
+
+\mbox{\Hypertarget{lcd_8h_a67921b0000a7f8890d660a8725edbc19}\label{lcd_8h_a67921b0000a7f8890d660a8725edbc19}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_DARKBLUE@{LCD\_COLOR\_DARKBLUE}}
+\index{LCD\_COLOR\_DARKBLUE@{LCD\_COLOR\_DARKBLUE}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_DARKBLUE}{LCD\_COLOR\_DARKBLUE}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+D\+A\+R\+K\+B\+L\+UE~((uint32\+\_\+t)0x\+F\+F000080)}
+
+\mbox{\Hypertarget{lcd_8h_af9e9a56d88620375c5826fb0a56381f8}\label{lcd_8h_af9e9a56d88620375c5826fb0a56381f8}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_DARKCYAN@{LCD\_COLOR\_DARKCYAN}}
+\index{LCD\_COLOR\_DARKCYAN@{LCD\_COLOR\_DARKCYAN}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_DARKCYAN}{LCD\_COLOR\_DARKCYAN}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+D\+A\+R\+K\+C\+Y\+AN~((uint32\+\_\+t)0x\+F\+F008080)}
+
+\mbox{\Hypertarget{lcd_8h_aed58783a24f35617da7c12b1053bcbbf}\label{lcd_8h_aed58783a24f35617da7c12b1053bcbbf}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_DARKGRAY@{LCD\_COLOR\_DARKGRAY}}
+\index{LCD\_COLOR\_DARKGRAY@{LCD\_COLOR\_DARKGRAY}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_DARKGRAY}{LCD\_COLOR\_DARKGRAY}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+D\+A\+R\+K\+G\+R\+AY~((uint32\+\_\+t)0x\+F\+F404040)}
+
+\mbox{\Hypertarget{lcd_8h_a4d604eacac3f85176b721eb590689ee0}\label{lcd_8h_a4d604eacac3f85176b721eb590689ee0}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_DARKGREEN@{LCD\_COLOR\_DARKGREEN}}
+\index{LCD\_COLOR\_DARKGREEN@{LCD\_COLOR\_DARKGREEN}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_DARKGREEN}{LCD\_COLOR\_DARKGREEN}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+D\+A\+R\+K\+G\+R\+E\+EN~((uint32\+\_\+t)0x\+F\+F008000)}
+
+\mbox{\Hypertarget{lcd_8h_a795752bdd0506d1a8cd1ad5e2c35f93e}\label{lcd_8h_a795752bdd0506d1a8cd1ad5e2c35f93e}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_DARKMAGENTA@{LCD\_COLOR\_DARKMAGENTA}}
+\index{LCD\_COLOR\_DARKMAGENTA@{LCD\_COLOR\_DARKMAGENTA}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_DARKMAGENTA}{LCD\_COLOR\_DARKMAGENTA}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+D\+A\+R\+K\+M\+A\+G\+E\+N\+TA~((uint32\+\_\+t)0x\+F\+F800080)}
+
+\mbox{\Hypertarget{lcd_8h_a12d859a7de90215057fee241f1b67eb6}\label{lcd_8h_a12d859a7de90215057fee241f1b67eb6}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_DARKRED@{LCD\_COLOR\_DARKRED}}
+\index{LCD\_COLOR\_DARKRED@{LCD\_COLOR\_DARKRED}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_DARKRED}{LCD\_COLOR\_DARKRED}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+D\+A\+R\+K\+R\+ED~((uint32\+\_\+t)0x\+F\+F800000)}
+
+\mbox{\Hypertarget{lcd_8h_a49fdaac69765cd63a68d30cc753b77fb}\label{lcd_8h_a49fdaac69765cd63a68d30cc753b77fb}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_DARKYELLOW@{LCD\_COLOR\_DARKYELLOW}}
+\index{LCD\_COLOR\_DARKYELLOW@{LCD\_COLOR\_DARKYELLOW}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_DARKYELLOW}{LCD\_COLOR\_DARKYELLOW}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+D\+A\+R\+K\+Y\+E\+L\+L\+OW~((uint32\+\_\+t)0x\+F\+F808000)}
+
+\mbox{\Hypertarget{lcd_8h_a424fdb50026cdfc18a287b01965983f0}\label{lcd_8h_a424fdb50026cdfc18a287b01965983f0}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_GRAY@{LCD\_COLOR\_GRAY}}
+\index{LCD\_COLOR\_GRAY@{LCD\_COLOR\_GRAY}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_GRAY}{LCD\_COLOR\_GRAY}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+R\+AY~((uint32\+\_\+t)0x\+F\+F808080)}
+
+\mbox{\Hypertarget{lcd_8h_aaee512e5955e0ed1bf67c7a3bc76fc53}\label{lcd_8h_aaee512e5955e0ed1bf67c7a3bc76fc53}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_GREEN@{LCD\_COLOR\_GREEN}}
+\index{LCD\_COLOR\_GREEN@{LCD\_COLOR\_GREEN}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_GREEN}{LCD\_COLOR\_GREEN}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+R\+E\+EN~((uint32\+\_\+t)0x\+F\+F00\+F\+F00)}
+
+\mbox{\Hypertarget{lcd_8h_a347a89173e8bfce09a85beea805ee202}\label{lcd_8h_a347a89173e8bfce09a85beea805ee202}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_LIGHTBLUE@{LCD\_COLOR\_LIGHTBLUE}}
+\index{LCD\_COLOR\_LIGHTBLUE@{LCD\_COLOR\_LIGHTBLUE}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_LIGHTBLUE}{LCD\_COLOR\_LIGHTBLUE}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+B\+L\+UE~((uint32\+\_\+t)0x\+F\+F8080\+FF)}
+
+\mbox{\Hypertarget{lcd_8h_af33fd44a04804e04e93b0d341d89d813}\label{lcd_8h_af33fd44a04804e04e93b0d341d89d813}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_LIGHTCYAN@{LCD\_COLOR\_LIGHTCYAN}}
+\index{LCD\_COLOR\_LIGHTCYAN@{LCD\_COLOR\_LIGHTCYAN}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_LIGHTCYAN}{LCD\_COLOR\_LIGHTCYAN}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+C\+Y\+AN~((uint32\+\_\+t)0x\+F\+F80\+F\+F\+FF)}
+
+\mbox{\Hypertarget{lcd_8h_a1fe85812ee1d9975211e1bd329664afc}\label{lcd_8h_a1fe85812ee1d9975211e1bd329664afc}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_LIGHTGRAY@{LCD\_COLOR\_LIGHTGRAY}}
+\index{LCD\_COLOR\_LIGHTGRAY@{LCD\_COLOR\_LIGHTGRAY}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_LIGHTGRAY}{LCD\_COLOR\_LIGHTGRAY}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+G\+R\+AY~((uint32\+\_\+t)0x\+F\+F\+D3\+D3\+D3)}
+
+\mbox{\Hypertarget{lcd_8h_a9d4e0fc799fada640cccf87cbf7d89ce}\label{lcd_8h_a9d4e0fc799fada640cccf87cbf7d89ce}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_LIGHTGREEN@{LCD\_COLOR\_LIGHTGREEN}}
+\index{LCD\_COLOR\_LIGHTGREEN@{LCD\_COLOR\_LIGHTGREEN}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_LIGHTGREEN}{LCD\_COLOR\_LIGHTGREEN}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+G\+R\+E\+EN~((uint32\+\_\+t)0x\+F\+F80\+F\+F80)}
+
+\mbox{\Hypertarget{lcd_8h_aa1f38c83f7a484fe440eb9ef0122f7f1}\label{lcd_8h_aa1f38c83f7a484fe440eb9ef0122f7f1}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_LIGHTMAGENTA@{LCD\_COLOR\_LIGHTMAGENTA}}
+\index{LCD\_COLOR\_LIGHTMAGENTA@{LCD\_COLOR\_LIGHTMAGENTA}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_LIGHTMAGENTA}{LCD\_COLOR\_LIGHTMAGENTA}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+M\+A\+G\+E\+N\+TA~((uint32\+\_\+t)0x\+F\+F\+F\+F80\+FF)}
+
+\mbox{\Hypertarget{lcd_8h_af03b9162384eeefe4381927c28e5ef1c}\label{lcd_8h_af03b9162384eeefe4381927c28e5ef1c}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_LIGHTRED@{LCD\_COLOR\_LIGHTRED}}
+\index{LCD\_COLOR\_LIGHTRED@{LCD\_COLOR\_LIGHTRED}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_LIGHTRED}{LCD\_COLOR\_LIGHTRED}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+R\+ED~((uint32\+\_\+t)0x\+F\+F\+F\+F8080)}
+
+\mbox{\Hypertarget{lcd_8h_aaaea2b5bd2d8b6fd01187f61e80e5820}\label{lcd_8h_aaaea2b5bd2d8b6fd01187f61e80e5820}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_LIGHTYELLOW@{LCD\_COLOR\_LIGHTYELLOW}}
+\index{LCD\_COLOR\_LIGHTYELLOW@{LCD\_COLOR\_LIGHTYELLOW}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_LIGHTYELLOW}{LCD\_COLOR\_LIGHTYELLOW}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+Y\+E\+L\+L\+OW~((uint32\+\_\+t)0x\+F\+F\+F\+F\+F\+F80)}
+
+\mbox{\Hypertarget{lcd_8h_ad65d67388318c734a32cdfb7a5935f59}\label{lcd_8h_ad65d67388318c734a32cdfb7a5935f59}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_MAGENTA@{LCD\_COLOR\_MAGENTA}}
+\index{LCD\_COLOR\_MAGENTA@{LCD\_COLOR\_MAGENTA}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_MAGENTA}{LCD\_COLOR\_MAGENTA}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+G\+E\+N\+TA~((uint32\+\_\+t)0x\+F\+F\+F\+F00\+FF)}
+
+\mbox{\Hypertarget{lcd_8h_a5da26295a6c0a7af2095b2579ce7c0f9}\label{lcd_8h_a5da26295a6c0a7af2095b2579ce7c0f9}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_ORANGE@{LCD\_COLOR\_ORANGE}}
+\index{LCD\_COLOR\_ORANGE@{LCD\_COLOR\_ORANGE}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_ORANGE}{LCD\_COLOR\_ORANGE}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+O\+R\+A\+N\+GE~((uint32\+\_\+t)0x\+F\+F\+F\+F\+A500)}
+
+\mbox{\Hypertarget{lcd_8h_af125d28a3cd79b94a81fc572990f300e}\label{lcd_8h_af125d28a3cd79b94a81fc572990f300e}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_RED@{LCD\_COLOR\_RED}}
+\index{LCD\_COLOR\_RED@{LCD\_COLOR\_RED}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_RED}{LCD\_COLOR\_RED}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+ED~((uint32\+\_\+t)0x\+F\+F\+F\+F0000)}
+
+\mbox{\Hypertarget{lcd_8h_a4b140f901775e4563eea22ea0885e834}\label{lcd_8h_a4b140f901775e4563eea22ea0885e834}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_TRANSPARENT@{LCD\_COLOR\_TRANSPARENT}}
+\index{LCD\_COLOR\_TRANSPARENT@{LCD\_COLOR\_TRANSPARENT}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_TRANSPARENT}{LCD\_COLOR\_TRANSPARENT}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT~((uint32\+\_\+t)0x\+F\+F000000)}
+
+\mbox{\Hypertarget{lcd_8h_acc49fc5e78780bc38a49d2ce30f02da0}\label{lcd_8h_acc49fc5e78780bc38a49d2ce30f02da0}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_WHITE@{LCD\_COLOR\_WHITE}}
+\index{LCD\_COLOR\_WHITE@{LCD\_COLOR\_WHITE}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_WHITE}{LCD\_COLOR\_WHITE}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+TE~((uint32\+\_\+t)0x\+F\+F\+F\+F\+F\+F\+FF)}
+
+\mbox{\Hypertarget{lcd_8h_a11062db6ba403700019e98a8b7c56f18}\label{lcd_8h_a11062db6ba403700019e98a8b7c56f18}} 
+\index{lcd.h@{lcd.h}!LCD\_COLOR\_YELLOW@{LCD\_COLOR\_YELLOW}}
+\index{LCD\_COLOR\_YELLOW@{LCD\_COLOR\_YELLOW}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLOR\_YELLOW}{LCD\_COLOR\_YELLOW}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+Y\+E\+L\+L\+OW~((uint32\+\_\+t)0x\+F\+F\+F\+F\+F\+F00)}
+
+\mbox{\Hypertarget{lcd_8h_ac639f5b04db49abc3ad579c3ae342adb}\label{lcd_8h_ac639f5b04db49abc3ad579c3ae342adb}} 
+\index{lcd.h@{lcd.h}!LCD\_ERROR@{LCD\_ERROR}}
+\index{LCD\_ERROR@{LCD\_ERROR}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_ERROR}{LCD\_ERROR}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+E\+R\+R\+OR~((uint8\+\_\+t)0x01)}
+
+\mbox{\Hypertarget{lcd_8h_abce6a3e4f22835ff690f563ff366ffcf}\label{lcd_8h_abce6a3e4f22835ff690f563ff366ffcf}} 
+\index{lcd.h@{lcd.h}!LCD\_FB\_START\_ADDRESS@{LCD\_FB\_START\_ADDRESS}}
+\index{LCD\_FB\_START\_ADDRESS@{LCD\_FB\_START\_ADDRESS}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_FB\_START\_ADDRESS}{LCD\_FB\_START\_ADDRESS}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+F\+B\+\_\+\+S\+T\+A\+R\+T\+\_\+\+A\+D\+D\+R\+E\+SS~((uint32\+\_\+t)0x\+C0000000)}
+
+\mbox{\Hypertarget{lcd_8h_a7246e715a8e53f519569b649e6ce733d}\label{lcd_8h_a7246e715a8e53f519569b649e6ce733d}} 
+\index{lcd.h@{lcd.h}!LCD\_OK@{LCD\_OK}}
+\index{LCD\_OK@{LCD\_OK}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_OK}{LCD\_OK}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+OK~((uint8\+\_\+t)0x00)}
+
+\mbox{\Hypertarget{lcd_8h_a68e1235b7ce21c42f5c85e22d9331e0a}\label{lcd_8h_a68e1235b7ce21c42f5c85e22d9331e0a}} 
+\index{lcd.h@{lcd.h}!LCD\_TIMEOUT@{LCD\_TIMEOUT}}
+\index{LCD\_TIMEOUT@{LCD\_TIMEOUT}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_TIMEOUT}{LCD\_TIMEOUT}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+T\+I\+M\+E\+O\+UT~((uint8\+\_\+t)0x02)}
+
+\mbox{\Hypertarget{lcd_8h_a5fa41785a8748c49b61639f4ddd8610b}\label{lcd_8h_a5fa41785a8748c49b61639f4ddd8610b}} 
+\index{lcd.h@{lcd.h}!LTDC\_ACTIVE\_LAYER@{LTDC\_ACTIVE\_LAYER}}
+\index{LTDC\_ACTIVE\_LAYER@{LTDC\_ACTIVE\_LAYER}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LTDC\_ACTIVE\_LAYER}{LTDC\_ACTIVE\_LAYER}}
+{\footnotesize\ttfamily \#define L\+T\+D\+C\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+L\+A\+Y\+ER~((uint32\+\_\+t)0) /$\ast$ Layer 0 $\ast$/}
+
+\mbox{\Hypertarget{lcd_8h_a03f08faebee92aa36fbcbf4cf77b5173}\label{lcd_8h_a03f08faebee92aa36fbcbf4cf77b5173}} 
+\index{lcd.h@{lcd.h}!MAX\_LAYER\_NUMBER@{MAX\_LAYER\_NUMBER}}
+\index{MAX\_LAYER\_NUMBER@{MAX\_LAYER\_NUMBER}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_LAYER\_NUMBER}{MAX\_LAYER\_NUMBER}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+N\+U\+M\+B\+ER~((uint32\+\_\+t)2)}
+

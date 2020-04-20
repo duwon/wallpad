@@ -1,0 +1,880 @@
+\hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d}{}\doxysection{L\+CD 제어 함수}
+\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d}\index{LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaa53c9d40f3aa552a9974cd55ac510cb3}{L\+C\+D\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em L\+CD 초기화 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{L\+C\+D\+\_\+\+Get\+X\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em L\+C\+D의 가로 크기 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}{L\+C\+D\+\_\+\+Get\+Y\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em L\+C\+D의 세로 크기 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8e3dca6342e3dd739edbec8a23488e56}{L\+C\+D\+\_\+\+Set\+X\+Size}} (uint32\+\_\+t image\+Width\+Pixels)
+\begin{DoxyCompactList}\small\item\em L\+C\+D의 가로 크기 설정. 초기값 480px \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga320415ea9b549dd0a4fa2452bde4565c}{L\+C\+D\+\_\+\+Set\+Y\+Size}} (uint32\+\_\+t image\+Height\+Pixels)
+\begin{DoxyCompactList}\small\item\em L\+C\+D의 세로 크기 설정. 초기값 272px \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga13a46d9d0387d7dfa97167fc30e064d2}{L\+C\+D\+\_\+\+Layer\+Init}} (uint16\+\_\+t Layer\+Index, uint32\+\_\+t F\+B\+\_\+\+Address)
+\begin{DoxyCompactList}\small\item\em R\+G\+B565 format L\+CD Layer 초기화. 초기값 0 Layer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga0568836139e5177b6ce37e470e255c77}{L\+C\+D\+\_\+\+Set\+Transparency}} (uint32\+\_\+t Layer\+Index, uint8\+\_\+t Transparency)
+\begin{DoxyCompactList}\small\item\em 레이어의 투명도 설정. 기본값 255 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf1420ea7b39dd570d4d6edbf789f7640}{L\+C\+D\+\_\+\+Select\+Layer}} (uint32\+\_\+t Layer\+Index)
+\begin{DoxyCompactList}\small\item\em L\+CD 레이어 선택. 초기값 0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga31a4bb3bde55452bbb8370f5d935e41d}{L\+C\+D\+\_\+\+Set\+Text\+Color}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em 픽셀 또는 폰트 색상 설정 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaaab8858f03c8bce1aaef2ca960c9009f}{L\+C\+D\+\_\+\+Get\+Text\+Color}} (void)
+\begin{DoxyCompactList}\small\item\em 현재 설정된 픽셀 또는 폰트 색상 읽어오기 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaeca000116f289bc36b8892a6c64164dd}{L\+C\+D\+\_\+\+Set\+Back\+Color}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em 배경 생삭 설정 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8047c26258565d29a4cbd5d4d831a87e}{L\+C\+D\+\_\+\+Get\+Back\+Color}} (void)
+\begin{DoxyCompactList}\small\item\em 현재 설정된 L\+CD 배경 색상 읽어오기 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf7865c8fa0299567a0bebeca881ace45}{L\+C\+D\+\_\+\+Set\+Back\+Image}} (uint32\+\_\+t Background\+Image\+Address)
+\begin{DoxyCompactList}\small\item\em 배경 이미지 설정. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga637234711335cb3a4306841ae5db4cf7}{L\+C\+D\+\_\+\+Draw\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t R\+G\+B\+\_\+\+Code)
+\begin{DoxyCompactList}\small\item\em L\+C\+D에 1픽셀 표시 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga29dd5609c60845657a8fb6e64b9ecca9}{L\+C\+D\+\_\+\+Draw\+Picture}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t $\ast$p\+Address, uint16\+\_\+t \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}, uint16\+\_\+t \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}, uint16\+\_\+t Color\+\_\+\+Alpha0)
+\begin{DoxyCompactList}\small\item\em L\+CD 그림 표시 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga9bf87417ff2e3e2a6a35729dfafc1725}{L\+C\+D\+\_\+\+Erase\+Picture}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t $\ast$p\+Address, uint16\+\_\+t \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}, uint16\+\_\+t \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}})
+\begin{DoxyCompactList}\small\item\em L\+CD 그림 삭제 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga846fbcfe435b2eb20d412c1793350a03}{L\+L\+\_\+\+Fill\+Buffer}} (uint32\+\_\+t Layer\+Index, void $\ast$p\+Dst, uint32\+\_\+t x\+Size, uint32\+\_\+t y\+Size, uint32\+\_\+t Off\+Line, uint32\+\_\+t Color\+Index)
+\begin{DoxyCompactList}\small\item\em 버퍼에 특정 색상 채우기 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gabc7f2b1e2c21c2a7329fef750344097b}{Draw\+Char}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, const uint8\+\_\+t $\ast$c)
+\begin{DoxyCompactList}\small\item\em L\+C\+D에 문자 그리기 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaa500186c114aaea3dd6cdc11d306617e}{L\+C\+D\+\_\+\+Display\+Char}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t Ascii)
+\begin{DoxyCompactList}\small\item\em L\+C\+D에 문자 표시 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga57c922bb916d5ae0c3a0b4f8744a6e4b}{L\+C\+D\+\_\+\+Display\+String}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t $\ast$Text)
+\begin{DoxyCompactList}\small\item\em L\+C\+D에 문자열 표시 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gae57144a5b4342ddd500fb50018123dc6}{L\+C\+D\+\_\+\+Clear}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em L\+CD 표시된 색상 전체 변경 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8de8fec410906e9a34e4416739402216}{L\+C\+D\+\_\+\+Display\+Num\+Picture}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t Num)
+\begin{DoxyCompactList}\small\item\em L\+C\+D에 그림 숫자 출력 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gabc7f2b1e2c21c2a7329fef750344097b}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gabc7f2b1e2c21c2a7329fef750344097b}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!DrawChar@{DrawChar}}
+\index{DrawChar@{DrawChar}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{DrawChar()}{DrawChar()}}
+{\footnotesize\ttfamily static void Draw\+Char (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{const uint8\+\_\+t $\ast$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+L\+C\+D에 문자 그리기 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Xpos} & 가로축 시작 위치 \\
+\hline
+{\em Ypos} & 세로축 시작 위치 \\
+\hline
+{\em c} & 폰트의 해당 문자 시작 포인터 주소 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{340 \{}
+\DoxyCodeLine{341   uint32\_t i = 0, j = 0;}
+\DoxyCodeLine{342   uint16\_t height, width;}
+\DoxyCodeLine{343   uint8\_t offset;}
+\DoxyCodeLine{344   uint8\_t *pchar;}
+\DoxyCodeLine{345   uint32\_t line;}
+\DoxyCodeLine{346   uint16\_t *lcdBuffer = (uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos)));}
+\DoxyCodeLine{347 }
+\DoxyCodeLine{348 \textcolor{comment}{//  height = DrawProp[ActiveLayer].pFont-\/>Height;}}
+\DoxyCodeLine{349 \textcolor{comment}{//  width = DrawProp[ActiveLayer].pFont-\/>Width;}}
+\DoxyCodeLine{350 }
+\DoxyCodeLine{351   offset = 8 * ((width + 7) / 8) -\/ width;}
+\DoxyCodeLine{352 }
+\DoxyCodeLine{353   \textcolor{keywordflow}{for} (i = 0; i < height; i++)}
+\DoxyCodeLine{354   \{}
+\DoxyCodeLine{355     pchar = ((uint8\_t *)c + (width + 7) / 8 * i);}
+\DoxyCodeLine{356 }
+\DoxyCodeLine{357     \textcolor{keywordflow}{switch} (((width + 7) / 8))}
+\DoxyCodeLine{358     \{}
+\DoxyCodeLine{359 }
+\DoxyCodeLine{360     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{361       line = pchar[0];}
+\DoxyCodeLine{362       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{363 }
+\DoxyCodeLine{364     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{365       line = (pchar[0] << 8) | pchar[1];}
+\DoxyCodeLine{366       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{367 }
+\DoxyCodeLine{368     \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{369     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{370       line = (pchar[0] << 16) | (pchar[1] << 8) | pchar[2];}
+\DoxyCodeLine{371       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{372     \}}
+\DoxyCodeLine{373 }
+\DoxyCodeLine{374     \textcolor{keywordflow}{for} (j = 0; j < width; j++)}
+\DoxyCodeLine{375     \{}
+\DoxyCodeLine{376       \textcolor{keywordflow}{if} (line \& (1 << (width -\/ j + offset -\/ 1)))}
+\DoxyCodeLine{377       \{}
+\DoxyCodeLine{378         \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga637234711335cb3a4306841ae5db4cf7}{LCD\_DrawPixel}}((Xpos + j), Ypos, \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].TextColor);}
+\DoxyCodeLine{379       \}}
+\DoxyCodeLine{380       \textcolor{keywordflow}{else}}
+\DoxyCodeLine{381       \{}
+\DoxyCodeLine{382         \textcolor{comment}{//BSP\_LCD\_DrawPixel((Xpos + j), Ypos, fish[Ypos*LCD\_GetXSize() + (Xpos + j)]);}}
+\DoxyCodeLine{383       \}}
+\DoxyCodeLine{384     \}}
+\DoxyCodeLine{385     Ypos++;}
+\DoxyCodeLine{386   \}}
+\DoxyCodeLine{387 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gae57144a5b4342ddd500fb50018123dc6}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gae57144a5b4342ddd500fb50018123dc6}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_Clear@{LCD\_Clear}}
+\index{LCD\_Clear@{LCD\_Clear}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_Clear()}{LCD\_Clear()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Color }\end{DoxyParamCaption})}
+
+
+
+L\+CD 표시된 색상 전체 변경 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Color} & R\+G\+B565 생상 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{445 \{ }
+\DoxyCodeLine{446   \textcolor{comment}{/* Clear the LCD */} }
+\DoxyCodeLine{447   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga846fbcfe435b2eb20d412c1793350a03}{LL\_FillBuffer}}(\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}, (uint32\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress), \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}(), \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}{LCD\_GetYSize}}(), 0, Color);}
+\DoxyCodeLine{448 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaa500186c114aaea3dd6cdc11d306617e}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaa500186c114aaea3dd6cdc11d306617e}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_DisplayChar@{LCD\_DisplayChar}}
+\index{LCD\_DisplayChar@{LCD\_DisplayChar}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_DisplayChar()}{LCD\_DisplayChar()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Display\+Char (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint8\+\_\+t}]{Ascii }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D에 문자 표시 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Xpos} & X 위치 \\
+\hline
+{\em Ypos} & Y 위치 \\
+\hline
+{\em Ascii} & 표시 할 문자 -\/ 아스키 코드표 참조 0x20$\sim$0x7E \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{397 \{}
+\DoxyCodeLine{398 \textcolor{comment}{//  DrawChar(Xpos, Ypos, \&DrawProp[ActiveLayer].pFont-\/>table[(Ascii-\/' ') * DrawProp[ActiveLayer].pFont-\/>Height * ((DrawProp[ActiveLayer].pFont-\/>Width + 7) / 8)]);}}
+\DoxyCodeLine{399 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8de8fec410906e9a34e4416739402216}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8de8fec410906e9a34e4416739402216}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_DisplayNumPicture@{LCD\_DisplayNumPicture}}
+\index{LCD\_DisplayNumPicture@{LCD\_DisplayNumPicture}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_DisplayNumPicture()}{LCD\_DisplayNumPicture()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Display\+Num\+Picture (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint8\+\_\+t}]{Num }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D에 그림 숫자 출력 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Xpos} & X 위치 (pixel) \\
+\hline
+{\em Ypos} & Y 위치 (pixel) ~\newline
+ \\
+\hline
+{\em Num} & 출력 할 숫자 (17x23 px 크기, 표시 문자 \+: 0$\sim$9 \+:) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{458 \{}
+\DoxyCodeLine{459 \textcolor{preprocessor}{  \#define XTotal 187}}
+\DoxyCodeLine{460 \textcolor{preprocessor}{  \#define Xsize 17}}
+\DoxyCodeLine{461 \textcolor{preprocessor}{  \#define Ysize 23}}
+\DoxyCodeLine{462   }
+\DoxyCodeLine{463   uint16\_t *lcdBuffer = (uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos)));}
+\DoxyCodeLine{464 }
+\DoxyCodeLine{465   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iY = 0; iY < \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}; iY++)}
+\DoxyCodeLine{466   \{}
+\DoxyCodeLine{467     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iX = 0; iX < \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}; iX++)}
+\DoxyCodeLine{468     \{}
+\DoxyCodeLine{469       \textcolor{keywordflow}{if} (\mbox{\hyperlink{17x23_n_u_m_8h_ab8e081826e5827888be6244836b289db}{IMG\_17x23NUM}}[\mbox{\hyperlink{lcd_8c_a48e1817379fdd1fd52461117aa50eab3}{XTotal}} * iY + iX + \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}} * Num] != 0xFFFF)}
+\DoxyCodeLine{470       \{}
+\DoxyCodeLine{471         lcdBuffer[\mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() * iY + iX] = \mbox{\hyperlink{17x23_n_u_m_8h_ab8e081826e5827888be6244836b289db}{IMG\_17x23NUM}}[\mbox{\hyperlink{lcd_8c_a48e1817379fdd1fd52461117aa50eab3}{XTotal}} * iY + iX + \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}} * Num];}
+\DoxyCodeLine{472       \}}
+\DoxyCodeLine{473     \}}
+\DoxyCodeLine{474   \}}
+\DoxyCodeLine{475 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga57c922bb916d5ae0c3a0b4f8744a6e4b}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga57c922bb916d5ae0c3a0b4f8744a6e4b}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_DisplayString@{LCD\_DisplayString}}
+\index{LCD\_DisplayString@{LCD\_DisplayString}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_DisplayString()}{LCD\_DisplayString()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Display\+String (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint8\+\_\+t $\ast$}]{Text }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D에 문자열 표시 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Xpos} & X 위치 (pixel) \\
+\hline
+{\em Ypos} & Y 위치 (pixel) ~\newline
+ \\
+\hline
+{\em Text} & 표시 할 문자열 시작 메모리 주소 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{409 \{}
+\DoxyCodeLine{410   uint16\_t ref\_column = 1, i = 0;}
+\DoxyCodeLine{411   uint32\_t size = 0; }
+\DoxyCodeLine{412   uint8\_t  *ptr = Text;}
+\DoxyCodeLine{413   }
+\DoxyCodeLine{414 }
+\DoxyCodeLine{415   \textcolor{keywordflow}{while} (*ptr++) size ++ ;  \textcolor{comment}{/* 텍스트 크기 */}}
+\DoxyCodeLine{416   }
+\DoxyCodeLine{417 }
+\DoxyCodeLine{418   ref\_column = Xpos;  \textcolor{comment}{/* 1라인의 크기 */}}
+\DoxyCodeLine{419   }
+\DoxyCodeLine{420 }
+\DoxyCodeLine{421   \textcolor{keywordflow}{if} ((ref\_column < 1) || (ref\_column >= 0x8000))  \textcolor{comment}{/* 표시 할 시작 메모리에서의 위치 */}}
+\DoxyCodeLine{422   \{}
+\DoxyCodeLine{423     ref\_column = 1;}
+\DoxyCodeLine{424   \}}
+\DoxyCodeLine{425 }
+\DoxyCodeLine{426   \textcolor{comment}{/* Send the string character by character on LCD */}}
+\DoxyCodeLine{427   \textcolor{comment}{//while ((*Text != 0) \& (((LCD\_GetXSize() -\/ (i*DrawProp[ActiveLayer].pFont-\/>Width)) \& 0xFFFF) >= DrawProp[ActiveLayer].pFont-\/>Width))}}
+\DoxyCodeLine{428   \textcolor{comment}{//\{}}
+\DoxyCodeLine{429   \textcolor{comment}{//  /* Display one character on LCD */}}
+\DoxyCodeLine{430   \textcolor{comment}{//  LCD\_DisplayChar(ref\_column, Ypos, *Text);}}
+\DoxyCodeLine{431   \textcolor{comment}{//  /* Decrement the column position by 16 */}}
+\DoxyCodeLine{432   \textcolor{comment}{//  ref\_column += DrawProp[ActiveLayer].pFont-\/>Width;}}
+\DoxyCodeLine{433   \textcolor{comment}{//  /* Point on the next character */}}
+\DoxyCodeLine{434   \textcolor{comment}{//  Text++;}}
+\DoxyCodeLine{435   \textcolor{comment}{//  i++;}}
+\DoxyCodeLine{436   \textcolor{comment}{//\}  }}
+\DoxyCodeLine{437 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga29dd5609c60845657a8fb6e64b9ecca9}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga29dd5609c60845657a8fb6e64b9ecca9}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_DrawPicture@{LCD\_DrawPicture}}
+\index{LCD\_DrawPicture@{LCD\_DrawPicture}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawPicture()}{LCD\_DrawPicture()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Draw\+Picture (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t $\ast$}]{p\+Address,  }\item[{uint16\+\_\+t}]{Xsize,  }\item[{uint16\+\_\+t}]{Ysize,  }\item[{uint16\+\_\+t}]{Color\+\_\+\+Alpha0 }\end{DoxyParamCaption})}
+
+
+
+L\+CD 그림 표시 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Xpos} & 시작 X 위치 \\
+\hline
+{\em Ypos} & 시작 Y 위치 \\
+\hline
+{\em p\+Address} & 그림 시작 주소 \\
+\hline
+{\em Xsize} & 표시할 그림 가로축 크기 px \\
+\hline
+{\em Ysize} & 표시할 그림 세로축 크기 px \\
+\hline
+{\em Color\+\_\+\+Alpha0} & 표시 할 그림의 뒷 배경 제거 색상. R\+G\+B565. 검정색 배경은 제거 불가능하며 0 입력 시 배경 제거 없이 출력 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{234 \{}
+\DoxyCodeLine{235   uint16\_t *lcdBuffer = (uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos)));}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{237   \textcolor{comment}{//for( int iY=0; iY<Ysize; iY++)}}
+\DoxyCodeLine{238   \textcolor{comment}{//\{}}
+\DoxyCodeLine{239   \textcolor{comment}{//  memcpy ((void*)\&lcdBuffer[480*iY],(void*)\&pAddress[iY*Xsize], Xsize * 2);}}
+\DoxyCodeLine{240   \textcolor{comment}{//\}}}
+\DoxyCodeLine{241   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} cnt = 0; cnt < 2; cnt++)}
+\DoxyCodeLine{242   \{}
+\DoxyCodeLine{243     \textcolor{keywordflow}{if} (Color\_Alpha0 != 0)}
+\DoxyCodeLine{244     \{}
+\DoxyCodeLine{245       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iY = 0; iY < \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}; iY++)}
+\DoxyCodeLine{246       \{}
+\DoxyCodeLine{247         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iX = 0; iX < \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}; iX++)}
+\DoxyCodeLine{248         \{}
+\DoxyCodeLine{249           \textcolor{keywordflow}{if} (pAddress[\mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}} * iY + iX] != Color\_Alpha0)}
+\DoxyCodeLine{250           \{}
+\DoxyCodeLine{251             lcdBuffer[\mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() * iY + iX] = pAddress[\mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}} * iY + iX];}
+\DoxyCodeLine{252             \textcolor{comment}{//LCD\_DrawPixel(Xpos + iX, Ypos * LCD\_GetXSize(), pAddress[Xsize * iY + iX]);}}
+\DoxyCodeLine{253           \}}
+\DoxyCodeLine{254         \}}
+\DoxyCodeLine{255       \}}
+\DoxyCodeLine{256     \}}
+\DoxyCodeLine{257     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{258     \{}
+\DoxyCodeLine{259       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iY = 0; iY < \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}; iY++)}
+\DoxyCodeLine{260       \{}
+\DoxyCodeLine{261         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iX = 0; iX < \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}; iX++)}
+\DoxyCodeLine{262         \{}
+\DoxyCodeLine{263           lcdBuffer[\mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() * iY + iX] = pAddress[\mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}} * iY + iX];}
+\DoxyCodeLine{264           \textcolor{comment}{//LCD\_DrawPixel(Xpos + iX, Ypos + (LCD\_GetXSize()*iY), pAddress[Xsize * iY + iX]);}}
+\DoxyCodeLine{265         \}}
+\DoxyCodeLine{266       \}}
+\DoxyCodeLine{267     \}}
+\DoxyCodeLine{268   \}}
+\DoxyCodeLine{269 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga637234711335cb3a4306841ae5db4cf7}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga637234711335cb3a4306841ae5db4cf7}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_DrawPixel@{LCD\_DrawPixel}}
+\index{LCD\_DrawPixel@{LCD\_DrawPixel}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_DrawPixel()}{LCD\_DrawPixel()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Draw\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{R\+G\+B\+\_\+\+Code }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D에 1픽셀 표시 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Xpos} & X 좌표 \\
+\hline
+{\em Ypos} & Y 좌표 \\
+\hline
+{\em R\+G\+B\+\_\+\+Code} & R\+G\+B565 색상 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{219 \{}
+\DoxyCodeLine{220   *(\_\_IO uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos))) = (uint16\_t)RGB\_Code;}
+\DoxyCodeLine{221 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga9bf87417ff2e3e2a6a35729dfafc1725}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga9bf87417ff2e3e2a6a35729dfafc1725}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_ErasePicture@{LCD\_ErasePicture}}
+\index{LCD\_ErasePicture@{LCD\_ErasePicture}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_ErasePicture()}{LCD\_ErasePicture()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Erase\+Picture (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t $\ast$}]{p\+Address,  }\item[{uint16\+\_\+t}]{Xsize,  }\item[{uint16\+\_\+t}]{Ysize }\end{DoxyParamCaption})}
+
+
+
+L\+CD 그림 삭제 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Xpos} & 시작 X 위치 \\
+\hline
+{\em Ypos} & 시작 Y 위치 \\
+\hline
+{\em Xsize} & 삭제 할 그림 가로축 크기 px \\
+\hline
+{\em Ysize} & 삭제 할 그림 세로축 크기 px \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{280 \{}
+\DoxyCodeLine{281   uint16\_t *lcdBuffer = (uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos)));}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{283   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iY = 0; iY < \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}; iY++)}
+\DoxyCodeLine{284   \{}
+\DoxyCodeLine{285     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iX = 0; iX < \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}; iX++)}
+\DoxyCodeLine{286     \{}
+\DoxyCodeLine{287       \textcolor{comment}{//lcdBuffer[LCD\_GetXSize() * iY + iX] = DrawProp[ActiveLayer].pBackImage[(Ypos*LCD\_GetXSize() + (Xpos))+ LCD\_GetXSize() * iY + iX];}}
+\DoxyCodeLine{288       \textcolor{comment}{//lcdBuffer[LCD\_GetXSize() * iY + iX] = fish[(Ypos*LCD\_GetXSize() + (Xpos))+ LCD\_GetXSize() * iY + iX];}}
+\DoxyCodeLine{289       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} delay=0; delay<100; delay++);}
+\DoxyCodeLine{290     \}}
+\DoxyCodeLine{291   \}}
+\DoxyCodeLine{292 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8047c26258565d29a4cbd5d4d831a87e}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8047c26258565d29a4cbd5d4d831a87e}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_GetBackColor@{LCD\_GetBackColor}}
+\index{LCD\_GetBackColor@{LCD\_GetBackColor}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_GetBackColor()}{LCD\_GetBackColor()}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+C\+D\+\_\+\+Get\+Back\+Color (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+현재 설정된 L\+CD 배경 색상 읽어오기 
+
+
+\begin{DoxyRetVals}{반환값}
+{\em R\+G\+B565} & 색상 \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{170 \{}
+\DoxyCodeLine{171   \textcolor{keywordflow}{return} \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a58d98c0f1117a321fbe4c5ccb118de4d}{BackColor}};}
+\DoxyCodeLine{172 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaaab8858f03c8bce1aaef2ca960c9009f}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaaab8858f03c8bce1aaef2ca960c9009f}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_GetTextColor@{LCD\_GetTextColor}}
+\index{LCD\_GetTextColor@{LCD\_GetTextColor}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_GetTextColor()}{LCD\_GetTextColor()}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+C\+D\+\_\+\+Get\+Text\+Color (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+현재 설정된 픽셀 또는 폰트 색상 읽어오기 
+
+
+\begin{DoxyRetVals}{반환값}
+{\em R\+G\+B565} & 색상 \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{151 \{}
+\DoxyCodeLine{152   \textcolor{keywordflow}{return} \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a690c4ba3c1b4800841192000b173b987}{TextColor}};}
+\DoxyCodeLine{153 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_GetXSize@{LCD\_GetXSize}}
+\index{LCD\_GetXSize@{LCD\_GetXSize}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_GetXSize()}{LCD\_GetXSize()}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+C\+D\+\_\+\+Get\+X\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D의 가로 크기 
+
+
+\begin{DoxyRetVals}{반환값}
+{\em L\+CD} & X size \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48   \textcolor{keywordflow}{return} \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].ImageWidth;}
+\DoxyCodeLine{49 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_GetYSize@{LCD\_GetYSize}}
+\index{LCD\_GetYSize@{LCD\_GetYSize}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_GetYSize()}{LCD\_GetYSize()}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+C\+D\+\_\+\+Get\+Y\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D의 세로 크기 
+
+
+\begin{DoxyRetVals}{반환값}
+{\em L\+CD} & Y size \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56 \{}
+\DoxyCodeLine{57   \textcolor{keywordflow}{return} \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].ImageHeight;}
+\DoxyCodeLine{58 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaa53c9d40f3aa552a9974cd55ac510cb3}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaa53c9d40f3aa552a9974cd55ac510cb3}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_Init@{LCD\_Init}}
+\index{LCD\_Init@{LCD\_Init}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_Init()}{LCD\_Init()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+L\+CD 초기화 
+
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37   \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}} = hltdc;}
+\DoxyCodeLine{38   \mbox{\hyperlink{lcd_8c_a14127fa633546fea43b5eb7d3c963890}{hDma2dHandler}} = hdma2d;}
+\DoxyCodeLine{39   HAL\_GPIO\_WritePin(LCD\_PWM\_GPIO\_Port, LCD\_PWM\_Pin, GPIO\_PIN\_SET);}
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga13a46d9d0387d7dfa97167fc30e064d2}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga13a46d9d0387d7dfa97167fc30e064d2}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_LayerInit@{LCD\_LayerInit}}
+\index{LCD\_LayerInit@{LCD\_LayerInit}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_LayerInit()}{LCD\_LayerInit()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Layer\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Layer\+Index,  }\item[{uint32\+\_\+t}]{F\+B\+\_\+\+Address }\end{DoxyParamCaption})}
+
+
+
+R\+G\+B565 format L\+CD Layer 초기화. 초기값 0 Layer 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Layer\+Index} & 레이어 0 or 1 \\
+\hline
+{\em F\+B\+\_\+\+Address} & 레이어 프레임 버퍼 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{87 \{     }
+\DoxyCodeLine{88   LTDC\_LayerCfgTypeDef  layer\_cfg;}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90   layer\_cfg.WindowX0 = 0;}
+\DoxyCodeLine{91   layer\_cfg.WindowX1 = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}();}
+\DoxyCodeLine{92   layer\_cfg.WindowY0 = 0;}
+\DoxyCodeLine{93   layer\_cfg.WindowY1 = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}{LCD\_GetYSize}}(); }
+\DoxyCodeLine{94   layer\_cfg.PixelFormat = LTDC\_PIXEL\_FORMAT\_RGB565;}
+\DoxyCodeLine{95   layer\_cfg.FBStartAdress = FB\_Address;}
+\DoxyCodeLine{96   layer\_cfg.Alpha = 255;}
+\DoxyCodeLine{97   layer\_cfg.Alpha0 = 0;}
+\DoxyCodeLine{98   layer\_cfg.Backcolor.Blue = 0;}
+\DoxyCodeLine{99   layer\_cfg.Backcolor.Green = 0;}
+\DoxyCodeLine{100   layer\_cfg.Backcolor.Red = 0;}
+\DoxyCodeLine{101   layer\_cfg.BlendingFactor1 = LTDC\_BLENDING\_FACTOR1\_PAxCA;}
+\DoxyCodeLine{102   layer\_cfg.BlendingFactor2 = LTDC\_BLENDING\_FACTOR2\_PAxCA;}
+\DoxyCodeLine{103   layer\_cfg.ImageWidth = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}();}
+\DoxyCodeLine{104   layer\_cfg.ImageHeight = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}{LCD\_GetYSize}}();}
+\DoxyCodeLine{105   }
+\DoxyCodeLine{106   HAL\_LTDC\_ConfigLayer(\&\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}, \&layer\_cfg, LayerIndex); }
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108   \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[LayerIndex].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a58d98c0f1117a321fbe4c5ccb118de4d}{BackColor}} = \mbox{\hyperlink{lcd_8h_acc49fc5e78780bc38a49d2ce30f02da0}{LCD\_COLOR\_WHITE}};}
+\DoxyCodeLine{109 \textcolor{comment}{//  DrawProp[LayerIndex].pFont     = \&Font24;}}
+\DoxyCodeLine{110   \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[LayerIndex].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a690c4ba3c1b4800841192000b173b987}{TextColor}} = \mbox{\hyperlink{lcd_8h_a5a28392f0f4fc236e038a15fe468ce1b}{LCD\_COLOR\_BLACK}}; }
+\DoxyCodeLine{111   \textcolor{comment}{//DrawProp[LayerIndex].pBackImage= (uint16\_t *)FB\_Address; }}
+\DoxyCodeLine{112 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf1420ea7b39dd570d4d6edbf789f7640}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf1420ea7b39dd570d4d6edbf789f7640}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_SelectLayer@{LCD\_SelectLayer}}
+\index{LCD\_SelectLayer@{LCD\_SelectLayer}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_SelectLayer()}{LCD\_SelectLayer()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Select\+Layer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index }\end{DoxyParamCaption})}
+
+
+
+L\+CD 레이어 선택. 초기값 0 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Layer\+Index} & 0 또는 1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{132 \{}
+\DoxyCodeLine{133   \mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}} = LayerIndex;}
+\DoxyCodeLine{134 \} }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaeca000116f289bc36b8892a6c64164dd}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaeca000116f289bc36b8892a6c64164dd}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_SetBackColor@{LCD\_SetBackColor}}
+\index{LCD\_SetBackColor@{LCD\_SetBackColor}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetBackColor()}{LCD\_SetBackColor()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Set\+Back\+Color (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Color }\end{DoxyParamCaption})}
+
+
+
+배경 생삭 설정 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Color} & R\+G\+B565 색상 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{161 \{}
+\DoxyCodeLine{162   \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a58d98c0f1117a321fbe4c5ccb118de4d}{BackColor}} = Color;}
+\DoxyCodeLine{163 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf7865c8fa0299567a0bebeca881ace45}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf7865c8fa0299567a0bebeca881ace45}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_SetBackImage@{LCD\_SetBackImage}}
+\index{LCD\_SetBackImage@{LCD\_SetBackImage}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetBackImage()}{LCD\_SetBackImage()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Set\+Back\+Image (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Background\+Image\+Address }\end{DoxyParamCaption})}
+
+
+
+배경 이미지 설정. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em p\+Background\+Image} & 배경으로 설정 할 이미지 포인터 (480x272 크기 사용$\ast$) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{180 \{}
+\DoxyCodeLine{181   \textcolor{comment}{//DrawProp[ActiveLayer].pBackImage = (uint16\_t*)BackgroundImageAddress;}}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183   hdma2d.Init.Mode         = DMA2D\_M2M;}
+\DoxyCodeLine{184   \textcolor{keywordflow}{if}(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].PixelFormat == LTDC\_PIXEL\_FORMAT\_RGB565)}
+\DoxyCodeLine{185   \{ \textcolor{comment}{/* RGB565 format */} }
+\DoxyCodeLine{186     hdma2d.Init.ColorMode    = DMA2D\_RGB565;}
+\DoxyCodeLine{187   \}}
+\DoxyCodeLine{188   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{189   \{ \textcolor{comment}{/* ARGB8888 format */}}
+\DoxyCodeLine{190     hdma2d.Init.ColorMode    = DMA2D\_ARGB8888;}
+\DoxyCodeLine{191   \}}
+\DoxyCodeLine{192   hdma2d.Init.OutputOffset = 0;      }
+\DoxyCodeLine{193   }
+\DoxyCodeLine{194   hdma2d.Instance = DMA2D;}
+\DoxyCodeLine{195   }
+\DoxyCodeLine{196   \textcolor{comment}{/* DMA2D Initialization */}}
+\DoxyCodeLine{197   \textcolor{keywordflow}{if}(HAL\_DMA2D\_Init(\&hdma2d) == HAL\_OK) }
+\DoxyCodeLine{198   \{}
+\DoxyCodeLine{199     \textcolor{keywordflow}{if}(HAL\_DMA2D\_ConfigLayer(\&hdma2d, \mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}) == HAL\_OK) }
+\DoxyCodeLine{200     \{}
+\DoxyCodeLine{201       \textcolor{keywordflow}{if} (HAL\_DMA2D\_Start(\&hdma2d, BackgroundImageAddress, (uint32\_t)\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress, \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}(), \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}{LCD\_GetYSize}}()) == HAL\_OK)}
+\DoxyCodeLine{202       \{}
+\DoxyCodeLine{203         \textcolor{comment}{/* Polling For DMA transfer */}  }
+\DoxyCodeLine{204         HAL\_DMA2D\_PollForTransfer(\&hdma2d, 10);}
+\DoxyCodeLine{205       \}}
+\DoxyCodeLine{206     \}}
+\DoxyCodeLine{207   \} }
+\DoxyCodeLine{208 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga31a4bb3bde55452bbb8370f5d935e41d}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga31a4bb3bde55452bbb8370f5d935e41d}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_SetTextColor@{LCD\_SetTextColor}}
+\index{LCD\_SetTextColor@{LCD\_SetTextColor}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetTextColor()}{LCD\_SetTextColor()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Set\+Text\+Color (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Color }\end{DoxyParamCaption})}
+
+
+
+픽셀 또는 폰트 색상 설정 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Color} & R\+G\+B565 색상 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{142 \{}
+\DoxyCodeLine{143   \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a690c4ba3c1b4800841192000b173b987}{TextColor}} = Color;}
+\DoxyCodeLine{144 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga0568836139e5177b6ce37e470e255c77}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga0568836139e5177b6ce37e470e255c77}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_SetTransparency@{LCD\_SetTransparency}}
+\index{LCD\_SetTransparency@{LCD\_SetTransparency}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetTransparency()}{LCD\_SetTransparency()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Set\+Transparency (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{uint8\+\_\+t}]{Transparency }\end{DoxyParamCaption})}
+
+
+
+레이어의 투명도 설정. 기본값 255 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Layer\+Index} & 레이어 0 or 1 (기본 0) \\
+\hline
+{\em Transparency} & 투명도 0$\sim$255까지 입력 가능 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{122 \{    }
+\DoxyCodeLine{123   HAL\_LTDC\_SetAlpha(\&\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}, Transparency, LayerIndex);}
+\DoxyCodeLine{124 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8e3dca6342e3dd739edbec8a23488e56}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8e3dca6342e3dd739edbec8a23488e56}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_SetXSize@{LCD\_SetXSize}}
+\index{LCD\_SetXSize@{LCD\_SetXSize}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetXSize()}{LCD\_SetXSize()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Set\+X\+Size (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{image\+Width\+Pixels }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D의 가로 크기 설정. 초기값 480px 
+
+
+\begin{DoxyParams}{매개변수}
+{\em image\+Width\+Pixels} & \+: 이미지 가로 크기 (Pixels) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66 \{}
+\DoxyCodeLine{67   \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].ImageWidth = imageWidthPixels;}
+\DoxyCodeLine{68 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga320415ea9b549dd0a4fa2452bde4565c}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga320415ea9b549dd0a4fa2452bde4565c}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LCD\_SetYSize@{LCD\_SetYSize}}
+\index{LCD\_SetYSize@{LCD\_SetYSize}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LCD\_SetYSize()}{LCD\_SetYSize()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Set\+Y\+Size (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{image\+Height\+Pixels }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D의 세로 크기 설정. 초기값 272px 
+
+
+\begin{DoxyParams}{매개변수}
+{\em image\+Height\+Pixels} & \+: 이미지 세로 크기 (Pixels) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76 \{}
+\DoxyCodeLine{77   \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].ImageHeight = imageHeightPixels;}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga846fbcfe435b2eb20d412c1793350a03}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga846fbcfe435b2eb20d412c1793350a03}} 
+\index{LCD 제어 함수@{LCD 제어 함수}!LL\_FillBuffer@{LL\_FillBuffer}}
+\index{LL\_FillBuffer@{LL\_FillBuffer}!LCD 제어 함수@{LCD 제어 함수}}
+\doxysubsubsection{\texorpdfstring{LL\_FillBuffer()}{LL\_FillBuffer()}}
+{\footnotesize\ttfamily static void L\+L\+\_\+\+Fill\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{void $\ast$}]{p\+Dst,  }\item[{uint32\+\_\+t}]{x\+Size,  }\item[{uint32\+\_\+t}]{y\+Size,  }\item[{uint32\+\_\+t}]{Off\+Line,  }\item[{uint32\+\_\+t}]{Color\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+버퍼에 특정 색상 채우기 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Layer\+Index} & 레이어 0 or 1 (기본 0) \\
+\hline
+{\em p\+Dst} & 버퍼의 메리모리 주소 \\
+\hline
+{\em x\+Size} & 색상 채울 가로축 크기 \\
+\hline
+{\em y\+Size} & 색상 채울 세로축 크기 \\
+\hline
+{\em Off\+Line} & \\
+\hline
+{\em Color\+Index} & 채울 색상 R\+G\+B565 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{305 \{}
+\DoxyCodeLine{306   }
+\DoxyCodeLine{307   hdma2d.Init.Mode         = DMA2D\_R2M; \textcolor{comment}{/* 레지스터에서 메모리로 복사 모드 */} }
+\DoxyCodeLine{308   \textcolor{keywordflow}{if}(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].PixelFormat == LTDC\_PIXEL\_FORMAT\_RGB565)}
+\DoxyCodeLine{309   \{ \textcolor{comment}{/* RGB565 */} }
+\DoxyCodeLine{310     hdma2d.Init.ColorMode    = DMA2D\_RGB565;}
+\DoxyCodeLine{311   \}}
+\DoxyCodeLine{312   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{313   \{ \textcolor{comment}{/* ARGB8888 */}}
+\DoxyCodeLine{314     hdma2d.Init.ColorMode    = DMA2D\_ARGB8888;}
+\DoxyCodeLine{315   \}}
+\DoxyCodeLine{316   hdma2d.Init.OutputOffset = OffLine;      }
+\DoxyCodeLine{317   hdma2d.Instance = DMA2D;}
+\DoxyCodeLine{318   }
+\DoxyCodeLine{319 }
+\DoxyCodeLine{320   \textcolor{keywordflow}{if}(HAL\_DMA2D\_Init(\&hdma2d) == HAL\_OK) }
+\DoxyCodeLine{321   \{}
+\DoxyCodeLine{322     \textcolor{keywordflow}{if}(HAL\_DMA2D\_ConfigLayer(\&hdma2d, LayerIndex) == HAL\_OK) }
+\DoxyCodeLine{323     \{}
+\DoxyCodeLine{324       \textcolor{keywordflow}{if} (HAL\_DMA2D\_Start(\&hdma2d, ColorIndex, (uint32\_t)pDst, xSize, ySize) == HAL\_OK)}
+\DoxyCodeLine{325       \{}
+\DoxyCodeLine{326         HAL\_DMA2D\_PollForTransfer(\&hdma2d, 10);        \textcolor{comment}{/* Polling For DMA transfer */}  }
+\DoxyCodeLine{327       \}}
+\DoxyCodeLine{328     \}}
+\DoxyCodeLine{329   \} }
+\DoxyCodeLine{330 \}}
+
+\end{DoxyCode}

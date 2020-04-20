@@ -1,0 +1,1469 @@
+\hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h}{}\doxysection{N25\+Q128A F\+L\+A\+SH 제어 함수}
+\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h}\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga4ad1a6305be3ef612b658af37e4dab14}{B\+L\+O\+C\+K\+\_\+\+C\+NT}}~3
+\item 
+\#define \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga0f208b12cb46d1ebf308a41fc8a2e6e9}{B\+L\+O\+C\+K\+\_\+\+R\+E\+M\+A\+IN}}~0x\+F\+C00
+\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\+\_\+\+Spi}} (uint8\+\_\+t Data)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga0a9b61dc448af7c0ac71c50d60fecc2b}{N25qxx\+\_\+\+Read\+ID}} (void)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa03eda9bba742d37f64bfe4903dafacf}{N25qxx\+\_\+\+Read\+Uniq\+ID}} (void)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga19b70ed108e271c3f7a448108c77a8bc}{N25qxx\+\_\+\+Write\+Enable}} (void)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga3a9b09223d10a266f69513333007acee}{N25qxx\+\_\+\+Write\+Disable}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga7c25f42945558d0fce808c04329e97aa}{N25qxx\+\_\+\+Read\+Status\+Register}} (uint8\+\_\+t Select\+Status\+Register\+\_\+1\+\_\+2\+\_\+3)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gac49a33b4586de43b8e63c6e90438ccd1}{N25qxx\+\_\+\+Write\+Status\+Register}} (uint8\+\_\+t Select\+Status\+Register\+\_\+1\+\_\+2\+\_\+3, uint8\+\_\+t Data)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6ed69de1ff6e4a87f798fd7fd60a9acf}{N25qxx\+\_\+\+Wait\+For\+Write\+End}} (void)
+\item 
+bool \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6d9adef64b426a95d339d30ba2fb4502}{Flash\+Init}} (void)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa570d1a31702991962d7c7578261b08b}{N25qxx\+\_\+\+Erase\+Chip}} (void)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gab1d460ca2b17e2d27b388186ba854b95}{N25qxx\+\_\+\+Erase\+Sector}} (uint32\+\_\+t Sector\+Addr)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaee5c95875b0aa9462b25909709678f2f}{N25qxx\+\_\+\+Erase\+Block}} (uint32\+\_\+t Block\+Addr)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa488bfa18b71099cf65103c55d8379da}{N25qxx\+\_\+\+Page\+To\+Sector}} (uint32\+\_\+t Page\+Address)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa2c38fb79f2c1470cbf11a16b735d28b}{N25qxx\+\_\+\+Page\+To\+Block}} (uint32\+\_\+t Page\+Address)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga24c5d9d113618e3706eeb75942216f56}{N25qxx\+\_\+\+Sector\+To\+Block}} (uint32\+\_\+t Sector\+Address)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga473318dbd3d70e328cc2502e65f1e525}{N25qxx\+\_\+\+Sector\+To\+Page}} (uint32\+\_\+t Sector\+Address)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gab2ca26fb93915fc3baa32001ed779dba}{N25qxx\+\_\+\+Block\+To\+Page}} (uint32\+\_\+t Block\+Address)
+\item 
+bool \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gab8bcf0e76a947af377e8d754705730a8}{N25qxx\+\_\+\+Is\+Empty\+Page}} (uint32\+\_\+t Page\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Check\+\_\+up\+\_\+to\+\_\+\+Page\+Size)
+\item 
+bool \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga5fdecfae212fabe66e2839c38dfe32e2}{N25qxx\+\_\+\+Is\+Empty\+Sector}} (uint32\+\_\+t Sector\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Check\+\_\+up\+\_\+to\+\_\+\+Sector\+Size)
+\item 
+bool \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga0a0063747b5fd8498112f460963e0ef3}{N25qxx\+\_\+\+Is\+Empty\+Block}} (uint32\+\_\+t Block\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Check\+\_\+up\+\_\+to\+\_\+\+Block\+Size)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gadb33cbdf325d2f42f3e029d6dc4940dc}{N25qxx\+\_\+\+Write\+Byte}} (uint8\+\_\+t p\+Buffer, uint32\+\_\+t Write\+Addr\+\_\+in\+Bytes)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gac879b1c4aa62de3088b1a6892eeede7b}{N25qxx\+\_\+\+Write\+Page}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Page\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Write\+\_\+up\+\_\+to\+\_\+\+Page\+Size)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6325fd02972cddf4e70eac7b948bfd76}{N25qxx\+\_\+\+Write\+Sector}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Sector\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Write\+\_\+up\+\_\+to\+\_\+\+Sector\+Size)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga8f716002a41434542164d42c7bbf8d85}{N25qxx\+\_\+\+Write\+Block}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Block\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Write\+\_\+up\+\_\+to\+\_\+\+Block\+Size)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga87141d4e01520326f047f9bbdff4a530}{N25qxx\+\_\+\+Read\+Byte}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Bytes\+\_\+\+Address)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaf4ef9ab394f7b1e60d90804c8db9acce}{N25qxx\+\_\+\+Read\+Bytes}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Read\+Addr, uint32\+\_\+t Num\+Byte\+To\+Read)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gacbedf786bfd7f44edc623039f55bfff2}{N25qxx\+\_\+\+Read\+Page}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Page\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Read\+\_\+up\+\_\+to\+\_\+\+Page\+Size)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga7970ddcd1b95f89589898d6ca409cf47}{N25qxx\+\_\+\+Read\+Sector}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Sector\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Read\+\_\+up\+\_\+to\+\_\+\+Sector\+Size)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga42214a329e32106095eff0e1b9011fa2}{N25qxx\+\_\+\+Read\+Block}} (uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Block\+\_\+\+Address, uint32\+\_\+t Offset\+In\+Byte, uint32\+\_\+t Num\+Byte\+To\+Read\+\_\+up\+\_\+to\+\_\+\+Block\+Size)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga566627fe296ea66e4a5b52de9a62f31d}{Flash\+\_\+write\+Image}} (uint8\+\_\+t $\ast$fb\+Address, int num\+Image)
+\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6627b0fcd392586cbfa10e52727cbe29}{Flash\+\_\+read\+Image}} (uint8\+\_\+t $\ast$fb\+Address, int num\+Image)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga4ad1a6305be3ef612b658af37e4dab14}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga4ad1a6305be3ef612b658af37e4dab14}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!BLOCK\_CNT@{BLOCK\_CNT}}
+\index{BLOCK\_CNT@{BLOCK\_CNT}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{BLOCK\_CNT}{BLOCK\_CNT}}
+{\footnotesize\ttfamily \#define B\+L\+O\+C\+K\+\_\+\+C\+NT~3}
+
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga0f208b12cb46d1ebf308a41fc8a2e6e9}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga0f208b12cb46d1ebf308a41fc8a2e6e9}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!BLOCK\_REMAIN@{BLOCK\_REMAIN}}
+\index{BLOCK\_REMAIN@{BLOCK\_REMAIN}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{BLOCK\_REMAIN}{BLOCK\_REMAIN}}
+{\footnotesize\ttfamily \#define B\+L\+O\+C\+K\+\_\+\+R\+E\+M\+A\+IN~0x\+F\+C00}
+
+
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6627b0fcd392586cbfa10e52727cbe29}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6627b0fcd392586cbfa10e52727cbe29}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!Flash\_readImage@{Flash\_readImage}}
+\index{Flash\_readImage@{Flash\_readImage}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{Flash\_readImage()}{Flash\_readImage()}}
+{\footnotesize\ttfamily void Flash\+\_\+read\+Image (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{fb\+Address,  }\item[{int}]{num\+Image }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1117 \{}
+\DoxyCodeLine{1118   \textcolor{comment}{//for(int i=0; i< BLOCK\_CNT;i++)}}
+\DoxyCodeLine{1119   \textcolor{comment}{//\{}}
+\DoxyCodeLine{1120   \textcolor{comment}{//  N25qxx\_ReadBlock((uint8\_t*)\&fbAddress[i*N25qxx.BlockSize/2],i*N25qxx.BlockSize+(numImage*0x50000),0,N25qxx.BlockSize);}}
+\DoxyCodeLine{1121   \textcolor{comment}{//\}}}
+\DoxyCodeLine{1122   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga42214a329e32106095eff0e1b9011fa2}{N25qxx\_ReadBlock}}((uint8\_t *)\&fbAddress[0], 0+(numImage*0x50000), 0, \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}});}
+\DoxyCodeLine{1123   \textcolor{comment}{//N25qxx\_ReadBlock((uint8\_t*)\&fbAddress[0x8000],0x10000+(numImage*0x50000),0,N25qxx.BlockSize);}}
+\DoxyCodeLine{1124   \textcolor{comment}{//N25qxx\_ReadBlock((uint8\_t*)\&fbAddress[0x10000],0x20000+(numImage*0x50000),0,N25qxx.BlockSize);}}
+\DoxyCodeLine{1125   \textcolor{comment}{//N25qxx\_ReadBlock((uint8\_t*)\&fbAddress[0x18000],0x30000+(numImage*0x50000),0,BLOCK\_REMAIN);}}
+\DoxyCodeLine{1126   printf(\textcolor{stringliteral}{"Read \%d Done\(\backslash\)r\(\backslash\)n"},numImage);}
+\DoxyCodeLine{1127 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga566627fe296ea66e4a5b52de9a62f31d}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga566627fe296ea66e4a5b52de9a62f31d}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!Flash\_writeImage@{Flash\_writeImage}}
+\index{Flash\_writeImage@{Flash\_writeImage}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{Flash\_writeImage()}{Flash\_writeImage()}}
+{\footnotesize\ttfamily void Flash\+\_\+write\+Image (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{fb\+Address,  }\item[{int}]{num\+Image }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1097 \{}
+\DoxyCodeLine{1098   \textcolor{comment}{//for(int i=0; i< BLOCK\_CNT;i++)}}
+\DoxyCodeLine{1099   \textcolor{comment}{//\{}}
+\DoxyCodeLine{1100   \textcolor{comment}{//  N25qxx\_EraseBlock(i*N25qxx.BlockSize);}}
+\DoxyCodeLine{1101   \textcolor{comment}{//  N25qxx\_WriteBlock((uint8\_t*)\&fbAddress[i*N25qxx.BlockSize/2],i*N25qxx.BlockSize+(numImage*0x50000),0,N25qxx.BlockSize);}}
+\DoxyCodeLine{1102   \textcolor{comment}{//\}}}
+\DoxyCodeLine{1103   \textcolor{comment}{//N25qxx\_EraseBlock(BLOCK\_CNT*N25qxx.BlockSize);}}
+\DoxyCodeLine{1104   \textcolor{comment}{//N25qxx\_WriteBlock((uint8\_t*)\&fbAddress[BLOCK\_CNT*N25qxx.BlockSize/2],BLOCK\_CNT*N25qxx.BlockSize+(numImage*0x50000),0,BLOCK\_REMAIN);}}
+\DoxyCodeLine{1105   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaee5c95875b0aa9462b25909709678f2f}{N25qxx\_EraseBlock}}(0+(numImage*0x50000));}
+\DoxyCodeLine{1106   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaee5c95875b0aa9462b25909709678f2f}{N25qxx\_EraseBlock}}(0x10000+(numImage*0x50000));}
+\DoxyCodeLine{1107   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaee5c95875b0aa9462b25909709678f2f}{N25qxx\_EraseBlock}}(0x20000+(numImage*0x50000));}
+\DoxyCodeLine{1108   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaee5c95875b0aa9462b25909709678f2f}{N25qxx\_EraseBlock}}(0x30000+(numImage*0x50000));}
+\DoxyCodeLine{1109   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga8f716002a41434542164d42c7bbf8d85}{N25qxx\_WriteBlock}}((uint8\_t *)\&fbAddress[0], 0, 0+(numImage*0x50000), \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}});}
+\DoxyCodeLine{1110   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga8f716002a41434542164d42c7bbf8d85}{N25qxx\_WriteBlock}}((uint8\_t *)\&fbAddress[0x8000], 0x10000+(numImage*0x50000), 0, \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}});}
+\DoxyCodeLine{1111   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga8f716002a41434542164d42c7bbf8d85}{N25qxx\_WriteBlock}}((uint8\_t *)\&fbAddress[0x10000], 0x20000+(numImage*0x50000), 0, \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}});}
+\DoxyCodeLine{1112   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga8f716002a41434542164d42c7bbf8d85}{N25qxx\_WriteBlock}}((uint8\_t *)\&fbAddress[0x18000], 0x30000+(numImage*0x50000), 0, \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga0f208b12cb46d1ebf308a41fc8a2e6e9}{BLOCK\_REMAIN}});}
+\DoxyCodeLine{1113   printf(\textcolor{stringliteral}{"Write Done\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{1114 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6d9adef64b426a95d339d30ba2fb4502}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6d9adef64b426a95d339d30ba2fb4502}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!FlashInit@{FlashInit}}
+\index{FlashInit@{FlashInit}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{FlashInit()}{FlashInit()}}
+{\footnotesize\ttfamily bool Flash\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{185 \{}
+\DoxyCodeLine{186   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 1;}
+\DoxyCodeLine{187   \textcolor{keywordflow}{while} (HAL\_GetTick() < 100)}
+\DoxyCodeLine{188     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{189   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{190   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{191   uint32\_t id;}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{193   printf(\textcolor{stringliteral}{"N25qxx Init Begin...\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{195   \textcolor{keywordtype}{id} = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga0a9b61dc448af7c0ac71c50d60fecc2b}{N25qxx\_ReadID}}();}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{198   printf(\textcolor{stringliteral}{"N25qxx ID:0x\%X\(\backslash\)r\(\backslash\)n"}, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{200   \textcolor{keywordflow}{switch} (\textcolor{keywordtype}{id} \& 0x0000FFFF)}
+\DoxyCodeLine{201   \{}
+\DoxyCodeLine{202   \textcolor{keywordflow}{case} 0x401A: \textcolor{comment}{//   n25q512}}
+\DoxyCodeLine{203     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} = \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a71c3026d30d4317387eab4195be199e7}{N25Q512}};}
+\DoxyCodeLine{204     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a1ef0815a72f7fb693a902e4a737a13c9}{BlockCount}} = 1024;}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{206     printf(\textcolor{stringliteral}{"N25qxx Chip: n25q512\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{208     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{209   \textcolor{keywordflow}{case} 0x4019: \textcolor{comment}{//   n25q256}}
+\DoxyCodeLine{210     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} = \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}};}
+\DoxyCodeLine{211     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a1ef0815a72f7fb693a902e4a737a13c9}{BlockCount}} = 512;}
+\DoxyCodeLine{212 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{213     printf(\textcolor{stringliteral}{"N25qxx Chip: n25q256\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{214 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{215     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{216   \textcolor{keywordflow}{case} 0x4018: \textcolor{comment}{//   n25q128}}
+\DoxyCodeLine{217     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} = \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a43adbbfda9c2f37e0801ea99fe75be86}{N25Q128}};}
+\DoxyCodeLine{218     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a1ef0815a72f7fb693a902e4a737a13c9}{BlockCount}} = 256;}
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{220     printf(\textcolor{stringliteral}{"N25qxx Chip: n25q128\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{221 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{222     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{223   \textcolor{keywordflow}{case} 0x4017: \textcolor{comment}{// n25q64}}
+\DoxyCodeLine{224     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} = \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a144a02867e32e9d36fa6818ee51c72cb}{N25Q64}};}
+\DoxyCodeLine{225     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a1ef0815a72f7fb693a902e4a737a13c9}{BlockCount}} = 128;}
+\DoxyCodeLine{226 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{227     printf(\textcolor{stringliteral}{"N25qxx Chip: n25q64\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{228 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{229     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{230   \textcolor{keywordflow}{case} 0x4016: \textcolor{comment}{// n25q32}}
+\DoxyCodeLine{231     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} = \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a17fff14858b8d5e63955bfbf28eb0960}{N25Q32}};}
+\DoxyCodeLine{232     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a1ef0815a72f7fb693a902e4a737a13c9}{BlockCount}} = 64;}
+\DoxyCodeLine{233 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{234     printf(\textcolor{stringliteral}{"N25qxx Chip: n25q32\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{236     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{237   \textcolor{keywordflow}{case} 0x4015: \textcolor{comment}{// n25q16}}
+\DoxyCodeLine{238     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} = \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a53157d866cf954ba92940047f40c3f9e}{N25Q16}};}
+\DoxyCodeLine{239     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a1ef0815a72f7fb693a902e4a737a13c9}{BlockCount}} = 32;}
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{241     printf(\textcolor{stringliteral}{"N25qxx Chip: n25q16\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{242 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{243     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{244   \textcolor{keywordflow}{case} 0x4014: \textcolor{comment}{// n25q80}}
+\DoxyCodeLine{245     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} = \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656ac1fbfd9c6245402e70d36b9ea1f8cc85}{N25Q80}};}
+\DoxyCodeLine{246     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a1ef0815a72f7fb693a902e4a737a13c9}{BlockCount}} = 16;}
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{248     printf(\textcolor{stringliteral}{"N25qxx Chip: n25q80\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{250     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{251   \textcolor{keywordflow}{case} 0x4013: \textcolor{comment}{// n25q40}}
+\DoxyCodeLine{252     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} = \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a4b341528dd165356df1f2d28291a47ba}{N25Q40}};}
+\DoxyCodeLine{253     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a1ef0815a72f7fb693a902e4a737a13c9}{BlockCount}} = 8;}
+\DoxyCodeLine{254 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{255     printf(\textcolor{stringliteral}{"N25qxx Chip: n25q40\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{256 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{257     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{258   \textcolor{keywordflow}{case} 0x4012: \textcolor{comment}{// n25q20}}
+\DoxyCodeLine{259     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} = \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a92f1a942af5053af9173d0bcd7306743}{N25Q20}};}
+\DoxyCodeLine{260     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a1ef0815a72f7fb693a902e4a737a13c9}{BlockCount}} = 4;}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{262     printf(\textcolor{stringliteral}{"N25qxx Chip: n25q20\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{264     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{265   \textcolor{keywordflow}{case} 0x4011: \textcolor{comment}{// n25q10}}
+\DoxyCodeLine{266     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} = \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a87665c30aebba5654fe86b20e9878e92}{N25Q10}};}
+\DoxyCodeLine{267     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a1ef0815a72f7fb693a902e4a737a13c9}{BlockCount}} = 2;}
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{269     printf(\textcolor{stringliteral}{"N25qxx Chip: n25q10\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{270 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{271     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{272   \textcolor{keywordflow}{case} 0x3217: \textcolor{comment}{// n25q128}}
+\DoxyCodeLine{273     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} = \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a43adbbfda9c2f37e0801ea99fe75be86}{N25Q128}};}
+\DoxyCodeLine{274     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a1ef0815a72f7fb693a902e4a737a13c9}{BlockCount}} = 256;}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{276     printf(\textcolor{stringliteral}{"N25qxx Chip: n25q128\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{277 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{278     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{279   \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{281     printf(\textcolor{stringliteral}{"N25qxx Unknown ID\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{282 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{283     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{284     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{285   \}}
+\DoxyCodeLine{286   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} = 256;}
+\DoxyCodeLine{287   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}} = 0x1000;}
+\DoxyCodeLine{288   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a9a5ede14edc4c1665d56b45a60f0035a}{SectorCount}} = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a1ef0815a72f7fb693a902e4a737a13c9}{BlockCount}} * 16;}
+\DoxyCodeLine{289   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_aca9e581e01a1f7e2d5e792c40e9b31ac}{PageCount}} = (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a9a5ede14edc4c1665d56b45a60f0035a}{SectorCount}} * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}}) / \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}};}
+\DoxyCodeLine{290   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}} = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}} * 16;}
+\DoxyCodeLine{291   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a7f4bbda6ac311f1e4ed16838d77ffac6}{CapacityInKiloByte}} = (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a9a5ede14edc4c1665d56b45a60f0035a}{SectorCount}} * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}}) / 1024;}
+\DoxyCodeLine{292   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa03eda9bba742d37f64bfe4903dafacf}{N25qxx\_ReadUniqID}}();}
+\DoxyCodeLine{293   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga7c25f42945558d0fce808c04329e97aa}{N25qxx\_ReadStatusRegister}}(1);}
+\DoxyCodeLine{294   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga7c25f42945558d0fce808c04329e97aa}{N25qxx\_ReadStatusRegister}}(2);}
+\DoxyCodeLine{295   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga7c25f42945558d0fce808c04329e97aa}{N25qxx\_ReadStatusRegister}}(3);}
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{297   printf(\textcolor{stringliteral}{"N25qxx Page Size: \%d Bytes\(\backslash\)r\(\backslash\)n"}, \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}});}
+\DoxyCodeLine{298   printf(\textcolor{stringliteral}{"N25qxx Page Count: \%d\(\backslash\)r\(\backslash\)n"}, \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_aca9e581e01a1f7e2d5e792c40e9b31ac}{PageCount}});}
+\DoxyCodeLine{299   printf(\textcolor{stringliteral}{"N25qxx Sector Size: \%d Bytes\(\backslash\)r\(\backslash\)n"}, \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}});}
+\DoxyCodeLine{300   printf(\textcolor{stringliteral}{"N25qxx Sector Count: \%d\(\backslash\)r\(\backslash\)n"}, \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a9a5ede14edc4c1665d56b45a60f0035a}{SectorCount}});}
+\DoxyCodeLine{301   printf(\textcolor{stringliteral}{"N25qxx Block Size: \%d Bytes\(\backslash\)r\(\backslash\)n"}, \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}});}
+\DoxyCodeLine{302   printf(\textcolor{stringliteral}{"N25qxx Block Count: \%d\(\backslash\)r\(\backslash\)n"}, \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a1ef0815a72f7fb693a902e4a737a13c9}{BlockCount}});}
+\DoxyCodeLine{303   printf(\textcolor{stringliteral}{"N25qxx Capacity: \%d KiloBytes\(\backslash\)r\(\backslash\)n"}, \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a7f4bbda6ac311f1e4ed16838d77ffac6}{CapacityInKiloByte}});}
+\DoxyCodeLine{304   printf(\textcolor{stringliteral}{"N25qxx Init Done\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{305 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{306   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{307   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{308 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gab2ca26fb93915fc3baa32001ed779dba}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gab2ca26fb93915fc3baa32001ed779dba}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_BlockToPage@{N25qxx\_BlockToPage}}
+\index{N25qxx\_BlockToPage@{N25qxx\_BlockToPage}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_BlockToPage()}{N25qxx\_BlockToPage()}}
+{\footnotesize\ttfamily uint32\+\_\+t N25qxx\+\_\+\+Block\+To\+Page (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Block\+Address }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em Block\+Address} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+uint32\+\_\+t 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{453 \{}
+\DoxyCodeLine{454   \textcolor{keywordflow}{return} (BlockAddress * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}}) / \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}};}
+\DoxyCodeLine{455 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaee5c95875b0aa9462b25909709678f2f}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaee5c95875b0aa9462b25909709678f2f}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_EraseBlock@{N25qxx\_EraseBlock}}
+\index{N25qxx\_EraseBlock@{N25qxx\_EraseBlock}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_EraseBlock()}{N25qxx\_EraseBlock()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Erase\+Block (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Block\+Addr }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em Block\+Addr} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{373 \{}
+\DoxyCodeLine{374   \textcolor{keywordflow}{while} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} == 1)}
+\DoxyCodeLine{375     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{376   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 1;}
+\DoxyCodeLine{377 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{378   printf(\textcolor{stringliteral}{"N25qxx EraseBlock \%d Begin...\(\backslash\)r\(\backslash\)n"}, BlockAddr);}
+\DoxyCodeLine{379   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{380   uint32\_t StartTime = HAL\_GetTick();}
+\DoxyCodeLine{381 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{382   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6ed69de1ff6e4a87f798fd7fd60a9acf}{N25qxx\_WaitForWriteEnd}}();}
+\DoxyCodeLine{383   BlockAddr = BlockAddr * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}} * 16;}
+\DoxyCodeLine{384   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga19b70ed108e271c3f7a448108c77a8bc}{N25qxx\_WriteEnable}}();}
+\DoxyCodeLine{385   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{386   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0xD8);}
+\DoxyCodeLine{387   \textcolor{keywordflow}{if} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} >= \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}})}
+\DoxyCodeLine{388     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((BlockAddr \& 0xFF000000) >> 24);}
+\DoxyCodeLine{389   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((BlockAddr \& 0xFF0000) >> 16);}
+\DoxyCodeLine{390   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((BlockAddr \& 0xFF00) >> 8);}
+\DoxyCodeLine{391   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(BlockAddr \& 0xFF);}
+\DoxyCodeLine{392   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{393   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6ed69de1ff6e4a87f798fd7fd60a9acf}{N25qxx\_WaitForWriteEnd}}();}
+\DoxyCodeLine{394 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{395   printf(\textcolor{stringliteral}{"N25qxx EraseBlock done after \%d ms\(\backslash\)r\(\backslash\)n"}, HAL\_GetTick() -\/ StartTime);}
+\DoxyCodeLine{396   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{397 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{398   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{399   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{400 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa570d1a31702991962d7c7578261b08b}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa570d1a31702991962d7c7578261b08b}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_EraseChip@{N25qxx\_EraseChip}}
+\index{N25qxx\_EraseChip@{N25qxx\_EraseChip}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_EraseChip()}{N25qxx\_EraseChip()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Erase\+Chip (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{315 \{}
+\DoxyCodeLine{316   \textcolor{keywordflow}{while} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} == 1)}
+\DoxyCodeLine{317     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{318   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 1;}
+\DoxyCodeLine{319 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{320   uint32\_t StartTime = HAL\_GetTick();}
+\DoxyCodeLine{321   printf(\textcolor{stringliteral}{"N25qxx EraseChip Begin...\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{322 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{323   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga19b70ed108e271c3f7a448108c77a8bc}{N25qxx\_WriteEnable}}();}
+\DoxyCodeLine{324   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{325   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0xC7);}
+\DoxyCodeLine{326   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{327   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6ed69de1ff6e4a87f798fd7fd60a9acf}{N25qxx\_WaitForWriteEnd}}();}
+\DoxyCodeLine{328 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{329   printf(\textcolor{stringliteral}{"N25qxx EraseBlock done after \%d ms!\(\backslash\)r\(\backslash\)n"}, HAL\_GetTick() -\/ StartTime);}
+\DoxyCodeLine{330 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{331   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(10);}
+\DoxyCodeLine{332   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{333 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gab1d460ca2b17e2d27b388186ba854b95}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gab1d460ca2b17e2d27b388186ba854b95}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_EraseSector@{N25qxx\_EraseSector}}
+\index{N25qxx\_EraseSector@{N25qxx\_EraseSector}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_EraseSector()}{N25qxx\_EraseSector()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Erase\+Sector (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Sector\+Addr }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em Sector\+Addr} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{340 \{}
+\DoxyCodeLine{341   \textcolor{keywordflow}{while} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} == 1)}
+\DoxyCodeLine{342     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{343   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 1;}
+\DoxyCodeLine{344 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{345   uint32\_t StartTime = HAL\_GetTick();}
+\DoxyCodeLine{346   printf(\textcolor{stringliteral}{"N25qxx EraseSector \%d Begin...\(\backslash\)r\(\backslash\)n"}, SectorAddr);}
+\DoxyCodeLine{347 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{348   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6ed69de1ff6e4a87f798fd7fd60a9acf}{N25qxx\_WaitForWriteEnd}}();}
+\DoxyCodeLine{349   SectorAddr = SectorAddr * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}};}
+\DoxyCodeLine{350   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga19b70ed108e271c3f7a448108c77a8bc}{N25qxx\_WriteEnable}}();}
+\DoxyCodeLine{351   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{352   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x20);}
+\DoxyCodeLine{353   \textcolor{keywordflow}{if} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} >= \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}})}
+\DoxyCodeLine{354     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((SectorAddr \& 0xFF000000) >> 24);}
+\DoxyCodeLine{355   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((SectorAddr \& 0xFF0000) >> 16);}
+\DoxyCodeLine{356   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((SectorAddr \& 0xFF00) >> 8);}
+\DoxyCodeLine{357   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(SectorAddr \& 0xFF);}
+\DoxyCodeLine{358   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{359   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6ed69de1ff6e4a87f798fd7fd60a9acf}{N25qxx\_WaitForWriteEnd}}();}
+\DoxyCodeLine{360 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{361   printf(\textcolor{stringliteral}{"N25qxx EraseSector done after \%d ms\(\backslash\)r\(\backslash\)n"}, HAL\_GetTick() -\/ StartTime);}
+\DoxyCodeLine{362 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{363   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{364   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{365 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga0a0063747b5fd8498112f460963e0ef3}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga0a0063747b5fd8498112f460963e0ef3}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_IsEmptyBlock@{N25qxx\_IsEmptyBlock}}
+\index{N25qxx\_IsEmptyBlock@{N25qxx\_IsEmptyBlock}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_IsEmptyBlock()}{N25qxx\_IsEmptyBlock()}}
+{\footnotesize\ttfamily bool N25qxx\+\_\+\+Is\+Empty\+Block (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Block\+\_\+\+Address,  }\item[{uint32\+\_\+t}]{Offset\+In\+Byte,  }\item[{uint32\+\_\+t}]{Num\+Byte\+To\+Check\+\_\+up\+\_\+to\+\_\+\+Block\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em Block\+\_\+\+Address} & \\
+\hline
+{\em Offset\+In\+Byte} & \\
+\hline
+{\em Num\+Byte\+To\+Check\+\_\+up\+\_\+to\+\_\+\+Block\+Size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{623 \{}
+\DoxyCodeLine{624   \textcolor{keywordflow}{while} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} == 1)}
+\DoxyCodeLine{625     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{626   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 1;}
+\DoxyCodeLine{627   \textcolor{keywordflow}{if} ((NumByteToCheck\_up\_to\_BlockSize > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}}) || (NumByteToCheck\_up\_to\_BlockSize == 0))}
+\DoxyCodeLine{628     NumByteToCheck\_up\_to\_BlockSize = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}};}
+\DoxyCodeLine{629 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{630   printf(\textcolor{stringliteral}{"N25qxx CheckBlock:\%d, Offset:\%d, Bytes:\%d begin...\(\backslash\)r\(\backslash\)n"}, Block\_Address, OffsetInByte, NumByteToCheck\_up\_to\_BlockSize);}
+\DoxyCodeLine{631   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{632   uint32\_t StartTime = HAL\_GetTick();}
+\DoxyCodeLine{633 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{634   uint8\_t pBuffer[32];}
+\DoxyCodeLine{635   uint32\_t WorkAddress;}
+\DoxyCodeLine{636   uint32\_t i;}
+\DoxyCodeLine{637   \textcolor{keywordflow}{for} (i = OffsetInByte; i < \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}}; i += \textcolor{keyword}{sizeof}(pBuffer))}
+\DoxyCodeLine{638   \{}
+\DoxyCodeLine{639     HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{640     WorkAddress = (i + Block\_Address * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}});}
+\DoxyCodeLine{641     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x0B);}
+\DoxyCodeLine{642     \textcolor{keywordflow}{if} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} >= \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}})}
+\DoxyCodeLine{643       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF000000) >> 24);}
+\DoxyCodeLine{644     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF0000) >> 16);}
+\DoxyCodeLine{645     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF00) >> 8);}
+\DoxyCodeLine{646     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(WorkAddress \& 0xFF);}
+\DoxyCodeLine{647     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0);}
+\DoxyCodeLine{648     HAL\_SPI\_Receive(\&\mbox{\hyperlink{flash_8h_a0a4c11784fcf7cb41c0329b680371c1b}{\_FLASH\_SPI}}, pBuffer, \textcolor{keyword}{sizeof}(pBuffer), 100);}
+\DoxyCodeLine{649     HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{650     \textcolor{keywordflow}{for} (uint8\_t x = 0; x < \textcolor{keyword}{sizeof}(pBuffer); x++)}
+\DoxyCodeLine{651     \{}
+\DoxyCodeLine{652       \textcolor{keywordflow}{if} (pBuffer[x] != 0xFF)}
+\DoxyCodeLine{653         \textcolor{keywordflow}{goto} NOT\_EMPTY;}
+\DoxyCodeLine{654     \}}
+\DoxyCodeLine{655   \}}
+\DoxyCodeLine{656   \textcolor{keywordflow}{if} ((\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}} + OffsetInByte) \% \textcolor{keyword}{sizeof}(pBuffer) != 0)}
+\DoxyCodeLine{657   \{}
+\DoxyCodeLine{658     i -\/= \textcolor{keyword}{sizeof}(pBuffer);}
+\DoxyCodeLine{659     \textcolor{keywordflow}{for} (; i < \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}}; i++)}
+\DoxyCodeLine{660     \{}
+\DoxyCodeLine{661       HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{662       WorkAddress = (i + Block\_Address * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}});}
+\DoxyCodeLine{663       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x0B);}
+\DoxyCodeLine{664       \textcolor{keywordflow}{if} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} >= \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}})}
+\DoxyCodeLine{665         \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF000000) >> 24);}
+\DoxyCodeLine{666       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF0000) >> 16);}
+\DoxyCodeLine{667       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF00) >> 8);}
+\DoxyCodeLine{668       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(WorkAddress \& 0xFF);}
+\DoxyCodeLine{669       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0);}
+\DoxyCodeLine{670       HAL\_SPI\_Receive(\&\mbox{\hyperlink{flash_8h_a0a4c11784fcf7cb41c0329b680371c1b}{\_FLASH\_SPI}}, pBuffer, 1, 100);}
+\DoxyCodeLine{671       HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{672       \textcolor{keywordflow}{if} (pBuffer[0] != 0xFF)}
+\DoxyCodeLine{673         \textcolor{keywordflow}{goto} NOT\_EMPTY;}
+\DoxyCodeLine{674     \}}
+\DoxyCodeLine{675   \}}
+\DoxyCodeLine{676 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{677   printf(\textcolor{stringliteral}{"N25qxx CheckBlock is Empty in \%d ms\(\backslash\)r\(\backslash\)n"}, HAL\_GetTick() -\/ StartTime);}
+\DoxyCodeLine{678   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{679 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{680   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{681   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{682 NOT\_EMPTY:}
+\DoxyCodeLine{683 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{684   printf(\textcolor{stringliteral}{"N25qxx CheckBlock is Not Empty in \%d ms\(\backslash\)r\(\backslash\)n"}, HAL\_GetTick() -\/ StartTime);}
+\DoxyCodeLine{685   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{686 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{687   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{688   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{689 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gab8bcf0e76a947af377e8d754705730a8}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gab8bcf0e76a947af377e8d754705730a8}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_IsEmptyPage@{N25qxx\_IsEmptyPage}}
+\index{N25qxx\_IsEmptyPage@{N25qxx\_IsEmptyPage}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_IsEmptyPage()}{N25qxx\_IsEmptyPage()}}
+{\footnotesize\ttfamily bool N25qxx\+\_\+\+Is\+Empty\+Page (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Page\+\_\+\+Address,  }\item[{uint32\+\_\+t}]{Offset\+In\+Byte,  }\item[{uint32\+\_\+t}]{Num\+Byte\+To\+Check\+\_\+up\+\_\+to\+\_\+\+Page\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em Page\+\_\+\+Address} & \\
+\hline
+{\em Offset\+In\+Byte} & \\
+\hline
+{\em Num\+Byte\+To\+Check\+\_\+up\+\_\+to\+\_\+\+Page\+Size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{467 \{}
+\DoxyCodeLine{468   \textcolor{keywordflow}{while} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} == 1)}
+\DoxyCodeLine{469     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{470   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 1;}
+\DoxyCodeLine{471   \textcolor{keywordflow}{if} (((NumByteToCheck\_up\_to\_PageSize + OffsetInByte) > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}}) || (NumByteToCheck\_up\_to\_PageSize == 0))}
+\DoxyCodeLine{472     NumByteToCheck\_up\_to\_PageSize = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} -\/ OffsetInByte;}
+\DoxyCodeLine{473 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{474   printf(\textcolor{stringliteral}{"N25qxx CheckPage:\%d, Offset:\%d, Bytes:\%d begin...\(\backslash\)r\(\backslash\)n"}, Page\_Address, OffsetInByte, NumByteToCheck\_up\_to\_PageSize);}
+\DoxyCodeLine{475   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{476   uint32\_t StartTime = HAL\_GetTick();}
+\DoxyCodeLine{477 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{478   uint8\_t pBuffer[32];}
+\DoxyCodeLine{479   uint32\_t WorkAddress;}
+\DoxyCodeLine{480   uint32\_t i;}
+\DoxyCodeLine{481   \textcolor{keywordflow}{for} (i = OffsetInByte; i < \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}}; i += \textcolor{keyword}{sizeof}(pBuffer))}
+\DoxyCodeLine{482   \{}
+\DoxyCodeLine{483     HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{484     WorkAddress = (i + Page\_Address * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}});}
+\DoxyCodeLine{485     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x0B);}
+\DoxyCodeLine{486     \textcolor{keywordflow}{if} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} >= \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}})}
+\DoxyCodeLine{487       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF000000) >> 24);}
+\DoxyCodeLine{488     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF0000) >> 16);}
+\DoxyCodeLine{489     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF00) >> 8);}
+\DoxyCodeLine{490     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(WorkAddress \& 0xFF);}
+\DoxyCodeLine{491     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0);}
+\DoxyCodeLine{492     HAL\_SPI\_Receive(\&\mbox{\hyperlink{flash_8h_a0a4c11784fcf7cb41c0329b680371c1b}{\_FLASH\_SPI}}, pBuffer, \textcolor{keyword}{sizeof}(pBuffer), 100);}
+\DoxyCodeLine{493     HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{494     \textcolor{keywordflow}{for} (uint8\_t x = 0; x < \textcolor{keyword}{sizeof}(pBuffer); x++)}
+\DoxyCodeLine{495     \{}
+\DoxyCodeLine{496       \textcolor{keywordflow}{if} (pBuffer[x] != 0xFF)}
+\DoxyCodeLine{497         \textcolor{keywordflow}{goto} NOT\_EMPTY;}
+\DoxyCodeLine{498     \}}
+\DoxyCodeLine{499   \}}
+\DoxyCodeLine{500   \textcolor{keywordflow}{if} ((\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} + OffsetInByte) \% \textcolor{keyword}{sizeof}(pBuffer) != 0)}
+\DoxyCodeLine{501   \{}
+\DoxyCodeLine{502     i -\/= \textcolor{keyword}{sizeof}(pBuffer);}
+\DoxyCodeLine{503     \textcolor{keywordflow}{for} (; i < \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}}; i++)}
+\DoxyCodeLine{504     \{}
+\DoxyCodeLine{505       HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{506       WorkAddress = (i + Page\_Address * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}});}
+\DoxyCodeLine{507       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x0B);}
+\DoxyCodeLine{508       \textcolor{keywordflow}{if} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} >= \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}})}
+\DoxyCodeLine{509         \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF000000) >> 24);}
+\DoxyCodeLine{510       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF0000) >> 16);}
+\DoxyCodeLine{511       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF00) >> 8);}
+\DoxyCodeLine{512       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(WorkAddress \& 0xFF);}
+\DoxyCodeLine{513       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0);}
+\DoxyCodeLine{514       HAL\_SPI\_Receive(\&\mbox{\hyperlink{flash_8h_a0a4c11784fcf7cb41c0329b680371c1b}{\_FLASH\_SPI}}, pBuffer, 1, 100);}
+\DoxyCodeLine{515       HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{516       \textcolor{keywordflow}{if} (pBuffer[0] != 0xFF)}
+\DoxyCodeLine{517         \textcolor{keywordflow}{goto} NOT\_EMPTY;}
+\DoxyCodeLine{518     \}}
+\DoxyCodeLine{519   \}}
+\DoxyCodeLine{520 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{521   printf(\textcolor{stringliteral}{"N25qxx CheckPage is Empty in \%d ms\(\backslash\)r\(\backslash\)n"}, HAL\_GetTick() -\/ StartTime);}
+\DoxyCodeLine{522   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{523 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{524   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{525   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{526 NOT\_EMPTY:}
+\DoxyCodeLine{527 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{528   printf(\textcolor{stringliteral}{"N25qxx CheckPage is Not Empty in \%d ms\(\backslash\)r\(\backslash\)n"}, HAL\_GetTick() -\/ StartTime);}
+\DoxyCodeLine{529   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{530 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{531   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{532   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{533 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga5fdecfae212fabe66e2839c38dfe32e2}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga5fdecfae212fabe66e2839c38dfe32e2}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_IsEmptySector@{N25qxx\_IsEmptySector}}
+\index{N25qxx\_IsEmptySector@{N25qxx\_IsEmptySector}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_IsEmptySector()}{N25qxx\_IsEmptySector()}}
+{\footnotesize\ttfamily bool N25qxx\+\_\+\+Is\+Empty\+Sector (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Sector\+\_\+\+Address,  }\item[{uint32\+\_\+t}]{Offset\+In\+Byte,  }\item[{uint32\+\_\+t}]{Num\+Byte\+To\+Check\+\_\+up\+\_\+to\+\_\+\+Sector\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em Sector\+\_\+\+Address} & \\
+\hline
+{\em Offset\+In\+Byte} & \\
+\hline
+{\em Num\+Byte\+To\+Check\+\_\+up\+\_\+to\+\_\+\+Sector\+Size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{545 \{}
+\DoxyCodeLine{546   \textcolor{keywordflow}{while} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} == 1)}
+\DoxyCodeLine{547     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{548   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 1;}
+\DoxyCodeLine{549   \textcolor{keywordflow}{if} ((NumByteToCheck\_up\_to\_SectorSize > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}}) || (NumByteToCheck\_up\_to\_SectorSize == 0))}
+\DoxyCodeLine{550     NumByteToCheck\_up\_to\_SectorSize = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}};}
+\DoxyCodeLine{551 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{552   printf(\textcolor{stringliteral}{"N25qxx CheckSector:\%d, Offset:\%d, Bytes:\%d begin...\(\backslash\)r\(\backslash\)n"}, Sector\_Address, OffsetInByte, NumByteToCheck\_up\_to\_SectorSize);}
+\DoxyCodeLine{553   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{554   uint32\_t StartTime = HAL\_GetTick();}
+\DoxyCodeLine{555 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{556   uint8\_t pBuffer[32];}
+\DoxyCodeLine{557   uint32\_t WorkAddress;}
+\DoxyCodeLine{558   uint32\_t i;}
+\DoxyCodeLine{559   \textcolor{keywordflow}{for} (i = OffsetInByte; i < \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}}; i += \textcolor{keyword}{sizeof}(pBuffer))}
+\DoxyCodeLine{560   \{}
+\DoxyCodeLine{561     HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{562     WorkAddress = (i + Sector\_Address * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}});}
+\DoxyCodeLine{563     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x0B);}
+\DoxyCodeLine{564     \textcolor{keywordflow}{if} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} >= \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}})}
+\DoxyCodeLine{565       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF000000) >> 24);}
+\DoxyCodeLine{566     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF0000) >> 16);}
+\DoxyCodeLine{567     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF00) >> 8);}
+\DoxyCodeLine{568     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(WorkAddress \& 0xFF);}
+\DoxyCodeLine{569     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0);}
+\DoxyCodeLine{570     HAL\_SPI\_Receive(\&\mbox{\hyperlink{flash_8h_a0a4c11784fcf7cb41c0329b680371c1b}{\_FLASH\_SPI}}, pBuffer, \textcolor{keyword}{sizeof}(pBuffer), 100);}
+\DoxyCodeLine{571     HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{572     \textcolor{keywordflow}{for} (uint8\_t x = 0; x < \textcolor{keyword}{sizeof}(pBuffer); x++)}
+\DoxyCodeLine{573     \{}
+\DoxyCodeLine{574       \textcolor{keywordflow}{if} (pBuffer[x] != 0xFF)}
+\DoxyCodeLine{575         \textcolor{keywordflow}{goto} NOT\_EMPTY;}
+\DoxyCodeLine{576     \}}
+\DoxyCodeLine{577   \}}
+\DoxyCodeLine{578   \textcolor{keywordflow}{if} ((\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}} + OffsetInByte) \% \textcolor{keyword}{sizeof}(pBuffer) != 0)}
+\DoxyCodeLine{579   \{}
+\DoxyCodeLine{580     i -\/= \textcolor{keyword}{sizeof}(pBuffer);}
+\DoxyCodeLine{581     \textcolor{keywordflow}{for} (; i < \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}}; i++)}
+\DoxyCodeLine{582     \{}
+\DoxyCodeLine{583       HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{584       WorkAddress = (i + Sector\_Address * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}});}
+\DoxyCodeLine{585       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x0B);}
+\DoxyCodeLine{586       \textcolor{keywordflow}{if} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} >= \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}})}
+\DoxyCodeLine{587         \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF000000) >> 24);}
+\DoxyCodeLine{588       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF0000) >> 16);}
+\DoxyCodeLine{589       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WorkAddress \& 0xFF00) >> 8);}
+\DoxyCodeLine{590       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(WorkAddress \& 0xFF);}
+\DoxyCodeLine{591       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0);}
+\DoxyCodeLine{592       HAL\_SPI\_Receive(\&\mbox{\hyperlink{flash_8h_a0a4c11784fcf7cb41c0329b680371c1b}{\_FLASH\_SPI}}, pBuffer, 1, 100);}
+\DoxyCodeLine{593       HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{594       \textcolor{keywordflow}{if} (pBuffer[0] != 0xFF)}
+\DoxyCodeLine{595         \textcolor{keywordflow}{goto} NOT\_EMPTY;}
+\DoxyCodeLine{596     \}}
+\DoxyCodeLine{597   \}}
+\DoxyCodeLine{598 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{599   printf(\textcolor{stringliteral}{"N25qxx CheckSector is Empty in \%d ms\(\backslash\)r\(\backslash\)n"}, HAL\_GetTick() -\/ StartTime);}
+\DoxyCodeLine{600   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{601 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{602   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{603   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{604 NOT\_EMPTY:}
+\DoxyCodeLine{605 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{606   printf(\textcolor{stringliteral}{"N25qxx CheckSector is Not Empty in \%d ms\(\backslash\)r\(\backslash\)n"}, HAL\_GetTick() -\/ StartTime);}
+\DoxyCodeLine{607   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{608 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{609   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{610   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{611 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa2c38fb79f2c1470cbf11a16b735d28b}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa2c38fb79f2c1470cbf11a16b735d28b}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_PageToBlock@{N25qxx\_PageToBlock}}
+\index{N25qxx\_PageToBlock@{N25qxx\_PageToBlock}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_PageToBlock()}{N25qxx\_PageToBlock()}}
+{\footnotesize\ttfamily uint32\+\_\+t N25qxx\+\_\+\+Page\+To\+Block (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Page\+Address }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em Page\+Address} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+uint32\+\_\+t 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{420 \{}
+\DoxyCodeLine{421   \textcolor{keywordflow}{return} ((PageAddress * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}}) / \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}});}
+\DoxyCodeLine{422 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa488bfa18b71099cf65103c55d8379da}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa488bfa18b71099cf65103c55d8379da}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_PageToSector@{N25qxx\_PageToSector}}
+\index{N25qxx\_PageToSector@{N25qxx\_PageToSector}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_PageToSector()}{N25qxx\_PageToSector()}}
+{\footnotesize\ttfamily uint32\+\_\+t N25qxx\+\_\+\+Page\+To\+Sector (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Page\+Address }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em Page\+Address} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+uint32\+\_\+t 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{409 \{}
+\DoxyCodeLine{410   \textcolor{keywordflow}{return} ((PageAddress * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}}) / \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}});}
+\DoxyCodeLine{411 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga42214a329e32106095eff0e1b9011fa2}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga42214a329e32106095eff0e1b9011fa2}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_ReadBlock@{N25qxx\_ReadBlock}}
+\index{N25qxx\_ReadBlock@{N25qxx\_ReadBlock}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_ReadBlock()}{N25qxx\_ReadBlock()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Read\+Block (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint32\+\_\+t}]{Block\+\_\+\+Address,  }\item[{uint32\+\_\+t}]{Offset\+In\+Byte,  }\item[{uint32\+\_\+t}]{Num\+Byte\+To\+Read\+\_\+up\+\_\+to\+\_\+\+Block\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em p\+Buffer} & \\
+\hline
+{\em Block\+\_\+\+Address} & \\
+\hline
+{\em Offset\+In\+Byte} & \\
+\hline
+{\em Num\+Byte\+To\+Read\+\_\+up\+\_\+to\+\_\+\+Block\+Size} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1056 \{}
+\DoxyCodeLine{1057   \textcolor{keywordflow}{if} ((NumByteToRead\_up\_to\_BlockSize > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}}) || (NumByteToRead\_up\_to\_BlockSize == 0))}
+\DoxyCodeLine{1058     NumByteToRead\_up\_to\_BlockSize = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}};}
+\DoxyCodeLine{1059 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{1060   printf(\textcolor{stringliteral}{"+++N25qxx ReadBlock:\%d, Offset:\%d ,Read \%d Bytes, begin...\(\backslash\)r\(\backslash\)n"}, Block\_Address, OffsetInByte, NumByteToRead\_up\_to\_BlockSize);}
+\DoxyCodeLine{1061   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{1062 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1063   \textcolor{keywordflow}{if} (OffsetInByte >= \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}})}
+\DoxyCodeLine{1064   \{}
+\DoxyCodeLine{1065 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{1066     printf(\textcolor{stringliteral}{"N25qxx ReadBlock Faild!\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{1067     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{1068 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1069     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{1070   \}}
+\DoxyCodeLine{1071   uint32\_t StartPage;}
+\DoxyCodeLine{1072   int32\_t BytesToRead;}
+\DoxyCodeLine{1073   uint32\_t LocalOffset;}
+\DoxyCodeLine{1074   \textcolor{keywordflow}{if} ((OffsetInByte + NumByteToRead\_up\_to\_BlockSize) > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}})}
+\DoxyCodeLine{1075     BytesToRead = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}} -\/ OffsetInByte;}
+\DoxyCodeLine{1076   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{1077     BytesToRead = NumByteToRead\_up\_to\_BlockSize;}
+\DoxyCodeLine{1078   StartPage = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gab2ca26fb93915fc3baa32001ed779dba}{N25qxx\_BlockToPage}}(Block\_Address) + (OffsetInByte / \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}});}
+\DoxyCodeLine{1079   LocalOffset = OffsetInByte \% \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}};}
+\DoxyCodeLine{1080   \textcolor{keywordflow}{do}}
+\DoxyCodeLine{1081   \{}
+\DoxyCodeLine{1082     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gacbedf786bfd7f44edc623039f55bfff2}{N25qxx\_ReadPage}}(pBuffer, StartPage, LocalOffset, BytesToRead);}
+\DoxyCodeLine{1083     StartPage++;}
+\DoxyCodeLine{1084     BytesToRead -\/= \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} -\/ LocalOffset;}
+\DoxyCodeLine{1085     pBuffer += \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} -\/ LocalOffset;}
+\DoxyCodeLine{1086     LocalOffset = 0;}
+\DoxyCodeLine{1087   \} \textcolor{keywordflow}{while} (BytesToRead > 0);}
+\DoxyCodeLine{1088 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{1089   printf(\textcolor{stringliteral}{"-\/-\/-\/N25qxx ReadBlock Done\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{1090   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{1091 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1092 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga87141d4e01520326f047f9bbdff4a530}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga87141d4e01520326f047f9bbdff4a530}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_ReadByte@{N25qxx\_ReadByte}}
+\index{N25qxx\_ReadByte@{N25qxx\_ReadByte}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_ReadByte()}{N25qxx\_ReadByte()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Read\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint32\+\_\+t}]{Bytes\+\_\+\+Address }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em p\+Buffer} & \\
+\hline
+{\em Bytes\+\_\+\+Address} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{879 \{}
+\DoxyCodeLine{880   \textcolor{keywordflow}{while} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} == 1)}
+\DoxyCodeLine{881     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{882   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 1;}
+\DoxyCodeLine{883 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{884   uint32\_t StartTime = HAL\_GetTick();}
+\DoxyCodeLine{885   printf(\textcolor{stringliteral}{"N25qxx ReadByte at address \%d begin...\(\backslash\)r\(\backslash\)n"}, Bytes\_Address);}
+\DoxyCodeLine{886 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{887   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{888   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x0B);}
+\DoxyCodeLine{889   \textcolor{keywordflow}{if} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} >= \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}})}
+\DoxyCodeLine{890     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((Bytes\_Address \& 0xFF000000) >> 24);}
+\DoxyCodeLine{891   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((Bytes\_Address \& 0xFF0000) >> 16);}
+\DoxyCodeLine{892   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((Bytes\_Address \& 0xFF00) >> 8);}
+\DoxyCodeLine{893   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(Bytes\_Address \& 0xFF);}
+\DoxyCodeLine{894   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0);}
+\DoxyCodeLine{895   *pBuffer = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(\mbox{\hyperlink{flash_8c_aac9052b6d58d7b61027b0a96c993aeb7}{FLASH\_DUMMY\_BYTE}});}
+\DoxyCodeLine{896   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{897 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{898   printf(\textcolor{stringliteral}{"N25qxx ReadByte 0x\%02X done after \%d ms\(\backslash\)r\(\backslash\)n"}, *pBuffer, HAL\_GetTick() -\/ StartTime);}
+\DoxyCodeLine{899 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{900   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{901 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaf4ef9ab394f7b1e60d90804c8db9acce}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaf4ef9ab394f7b1e60d90804c8db9acce}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_ReadBytes@{N25qxx\_ReadBytes}}
+\index{N25qxx\_ReadBytes@{N25qxx\_ReadBytes}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_ReadBytes()}{N25qxx\_ReadBytes()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Read\+Bytes (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint32\+\_\+t}]{Read\+Addr,  }\item[{uint32\+\_\+t}]{Num\+Byte\+To\+Read }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em p\+Buffer} & \\
+\hline
+{\em Read\+Addr} & \\
+\hline
+{\em Num\+Byte\+To\+Read} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{911 \{}
+\DoxyCodeLine{912   \textcolor{keywordflow}{while} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} == 1)}
+\DoxyCodeLine{913     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{914   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 1;}
+\DoxyCodeLine{915 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{916   uint32\_t StartTime = HAL\_GetTick();}
+\DoxyCodeLine{917   printf(\textcolor{stringliteral}{"N25qxx ReadBytes at Address:\%d, \%d Bytes  begin...\(\backslash\)r\(\backslash\)n"}, ReadAddr, NumByteToRead);}
+\DoxyCodeLine{918 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{919   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{920   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x0B);}
+\DoxyCodeLine{921   \textcolor{keywordflow}{if} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} >= \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}})}
+\DoxyCodeLine{922     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((ReadAddr \& 0xFF000000) >> 24);}
+\DoxyCodeLine{923   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((ReadAddr \& 0xFF0000) >> 16);}
+\DoxyCodeLine{924   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((ReadAddr \& 0xFF00) >> 8);}
+\DoxyCodeLine{925   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(ReadAddr \& 0xFF);}
+\DoxyCodeLine{926   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0);}
+\DoxyCodeLine{927   HAL\_SPI\_Receive(\&\mbox{\hyperlink{flash_8h_a0a4c11784fcf7cb41c0329b680371c1b}{\_FLASH\_SPI}}, pBuffer, NumByteToRead, 2000);}
+\DoxyCodeLine{928   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{929 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{930   StartTime = HAL\_GetTick() -\/ StartTime;}
+\DoxyCodeLine{931   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < NumByteToRead; i++)}
+\DoxyCodeLine{932   \{}
+\DoxyCodeLine{933     \textcolor{keywordflow}{if} ((i \% 8 == 0) \&\& (i > 2))}
+\DoxyCodeLine{934     \{}
+\DoxyCodeLine{935       printf(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{936       \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(10);}
+\DoxyCodeLine{937     \}}
+\DoxyCodeLine{938     printf(\textcolor{stringliteral}{"0x\%02X,"}, pBuffer[i]);}
+\DoxyCodeLine{939   \}}
+\DoxyCodeLine{940   printf(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{941   printf(\textcolor{stringliteral}{"N25qxx ReadBytes done after \%d ms\(\backslash\)r\(\backslash\)n"}, StartTime);}
+\DoxyCodeLine{942   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{943 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{944   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{945   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{946 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga0a9b61dc448af7c0ac71c50d60fecc2b}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga0a9b61dc448af7c0ac71c50d60fecc2b}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_ReadID@{N25qxx\_ReadID}}
+\index{N25qxx\_ReadID@{N25qxx\_ReadID}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_ReadID()}{N25qxx\_ReadID()}}
+{\footnotesize\ttfamily uint32\+\_\+t N25qxx\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{반환값}
+uint32\+\_\+t 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{51   uint32\_t Temp = 0, Temp0 = 0, Temp1 = 0, Temp2 = 0;}
+\DoxyCodeLine{52   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{53   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x9F);}
+\DoxyCodeLine{54   Temp0 = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(\mbox{\hyperlink{flash_8c_aac9052b6d58d7b61027b0a96c993aeb7}{FLASH\_DUMMY\_BYTE}});}
+\DoxyCodeLine{55   Temp1 = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(\mbox{\hyperlink{flash_8c_aac9052b6d58d7b61027b0a96c993aeb7}{FLASH\_DUMMY\_BYTE}});}
+\DoxyCodeLine{56   Temp2 = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(\mbox{\hyperlink{flash_8c_aac9052b6d58d7b61027b0a96c993aeb7}{FLASH\_DUMMY\_BYTE}});}
+\DoxyCodeLine{57   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{58   Temp = (Temp0 << 16) | (Temp1 << 8) | Temp2;}
+\DoxyCodeLine{59   \textcolor{keywordflow}{return} Temp;}
+\DoxyCodeLine{60 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gacbedf786bfd7f44edc623039f55bfff2}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gacbedf786bfd7f44edc623039f55bfff2}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_ReadPage@{N25qxx\_ReadPage}}
+\index{N25qxx\_ReadPage@{N25qxx\_ReadPage}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_ReadPage()}{N25qxx\_ReadPage()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Read\+Page (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint32\+\_\+t}]{Page\+\_\+\+Address,  }\item[{uint32\+\_\+t}]{Offset\+In\+Byte,  }\item[{uint32\+\_\+t}]{Num\+Byte\+To\+Read\+\_\+up\+\_\+to\+\_\+\+Page\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em p\+Buffer} & \\
+\hline
+{\em Page\+\_\+\+Address} & \\
+\hline
+{\em Offset\+In\+Byte} & \\
+\hline
+{\em Num\+Byte\+To\+Read\+\_\+up\+\_\+to\+\_\+\+Page\+Size} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{957 \{}
+\DoxyCodeLine{958   \textcolor{keywordflow}{while} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} == 1)}
+\DoxyCodeLine{959     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{960   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 1;}
+\DoxyCodeLine{961   \textcolor{keywordflow}{if} ((NumByteToRead\_up\_to\_PageSize > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}}) || (NumByteToRead\_up\_to\_PageSize == 0))}
+\DoxyCodeLine{962     NumByteToRead\_up\_to\_PageSize = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}};}
+\DoxyCodeLine{963   \textcolor{keywordflow}{if} ((OffsetInByte + NumByteToRead\_up\_to\_PageSize) > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}})}
+\DoxyCodeLine{964     NumByteToRead\_up\_to\_PageSize = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} -\/ OffsetInByte;}
+\DoxyCodeLine{965 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{966   printf(\textcolor{stringliteral}{"N25qxx ReadPage:\%d, Offset:\%d ,Read \%d Bytes, begin...\(\backslash\)r\(\backslash\)n"}, Page\_Address, OffsetInByte, NumByteToRead\_up\_to\_PageSize);}
+\DoxyCodeLine{967   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{968   uint32\_t StartTime = HAL\_GetTick();}
+\DoxyCodeLine{969 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{970   Page\_Address = Page\_Address * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} + OffsetInByte;}
+\DoxyCodeLine{971   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{972   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x0B);}
+\DoxyCodeLine{973   \textcolor{keywordflow}{if} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} >= \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}})}
+\DoxyCodeLine{974     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((Page\_Address \& 0xFF000000) >> 24);}
+\DoxyCodeLine{975   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((Page\_Address \& 0xFF0000) >> 16);}
+\DoxyCodeLine{976   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((Page\_Address \& 0xFF00) >> 8);}
+\DoxyCodeLine{977   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(Page\_Address \& 0xFF);}
+\DoxyCodeLine{978   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0);}
+\DoxyCodeLine{979   HAL\_SPI\_Receive(\&\mbox{\hyperlink{flash_8h_a0a4c11784fcf7cb41c0329b680371c1b}{\_FLASH\_SPI}}, pBuffer, NumByteToRead\_up\_to\_PageSize, 100);}
+\DoxyCodeLine{980   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{981 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{982   StartTime = HAL\_GetTick() -\/ StartTime;}
+\DoxyCodeLine{983   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < NumByteToRead\_up\_to\_PageSize; i++)}
+\DoxyCodeLine{984   \{}
+\DoxyCodeLine{985     \textcolor{keywordflow}{if} ((i \% 8 == 0) \&\& (i > 2))}
+\DoxyCodeLine{986     \{}
+\DoxyCodeLine{987       printf(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{988       \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(10);}
+\DoxyCodeLine{989     \}}
+\DoxyCodeLine{990     printf(\textcolor{stringliteral}{"0x\%02X,"}, pBuffer[i]);}
+\DoxyCodeLine{991   \}}
+\DoxyCodeLine{992   printf(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{993   printf(\textcolor{stringliteral}{"N25qxx ReadPage done after \%d ms\(\backslash\)r\(\backslash\)n"}, StartTime);}
+\DoxyCodeLine{994   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{995 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{996   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{997   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{998 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga7970ddcd1b95f89589898d6ca409cf47}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga7970ddcd1b95f89589898d6ca409cf47}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_ReadSector@{N25qxx\_ReadSector}}
+\index{N25qxx\_ReadSector@{N25qxx\_ReadSector}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_ReadSector()}{N25qxx\_ReadSector()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Read\+Sector (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint32\+\_\+t}]{Sector\+\_\+\+Address,  }\item[{uint32\+\_\+t}]{Offset\+In\+Byte,  }\item[{uint32\+\_\+t}]{Num\+Byte\+To\+Read\+\_\+up\+\_\+to\+\_\+\+Sector\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em p\+Buffer} & \\
+\hline
+{\em Sector\+\_\+\+Address} & \\
+\hline
+{\em Offset\+In\+Byte} & \\
+\hline
+{\em Num\+Byte\+To\+Read\+\_\+up\+\_\+to\+\_\+\+Sector\+Size} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1009 \{}
+\DoxyCodeLine{1010   \textcolor{keywordflow}{if} ((NumByteToRead\_up\_to\_SectorSize > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}}) || (NumByteToRead\_up\_to\_SectorSize == 0))}
+\DoxyCodeLine{1011     NumByteToRead\_up\_to\_SectorSize = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}};}
+\DoxyCodeLine{1012 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{1013   printf(\textcolor{stringliteral}{"+++N25qxx ReadSector:\%d, Offset:\%d ,Read \%d Bytes, begin...\(\backslash\)r\(\backslash\)n"}, Sector\_Address, OffsetInByte, NumByteToRead\_up\_to\_SectorSize);}
+\DoxyCodeLine{1014   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{1015 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1016   \textcolor{keywordflow}{if} (OffsetInByte >= \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}})}
+\DoxyCodeLine{1017   \{}
+\DoxyCodeLine{1018 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{1019     printf(\textcolor{stringliteral}{"-\/-\/-\/N25qxx ReadSector Faild!\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{1020     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{1021 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1022     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{1023   \}}
+\DoxyCodeLine{1024   uint32\_t StartPage;}
+\DoxyCodeLine{1025   int32\_t BytesToRead;}
+\DoxyCodeLine{1026   uint32\_t LocalOffset;}
+\DoxyCodeLine{1027   \textcolor{keywordflow}{if} ((OffsetInByte + NumByteToRead\_up\_to\_SectorSize) > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}})}
+\DoxyCodeLine{1028     BytesToRead = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}} -\/ OffsetInByte;}
+\DoxyCodeLine{1029   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{1030     BytesToRead = NumByteToRead\_up\_to\_SectorSize;}
+\DoxyCodeLine{1031   StartPage = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga473318dbd3d70e328cc2502e65f1e525}{N25qxx\_SectorToPage}}(Sector\_Address) + (OffsetInByte / \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}});}
+\DoxyCodeLine{1032   LocalOffset = OffsetInByte \% \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}};}
+\DoxyCodeLine{1033   \textcolor{keywordflow}{do}}
+\DoxyCodeLine{1034   \{}
+\DoxyCodeLine{1035     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gacbedf786bfd7f44edc623039f55bfff2}{N25qxx\_ReadPage}}(pBuffer, StartPage, LocalOffset, BytesToRead);}
+\DoxyCodeLine{1036     StartPage++;}
+\DoxyCodeLine{1037     BytesToRead -\/= \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} -\/ LocalOffset;}
+\DoxyCodeLine{1038     pBuffer += \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} -\/ LocalOffset;}
+\DoxyCodeLine{1039     LocalOffset = 0;}
+\DoxyCodeLine{1040   \} \textcolor{keywordflow}{while} (BytesToRead > 0);}
+\DoxyCodeLine{1041 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{1042   printf(\textcolor{stringliteral}{"-\/-\/-\/N25qxx ReadSector Done\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{1043   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{1044 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1045 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga7c25f42945558d0fce808c04329e97aa}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga7c25f42945558d0fce808c04329e97aa}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_ReadStatusRegister@{N25qxx\_ReadStatusRegister}}
+\index{N25qxx\_ReadStatusRegister@{N25qxx\_ReadStatusRegister}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_ReadStatusRegister()}{N25qxx\_ReadStatusRegister()}}
+{\footnotesize\ttfamily uint8\+\_\+t N25qxx\+\_\+\+Read\+Status\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Select\+Status\+Register\+\_\+1\+\_\+2\+\_\+3 }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em Select\+Status\+Register\+\_\+1\+\_\+2\+\_\+3} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+uint8\+\_\+t 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{108 \{}
+\DoxyCodeLine{109   uint8\_t status = 0;}
+\DoxyCodeLine{110   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{111   \textcolor{keywordflow}{if} (SelectStatusRegister\_1\_2\_3 == 1)}
+\DoxyCodeLine{112   \{}
+\DoxyCodeLine{113     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x05);}
+\DoxyCodeLine{114     status = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(\mbox{\hyperlink{flash_8c_aac9052b6d58d7b61027b0a96c993aeb7}{FLASH\_DUMMY\_BYTE}});}
+\DoxyCodeLine{115     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a65ac28778c56ba4f6a4cf165cc0bba82}{StatusRegister1}} = status;}
+\DoxyCodeLine{116   \}}
+\DoxyCodeLine{117   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (SelectStatusRegister\_1\_2\_3 == 2)}
+\DoxyCodeLine{118   \{}
+\DoxyCodeLine{119     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x35);}
+\DoxyCodeLine{120     status = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(\mbox{\hyperlink{flash_8c_aac9052b6d58d7b61027b0a96c993aeb7}{FLASH\_DUMMY\_BYTE}});}
+\DoxyCodeLine{121     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a8410a659d220fd0ff69f71c295770661}{StatusRegister2}} = status;}
+\DoxyCodeLine{122   \}}
+\DoxyCodeLine{123   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{124   \{}
+\DoxyCodeLine{125     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x15);}
+\DoxyCodeLine{126     status = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(\mbox{\hyperlink{flash_8c_aac9052b6d58d7b61027b0a96c993aeb7}{FLASH\_DUMMY\_BYTE}});}
+\DoxyCodeLine{127     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af0745974d8a189c04174b3eb381015f0}{StatusRegister3}} = status;}
+\DoxyCodeLine{128   \}}
+\DoxyCodeLine{129   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{130   \textcolor{keywordflow}{return} status;}
+\DoxyCodeLine{131 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa03eda9bba742d37f64bfe4903dafacf}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gaa03eda9bba742d37f64bfe4903dafacf}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_ReadUniqID@{N25qxx\_ReadUniqID}}
+\index{N25qxx\_ReadUniqID@{N25qxx\_ReadUniqID}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_ReadUniqID()}{N25qxx\_ReadUniqID()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Read\+Uniq\+ID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67 \{}
+\DoxyCodeLine{68   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{69   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x4B);}
+\DoxyCodeLine{70   \textcolor{keywordflow}{for} (uint8\_t i = 0; i < 4; i++)}
+\DoxyCodeLine{71     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(\mbox{\hyperlink{flash_8c_aac9052b6d58d7b61027b0a96c993aeb7}{FLASH\_DUMMY\_BYTE}});}
+\DoxyCodeLine{72   \textcolor{keywordflow}{for} (uint8\_t i = 0; i < 8; i++)}
+\DoxyCodeLine{73     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a8ef5b051b0f991e1e19da82a44564ab2}{UniqID}}[i] = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(\mbox{\hyperlink{flash_8c_aac9052b6d58d7b61027b0a96c993aeb7}{FLASH\_DUMMY\_BYTE}});}
+\DoxyCodeLine{74   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{75 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga24c5d9d113618e3706eeb75942216f56}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga24c5d9d113618e3706eeb75942216f56}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_SectorToBlock@{N25qxx\_SectorToBlock}}
+\index{N25qxx\_SectorToBlock@{N25qxx\_SectorToBlock}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_SectorToBlock()}{N25qxx\_SectorToBlock()}}
+{\footnotesize\ttfamily uint32\+\_\+t N25qxx\+\_\+\+Sector\+To\+Block (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Sector\+Address }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em Sector\+Address} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+uint32\+\_\+t 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{431 \{}
+\DoxyCodeLine{432   \textcolor{keywordflow}{return} ((SectorAddress * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}}) / \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}});}
+\DoxyCodeLine{433 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga473318dbd3d70e328cc2502e65f1e525}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga473318dbd3d70e328cc2502e65f1e525}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_SectorToPage@{N25qxx\_SectorToPage}}
+\index{N25qxx\_SectorToPage@{N25qxx\_SectorToPage}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_SectorToPage()}{N25qxx\_SectorToPage()}}
+{\footnotesize\ttfamily uint32\+\_\+t N25qxx\+\_\+\+Sector\+To\+Page (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Sector\+Address }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em Sector\+Address} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+uint32\+\_\+t 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{442 \{}
+\DoxyCodeLine{443   \textcolor{keywordflow}{return} (SectorAddress * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}}) / \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}};}
+\DoxyCodeLine{444 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_Spi@{N25qxx\_Spi}}
+\index{N25qxx\_Spi@{N25qxx\_Spi}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_Spi()}{N25qxx\_Spi()}}
+{\footnotesize\ttfamily uint8\+\_\+t N25qxx\+\_\+\+Spi (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em Data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+uint8\+\_\+t 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39   uint8\_t ret;}
+\DoxyCodeLine{40   HAL\_SPI\_TransmitReceive(\&\mbox{\hyperlink{flash_8h_a0a4c11784fcf7cb41c0329b680371c1b}{\_FLASH\_SPI}}, \&Data, \&ret, 1, 100);}
+\DoxyCodeLine{41   \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6ed69de1ff6e4a87f798fd7fd60a9acf}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6ed69de1ff6e4a87f798fd7fd60a9acf}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_WaitForWriteEnd@{N25qxx\_WaitForWriteEnd}}
+\index{N25qxx\_WaitForWriteEnd@{N25qxx\_WaitForWriteEnd}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_WaitForWriteEnd()}{N25qxx\_WaitForWriteEnd()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Wait\+For\+Write\+End (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{166 \{}
+\DoxyCodeLine{167   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{168   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{169   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x05);}
+\DoxyCodeLine{170   \textcolor{keywordflow}{do}}
+\DoxyCodeLine{171   \{}
+\DoxyCodeLine{172     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a65ac28778c56ba4f6a4cf165cc0bba82}{StatusRegister1}} = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(\mbox{\hyperlink{flash_8c_aac9052b6d58d7b61027b0a96c993aeb7}{FLASH\_DUMMY\_BYTE}});}
+\DoxyCodeLine{173     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{174   \} \textcolor{keywordflow}{while} ((\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a65ac28778c56ba4f6a4cf165cc0bba82}{StatusRegister1}} \& 0x01) == 0x01);}
+\DoxyCodeLine{175   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{176 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga8f716002a41434542164d42c7bbf8d85}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga8f716002a41434542164d42c7bbf8d85}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_WriteBlock@{N25qxx\_WriteBlock}}
+\index{N25qxx\_WriteBlock@{N25qxx\_WriteBlock}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_WriteBlock()}{N25qxx\_WriteBlock()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Write\+Block (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint32\+\_\+t}]{Block\+\_\+\+Address,  }\item[{uint32\+\_\+t}]{Offset\+In\+Byte,  }\item[{uint32\+\_\+t}]{Num\+Byte\+To\+Write\+\_\+up\+\_\+to\+\_\+\+Block\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em p\+Buffer} & \\
+\hline
+{\em Block\+\_\+\+Address} & \\
+\hline
+{\em Offset\+In\+Byte} & \\
+\hline
+{\em Num\+Byte\+To\+Write\+\_\+up\+\_\+to\+\_\+\+Block\+Size} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{834 \{}
+\DoxyCodeLine{835   \textcolor{keywordflow}{if} ((NumByteToWrite\_up\_to\_BlockSize > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}}) || (NumByteToWrite\_up\_to\_BlockSize == 0))}
+\DoxyCodeLine{836     NumByteToWrite\_up\_to\_BlockSize = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}};}
+\DoxyCodeLine{837 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{838   printf(\textcolor{stringliteral}{"+++N25qxx WriteBlock:\%d, Offset:\%d ,Write \%d Bytes, begin...\(\backslash\)r\(\backslash\)n"}, Block\_Address, OffsetInByte, NumByteToWrite\_up\_to\_BlockSize);}
+\DoxyCodeLine{839   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{840 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{841   \textcolor{keywordflow}{if} (OffsetInByte >= \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}})}
+\DoxyCodeLine{842   \{}
+\DoxyCodeLine{843 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{844     printf(\textcolor{stringliteral}{"-\/-\/-\/N25qxx WriteBlock Faild!\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{845     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{846 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{847     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{848   \}}
+\DoxyCodeLine{849   uint32\_t StartPage;}
+\DoxyCodeLine{850   int32\_t BytesToWrite;}
+\DoxyCodeLine{851   uint32\_t LocalOffset;}
+\DoxyCodeLine{852   \textcolor{keywordflow}{if} ((OffsetInByte + NumByteToWrite\_up\_to\_BlockSize) > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}})}
+\DoxyCodeLine{853     BytesToWrite = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_ab733a42cbc069f09f55bfa7bdc166755}{BlockSize}} -\/ OffsetInByte;}
+\DoxyCodeLine{854   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{855     BytesToWrite = NumByteToWrite\_up\_to\_BlockSize;}
+\DoxyCodeLine{856   StartPage = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gab2ca26fb93915fc3baa32001ed779dba}{N25qxx\_BlockToPage}}(Block\_Address) + (OffsetInByte / \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}});}
+\DoxyCodeLine{857   LocalOffset = OffsetInByte \% \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}};}
+\DoxyCodeLine{858   \textcolor{keywordflow}{do}}
+\DoxyCodeLine{859   \{}
+\DoxyCodeLine{860     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gac879b1c4aa62de3088b1a6892eeede7b}{N25qxx\_WritePage}}(pBuffer, StartPage, LocalOffset, BytesToWrite);}
+\DoxyCodeLine{861     StartPage++;}
+\DoxyCodeLine{862     BytesToWrite -\/= \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} -\/ LocalOffset;}
+\DoxyCodeLine{863     pBuffer += \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} -\/ LocalOffset;}
+\DoxyCodeLine{864     LocalOffset = 0;}
+\DoxyCodeLine{865   \} \textcolor{keywordflow}{while} (BytesToWrite > 0);}
+\DoxyCodeLine{866 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{867   printf(\textcolor{stringliteral}{"-\/-\/-\/N25qxx WriteBlock Done\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{868   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{869 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{870 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gadb33cbdf325d2f42f3e029d6dc4940dc}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gadb33cbdf325d2f42f3e029d6dc4940dc}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_WriteByte@{N25qxx\_WriteByte}}
+\index{N25qxx\_WriteByte@{N25qxx\_WriteByte}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_WriteByte()}{N25qxx\_WriteByte()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Write\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{p\+Buffer,  }\item[{uint32\+\_\+t}]{Write\+Addr\+\_\+in\+Bytes }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em p\+Buffer} & \\
+\hline
+{\em Write\+Addr\+\_\+in\+Bytes} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{698 \{}
+\DoxyCodeLine{699   \textcolor{keywordflow}{while} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} == 1)}
+\DoxyCodeLine{700     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{701   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 1;}
+\DoxyCodeLine{702 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{703   uint32\_t StartTime = HAL\_GetTick();}
+\DoxyCodeLine{704   printf(\textcolor{stringliteral}{"N25qxx WriteByte 0x\%02X at address \%d begin..."}, pBuffer, WriteAddr\_inBytes);}
+\DoxyCodeLine{705 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{706   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6ed69de1ff6e4a87f798fd7fd60a9acf}{N25qxx\_WaitForWriteEnd}}();}
+\DoxyCodeLine{707   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga19b70ed108e271c3f7a448108c77a8bc}{N25qxx\_WriteEnable}}();}
+\DoxyCodeLine{708   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{709   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x02);}
+\DoxyCodeLine{710   \textcolor{keywordflow}{if} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} >= \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}})}
+\DoxyCodeLine{711     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WriteAddr\_inBytes \& 0xFF000000) >> 24);}
+\DoxyCodeLine{712   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WriteAddr\_inBytes \& 0xFF0000) >> 16);}
+\DoxyCodeLine{713   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((WriteAddr\_inBytes \& 0xFF00) >> 8);}
+\DoxyCodeLine{714   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(WriteAddr\_inBytes \& 0xFF);}
+\DoxyCodeLine{715   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(pBuffer);}
+\DoxyCodeLine{716   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{717   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6ed69de1ff6e4a87f798fd7fd60a9acf}{N25qxx\_WaitForWriteEnd}}();}
+\DoxyCodeLine{718 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{719   printf(\textcolor{stringliteral}{"N25qxx WriteByte done after \%d ms\(\backslash\)r\(\backslash\)n"}, HAL\_GetTick() -\/ StartTime);}
+\DoxyCodeLine{720 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{721   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{722 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga3a9b09223d10a266f69513333007acee}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga3a9b09223d10a266f69513333007acee}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_WriteDisable@{N25qxx\_WriteDisable}}
+\index{N25qxx\_WriteDisable@{N25qxx\_WriteDisable}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_WriteDisable()}{N25qxx\_WriteDisable()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Write\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{94 \{}
+\DoxyCodeLine{95   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{96   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x04);}
+\DoxyCodeLine{97   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{98   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{99 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga19b70ed108e271c3f7a448108c77a8bc}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga19b70ed108e271c3f7a448108c77a8bc}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_WriteEnable@{N25qxx\_WriteEnable}}
+\index{N25qxx\_WriteEnable@{N25qxx\_WriteEnable}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_WriteEnable()}{N25qxx\_WriteEnable()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Write\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82 \{}
+\DoxyCodeLine{83   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{84   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x06);}
+\DoxyCodeLine{85   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{86   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{87 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gac879b1c4aa62de3088b1a6892eeede7b}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gac879b1c4aa62de3088b1a6892eeede7b}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_WritePage@{N25qxx\_WritePage}}
+\index{N25qxx\_WritePage@{N25qxx\_WritePage}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_WritePage()}{N25qxx\_WritePage()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Write\+Page (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint32\+\_\+t}]{Page\+\_\+\+Address,  }\item[{uint32\+\_\+t}]{Offset\+In\+Byte,  }\item[{uint32\+\_\+t}]{Num\+Byte\+To\+Write\+\_\+up\+\_\+to\+\_\+\+Page\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em p\+Buffer} & \\
+\hline
+{\em Page\+\_\+\+Address} & \\
+\hline
+{\em Offset\+In\+Byte} & \\
+\hline
+{\em Num\+Byte\+To\+Write\+\_\+up\+\_\+to\+\_\+\+Page\+Size} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{733 \{}
+\DoxyCodeLine{734   \textcolor{keywordflow}{while} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} == 1)}
+\DoxyCodeLine{735     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{736   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 1;}
+\DoxyCodeLine{737   \textcolor{keywordflow}{if} (((NumByteToWrite\_up\_to\_PageSize + OffsetInByte) > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}}) || (NumByteToWrite\_up\_to\_PageSize == 0))}
+\DoxyCodeLine{738     NumByteToWrite\_up\_to\_PageSize = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} -\/ OffsetInByte;}
+\DoxyCodeLine{739   \textcolor{keywordflow}{if} ((OffsetInByte + NumByteToWrite\_up\_to\_PageSize) > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}})}
+\DoxyCodeLine{740     NumByteToWrite\_up\_to\_PageSize = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} -\/ OffsetInByte;}
+\DoxyCodeLine{741 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{742   printf(\textcolor{stringliteral}{"N25qxx WritePage:\%d, Offset:\%d ,Writes \%d Bytes, begin...\(\backslash\)r\(\backslash\)n"}, Page\_Address, OffsetInByte, NumByteToWrite\_up\_to\_PageSize);}
+\DoxyCodeLine{743   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{744   uint32\_t StartTime = HAL\_GetTick();}
+\DoxyCodeLine{745 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{746   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6ed69de1ff6e4a87f798fd7fd60a9acf}{N25qxx\_WaitForWriteEnd}}();}
+\DoxyCodeLine{747   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga19b70ed108e271c3f7a448108c77a8bc}{N25qxx\_WriteEnable}}();}
+\DoxyCodeLine{748   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{749   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x02);}
+\DoxyCodeLine{750   Page\_Address = (Page\_Address * \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}}) + OffsetInByte;}
+\DoxyCodeLine{751   \textcolor{keywordflow}{if} (\mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af6a1be587c588cd6ab0552e940986d45}{ID}} >= \mbox{\hyperlink{flash_8h_a08a0f5fb10b1858f10fecc768c61a656a9c4403d29b2e464013438ec619598f63}{N25Q256}})}
+\DoxyCodeLine{752     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((Page\_Address \& 0xFF000000) >> 24);}
+\DoxyCodeLine{753   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((Page\_Address \& 0xFF0000) >> 16);}
+\DoxyCodeLine{754   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}((Page\_Address \& 0xFF00) >> 8);}
+\DoxyCodeLine{755   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(Page\_Address \& 0xFF);}
+\DoxyCodeLine{756   HAL\_SPI\_Transmit(\&\mbox{\hyperlink{flash_8h_a0a4c11784fcf7cb41c0329b680371c1b}{\_FLASH\_SPI}}, pBuffer, NumByteToWrite\_up\_to\_PageSize, 100);}
+\DoxyCodeLine{757   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{758   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6ed69de1ff6e4a87f798fd7fd60a9acf}{N25qxx\_WaitForWriteEnd}}();}
+\DoxyCodeLine{759 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{760   StartTime = HAL\_GetTick() -\/ StartTime;}
+\DoxyCodeLine{761   \textcolor{keywordflow}{for} (uint32\_t i = 0; i < NumByteToWrite\_up\_to\_PageSize; i++)}
+\DoxyCodeLine{762   \{}
+\DoxyCodeLine{763     \textcolor{keywordflow}{if} ((i \% 8 == 0) \&\& (i > 2))}
+\DoxyCodeLine{764     \{}
+\DoxyCodeLine{765       printf(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{766       \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(10);}
+\DoxyCodeLine{767     \}}
+\DoxyCodeLine{768     printf(\textcolor{stringliteral}{"0x\%02X,"}, pBuffer[i]);}
+\DoxyCodeLine{769   \}}
+\DoxyCodeLine{770   printf(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{771   printf(\textcolor{stringliteral}{"N25qxx WritePage done after \%d ms\(\backslash\)r\(\backslash\)n"}, StartTime);}
+\DoxyCodeLine{772   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{773 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{774   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(1);}
+\DoxyCodeLine{775   \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a02d41ef2286faab324f4fa9946c3c5ab}{Lock}} = 0;}
+\DoxyCodeLine{776 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6325fd02972cddf4e70eac7b948bfd76}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga6325fd02972cddf4e70eac7b948bfd76}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_WriteSector@{N25qxx\_WriteSector}}
+\index{N25qxx\_WriteSector@{N25qxx\_WriteSector}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_WriteSector()}{N25qxx\_WriteSector()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Write\+Sector (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint32\+\_\+t}]{Sector\+\_\+\+Address,  }\item[{uint32\+\_\+t}]{Offset\+In\+Byte,  }\item[{uint32\+\_\+t}]{Num\+Byte\+To\+Write\+\_\+up\+\_\+to\+\_\+\+Sector\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em p\+Buffer} & \\
+\hline
+{\em Sector\+\_\+\+Address} & \\
+\hline
+{\em Offset\+In\+Byte} & \\
+\hline
+{\em Num\+Byte\+To\+Write\+\_\+up\+\_\+to\+\_\+\+Sector\+Size} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{787 \{}
+\DoxyCodeLine{788   \textcolor{keywordflow}{if} ((NumByteToWrite\_up\_to\_SectorSize > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}}) || (NumByteToWrite\_up\_to\_SectorSize == 0))}
+\DoxyCodeLine{789     NumByteToWrite\_up\_to\_SectorSize = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}};}
+\DoxyCodeLine{790 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{791   printf(\textcolor{stringliteral}{"+++N25qxx WriteSector:\%d, Offset:\%d ,Write \%d Bytes, begin...\(\backslash\)r\(\backslash\)n"}, Sector\_Address, OffsetInByte, NumByteToWrite\_up\_to\_SectorSize);}
+\DoxyCodeLine{792   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{793 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{794   \textcolor{keywordflow}{if} (OffsetInByte >= \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}})}
+\DoxyCodeLine{795   \{}
+\DoxyCodeLine{796 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{797     printf(\textcolor{stringliteral}{"-\/-\/-\/N25qxx WriteSector Faild!\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{798     \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{799 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{800     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{801   \}}
+\DoxyCodeLine{802   uint32\_t StartPage;}
+\DoxyCodeLine{803   int32\_t BytesToWrite;}
+\DoxyCodeLine{804   uint32\_t LocalOffset;}
+\DoxyCodeLine{805   \textcolor{keywordflow}{if} ((OffsetInByte + NumByteToWrite\_up\_to\_SectorSize) > \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}})}
+\DoxyCodeLine{806     BytesToWrite = \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_abc67ced0a08b04a8c77eb4f9f0d3fc69}{SectorSize}} -\/ OffsetInByte;}
+\DoxyCodeLine{807   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{808     BytesToWrite = NumByteToWrite\_up\_to\_SectorSize;}
+\DoxyCodeLine{809   StartPage = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_ga473318dbd3d70e328cc2502e65f1e525}{N25qxx\_SectorToPage}}(Sector\_Address) + (OffsetInByte / \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}});}
+\DoxyCodeLine{810   LocalOffset = OffsetInByte \% \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}};}
+\DoxyCodeLine{811   \textcolor{keywordflow}{do}}
+\DoxyCodeLine{812   \{}
+\DoxyCodeLine{813     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gac879b1c4aa62de3088b1a6892eeede7b}{N25qxx\_WritePage}}(pBuffer, StartPage, LocalOffset, BytesToWrite);}
+\DoxyCodeLine{814     StartPage++;}
+\DoxyCodeLine{815     BytesToWrite -\/= \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} -\/ LocalOffset;}
+\DoxyCodeLine{816     pBuffer += \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af15685480917d0693a0861de3a2bf784}{PageSize}} -\/ LocalOffset;}
+\DoxyCodeLine{817     LocalOffset = 0;}
+\DoxyCodeLine{818   \} \textcolor{keywordflow}{while} (BytesToWrite > 0);}
+\DoxyCodeLine{819 \textcolor{preprocessor}{\#if (\_FLASH\_DEBUG == 1)}}
+\DoxyCodeLine{820   printf(\textcolor{stringliteral}{"-\/-\/-\/N25qxx WriteSector Done\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{821   \mbox{\hyperlink{flash_8c_aaa634dffa86c5b8a605044bb4afacd21}{N25qxx\_Delay}}(100);}
+\DoxyCodeLine{822 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{823 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gac49a33b4586de43b8e63c6e90438ccd1}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gac49a33b4586de43b8e63c6e90438ccd1}} 
+\index{N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}!N25qxx\_WriteStatusRegister@{N25qxx\_WriteStatusRegister}}
+\index{N25qxx\_WriteStatusRegister@{N25qxx\_WriteStatusRegister}!N25Q128A FLASH 제어 함수@{N25Q128A FLASH 제어 함수}}
+\doxysubsubsection{\texorpdfstring{N25qxx\_WriteStatusRegister()}{N25qxx\_WriteStatusRegister()}}
+{\footnotesize\ttfamily void N25qxx\+\_\+\+Write\+Status\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Select\+Status\+Register\+\_\+1\+\_\+2\+\_\+3,  }\item[{uint8\+\_\+t}]{Data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em Select\+Status\+Register\+\_\+1\+\_\+2\+\_\+3} & \\
+\hline
+{\em Data} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{140 \{}
+\DoxyCodeLine{141   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_RESET);}
+\DoxyCodeLine{142   \textcolor{keywordflow}{if} (SelectStatusRegister\_1\_2\_3 == 1)}
+\DoxyCodeLine{143   \{}
+\DoxyCodeLine{144     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x01);}
+\DoxyCodeLine{145     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a65ac28778c56ba4f6a4cf165cc0bba82}{StatusRegister1}} = Data;}
+\DoxyCodeLine{146   \}}
+\DoxyCodeLine{147   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (SelectStatusRegister\_1\_2\_3 == 2)}
+\DoxyCodeLine{148   \{}
+\DoxyCodeLine{149     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x31);}
+\DoxyCodeLine{150     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_a8410a659d220fd0ff69f71c295770661}{StatusRegister2}} = Data;}
+\DoxyCodeLine{151   \}}
+\DoxyCodeLine{152   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{153   \{}
+\DoxyCodeLine{154     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(0x11);}
+\DoxyCodeLine{155     \mbox{\hyperlink{flash_8c_a0f391b7aa73a7fa57cbb69d21c91bc65}{N25qxx}}.\mbox{\hyperlink{struct_n25qxx__t_af0745974d8a189c04174b3eb381015f0}{StatusRegister3}} = Data;}
+\DoxyCodeLine{156   \}}
+\DoxyCodeLine{157   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_gace8f14432285833c8a87ee89aa333e17}{N25qxx\_Spi}}(Data);}
+\DoxyCodeLine{158   HAL\_GPIO\_WritePin(\mbox{\hyperlink{flash_8h_a5fcb87f27bac0f481b7249edeff63e78}{\_FLASH\_CS\_GPIO}}, \mbox{\hyperlink{flash_8h_a5ef56be7d2387303c41656671951350a}{\_FLASH\_CS\_PIN}}, GPIO\_PIN\_SET);}
+\DoxyCodeLine{159 \}}
+
+\end{DoxyCode}
