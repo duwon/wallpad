@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['xsize_377',['Xsize',['../lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8',1,'lcd.c']]],
-  ['xtotal_378',['XTotal',['../lcd_8c.html#a48e1817379fdd1fd52461117aa50eab3',1,'lcd.c']]]
+  ['xsize_389',['Xsize',['../lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8',1,'lcd.c']]],
+  ['xtotal_390',['XTotal',['../lcd_8c.html#a48e1817379fdd1fd52461117aa50eab3',1,'lcd.c']]]
 ];

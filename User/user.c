@@ -14,9 +14,10 @@
     - 생활정보기 제어 API
   * @section  CREATEINFO      작성정보
     - 작성자      :   정두원
-    - 작성일      :   2020-04-19
+    - 작성일      :   2020-04-21
   * @section  MODIFYINFO      수정정보
     - 2020-04-19    :    문서화
+    - 2020-04-21    :    Flash 제어 추가
   
   */
 #include <stdio.h>

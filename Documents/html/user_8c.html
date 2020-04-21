@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>생활정보기: C:/Users/duwon/Documents/GitHub/LCD/User/user.c 파일 참조</title>
+<title>생활정보기: C:/Users/duwon/OneDrive/Documents/Git/LCD/User/user.c 파일 참조</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -82,10 +82,11 @@ $(function() {
 <code>#include &quot;<a class="el" href="lcd_8h_source.html">lcd.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="led_8h_source.html">led.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="flash_8h_source.html">flash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="message_8h_source.html">message.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 user.c에 대한 include 의존 그래프</div>
 <div class="dyncontent">
-<div class="center"><img src="user_8c__incl.png" border="0" usemap="#_c_1_2_users_2duwon_2_documents_2_git_hub_2_l_c_d_2_user_2user_8c" alt=""/></div>
+<div class="center"><img src="user_8c__incl.png" border="0" usemap="#_c_1_2_users_2duwon_2_one_drive_2_documents_2_git_2_l_c_d_2_user_2user_8c" alt=""/></div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -104,6 +105,8 @@ user.c에 대한 include 의존 그래프</div>
 변수</h2></td></tr>
 <tr class="memitem:ad487255bdea276b437623c963984b6c7"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a> [130560]</td></tr>
 <tr class="separator:ad487255bdea276b437623c963984b6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa054d0bdc521d7ff05c9445d245c68ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user_8c.html#aa054d0bdc521d7ff05c9445d245c68ec">leftTime</a> = 0</td></tr>
+<tr class="separator:aa054d0bdc521d7ff05c9445d245c68ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><dl class="section author"><dt>작성자</dt><dd>정두원 </dd></dl>
@@ -132,12 +135,21 @@ user.c에 대한 include 의존 그래프</div>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">if</span> (htim-&gt;Instance == TIM6)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga998cf4b1f88c20705801d100dc084b43">soundTimerCallback</a>(htim);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">if</span> (htim-&gt;Instance == TIM6)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga998cf4b1f88c20705801d100dc084b43">soundTimerCallback</a>(htim);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="user_8c.html#aa054d0bdc521d7ff05c9445d245c68ec">leftTime</a>++;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="user_8c.html#aa054d0bdc521d7ff05c9445d245c68ec">leftTime</a> == 8000)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#gaa33fbaa898acf10b4d46171b086eab92">LED_Toggle</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdaf4ea6611b98f83a6e1ec4ce823bf9217">LED5</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <a class="code" href="user_8c.html#aa054d0bdc521d7ff05c9445d245c68ec">leftTime</a> = 0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">if</span> (htim-&gt;Instance == TIM7)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -164,39 +176,36 @@ user.c에 대한 include 의존 그래프</div>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  printf(<span class="stringliteral">&quot;\r\nSTART\r\n&quot;</span>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">// GPIO LED</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#ga1c0c731197851cdf2b2ac63deedfad25">LED_Off</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdadac6477842247cab1a8c02c65f431b44">LED1</a>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#ga1c0c731197851cdf2b2ac63deedfad25">LED_Off</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecda8379bbaa96d151e6adac488b2a147b7a">LED2</a>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#ga1c0c731197851cdf2b2ac63deedfad25">LED_Off</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecda5dec293e081e0fc78369c842fab8452b">LED3</a>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#ga1c0c731197851cdf2b2ac63deedfad25">LED_Off</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdad60e39b8d1701d30aa64f80343217342">LED4</a>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#ga1c0c731197851cdf2b2ac63deedfad25">LED_Off</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdaf4ea6611b98f83a6e1ec4ce823bf9217">LED5</a>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h.html#gae38e9d631b156b3d7f04c8af00db5540">touchInit</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga894808277b202630f4bf26be941fdb4e">soundInit</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga6d9adef64b426a95d339d30ba2fb4502">FlashInit</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga62b7eb28a066b82ef3155bd14520369d">playSound</a>((uint8_t *)<a class="code" href="user_8h.html#aafff4278ac5cd10656b8c6b5454a2975">wave</a>, <span class="keyword">sizeof</span>(<a class="code" href="user_8h.html#aafff4278ac5cd10656b8c6b5454a2975">wave</a>));</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="comment">//memset(ltdcBuffer,0x0,sizeof(ltdcBuffer));</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 130560; i++) <span class="comment">/* 색 변경 도트 출력 설정 */</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a>[i] = (uint16_t)i;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaa53c9d40f3aa552a9974cd55ac510cb3">LCD_Init</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaf1420ea7b39dd570d4d6edbf789f7640">LCD_SelectLayer</a>(0);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga13a46d9d0387d7dfa97167fc30e064d2">LCD_LayerInit</a>(0, (uint32_t)&amp;<a class="code" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga8de8fec410906e9a34e4416739402216">LCD_DisplayNumPicture</a>(100, 100, 1);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga8de8fec410906e9a34e4416739402216">LCD_DisplayNumPicture</a>(120, 100, 2);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga8de8fec410906e9a34e4416739402216">LCD_DisplayNumPicture</a>(140, 100, 10);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga8de8fec410906e9a34e4416739402216">LCD_DisplayNumPicture</a>(160, 100, 3);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga8de8fec410906e9a34e4416739402216">LCD_DisplayNumPicture</a>(180, 100, 4);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga566627fe296ea66e4a5b52de9a62f31d">Flash_writeImage</a>((uint8_t *)<a class="code" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a>, 0);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  memset(<a class="code" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a>, 0xDD, <span class="keyword">sizeof</span>(<a class="code" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a>));</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  printf(<span class="stringliteral">&quot;\r\nSTART\r\n&quot;</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="comment">// GPIO LED</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#ga1c0c731197851cdf2b2ac63deedfad25">LED_Off</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdadac6477842247cab1a8c02c65f431b44">LED1</a>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#ga1c0c731197851cdf2b2ac63deedfad25">LED_Off</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecda8379bbaa96d151e6adac488b2a147b7a">LED2</a>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#ga1c0c731197851cdf2b2ac63deedfad25">LED_Off</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecda5dec293e081e0fc78369c842fab8452b">LED3</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#ga1c0c731197851cdf2b2ac63deedfad25">LED_Off</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdad60e39b8d1701d30aa64f80343217342">LED4</a>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#ga1c0c731197851cdf2b2ac63deedfad25">LED_Off</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdaf4ea6611b98f83a6e1ec4ce823bf9217">LED5</a>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h.html#gae38e9d631b156b3d7f04c8af00db5540">touchInit</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga894808277b202630f4bf26be941fdb4e">soundInit</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga6d9adef64b426a95d339d30ba2fb4502">FlashInit</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e.html#ga9b8e356f7ac4e4ba929f0e782e50329e">messageInit</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga62b7eb28a066b82ef3155bd14520369d">playSound</a>((uint8_t *)<a class="code" href="user_8h.html#aafff4278ac5cd10656b8c6b5454a2975">wave</a>, <span class="keyword">sizeof</span>(<a class="code" href="user_8h.html#aafff4278ac5cd10656b8c6b5454a2975">wave</a>));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 130560; i++) <span class="comment">/* 색 변경 도트 출력 설정 */</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a>[i] = (uint16_t)i;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaa53c9d40f3aa552a9974cd55ac510cb3">LCD_Init</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaf1420ea7b39dd570d4d6edbf789f7640">LCD_SelectLayer</a>(0);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga13a46d9d0387d7dfa97167fc30e064d2">LCD_LayerInit</a>(0, (uint32_t)&amp;<a class="code" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga8de8fec410906e9a34e4416739402216">LCD_DisplayNumPicture</a>(100, 100, 1);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga8de8fec410906e9a34e4416739402216">LCD_DisplayNumPicture</a>(120, 100, 2);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga8de8fec410906e9a34e4416739402216">LCD_DisplayNumPicture</a>(140, 100, 10);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga8de8fec410906e9a34e4416739402216">LCD_DisplayNumPicture</a>(160, 100, 3);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga8de8fec410906e9a34e4416739402216">LCD_DisplayNumPicture</a>(180, 100, 4);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -223,29 +232,44 @@ user.c에 대한 include 의존 그래프</div>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#gaa33fbaa898acf10b4d46171b086eab92">LED_Toggle</a>(<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdaf4ea6611b98f83a6e1ec4ce823bf9217">LED5</a>);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  uint8_t touchValue = <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h.html#ga88144ebcf10a44777798ed68515798c9">getTouchValue</a>();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  printf(<span class="stringliteral">&quot;touch 0x%x\r\n&quot;</span>, touchValue);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 4; i++)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> (((touchValue &gt;&gt; i) &amp; 0x01) == 1)</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#gaa33fbaa898acf10b4d46171b086eab92">LED_Toggle</a>((<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecd">Led_TypeDef</a>)i);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  HAL_Delay(1000);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga6627b0fcd392586cbfa10e52727cbe29">Flash_readImage</a>((uint8_t *)<a class="code" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a>, 1);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  HAL_Delay(1000);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga6627b0fcd392586cbfa10e52727cbe29">Flash_readImage</a>((uint8_t *)<a class="code" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a>, 2);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  HAL_Delay(1000);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga6627b0fcd392586cbfa10e52727cbe29">Flash_readImage</a>((uint8_t *)<a class="code" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a>, 3);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  uint8_t touchValue = <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h.html#ga88144ebcf10a44777798ed68515798c9">getTouchValue</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  printf(<span class="stringliteral">&quot;touch 0x%x\r\n&quot;</span>, touchValue);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 4; i++)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">if</span> (((touchValue &gt;&gt; i) &amp; 0x01) == 1)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#gaa33fbaa898acf10b4d46171b086eab92">LED_Toggle</a>((<a class="code" href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecd">Led_TypeDef</a>)i);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  HAL_Delay(1000);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga6627b0fcd392586cbfa10e52727cbe29">Flash_readImage</a>((uint8_t *)<a class="code" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a>, 10);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  HAL_Delay(1000);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga6627b0fcd392586cbfa10e52727cbe29">Flash_readImage</a>((uint8_t *)<a class="code" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a>, 11);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  HAL_Delay(1000);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga6627b0fcd392586cbfa10e52727cbe29">Flash_readImage</a>((uint8_t *)<a class="code" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a>, 12);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  HAL_Delay(1000);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga6627b0fcd392586cbfa10e52727cbe29">Flash_readImage</a>((uint8_t *)<a class="code" href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a>, 13);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">변수 문서화</h2>
+<a id="aa054d0bdc521d7ff05c9445d245c68ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa054d0bdc521d7ff05c9445d245c68ec">&#9670;&nbsp;</a></span>leftTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leftTime = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad487255bdea276b437623c963984b6c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad487255bdea276b437623c963984b6c7">&#9670;&nbsp;</a></span>ltdcBuffer</h2>
 
@@ -266,14 +290,13 @@ user.c에 대한 include 의존 그래프</div>
 </div><!-- contents -->
 <div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_html_ga998cf4b1f88c20705801d100dc084b43"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga998cf4b1f88c20705801d100dc084b43">soundTimerCallback</a></div><div class="ttdeci">void soundTimerCallback(TIM_HandleTypeDef *htim)</div><div class="ttdoc">사운드 재생을 위한 8000Hz 인터럽트</div><div class="ttdef"><b>Definition:</b> sound.c:67</div></div>
 <div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_html_ga13a46d9d0387d7dfa97167fc30e064d2"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga13a46d9d0387d7dfa97167fc30e064d2">LCD_LayerInit</a></div><div class="ttdeci">void LCD_LayerInit(uint16_t LayerIndex, uint32_t FB_Address)</div><div class="ttdoc">RGB565 format LCD Layer 초기화. 초기값 0 Layer</div><div class="ttdef"><b>Definition:</b> lcd.c:86</div></div>
-<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_html_ga6d9adef64b426a95d339d30ba2fb4502"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga6d9adef64b426a95d339d30ba2fb4502">FlashInit</a></div><div class="ttdeci">bool FlashInit(void)</div><div class="ttdef"><b>Definition:</b> flash.c:184</div></div>
-<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_html_ga6627b0fcd392586cbfa10e52727cbe29"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga6627b0fcd392586cbfa10e52727cbe29">Flash_readImage</a></div><div class="ttdeci">void Flash_readImage(uint8_t *fbAddress, int numImage)</div><div class="ttdef"><b>Definition:</b> flash.c:1116</div></div>
+<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_html_ga6d9adef64b426a95d339d30ba2fb4502"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga6d9adef64b426a95d339d30ba2fb4502">FlashInit</a></div><div class="ttdeci">bool FlashInit(void)</div><div class="ttdef"><b>Definition:</b> flash.c:185</div></div>
+<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_html_ga6627b0fcd392586cbfa10e52727cbe29"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga6627b0fcd392586cbfa10e52727cbe29">Flash_readImage</a></div><div class="ttdeci">void Flash_readImage(uint8_t *fbAddress, int numImage)</div><div class="ttdef"><b>Definition:</b> flash.c:1096</div></div>
 <div class="ttc" id="aled_8h_html_aa059704b7ca945eb9c1e7f2c3d03fecd"><div class="ttname"><a href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecd">Led_TypeDef</a></div><div class="ttdeci">Led_TypeDef</div><div class="ttdef"><b>Definition:</b> led.h:13</div></div>
 <div class="ttc" id="aled_8h_html_aa059704b7ca945eb9c1e7f2c3d03fecda5dec293e081e0fc78369c842fab8452b"><div class="ttname"><a href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecda5dec293e081e0fc78369c842fab8452b">LED3</a></div><div class="ttdeci">@ LED3</div><div class="ttdef"><b>Definition:</b> led.h:16</div></div>
 <div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_html_gae38e9d631b156b3d7f04c8af00db5540"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h.html#gae38e9d631b156b3d7f04c8af00db5540">touchInit</a></div><div class="ttdeci">void touchInit(void)</div><div class="ttdoc">터치 초기화</div><div class="ttdef"><b>Definition:</b> touch.c:49</div></div>
 <div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_html_gaa33fbaa898acf10b4d46171b086eab92"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d.html#gaa33fbaa898acf10b4d46171b086eab92">LED_Toggle</a></div><div class="ttdeci">void LED_Toggle(Led_TypeDef Led)</div><div class="ttdoc">Toggles the selected LED.</div><div class="ttdef"><b>Definition:</b> led.c:57</div></div>
 <div class="ttc" id="aled_8h_html_aa059704b7ca945eb9c1e7f2c3d03fecdad60e39b8d1701d30aa64f80343217342"><div class="ttname"><a href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdad60e39b8d1701d30aa64f80343217342">LED4</a></div><div class="ttdeci">@ LED4</div><div class="ttdef"><b>Definition:</b> led.h:17</div></div>
-<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h_html_ga566627fe296ea66e4a5b52de9a62f31d"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___f_l_a_s_h.html#ga566627fe296ea66e4a5b52de9a62f31d">Flash_writeImage</a></div><div class="ttdeci">void Flash_writeImage(uint8_t *fbAddress, int numImage)</div><div class="ttdef"><b>Definition:</b> flash.c:1096</div></div>
 <div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_html_gaf1420ea7b39dd570d4d6edbf789f7640"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaf1420ea7b39dd570d4d6edbf789f7640">LCD_SelectLayer</a></div><div class="ttdeci">void LCD_SelectLayer(uint32_t LayerIndex)</div><div class="ttdoc">LCD 레이어 선택. 초기값 0</div><div class="ttdef"><b>Definition:</b> lcd.c:131</div></div>
 <div class="ttc" id="aled_8h_html_aa059704b7ca945eb9c1e7f2c3d03fecdaf4ea6611b98f83a6e1ec4ce823bf9217"><div class="ttname"><a href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdaf4ea6611b98f83a6e1ec4ce823bf9217">LED5</a></div><div class="ttdeci">@ LED5</div><div class="ttdef"><b>Definition:</b> led.h:18</div></div>
 <div class="ttc" id="aled_8h_html_aa059704b7ca945eb9c1e7f2c3d03fecda8379bbaa96d151e6adac488b2a147b7a"><div class="ttname"><a href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecda8379bbaa96d151e6adac488b2a147b7a">LED2</a></div><div class="ttdeci">@ LED2</div><div class="ttdef"><b>Definition:</b> led.h:15</div></div>
@@ -282,10 +305,12 @@ user.c에 대한 include 의존 그래프</div>
 <div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_html_ga88144ebcf10a44777798ed68515798c9"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h.html#ga88144ebcf10a44777798ed68515798c9">getTouchValue</a></div><div class="ttdeci">uint8_t getTouchValue(void)</div><div class="ttdoc">터치센서의 값 읽기</div><div class="ttdef"><b>Definition:</b> touch.c:73</div></div>
 <div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_html_gaa53c9d40f3aa552a9974cd55ac510cb3"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaa53c9d40f3aa552a9974cd55ac510cb3">LCD_Init</a></div><div class="ttdeci">void LCD_Init(void)</div><div class="ttdoc">LCD 초기화</div><div class="ttdef"><b>Definition:</b> lcd.c:35</div></div>
 <div class="ttc" id="aled_8h_html_aa059704b7ca945eb9c1e7f2c3d03fecdadac6477842247cab1a8c02c65f431b44"><div class="ttname"><a href="led_8h.html#aa059704b7ca945eb9c1e7f2c3d03fecdadac6477842247cab1a8c02c65f431b44">LED1</a></div><div class="ttdeci">@ LED1</div><div class="ttdef"><b>Definition:</b> led.h:14</div></div>
+<div class="ttc" id="auser_8c_html_aa054d0bdc521d7ff05c9445d245c68ec"><div class="ttname"><a href="user_8c.html#aa054d0bdc521d7ff05c9445d245c68ec">leftTime</a></div><div class="ttdeci">int leftTime</div><div class="ttdef"><b>Definition:</b> user.c:39</div></div>
 <div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_html_ga894808277b202630f4bf26be941fdb4e"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga894808277b202630f4bf26be941fdb4e">soundInit</a></div><div class="ttdeci">void soundInit(void)</div><div class="ttdoc">사운드 초기화 함수. 인터럽트 시작 및 DAC 설정</div><div class="ttdef"><b>Definition:</b> sound.c:36</div></div>
 <div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_html_ga62b7eb28a066b82ef3155bd14520369d"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga62b7eb28a066b82ef3155bd14520369d">playSound</a></div><div class="ttdeci">void playSound(uint8_t *soundAddr, uint32_t soundLen)</div><div class="ttdoc">사운드 재생</div><div class="ttdef"><b>Definition:</b> sound.c:54</div></div>
-<div class="ttc" id="auser_8h_html_aafff4278ac5cd10656b8c6b5454a2975"><div class="ttname"><a href="user_8h.html#aafff4278ac5cd10656b8c6b5454a2975">wave</a></div><div class="ttdeci">static const uint8_t wave[]</div><div class="ttdef"><b>Definition:</b> user.h:15</div></div>
-<div class="ttc" id="auser_8c_html_ad487255bdea276b437623c963984b6c7"><div class="ttname"><a href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a></div><div class="ttdeci">uint16_t ltdcBuffer[130560]</div><div class="ttdef"><b>Definition:</b> user.c:33</div></div>
+<div class="ttc" id="auser_8h_html_aafff4278ac5cd10656b8c6b5454a2975"><div class="ttname"><a href="user_8h.html#aafff4278ac5cd10656b8c6b5454a2975">wave</a></div><div class="ttdeci">static const uint8_t wave[]</div><div class="ttdef"><b>Definition:</b> user.h:14</div></div>
+<div class="ttc" id="auser_8c_html_ad487255bdea276b437623c963984b6c7"><div class="ttname"><a href="user_8c.html#ad487255bdea276b437623c963984b6c7">ltdcBuffer</a></div><div class="ttdeci">uint16_t ltdcBuffer[130560]</div><div class="ttdef"><b>Definition:</b> user.c:35</div></div>
+<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_html_ga9b8e356f7ac4e4ba929f0e782e50329e"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e.html#ga9b8e356f7ac4e4ba929f0e782e50329e">messageInit</a></div><div class="ttdeci">void messageInit(void)</div><div class="ttdef"><b>Definition:</b> message.c:54</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">

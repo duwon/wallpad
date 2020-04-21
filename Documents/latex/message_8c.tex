@@ -1,9 +1,10 @@
-\hypertarget{message_8c}{}\doxysection{C\+:/\+Users/duwon/\+Documents/\+Git\+Hub/\+L\+C\+D/\+User/message.c 파일 참조}
-\label{message_8c}\index{C:/Users/duwon/Documents/GitHub/LCD/User/message.c@{C:/Users/duwon/Documents/GitHub/LCD/User/message.c}}
+\hypertarget{message_8c}{}\doxysection{C\+:/\+Users/duwon/\+One\+Drive/\+Documents/\+Git/\+L\+C\+D/\+User/message.c 파일 참조}
+\label{message_8c}\index{C:/Users/duwon/OneDrive/Documents/Git/LCD/User/message.c@{C:/Users/duwon/OneDrive/Documents/Git/LCD/User/message.c}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}usart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}flash.\+h\char`\"{}}\newline
 message.\+c에 대한 include 의존 그래프
 % FIG 0
 \doxysubsection*{매크로}
@@ -14,21 +15,40 @@ message.\+c에 대한 include 의존 그래프
 \doxysubsection*{함수}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga4c554787dc5196e18c0d2f5eab6a5254}{put\+Byte\+To\+Buffer}} (volatile \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} $\ast$buffer, uint8\+\_\+t \mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}})
+\begin{DoxyCompactList}\small\item\em U\+A\+RT 버퍼 1Byte 저장 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_gac6432ce1f2fa79fd11b6aee1254ed39c}{get\+Byte\+From\+Buffer}} (volatile \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} $\ast$buffer, uint8\+\_\+t $\ast$\mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}})
+\begin{DoxyCompactList}\small\item\em Get the Byte From Buffer object \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{message_8c_ae494a9643f29b87d6d81e5264e60e57b}{H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Rx\+Cplt\+Callback}} (U\+A\+R\+T\+\_\+\+Handle\+Type\+Def $\ast$huart)
 \begin{DoxyCompactList}\small\item\em U\+A\+RT RX 인터럽트 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga9b8e356f7ac4e4ba929f0e782e50329e}{message\+Init}} (void)
 \item 
-void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga4c554787dc5196e18c0d2f5eab6a5254}{put\+Byte\+To\+Buffer}} (volatile \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} $\ast$buffer, uint8\+\_\+t \mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}})
-\begin{DoxyCompactList}\small\item\em U\+A\+RT 버퍼 1Byte 저장 \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_gac6432ce1f2fa79fd11b6aee1254ed39c}{get\+Byte\+From\+Buffer}} (volatile \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} $\ast$buffer, uint8\+\_\+t $\ast$\mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}})
-\begin{DoxyCompactList}\small\item\em Get the Byte From Buffer object \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_gafb2a4ed7b6014472d0b09de7159e3d64}{proc\+Message}} (uint8\+\_\+t $\ast$\mbox{\hyperlink{user_8h_ad487255bdea276b437623c963984b6c7}{ltdc\+Buffer}})
+\end{DoxyCompactItemize}
 \doxysubsection*{변수}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} \mbox{\hyperlink{message_8c_aed1d3430d79be36c0a24bc410a75fd78}{uart3\+Buffer}}
+\item 
+\mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} \mbox{\hyperlink{message_8c_ac8100bb141db19912399a3c1bd92b2ed}{uart1\+Buffer}}
 \item 
 \mbox{\hyperlink{message_8c_a6b71e3c5cd86d6941c8f4a8beb1b354f}{P\+U\+T\+C\+H\+A\+R\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE}}
 \item 
 return \mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_gac10c148705bec3c6e93b4eebc40130c4}{px\+Index}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga17cf3733a2cdd91082e85c39c94facb3}{rx\+Ch}} = 0
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+\begin{DoxyAuthor}{작성자}
+정두원 
+\end{DoxyAuthor}
+\begin{DoxyDate}{날짜}
+2020-\/04-\/21 @brif 메시지 처리 함수 
+\end{DoxyDate}
 
 
 \doxysubsection{매크로 문서화}
@@ -58,17 +78,19 @@ U\+A\+RT RX 인터럽트
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{23 \{}
-\DoxyCodeLine{24 }
-\DoxyCodeLine{25   \textcolor{keywordflow}{if} (huart-\/>Instance == USART1)}
-\DoxyCodeLine{26   \{}
-\DoxyCodeLine{27     HAL\_UART\_Receive\_DMA(huart, (uint8\_t *)\&\mbox{\hyperlink{message_8h_aed1d3430d79be36c0a24bc410a75fd78}{uart3Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}}, 1);}
-\DoxyCodeLine{28   \}}
-\DoxyCodeLine{29   \textcolor{keywordflow}{if} (huart-\/>Instance == USART3)}
-\DoxyCodeLine{30   \{}
-\DoxyCodeLine{31       HAL\_UART\_Receive\_DMA(huart, (uint8\_t *)\&\mbox{\hyperlink{message_8h_ac8100bb141db19912399a3c1bd92b2ed}{uart1Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}}, 1);}
-\DoxyCodeLine{32   \}}
-\DoxyCodeLine{33 \}}
+\DoxyCodeLine{37 \{}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39   \textcolor{keywordflow}{if} (huart-\/>Instance == USART3)}
+\DoxyCodeLine{40   \{ \textcolor{comment}{/* RS485 */}}
+\DoxyCodeLine{41     HAL\_UART\_Receive\_DMA(huart, (uint8\_t *)\&\mbox{\hyperlink{message_8c_aed1d3430d79be36c0a24bc410a75fd78}{uart3Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}}, 1);}
+\DoxyCodeLine{42     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga4c554787dc5196e18c0d2f5eab6a5254}{putByteToBuffer}}(\&\mbox{\hyperlink{message_8c_aed1d3430d79be36c0a24bc410a75fd78}{uart3Buffer}}, \mbox{\hyperlink{message_8c_aed1d3430d79be36c0a24bc410a75fd78}{uart3Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}});}
+\DoxyCodeLine{43   \}}
+\DoxyCodeLine{44   \textcolor{keywordflow}{if} (huart-\/>Instance == USART1)}
+\DoxyCodeLine{45   \{ \textcolor{comment}{/* Debug */}}
+\DoxyCodeLine{46     HAL\_UART\_Receive\_DMA(huart, (uint8\_t *)\&\mbox{\hyperlink{message_8c_ac8100bb141db19912399a3c1bd92b2ed}{uart1Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}}, 1);}
+\DoxyCodeLine{47     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga4c554787dc5196e18c0d2f5eab6a5254}{putByteToBuffer}}(\&\mbox{\hyperlink{message_8c_ac8100bb141db19912399a3c1bd92b2ed}{uart1Buffer}}, \mbox{\hyperlink{message_8c_ac8100bb141db19912399a3c1bd92b2ed}{uart1Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}});}
+\DoxyCodeLine{48   \}}
+\DoxyCodeLine{49 \}}
 
 \end{DoxyCode}
 
@@ -92,3 +114,15 @@ U\+A\+RT RX 인터럽트
 \DoxyCodeLine{  HAL\_UART\_Transmit(\&huart3, (uint8\_t *)\&\mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}}, 1, 0xFFFF)}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{message_8c_ac8100bb141db19912399a3c1bd92b2ed}\label{message_8c_ac8100bb141db19912399a3c1bd92b2ed}} 
+\index{message.c@{message.c}!uart1Buffer@{uart1Buffer}}
+\index{uart1Buffer@{uart1Buffer}!message.c@{message.c}}
+\doxysubsubsection{\texorpdfstring{uart1Buffer}{uart1Buffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} uart1\+Buffer}
+
+\mbox{\Hypertarget{message_8c_aed1d3430d79be36c0a24bc410a75fd78}\label{message_8c_aed1d3430d79be36c0a24bc410a75fd78}} 
+\index{message.c@{message.c}!uart3Buffer@{uart3Buffer}}
+\index{uart3Buffer@{uart3Buffer}!message.c@{message.c}}
+\doxysubsubsection{\texorpdfstring{uart3Buffer}{uart3Buffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} uart3\+Buffer}
+
