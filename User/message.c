@@ -123,7 +123,21 @@ void procMessage(uint8_t *ltdcBuffer)
   //    pxIndex++;
   //  }
   //}
+  
   /* Sound Write */
+  if (getByteFromBuffer(&uart3Buffer, &rxCh) == true)
+  {
+    ltdcBuffer[pxIndex] = rxCh;
+    if (pxIndex == (130559 * 2))
+    {
+      pxIndex = 0;
+      Flash_writeImage(ltdcBuffer,0);
+    }
+    else
+    {
+      pxIndex++;
+    }
+  }
 }
 
 /**

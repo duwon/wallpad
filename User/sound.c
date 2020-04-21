@@ -18,6 +18,7 @@
 #include "sound.h"
 #include "tim.h"
 #include "dac.h"
+#include "flash.h"
 
 bool flagPlaySound = false;
 uint32_t sampleRateIndex = 0;
@@ -81,3 +82,4 @@ void soundTimerCallback(TIM_HandleTypeDef *htim)
 /**
   * @}
   */
+

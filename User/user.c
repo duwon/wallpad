@@ -77,21 +77,10 @@ void userStart(void)
   FlashInit();
   messageInit();
 
-  playSound((uint8_t *)wave, sizeof(wave));
+  Flash_readImage((uint8_t *)ltdcBuffer,0);
 
-  for (int i = 0; i < 130560; i++) /* 색 변경 도트 출력 설정 */
-  {
-    ltdcBuffer[i] = (uint16_t)i;
-  }
-  LCD_Init();
-  LCD_SelectLayer(0);
-  LCD_LayerInit(0, (uint32_t)&ltdcBuffer);
 
-  LCD_DisplayNumPicture(100, 100, 1);
-  LCD_DisplayNumPicture(120, 100, 2);
-  LCD_DisplayNumPicture(140, 100, 10);
-  LCD_DisplayNumPicture(160, 100, 3);
-  LCD_DisplayNumPicture(180, 100, 4);
+  playSound((uint8_t *)ltdcBuffer, sizeof(ltdcBuffer));
 }
 
 /**
@@ -100,22 +89,5 @@ void userStart(void)
   */
 void userWhile(void)
 {
-  uint8_t touchValue = getTouchValue();
-  printf("touch 0x%x\r\n", touchValue);
-  for (int i = 0; i < 4; i++)
-  {
-    if (((touchValue >> i) & 0x01) == 1)
-    {
-      LED_Toggle((Led_TypeDef)i);
-    }
-  }
-
-  HAL_Delay(1000);
-  Flash_readImage((uint8_t *)ltdcBuffer, 10);
-  HAL_Delay(1000);
-  Flash_readImage((uint8_t *)ltdcBuffer, 11);
-  HAL_Delay(1000);
-  Flash_readImage((uint8_t *)ltdcBuffer, 12);
-	HAL_Delay(1000);
-	Flash_readImage((uint8_t *)ltdcBuffer, 13);
+	procMessage((uint8_t *)ltdcBuffer);
 }
