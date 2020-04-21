@@ -2,6 +2,7 @@
   ******************************************************************************
   * @file    flash.c
   * @author  정두원
+  * @date    2020-04-20
   * @brief   N25Q Flash 제어
   * @details
   1. 사용 방법:
@@ -22,7 +23,7 @@
 
 N25qxx_t N25qxx;
 
-#define N25qxx_Delay(delay) HAL_Delay(delay)
+#define N25qxx_Delay(delay) //HAL_Delay(delay)
 
 /** @defgroup 생활정보기_FLASH N25Q128A FLASH 제어 함수
   * @{
@@ -758,16 +759,6 @@ void N25qxx_WritePage(uint8_t *pBuffer, uint32_t Page_Address, uint32_t OffsetIn
 	N25qxx_WaitForWriteEnd();
 #if (_FLASH_DEBUG == 1)
 	StartTime = HAL_GetTick() - StartTime;
-	//for (uint32_t i = 0; i < NumByteToWrite_up_to_PageSize; i++)
-	//{
-	//	if ((i % 8 == 0) && (i > 2))
-	//	{
-	//		printf("\r\n");
-	//		N25qxx_Delay(10);
-	//	}
-	//	printf("0x%02X,", pBuffer[i]);
-	//}
-	//printf("\r\n");
 	printf("N25qxx WritePage done after %d ms\r\n", StartTime);
 	N25qxx_Delay(100);
 #endif
@@ -980,16 +971,6 @@ void N25qxx_ReadPage(uint8_t *pBuffer, uint32_t Page_Address, uint32_t OffsetInB
 	HAL_GPIO_WritePin(_FLASH_CS_GPIO, _FLASH_CS_PIN, GPIO_PIN_SET);
 #if (_FLASH_DEBUG == 1)
 	StartTime = HAL_GetTick() - StartTime;
-	//for (uint32_t i = 0; i < NumByteToRead_up_to_PageSize; i++)
-	//{
-	//	if ((i % 8 == 0) && (i > 2))
-	//	{
-	//		printf("\r\n");
-	//		N25qxx_Delay(10);
-	//	}
-	//	printf("0x%02X,", pBuffer[i]);
-	//}
-	//printf("\r\n");
 	printf("N25qxx ReadPage done after %d ms\r\n", StartTime);
 	N25qxx_Delay(100);
 #endif
@@ -1095,40 +1076,32 @@ void N25qxx_ReadBlock(uint8_t *pBuffer, uint32_t Block_Address, uint32_t OffsetI
 #define BLOCK_REMAIN 0xFC00
 void Flash_writeImage(uint8_t *fbAddress, int numImage)
 {
-	//for(int i=0; i< BLOCK_CNT;i++)
-	//{
-	//	N25qxx_EraseBlock(i*N25qxx.BlockSize);
-	//	N25qxx_WriteBlock((uint8_t*)&fbAddress[i*N25qxx.BlockSize/2],i*N25qxx.BlockSize+(numImage*0x50000),0,N25qxx.BlockSize);
-	//}
-	//N25qxx_EraseBlock(BLOCK_CNT*N25qxx.BlockSize);
-	//N25qxx_WriteBlock((uint8_t*)&fbAddress[BLOCK_CNT*N25qxx.BlockSize/2],BLOCK_CNT*N25qxx.BlockSize+(numImage*0x50000),0,BLOCK_REMAIN);
-	printf("Write %x address\r\n",(numImage*0x50000));
-	N25qxx_EraseBlock(0+(numImage*0x50000));
-	N25qxx_EraseBlock(0x10000+(numImage*0x50000));
-	N25qxx_EraseBlock(0x20000+(numImage*0x50000));
-	N25qxx_EraseBlock(0x30000+(numImage*0x50000));
+
+	N25qxx_EraseBlock(0 + (numImage * 5));
+	N25qxx_EraseBlock(1 + (numImage * 5));
+	N25qxx_EraseBlock(2 + (numImage * 5));
+	N25qxx_EraseBlock(3 + (numImage * 5));
+#if (_FLASH_DEBUG == 1)
 	printf("Erase Done\r\n");
-	N25qxx_WriteBlock((uint8_t *)&fbAddress[0], 0, 0+(numImage*0x50000), N25qxx.BlockSize);
-	printf("Write 1 Done\r\n");
-	N25qxx_WriteBlock((uint8_t *)&fbAddress[0x8000], 0x10000+(numImage*0x50000), 0, N25qxx.BlockSize);
-	printf("Write 2  Done\r\n");
-	N25qxx_WriteBlock((uint8_t *)&fbAddress[0x10000], 0x20000+(numImage*0x50000), 0, N25qxx.BlockSize);
-	printf("Write 3  Done\r\n");
-	N25qxx_WriteBlock((uint8_t *)&fbAddress[0x18000], 0x30000+(numImage*0x50000), 0, BLOCK_REMAIN);
-	printf("Write 4  Done\r\n");
+#endif
+	N25qxx_WriteBlock((uint8_t *)&fbAddress[0], 0 + (numImage * 5), 0, N25qxx.BlockSize);
+	N25qxx_WriteBlock((uint8_t *)&fbAddress[0x10000], 1 + (numImage * 5), 0, N25qxx.BlockSize);
+	N25qxx_WriteBlock((uint8_t *)&fbAddress[0x20000], 2 + (numImage * 5), 0, N25qxx.BlockSize);
+	N25qxx_WriteBlock((uint8_t *)&fbAddress[0x30000], 3 + (numImage * 5), 0, BLOCK_REMAIN);
+#if (_FLASH_DEBUG == 1)
+	printf("Write 4\r\n");
+#endif
 }
 
 void Flash_readImage(uint8_t *fbAddress, int numImage)
 {
-	//for(int i=0; i< BLOCK_CNT;i++)
-	//{
-	//	N25qxx_ReadBlock((uint8_t*)&fbAddress[i*N25qxx.BlockSize/2],i*N25qxx.BlockSize+(numImage*0x50000),0,N25qxx.BlockSize);
-	//}
-	N25qxx_ReadBlock((uint8_t *)&fbAddress[0], 0+(numImage*0x50000), 0, N25qxx.BlockSize);
-	N25qxx_ReadBlock((uint8_t*)&fbAddress[0x8000],0x10000+(numImage*0x50000),0,N25qxx.BlockSize);
-	N25qxx_ReadBlock((uint8_t*)&fbAddress[0x10000],0x20000+(numImage*0x50000),0,N25qxx.BlockSize);
-	N25qxx_ReadBlock((uint8_t*)&fbAddress[0x18000],0x30000+(numImage*0x50000),0,BLOCK_REMAIN);
-	printf("Read %d Done\r\n",numImage);
+	N25qxx_ReadBlock((uint8_t *)&fbAddress[0], 0 + (numImage * 5), 0, N25qxx.BlockSize);
+	N25qxx_ReadBlock((uint8_t *)&fbAddress[0x10000], 1 + (numImage * 5), 0, N25qxx.BlockSize);
+	N25qxx_ReadBlock((uint8_t *)&fbAddress[0x20000], 2 + (numImage * 5), 0, N25qxx.BlockSize);
+	N25qxx_ReadBlock((uint8_t *)&fbAddress[0x30000], 3 + (numImage * 5), 0, BLOCK_REMAIN);
+#if (_FLASH_DEBUG == 1)
+	printf("Read %d Done\r\n", numImage);
+#endif
 }
 
 /**
