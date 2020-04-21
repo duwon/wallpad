@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['n25qxx_5fdelay_386',['N25qxx_Delay',['../flash_8c.html#aaa634dffa86c5b8a605044bb4afacd21',1,'flash.c']]]
+  ['n25qxx_5fdelay_408',['N25qxx_Delay',['../flash_8c.html#aaa634dffa86c5b8a605044bb4afacd21',1,'flash.c']]]
 ];

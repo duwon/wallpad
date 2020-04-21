@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['xsize_194',['Xsize',['../lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8',1,'lcd.c']]],
-  ['xtotal_195',['XTotal',['../lcd_8c.html#a48e1817379fdd1fd52461117aa50eab3',1,'lcd.c']]]
+  ['생활정보기_208',['생활정보기',['../index.html',1,'']]],
+  ['소리_20재생_20함수_209',['소리 재생 함수',['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html',1,'']]]
 ];

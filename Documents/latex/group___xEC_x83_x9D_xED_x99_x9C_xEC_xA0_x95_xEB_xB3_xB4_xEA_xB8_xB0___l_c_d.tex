@@ -79,54 +79,54 @@ L\+C\+D에 문자 그리기
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{340 \{}
-\DoxyCodeLine{341   uint32\_t i = 0, j = 0;}
-\DoxyCodeLine{342   uint16\_t height, width;}
-\DoxyCodeLine{343   uint8\_t offset;}
-\DoxyCodeLine{344   uint8\_t *pchar;}
-\DoxyCodeLine{345   uint32\_t line;}
-\DoxyCodeLine{346   uint16\_t *lcdBuffer = (uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos)));}
-\DoxyCodeLine{347 }
-\DoxyCodeLine{348 \textcolor{comment}{//  height = DrawProp[ActiveLayer].pFont-\/>Height;}}
-\DoxyCodeLine{349 \textcolor{comment}{//  width = DrawProp[ActiveLayer].pFont-\/>Width;}}
-\DoxyCodeLine{350 }
-\DoxyCodeLine{351   offset = 8 * ((width + 7) / 8) -\/ width;}
-\DoxyCodeLine{352 }
-\DoxyCodeLine{353   \textcolor{keywordflow}{for} (i = 0; i < height; i++)}
-\DoxyCodeLine{354   \{}
-\DoxyCodeLine{355     pchar = ((uint8\_t *)c + (width + 7) / 8 * i);}
-\DoxyCodeLine{356 }
-\DoxyCodeLine{357     \textcolor{keywordflow}{switch} (((width + 7) / 8))}
-\DoxyCodeLine{358     \{}
-\DoxyCodeLine{359 }
-\DoxyCodeLine{360     \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{361       line = pchar[0];}
-\DoxyCodeLine{362       \textcolor{keywordflow}{break};}
-\DoxyCodeLine{363 }
-\DoxyCodeLine{364     \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{365       line = (pchar[0] << 8) | pchar[1];}
-\DoxyCodeLine{366       \textcolor{keywordflow}{break};}
-\DoxyCodeLine{367 }
-\DoxyCodeLine{368     \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{369     \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{370       line = (pchar[0] << 16) | (pchar[1] << 8) | pchar[2];}
-\DoxyCodeLine{371       \textcolor{keywordflow}{break};}
-\DoxyCodeLine{372     \}}
-\DoxyCodeLine{373 }
-\DoxyCodeLine{374     \textcolor{keywordflow}{for} (j = 0; j < width; j++)}
-\DoxyCodeLine{375     \{}
-\DoxyCodeLine{376       \textcolor{keywordflow}{if} (line \& (1 << (width -\/ j + offset -\/ 1)))}
-\DoxyCodeLine{377       \{}
-\DoxyCodeLine{378         \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga637234711335cb3a4306841ae5db4cf7}{LCD\_DrawPixel}}((Xpos + j), Ypos, \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].TextColor);}
-\DoxyCodeLine{379       \}}
-\DoxyCodeLine{380       \textcolor{keywordflow}{else}}
-\DoxyCodeLine{381       \{}
-\DoxyCodeLine{382         \textcolor{comment}{//BSP\_LCD\_DrawPixel((Xpos + j), Ypos, fish[Ypos*LCD\_GetXSize() + (Xpos + j)]);}}
-\DoxyCodeLine{383       \}}
-\DoxyCodeLine{384     \}}
-\DoxyCodeLine{385     Ypos++;}
-\DoxyCodeLine{386   \}}
-\DoxyCodeLine{387 \}}
+\DoxyCodeLine{339 \{}
+\DoxyCodeLine{340   uint32\_t i = 0, j = 0;}
+\DoxyCodeLine{341   uint16\_t height, width;}
+\DoxyCodeLine{342   uint8\_t offset;}
+\DoxyCodeLine{343   uint8\_t *pchar;}
+\DoxyCodeLine{344   uint32\_t line;}
+\DoxyCodeLine{345   uint16\_t *lcdBuffer = (uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos)));}
+\DoxyCodeLine{346 }
+\DoxyCodeLine{347 \textcolor{comment}{//  height = DrawProp[ActiveLayer].pFont-\/>Height;}}
+\DoxyCodeLine{348 \textcolor{comment}{//  width = DrawProp[ActiveLayer].pFont-\/>Width;}}
+\DoxyCodeLine{349 }
+\DoxyCodeLine{350   offset = 8 * ((width + 7) / 8) -\/ width;}
+\DoxyCodeLine{351 }
+\DoxyCodeLine{352   \textcolor{keywordflow}{for} (i = 0; i < height; i++)}
+\DoxyCodeLine{353   \{}
+\DoxyCodeLine{354     pchar = ((uint8\_t *)c + (width + 7) / 8 * i);}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{356     \textcolor{keywordflow}{switch} (((width + 7) / 8))}
+\DoxyCodeLine{357     \{}
+\DoxyCodeLine{358 }
+\DoxyCodeLine{359     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{360       line = pchar[0];}
+\DoxyCodeLine{361       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{362 }
+\DoxyCodeLine{363     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{364       line = (pchar[0] << 8) | pchar[1];}
+\DoxyCodeLine{365       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{366 }
+\DoxyCodeLine{367     \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{368     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{369       line = (pchar[0] << 16) | (pchar[1] << 8) | pchar[2];}
+\DoxyCodeLine{370       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{371     \}}
+\DoxyCodeLine{372 }
+\DoxyCodeLine{373     \textcolor{keywordflow}{for} (j = 0; j < width; j++)}
+\DoxyCodeLine{374     \{}
+\DoxyCodeLine{375       \textcolor{keywordflow}{if} (line \& (1 << (width -\/ j + offset -\/ 1)))}
+\DoxyCodeLine{376       \{}
+\DoxyCodeLine{377         \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga637234711335cb3a4306841ae5db4cf7}{LCD\_DrawPixel}}((Xpos + j), Ypos, \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].TextColor);}
+\DoxyCodeLine{378       \}}
+\DoxyCodeLine{379       \textcolor{keywordflow}{else}}
+\DoxyCodeLine{380       \{}
+\DoxyCodeLine{381         \textcolor{comment}{//BSP\_LCD\_DrawPixel((Xpos + j), Ypos, fish[Ypos*LCD\_GetXSize() + (Xpos + j)]);}}
+\DoxyCodeLine{382       \}}
+\DoxyCodeLine{383     \}}
+\DoxyCodeLine{384     Ypos++;}
+\DoxyCodeLine{385   \}}
+\DoxyCodeLine{386 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gae57144a5b4342ddd500fb50018123dc6}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gae57144a5b4342ddd500fb50018123dc6}} 
@@ -151,10 +151,10 @@ L\+CD 표시된 색상 전체 변경
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{445 \{ }
-\DoxyCodeLine{446   \textcolor{comment}{/* Clear the LCD */} }
-\DoxyCodeLine{447   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga846fbcfe435b2eb20d412c1793350a03}{LL\_FillBuffer}}(\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}, (uint32\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress), \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}(), \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}{LCD\_GetYSize}}(), 0, Color);}
-\DoxyCodeLine{448 \}}
+\DoxyCodeLine{444 \{ }
+\DoxyCodeLine{445   \textcolor{comment}{/* Clear the LCD */} }
+\DoxyCodeLine{446   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga846fbcfe435b2eb20d412c1793350a03}{LL\_FillBuffer}}(\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}, (uint32\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress), \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}(), \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}{LCD\_GetYSize}}(), 0, Color);}
+\DoxyCodeLine{447 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaa500186c114aaea3dd6cdc11d306617e}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaa500186c114aaea3dd6cdc11d306617e}} 
@@ -183,9 +183,9 @@ L\+C\+D에 문자 표시
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{397 \{}
-\DoxyCodeLine{398 \textcolor{comment}{//  DrawChar(Xpos, Ypos, \&DrawProp[ActiveLayer].pFont-\/>table[(Ascii-\/' ') * DrawProp[ActiveLayer].pFont-\/>Height * ((DrawProp[ActiveLayer].pFont-\/>Width + 7) / 8)]);}}
-\DoxyCodeLine{399 \}}
+\DoxyCodeLine{396 \{}
+\DoxyCodeLine{397 \textcolor{comment}{//  DrawChar(Xpos, Ypos, \&DrawProp[ActiveLayer].pFont-\/>table[(Ascii-\/' ') * DrawProp[ActiveLayer].pFont-\/>Height * ((DrawProp[ActiveLayer].pFont-\/>Width + 7) / 8)]);}}
+\DoxyCodeLine{398 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8de8fec410906e9a34e4416739402216}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8de8fec410906e9a34e4416739402216}} 
@@ -215,24 +215,24 @@ L\+C\+D에 그림 숫자 출력
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{458 \{}
-\DoxyCodeLine{459 \textcolor{preprocessor}{  \#define XTotal 187}}
-\DoxyCodeLine{460 \textcolor{preprocessor}{  \#define Xsize 17}}
-\DoxyCodeLine{461 \textcolor{preprocessor}{  \#define Ysize 23}}
-\DoxyCodeLine{462   }
-\DoxyCodeLine{463   uint16\_t *lcdBuffer = (uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos)));}
-\DoxyCodeLine{464 }
-\DoxyCodeLine{465   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iY = 0; iY < \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}; iY++)}
-\DoxyCodeLine{466   \{}
-\DoxyCodeLine{467     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iX = 0; iX < \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}; iX++)}
-\DoxyCodeLine{468     \{}
-\DoxyCodeLine{469       \textcolor{keywordflow}{if} (\mbox{\hyperlink{17x23_n_u_m_8h_ab8e081826e5827888be6244836b289db}{IMG\_17x23NUM}}[\mbox{\hyperlink{lcd_8c_a48e1817379fdd1fd52461117aa50eab3}{XTotal}} * iY + iX + \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}} * Num] != 0xFFFF)}
-\DoxyCodeLine{470       \{}
-\DoxyCodeLine{471         lcdBuffer[\mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() * iY + iX] = \mbox{\hyperlink{17x23_n_u_m_8h_ab8e081826e5827888be6244836b289db}{IMG\_17x23NUM}}[\mbox{\hyperlink{lcd_8c_a48e1817379fdd1fd52461117aa50eab3}{XTotal}} * iY + iX + \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}} * Num];}
-\DoxyCodeLine{472       \}}
-\DoxyCodeLine{473     \}}
-\DoxyCodeLine{474   \}}
-\DoxyCodeLine{475 \}}
+\DoxyCodeLine{457 \{}
+\DoxyCodeLine{458 \textcolor{preprocessor}{  \#define XTotal 187}}
+\DoxyCodeLine{459 \textcolor{preprocessor}{  \#define Xsize 17}}
+\DoxyCodeLine{460 \textcolor{preprocessor}{  \#define Ysize 23}}
+\DoxyCodeLine{461   }
+\DoxyCodeLine{462   uint16\_t *lcdBuffer = (uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos)));}
+\DoxyCodeLine{463 }
+\DoxyCodeLine{464   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iY = 0; iY < \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}; iY++)}
+\DoxyCodeLine{465   \{}
+\DoxyCodeLine{466     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iX = 0; iX < \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}; iX++)}
+\DoxyCodeLine{467     \{}
+\DoxyCodeLine{468       \textcolor{comment}{//if (IMG\_17x23NUM[XTotal * iY + iX + Xsize * Num] != 0xFFFF)}}
+\DoxyCodeLine{469       \textcolor{comment}{//\{}}
+\DoxyCodeLine{470       \textcolor{comment}{//  lcdBuffer[LCD\_GetXSize() * iY + iX] = IMG\_17x23NUM[XTotal * iY + iX + Xsize * Num];}}
+\DoxyCodeLine{471       \textcolor{comment}{//\}}}
+\DoxyCodeLine{472     \}}
+\DoxyCodeLine{473   \}}
+\DoxyCodeLine{474 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga57c922bb916d5ae0c3a0b4f8744a6e4b}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga57c922bb916d5ae0c3a0b4f8744a6e4b}} 
@@ -262,35 +262,35 @@ L\+C\+D에 문자열 표시
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{409 \{}
-\DoxyCodeLine{410   uint16\_t ref\_column = 1, i = 0;}
-\DoxyCodeLine{411   uint32\_t size = 0; }
-\DoxyCodeLine{412   uint8\_t  *ptr = Text;}
-\DoxyCodeLine{413   }
-\DoxyCodeLine{414 }
-\DoxyCodeLine{415   \textcolor{keywordflow}{while} (*ptr++) size ++ ;  \textcolor{comment}{/* 텍스트 크기 */}}
-\DoxyCodeLine{416   }
-\DoxyCodeLine{417 }
-\DoxyCodeLine{418   ref\_column = Xpos;  \textcolor{comment}{/* 1라인의 크기 */}}
-\DoxyCodeLine{419   }
-\DoxyCodeLine{420 }
-\DoxyCodeLine{421   \textcolor{keywordflow}{if} ((ref\_column < 1) || (ref\_column >= 0x8000))  \textcolor{comment}{/* 표시 할 시작 메모리에서의 위치 */}}
-\DoxyCodeLine{422   \{}
-\DoxyCodeLine{423     ref\_column = 1;}
-\DoxyCodeLine{424   \}}
-\DoxyCodeLine{425 }
-\DoxyCodeLine{426   \textcolor{comment}{/* Send the string character by character on LCD */}}
-\DoxyCodeLine{427   \textcolor{comment}{//while ((*Text != 0) \& (((LCD\_GetXSize() -\/ (i*DrawProp[ActiveLayer].pFont-\/>Width)) \& 0xFFFF) >= DrawProp[ActiveLayer].pFont-\/>Width))}}
-\DoxyCodeLine{428   \textcolor{comment}{//\{}}
-\DoxyCodeLine{429   \textcolor{comment}{//  /* Display one character on LCD */}}
-\DoxyCodeLine{430   \textcolor{comment}{//  LCD\_DisplayChar(ref\_column, Ypos, *Text);}}
-\DoxyCodeLine{431   \textcolor{comment}{//  /* Decrement the column position by 16 */}}
-\DoxyCodeLine{432   \textcolor{comment}{//  ref\_column += DrawProp[ActiveLayer].pFont-\/>Width;}}
-\DoxyCodeLine{433   \textcolor{comment}{//  /* Point on the next character */}}
-\DoxyCodeLine{434   \textcolor{comment}{//  Text++;}}
-\DoxyCodeLine{435   \textcolor{comment}{//  i++;}}
-\DoxyCodeLine{436   \textcolor{comment}{//\}  }}
-\DoxyCodeLine{437 \}}
+\DoxyCodeLine{408 \{}
+\DoxyCodeLine{409   uint16\_t ref\_column = 1, i = 0;}
+\DoxyCodeLine{410   uint32\_t size = 0; }
+\DoxyCodeLine{411   uint8\_t  *ptr = Text;}
+\DoxyCodeLine{412   }
+\DoxyCodeLine{413 }
+\DoxyCodeLine{414   \textcolor{keywordflow}{while} (*ptr++) size ++ ;  \textcolor{comment}{/* 텍스트 크기 */}}
+\DoxyCodeLine{415   }
+\DoxyCodeLine{416 }
+\DoxyCodeLine{417   ref\_column = Xpos;  \textcolor{comment}{/* 1라인의 크기 */}}
+\DoxyCodeLine{418   }
+\DoxyCodeLine{419 }
+\DoxyCodeLine{420   \textcolor{keywordflow}{if} ((ref\_column < 1) || (ref\_column >= 0x8000))  \textcolor{comment}{/* 표시 할 시작 메모리에서의 위치 */}}
+\DoxyCodeLine{421   \{}
+\DoxyCodeLine{422     ref\_column = 1;}
+\DoxyCodeLine{423   \}}
+\DoxyCodeLine{424 }
+\DoxyCodeLine{425   \textcolor{comment}{/* Send the string character by character on LCD */}}
+\DoxyCodeLine{426   \textcolor{comment}{//while ((*Text != 0) \& (((LCD\_GetXSize() -\/ (i*DrawProp[ActiveLayer].pFont-\/>Width)) \& 0xFFFF) >= DrawProp[ActiveLayer].pFont-\/>Width))}}
+\DoxyCodeLine{427   \textcolor{comment}{//\{}}
+\DoxyCodeLine{428   \textcolor{comment}{//  /* Display one character on LCD */}}
+\DoxyCodeLine{429   \textcolor{comment}{//  LCD\_DisplayChar(ref\_column, Ypos, *Text);}}
+\DoxyCodeLine{430   \textcolor{comment}{//  /* Decrement the column position by 16 */}}
+\DoxyCodeLine{431   \textcolor{comment}{//  ref\_column += DrawProp[ActiveLayer].pFont-\/>Width;}}
+\DoxyCodeLine{432   \textcolor{comment}{//  /* Point on the next character */}}
+\DoxyCodeLine{433   \textcolor{comment}{//  Text++;}}
+\DoxyCodeLine{434   \textcolor{comment}{//  i++;}}
+\DoxyCodeLine{435   \textcolor{comment}{//\}  }}
+\DoxyCodeLine{436 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga29dd5609c60845657a8fb6e64b9ecca9}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga29dd5609c60845657a8fb6e64b9ecca9}} 
@@ -325,42 +325,42 @@ L\+CD 그림 표시
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{234 \{}
-\DoxyCodeLine{235   uint16\_t *lcdBuffer = (uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos)));}
-\DoxyCodeLine{236 }
-\DoxyCodeLine{237   \textcolor{comment}{//for( int iY=0; iY<Ysize; iY++)}}
-\DoxyCodeLine{238   \textcolor{comment}{//\{}}
-\DoxyCodeLine{239   \textcolor{comment}{//  memcpy ((void*)\&lcdBuffer[480*iY],(void*)\&pAddress[iY*Xsize], Xsize * 2);}}
-\DoxyCodeLine{240   \textcolor{comment}{//\}}}
-\DoxyCodeLine{241   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} cnt = 0; cnt < 2; cnt++)}
-\DoxyCodeLine{242   \{}
-\DoxyCodeLine{243     \textcolor{keywordflow}{if} (Color\_Alpha0 != 0)}
-\DoxyCodeLine{244     \{}
-\DoxyCodeLine{245       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iY = 0; iY < \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}; iY++)}
-\DoxyCodeLine{246       \{}
-\DoxyCodeLine{247         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iX = 0; iX < \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}; iX++)}
-\DoxyCodeLine{248         \{}
-\DoxyCodeLine{249           \textcolor{keywordflow}{if} (pAddress[\mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}} * iY + iX] != Color\_Alpha0)}
-\DoxyCodeLine{250           \{}
-\DoxyCodeLine{251             lcdBuffer[\mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() * iY + iX] = pAddress[\mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}} * iY + iX];}
-\DoxyCodeLine{252             \textcolor{comment}{//LCD\_DrawPixel(Xpos + iX, Ypos * LCD\_GetXSize(), pAddress[Xsize * iY + iX]);}}
-\DoxyCodeLine{253           \}}
-\DoxyCodeLine{254         \}}
-\DoxyCodeLine{255       \}}
-\DoxyCodeLine{256     \}}
-\DoxyCodeLine{257     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{258     \{}
-\DoxyCodeLine{259       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iY = 0; iY < \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}; iY++)}
-\DoxyCodeLine{260       \{}
-\DoxyCodeLine{261         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iX = 0; iX < \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}; iX++)}
-\DoxyCodeLine{262         \{}
-\DoxyCodeLine{263           lcdBuffer[\mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() * iY + iX] = pAddress[\mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}} * iY + iX];}
-\DoxyCodeLine{264           \textcolor{comment}{//LCD\_DrawPixel(Xpos + iX, Ypos + (LCD\_GetXSize()*iY), pAddress[Xsize * iY + iX]);}}
-\DoxyCodeLine{265         \}}
-\DoxyCodeLine{266       \}}
-\DoxyCodeLine{267     \}}
-\DoxyCodeLine{268   \}}
-\DoxyCodeLine{269 \}}
+\DoxyCodeLine{233 \{}
+\DoxyCodeLine{234   uint16\_t *lcdBuffer = (uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos)));}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{236   \textcolor{comment}{//for( int iY=0; iY<Ysize; iY++)}}
+\DoxyCodeLine{237   \textcolor{comment}{//\{}}
+\DoxyCodeLine{238   \textcolor{comment}{//  memcpy ((void*)\&lcdBuffer[480*iY],(void*)\&pAddress[iY*Xsize], Xsize * 2);}}
+\DoxyCodeLine{239   \textcolor{comment}{//\}}}
+\DoxyCodeLine{240   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} cnt = 0; cnt < 2; cnt++)}
+\DoxyCodeLine{241   \{}
+\DoxyCodeLine{242     \textcolor{keywordflow}{if} (Color\_Alpha0 != 0)}
+\DoxyCodeLine{243     \{}
+\DoxyCodeLine{244       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iY = 0; iY < \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}; iY++)}
+\DoxyCodeLine{245       \{}
+\DoxyCodeLine{246         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iX = 0; iX < \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}; iX++)}
+\DoxyCodeLine{247         \{}
+\DoxyCodeLine{248           \textcolor{keywordflow}{if} (pAddress[\mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}} * iY + iX] != Color\_Alpha0)}
+\DoxyCodeLine{249           \{}
+\DoxyCodeLine{250             lcdBuffer[\mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() * iY + iX] = pAddress[\mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}} * iY + iX];}
+\DoxyCodeLine{251             \textcolor{comment}{//LCD\_DrawPixel(Xpos + iX, Ypos * LCD\_GetXSize(), pAddress[Xsize * iY + iX]);}}
+\DoxyCodeLine{252           \}}
+\DoxyCodeLine{253         \}}
+\DoxyCodeLine{254       \}}
+\DoxyCodeLine{255     \}}
+\DoxyCodeLine{256     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{257     \{}
+\DoxyCodeLine{258       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iY = 0; iY < \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}; iY++)}
+\DoxyCodeLine{259       \{}
+\DoxyCodeLine{260         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iX = 0; iX < \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}; iX++)}
+\DoxyCodeLine{261         \{}
+\DoxyCodeLine{262           lcdBuffer[\mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() * iY + iX] = pAddress[\mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}} * iY + iX];}
+\DoxyCodeLine{263           \textcolor{comment}{//LCD\_DrawPixel(Xpos + iX, Ypos + (LCD\_GetXSize()*iY), pAddress[Xsize * iY + iX]);}}
+\DoxyCodeLine{264         \}}
+\DoxyCodeLine{265       \}}
+\DoxyCodeLine{266     \}}
+\DoxyCodeLine{267   \}}
+\DoxyCodeLine{268 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga637234711335cb3a4306841ae5db4cf7}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga637234711335cb3a4306841ae5db4cf7}} 
@@ -389,9 +389,9 @@ L\+C\+D에 1픽셀 표시
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{219 \{}
-\DoxyCodeLine{220   *(\_\_IO uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos))) = (uint16\_t)RGB\_Code;}
-\DoxyCodeLine{221 \}}
+\DoxyCodeLine{218 \{}
+\DoxyCodeLine{219   *(\_\_IO uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos))) = (uint16\_t)RGB\_Code;}
+\DoxyCodeLine{220 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga9bf87417ff2e3e2a6a35729dfafc1725}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga9bf87417ff2e3e2a6a35729dfafc1725}} 
@@ -422,19 +422,19 @@ L\+CD 그림 삭제
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{280 \{}
-\DoxyCodeLine{281   uint16\_t *lcdBuffer = (uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos)));}
-\DoxyCodeLine{282 }
-\DoxyCodeLine{283   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iY = 0; iY < \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}; iY++)}
-\DoxyCodeLine{284   \{}
-\DoxyCodeLine{285     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iX = 0; iX < \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}; iX++)}
-\DoxyCodeLine{286     \{}
-\DoxyCodeLine{287       \textcolor{comment}{//lcdBuffer[LCD\_GetXSize() * iY + iX] = DrawProp[ActiveLayer].pBackImage[(Ypos*LCD\_GetXSize() + (Xpos))+ LCD\_GetXSize() * iY + iX];}}
-\DoxyCodeLine{288       \textcolor{comment}{//lcdBuffer[LCD\_GetXSize() * iY + iX] = fish[(Ypos*LCD\_GetXSize() + (Xpos))+ LCD\_GetXSize() * iY + iX];}}
-\DoxyCodeLine{289       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} delay=0; delay<100; delay++);}
-\DoxyCodeLine{290     \}}
-\DoxyCodeLine{291   \}}
-\DoxyCodeLine{292 \}}
+\DoxyCodeLine{279 \{}
+\DoxyCodeLine{280   uint16\_t *lcdBuffer = (uint16\_t *)(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress + (2 * (Ypos * \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + Xpos)));}
+\DoxyCodeLine{281 }
+\DoxyCodeLine{282   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iY = 0; iY < \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}; iY++)}
+\DoxyCodeLine{283   \{}
+\DoxyCodeLine{284     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iX = 0; iX < \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}; iX++)}
+\DoxyCodeLine{285     \{}
+\DoxyCodeLine{286       lcdBuffer[\mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() * iY + iX] = \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a32ff144f7348f18369ed5d1071946edc}{pBackImage}}[(Ypos*\mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() + (Xpos))+ \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}() * iY + iX];}
+\DoxyCodeLine{287       \textcolor{comment}{//lcdBuffer[LCD\_GetXSize() * iY + iX] = fish[(Ypos*LCD\_GetXSize() + (Xpos))+ LCD\_GetXSize() * iY + iX];}}
+\DoxyCodeLine{288       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} delay=0; delay<100; delay++);}
+\DoxyCodeLine{289     \}}
+\DoxyCodeLine{290   \}}
+\DoxyCodeLine{291 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8047c26258565d29a4cbd5d4d831a87e}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8047c26258565d29a4cbd5d4d831a87e}} 
@@ -454,9 +454,9 @@ L\+CD 그림 삭제
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{170 \{}
-\DoxyCodeLine{171   \textcolor{keywordflow}{return} \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a58d98c0f1117a321fbe4c5ccb118de4d}{BackColor}};}
-\DoxyCodeLine{172 \}}
+\DoxyCodeLine{169 \{}
+\DoxyCodeLine{170   \textcolor{keywordflow}{return} \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a58d98c0f1117a321fbe4c5ccb118de4d}{BackColor}};}
+\DoxyCodeLine{171 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaaab8858f03c8bce1aaef2ca960c9009f}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaaab8858f03c8bce1aaef2ca960c9009f}} 
@@ -476,9 +476,9 @@ L\+CD 그림 삭제
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{151 \{}
-\DoxyCodeLine{152   \textcolor{keywordflow}{return} \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a690c4ba3c1b4800841192000b173b987}{TextColor}};}
-\DoxyCodeLine{153 \}}
+\DoxyCodeLine{150 \{}
+\DoxyCodeLine{151   \textcolor{keywordflow}{return} \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a690c4ba3c1b4800841192000b173b987}{TextColor}};}
+\DoxyCodeLine{152 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}} 
@@ -498,9 +498,9 @@ L\+C\+D의 가로 크기
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{47 \{}
-\DoxyCodeLine{48   \textcolor{keywordflow}{return} \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].ImageWidth;}
-\DoxyCodeLine{49 \}}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{47   \textcolor{keywordflow}{return} \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].ImageWidth;}
+\DoxyCodeLine{48 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}} 
@@ -520,9 +520,9 @@ L\+C\+D의 세로 크기
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{56 \{}
-\DoxyCodeLine{57   \textcolor{keywordflow}{return} \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].ImageHeight;}
-\DoxyCodeLine{58 \}}
+\DoxyCodeLine{55 \{}
+\DoxyCodeLine{56   \textcolor{keywordflow}{return} \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].ImageHeight;}
+\DoxyCodeLine{57 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaa53c9d40f3aa552a9974cd55ac510cb3}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaa53c9d40f3aa552a9974cd55ac510cb3}} 
@@ -542,11 +542,11 @@ L\+CD 초기화
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{36 \{}
-\DoxyCodeLine{37   \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}} = hltdc;}
-\DoxyCodeLine{38   \mbox{\hyperlink{lcd_8c_a14127fa633546fea43b5eb7d3c963890}{hDma2dHandler}} = hdma2d;}
-\DoxyCodeLine{39   HAL\_GPIO\_WritePin(LCD\_PWM\_GPIO\_Port, LCD\_PWM\_Pin, GPIO\_PIN\_SET);}
-\DoxyCodeLine{40 \}}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{36   \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}} = hltdc;}
+\DoxyCodeLine{37   \mbox{\hyperlink{lcd_8c_a14127fa633546fea43b5eb7d3c963890}{hDma2dHandler}} = hdma2d;}
+\DoxyCodeLine{38   HAL\_GPIO\_WritePin(LCD\_PWM\_GPIO\_Port, LCD\_PWM\_Pin, GPIO\_PIN\_SET);}
+\DoxyCodeLine{39 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga13a46d9d0387d7dfa97167fc30e064d2}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga13a46d9d0387d7dfa97167fc30e064d2}} 
@@ -573,32 +573,32 @@ R\+G\+B565 format L\+CD Layer 초기화. 초기값 0 Layer
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{87 \{     }
-\DoxyCodeLine{88   LTDC\_LayerCfgTypeDef  layer\_cfg;}
-\DoxyCodeLine{89 }
-\DoxyCodeLine{90   layer\_cfg.WindowX0 = 0;}
-\DoxyCodeLine{91   layer\_cfg.WindowX1 = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}();}
-\DoxyCodeLine{92   layer\_cfg.WindowY0 = 0;}
-\DoxyCodeLine{93   layer\_cfg.WindowY1 = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}{LCD\_GetYSize}}(); }
-\DoxyCodeLine{94   layer\_cfg.PixelFormat = LTDC\_PIXEL\_FORMAT\_RGB565;}
-\DoxyCodeLine{95   layer\_cfg.FBStartAdress = FB\_Address;}
-\DoxyCodeLine{96   layer\_cfg.Alpha = 255;}
-\DoxyCodeLine{97   layer\_cfg.Alpha0 = 0;}
-\DoxyCodeLine{98   layer\_cfg.Backcolor.Blue = 0;}
-\DoxyCodeLine{99   layer\_cfg.Backcolor.Green = 0;}
-\DoxyCodeLine{100   layer\_cfg.Backcolor.Red = 0;}
-\DoxyCodeLine{101   layer\_cfg.BlendingFactor1 = LTDC\_BLENDING\_FACTOR1\_PAxCA;}
-\DoxyCodeLine{102   layer\_cfg.BlendingFactor2 = LTDC\_BLENDING\_FACTOR2\_PAxCA;}
-\DoxyCodeLine{103   layer\_cfg.ImageWidth = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}();}
-\DoxyCodeLine{104   layer\_cfg.ImageHeight = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}{LCD\_GetYSize}}();}
-\DoxyCodeLine{105   }
-\DoxyCodeLine{106   HAL\_LTDC\_ConfigLayer(\&\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}, \&layer\_cfg, LayerIndex); }
-\DoxyCodeLine{107 }
-\DoxyCodeLine{108   \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[LayerIndex].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a58d98c0f1117a321fbe4c5ccb118de4d}{BackColor}} = \mbox{\hyperlink{lcd_8h_acc49fc5e78780bc38a49d2ce30f02da0}{LCD\_COLOR\_WHITE}};}
-\DoxyCodeLine{109 \textcolor{comment}{//  DrawProp[LayerIndex].pFont     = \&Font24;}}
-\DoxyCodeLine{110   \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[LayerIndex].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a690c4ba3c1b4800841192000b173b987}{TextColor}} = \mbox{\hyperlink{lcd_8h_a5a28392f0f4fc236e038a15fe468ce1b}{LCD\_COLOR\_BLACK}}; }
-\DoxyCodeLine{111   \textcolor{comment}{//DrawProp[LayerIndex].pBackImage= (uint16\_t *)FB\_Address; }}
-\DoxyCodeLine{112 \}}
+\DoxyCodeLine{86 \{     }
+\DoxyCodeLine{87   LTDC\_LayerCfgTypeDef  layer\_cfg;}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89   layer\_cfg.WindowX0 = 0;}
+\DoxyCodeLine{90   layer\_cfg.WindowX1 = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}();}
+\DoxyCodeLine{91   layer\_cfg.WindowY0 = 0;}
+\DoxyCodeLine{92   layer\_cfg.WindowY1 = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}{LCD\_GetYSize}}(); }
+\DoxyCodeLine{93   layer\_cfg.PixelFormat = LTDC\_PIXEL\_FORMAT\_RGB565;}
+\DoxyCodeLine{94   layer\_cfg.FBStartAdress = FB\_Address;}
+\DoxyCodeLine{95   layer\_cfg.Alpha = 255;}
+\DoxyCodeLine{96   layer\_cfg.Alpha0 = 0;}
+\DoxyCodeLine{97   layer\_cfg.Backcolor.Blue = 0;}
+\DoxyCodeLine{98   layer\_cfg.Backcolor.Green = 0;}
+\DoxyCodeLine{99   layer\_cfg.Backcolor.Red = 0;}
+\DoxyCodeLine{100   layer\_cfg.BlendingFactor1 = LTDC\_BLENDING\_FACTOR1\_PAxCA;}
+\DoxyCodeLine{101   layer\_cfg.BlendingFactor2 = LTDC\_BLENDING\_FACTOR2\_PAxCA;}
+\DoxyCodeLine{102   layer\_cfg.ImageWidth = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}();}
+\DoxyCodeLine{103   layer\_cfg.ImageHeight = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}{LCD\_GetYSize}}();}
+\DoxyCodeLine{104   }
+\DoxyCodeLine{105   HAL\_LTDC\_ConfigLayer(\&\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}, \&layer\_cfg, LayerIndex); }
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107   \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[LayerIndex].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a58d98c0f1117a321fbe4c5ccb118de4d}{BackColor}} = \mbox{\hyperlink{lcd_8h_acc49fc5e78780bc38a49d2ce30f02da0}{LCD\_COLOR\_WHITE}};}
+\DoxyCodeLine{108 \textcolor{comment}{//  DrawProp[LayerIndex].pFont     = \&Font24;}}
+\DoxyCodeLine{109   \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[LayerIndex].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a690c4ba3c1b4800841192000b173b987}{TextColor}} = \mbox{\hyperlink{lcd_8h_a5a28392f0f4fc236e038a15fe468ce1b}{LCD\_COLOR\_BLACK}}; }
+\DoxyCodeLine{110   \textcolor{comment}{//DrawProp[LayerIndex].pBackImage= (uint16\_t *)FB\_Address; }}
+\DoxyCodeLine{111 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf1420ea7b39dd570d4d6edbf789f7640}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf1420ea7b39dd570d4d6edbf789f7640}} 
@@ -623,9 +623,9 @@ L\+CD 레이어 선택. 초기값 0
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{132 \{}
-\DoxyCodeLine{133   \mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}} = LayerIndex;}
-\DoxyCodeLine{134 \} }
+\DoxyCodeLine{131 \{}
+\DoxyCodeLine{132   \mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}} = LayerIndex;}
+\DoxyCodeLine{133 \} }
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaeca000116f289bc36b8892a6c64164dd}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaeca000116f289bc36b8892a6c64164dd}} 
@@ -650,9 +650,9 @@ L\+CD 레이어 선택. 초기값 0
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{161 \{}
-\DoxyCodeLine{162   \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a58d98c0f1117a321fbe4c5ccb118de4d}{BackColor}} = Color;}
-\DoxyCodeLine{163 \}}
+\DoxyCodeLine{160 \{}
+\DoxyCodeLine{161   \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a58d98c0f1117a321fbe4c5ccb118de4d}{BackColor}} = Color;}
+\DoxyCodeLine{162 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf7865c8fa0299567a0bebeca881ace45}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf7865c8fa0299567a0bebeca881ace45}} 
@@ -677,35 +677,35 @@ L\+CD 레이어 선택. 초기값 0
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{180 \{}
-\DoxyCodeLine{181   \textcolor{comment}{//DrawProp[ActiveLayer].pBackImage = (uint16\_t*)BackgroundImageAddress;}}
-\DoxyCodeLine{182 }
-\DoxyCodeLine{183   hdma2d.Init.Mode         = DMA2D\_M2M;}
-\DoxyCodeLine{184   \textcolor{keywordflow}{if}(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].PixelFormat == LTDC\_PIXEL\_FORMAT\_RGB565)}
-\DoxyCodeLine{185   \{ \textcolor{comment}{/* RGB565 format */} }
-\DoxyCodeLine{186     hdma2d.Init.ColorMode    = DMA2D\_RGB565;}
-\DoxyCodeLine{187   \}}
-\DoxyCodeLine{188   \textcolor{keywordflow}{else}}
-\DoxyCodeLine{189   \{ \textcolor{comment}{/* ARGB8888 format */}}
-\DoxyCodeLine{190     hdma2d.Init.ColorMode    = DMA2D\_ARGB8888;}
-\DoxyCodeLine{191   \}}
-\DoxyCodeLine{192   hdma2d.Init.OutputOffset = 0;      }
-\DoxyCodeLine{193   }
-\DoxyCodeLine{194   hdma2d.Instance = DMA2D;}
-\DoxyCodeLine{195   }
-\DoxyCodeLine{196   \textcolor{comment}{/* DMA2D Initialization */}}
-\DoxyCodeLine{197   \textcolor{keywordflow}{if}(HAL\_DMA2D\_Init(\&hdma2d) == HAL\_OK) }
-\DoxyCodeLine{198   \{}
-\DoxyCodeLine{199     \textcolor{keywordflow}{if}(HAL\_DMA2D\_ConfigLayer(\&hdma2d, \mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}) == HAL\_OK) }
-\DoxyCodeLine{200     \{}
-\DoxyCodeLine{201       \textcolor{keywordflow}{if} (HAL\_DMA2D\_Start(\&hdma2d, BackgroundImageAddress, (uint32\_t)\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress, \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}(), \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}{LCD\_GetYSize}}()) == HAL\_OK)}
-\DoxyCodeLine{202       \{}
-\DoxyCodeLine{203         \textcolor{comment}{/* Polling For DMA transfer */}  }
-\DoxyCodeLine{204         HAL\_DMA2D\_PollForTransfer(\&hdma2d, 10);}
-\DoxyCodeLine{205       \}}
-\DoxyCodeLine{206     \}}
-\DoxyCodeLine{207   \} }
-\DoxyCodeLine{208 \}}
+\DoxyCodeLine{179 \{}
+\DoxyCodeLine{180   \textcolor{comment}{//DrawProp[ActiveLayer].pBackImage = (uint16\_t*)BackgroundImageAddress;}}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182   hdma2d.Init.Mode         = DMA2D\_M2M;}
+\DoxyCodeLine{183   \textcolor{keywordflow}{if}(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].PixelFormat == LTDC\_PIXEL\_FORMAT\_RGB565)}
+\DoxyCodeLine{184   \{ \textcolor{comment}{/* RGB565 format */} }
+\DoxyCodeLine{185     hdma2d.Init.ColorMode    = DMA2D\_RGB565;}
+\DoxyCodeLine{186   \}}
+\DoxyCodeLine{187   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{188   \{ \textcolor{comment}{/* ARGB8888 format */}}
+\DoxyCodeLine{189     hdma2d.Init.ColorMode    = DMA2D\_ARGB8888;}
+\DoxyCodeLine{190   \}}
+\DoxyCodeLine{191   hdma2d.Init.OutputOffset = 0;      }
+\DoxyCodeLine{192   }
+\DoxyCodeLine{193   hdma2d.Instance = DMA2D;}
+\DoxyCodeLine{194   }
+\DoxyCodeLine{195   \textcolor{comment}{/* DMA2D Initialization */}}
+\DoxyCodeLine{196   \textcolor{keywordflow}{if}(HAL\_DMA2D\_Init(\&hdma2d) == HAL\_OK) }
+\DoxyCodeLine{197   \{}
+\DoxyCodeLine{198     \textcolor{keywordflow}{if}(HAL\_DMA2D\_ConfigLayer(\&hdma2d, \mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}) == HAL\_OK) }
+\DoxyCodeLine{199     \{}
+\DoxyCodeLine{200       \textcolor{keywordflow}{if} (HAL\_DMA2D\_Start(\&hdma2d, BackgroundImageAddress, (uint32\_t)\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].FBStartAdress, \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga6a405abda5e830f0f33dacfd21ec1e51}{LCD\_GetXSize}}(), \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaadafb98eeb93c99b8468d36e406ac90e}{LCD\_GetYSize}}()) == HAL\_OK)}
+\DoxyCodeLine{201       \{}
+\DoxyCodeLine{202         \textcolor{comment}{/* Polling For DMA transfer */}  }
+\DoxyCodeLine{203         HAL\_DMA2D\_PollForTransfer(\&hdma2d, 10);}
+\DoxyCodeLine{204       \}}
+\DoxyCodeLine{205     \}}
+\DoxyCodeLine{206   \} }
+\DoxyCodeLine{207 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga31a4bb3bde55452bbb8370f5d935e41d}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga31a4bb3bde55452bbb8370f5d935e41d}} 
@@ -730,9 +730,9 @@ L\+CD 레이어 선택. 초기값 0
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{142 \{}
-\DoxyCodeLine{143   \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a690c4ba3c1b4800841192000b173b987}{TextColor}} = Color;}
-\DoxyCodeLine{144 \}}
+\DoxyCodeLine{141 \{}
+\DoxyCodeLine{142   \mbox{\hyperlink{lcd_8c_ad781f76dabee52f2a0f804e889874669}{DrawProp}}[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def_a690c4ba3c1b4800841192000b173b987}{TextColor}} = Color;}
+\DoxyCodeLine{143 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga0568836139e5177b6ce37e470e255c77}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga0568836139e5177b6ce37e470e255c77}} 
@@ -759,9 +759,9 @@ L\+CD 레이어 선택. 초기값 0
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{122 \{    }
-\DoxyCodeLine{123   HAL\_LTDC\_SetAlpha(\&\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}, Transparency, LayerIndex);}
-\DoxyCodeLine{124 \}}
+\DoxyCodeLine{121 \{    }
+\DoxyCodeLine{122   HAL\_LTDC\_SetAlpha(\&\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}, Transparency, LayerIndex);}
+\DoxyCodeLine{123 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8e3dca6342e3dd739edbec8a23488e56}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8e3dca6342e3dd739edbec8a23488e56}} 
@@ -786,9 +786,9 @@ L\+C\+D의 가로 크기 설정. 초기값 480px
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{66 \{}
-\DoxyCodeLine{67   \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].ImageWidth = imageWidthPixels;}
-\DoxyCodeLine{68 \}}
+\DoxyCodeLine{65 \{}
+\DoxyCodeLine{66   \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].ImageWidth = imageWidthPixels;}
+\DoxyCodeLine{67 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga320415ea9b549dd0a4fa2452bde4565c}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga320415ea9b549dd0a4fa2452bde4565c}} 
@@ -813,9 +813,9 @@ L\+C\+D의 세로 크기 설정. 초기값 272px
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{76 \{}
-\DoxyCodeLine{77   \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].ImageHeight = imageHeightPixels;}
-\DoxyCodeLine{78 \}}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76   \mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].ImageHeight = imageHeightPixels;}
+\DoxyCodeLine{77 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga846fbcfe435b2eb20d412c1793350a03}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga846fbcfe435b2eb20d412c1793350a03}} 
@@ -850,31 +850,31 @@ L\+C\+D의 세로 크기 설정. 초기값 272px
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{305 \{}
-\DoxyCodeLine{306   }
-\DoxyCodeLine{307   hdma2d.Init.Mode         = DMA2D\_R2M; \textcolor{comment}{/* 레지스터에서 메모리로 복사 모드 */} }
-\DoxyCodeLine{308   \textcolor{keywordflow}{if}(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].PixelFormat == LTDC\_PIXEL\_FORMAT\_RGB565)}
-\DoxyCodeLine{309   \{ \textcolor{comment}{/* RGB565 */} }
-\DoxyCodeLine{310     hdma2d.Init.ColorMode    = DMA2D\_RGB565;}
-\DoxyCodeLine{311   \}}
-\DoxyCodeLine{312   \textcolor{keywordflow}{else}}
-\DoxyCodeLine{313   \{ \textcolor{comment}{/* ARGB8888 */}}
-\DoxyCodeLine{314     hdma2d.Init.ColorMode    = DMA2D\_ARGB8888;}
-\DoxyCodeLine{315   \}}
-\DoxyCodeLine{316   hdma2d.Init.OutputOffset = OffLine;      }
-\DoxyCodeLine{317   hdma2d.Instance = DMA2D;}
-\DoxyCodeLine{318   }
-\DoxyCodeLine{319 }
-\DoxyCodeLine{320   \textcolor{keywordflow}{if}(HAL\_DMA2D\_Init(\&hdma2d) == HAL\_OK) }
-\DoxyCodeLine{321   \{}
-\DoxyCodeLine{322     \textcolor{keywordflow}{if}(HAL\_DMA2D\_ConfigLayer(\&hdma2d, LayerIndex) == HAL\_OK) }
-\DoxyCodeLine{323     \{}
-\DoxyCodeLine{324       \textcolor{keywordflow}{if} (HAL\_DMA2D\_Start(\&hdma2d, ColorIndex, (uint32\_t)pDst, xSize, ySize) == HAL\_OK)}
-\DoxyCodeLine{325       \{}
-\DoxyCodeLine{326         HAL\_DMA2D\_PollForTransfer(\&hdma2d, 10);        \textcolor{comment}{/* Polling For DMA transfer */}  }
-\DoxyCodeLine{327       \}}
-\DoxyCodeLine{328     \}}
-\DoxyCodeLine{329   \} }
-\DoxyCodeLine{330 \}}
+\DoxyCodeLine{304 \{}
+\DoxyCodeLine{305   }
+\DoxyCodeLine{306   hdma2d.Init.Mode         = DMA2D\_R2M; \textcolor{comment}{/* 레지스터에서 메모리로 복사 모드 */} }
+\DoxyCodeLine{307   \textcolor{keywordflow}{if}(\mbox{\hyperlink{lcd_8c_a84af1341e42fc6661364a930af0a8dbc}{hLtdcHandler}}.LayerCfg[\mbox{\hyperlink{lcd_8c_acd3770d26b39dab77fde9d1cbfd261f9}{ActiveLayer}}].PixelFormat == LTDC\_PIXEL\_FORMAT\_RGB565)}
+\DoxyCodeLine{308   \{ \textcolor{comment}{/* RGB565 */} }
+\DoxyCodeLine{309     hdma2d.Init.ColorMode    = DMA2D\_RGB565;}
+\DoxyCodeLine{310   \}}
+\DoxyCodeLine{311   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{312   \{ \textcolor{comment}{/* ARGB8888 */}}
+\DoxyCodeLine{313     hdma2d.Init.ColorMode    = DMA2D\_ARGB8888;}
+\DoxyCodeLine{314   \}}
+\DoxyCodeLine{315   hdma2d.Init.OutputOffset = OffLine;      }
+\DoxyCodeLine{316   hdma2d.Instance = DMA2D;}
+\DoxyCodeLine{317   }
+\DoxyCodeLine{318 }
+\DoxyCodeLine{319   \textcolor{keywordflow}{if}(HAL\_DMA2D\_Init(\&hdma2d) == HAL\_OK) }
+\DoxyCodeLine{320   \{}
+\DoxyCodeLine{321     \textcolor{keywordflow}{if}(HAL\_DMA2D\_ConfigLayer(\&hdma2d, LayerIndex) == HAL\_OK) }
+\DoxyCodeLine{322     \{}
+\DoxyCodeLine{323       \textcolor{keywordflow}{if} (HAL\_DMA2D\_Start(\&hdma2d, ColorIndex, (uint32\_t)pDst, xSize, ySize) == HAL\_OK)}
+\DoxyCodeLine{324       \{}
+\DoxyCodeLine{325         HAL\_DMA2D\_PollForTransfer(\&hdma2d, 10);        \textcolor{comment}{/* Polling For DMA transfer */}  }
+\DoxyCodeLine{326       \}}
+\DoxyCodeLine{327     \}}
+\DoxyCodeLine{328   \} }
+\DoxyCodeLine{329 \}}
 
 \end{DoxyCode}

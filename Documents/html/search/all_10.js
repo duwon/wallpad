@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['samplerateindex_165',['sampleRateIndex',['../sound_8c.html#a981d908ff2635ad4256b8bd5b3dbc42e',1,'sound.c']]],
-  ['sampleratemax_166',['sampleRateMax',['../sound_8c.html#aa7c9bd3cdd96c72711f156f9717f73e8',1,'sound.c']]],
-  ['sectorcount_167',['SectorCount',['../struct_n25qxx__t.html#a9a5ede14edc4c1665d56b45a60f0035a',1,'N25qxx_t']]],
-  ['sectorsize_168',['SectorSize',['../struct_n25qxx__t.html#abc67ced0a08b04a8c77eb4f9f0d3fc69',1,'N25qxx_t']]],
-  ['sound_2ec_169',['sound.c',['../sound_8c.html',1,'']]],
-  ['sound_2eh_170',['sound.h',['../sound_8h.html',1,'']]],
-  ['soundinit_171',['soundInit',['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga894808277b202630f4bf26be941fdb4e',1,'soundInit(void):&#160;sound.c'],['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga894808277b202630f4bf26be941fdb4e',1,'soundInit(void):&#160;sound.c']]],
-  ['soundtimercallback_172',['soundTimerCallback',['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga998cf4b1f88c20705801d100dc084b43',1,'soundTimerCallback(TIM_HandleTypeDef *htim):&#160;sound.c'],['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga998cf4b1f88c20705801d100dc084b43',1,'soundTimerCallback(TIM_HandleTypeDef *htim):&#160;sound.c']]],
-  ['statusregister1_173',['StatusRegister1',['../struct_n25qxx__t.html#a65ac28778c56ba4f6a4cf165cc0bba82',1,'N25qxx_t']]],
-  ['statusregister2_174',['StatusRegister2',['../struct_n25qxx__t.html#a8410a659d220fd0ff69f71c295770661',1,'N25qxx_t']]],
-  ['statusregister3_175',['StatusRegister3',['../struct_n25qxx__t.html#af0745974d8a189c04174b3eb381015f0',1,'N25qxx_t']]]
+  ['uart1buffer_193',['uart1Buffer',['../message_8c.html#ac8100bb141db19912399a3c1bd92b2ed',1,'message.c']]],
+  ['uart3buffer_194',['uart3Buffer',['../message_8c.html#aed1d3430d79be36c0a24bc410a75fd78',1,'message.c']]],
+  ['uart_5fbuffer_5fsize_195',['UART_BUFFER_SIZE',['../message_8h.html#a0d57378e32bf8278011460740bc29f7f',1,'message.h']]],
+  ['uartfifo_5ftypedef_196',['uartFIFO_TypeDef',['../structuart_f_i_f_o___type_def.html',1,'']]],
+  ['uniqid_197',['UniqID',['../struct_n25qxx__t.html#a8ef5b051b0f991e1e19da82a44564ab2',1,'N25qxx_t']]],
+  ['user_2ec_198',['user.c',['../user_8c.html',1,'']]],
+  ['user_2eh_199',['user.h',['../user_8h.html',1,'']]],
+  ['user_5ftim_5fperiodelapsedcallback_200',['user_TIM_PeriodElapsedCallback',['../user_8c.html#a41ba2da3065f95958338e787c12a0c5e',1,'user_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim):&#160;user.c'],['../user_8h.html#a41ba2da3065f95958338e787c12a0c5e',1,'user_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim):&#160;user.c']]],
+  ['userstart_201',['userStart',['../user_8c.html#a940fbac2c2da16a8b3b8a0220586a72b',1,'userStart(void):&#160;user.c'],['../user_8h.html#a940fbac2c2da16a8b3b8a0220586a72b',1,'userStart(void):&#160;user.c']]],
+  ['userwhile_202',['userWhile',['../user_8c.html#a3024e1f7fb83d8fb569e7d2bcea75302',1,'userWhile(void):&#160;user.c'],['../user_8h.html#a3024e1f7fb83d8fb569e7d2bcea75302',1,'userWhile(void):&#160;user.c']]],
+  ['uart_20패킷_20송수신_203',['UART 패킷 송수신',['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e.html',1,'']]]
 ];

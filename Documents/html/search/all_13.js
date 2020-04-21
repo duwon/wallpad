@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wave_193',['wave',['../user_8h.html#aafff4278ac5cd10656b8c6b5454a2975',1,'user.h']]]
+  ['ysize_207',['Ysize',['../lcd_8c.html#a8b5ce56e84706270c0eb57f6338a4684',1,'lcd.c']]]
 ];

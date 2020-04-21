@@ -1,9 +1,4 @@
 var searchData=
 [
-  ['textcolor_176',['TextColor',['../struct_l_c_d___draw_prop_type_def.html#a690c4ba3c1b4800841192000b173b987',1,'LCD_DrawPropTypeDef']]],
-  ['touch_2ec_177',['touch.c',['../touch_8c.html',1,'']]],
-  ['touch_2eh_178',['touch.h',['../touch_8h.html',1,'']]],
-  ['touchinit_179',['touchInit',['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h.html#gae38e9d631b156b3d7f04c8af00db5540',1,'touchInit(void):&#160;touch.c'],['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h.html#gae38e9d631b156b3d7f04c8af00db5540',1,'touchInit(void):&#160;touch.c']]],
-  ['touchreadregdata_180',['touchReadRegData',['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h.html#ga099084b7ee4f2eb8b309fbfbd48dd8c7',1,'touch.c']]],
-  ['touchwriteregdata_181',['touchWriteRegData',['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h.html#gabbe30f7ec3b196cb56de0be8e057c15e',1,'touch.c']]]
+  ['wave_204',['wave',['../user_8h.html#aafff4278ac5cd10656b8c6b5454a2975',1,'user.h']]]
 ];

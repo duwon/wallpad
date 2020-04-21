@@ -22,6 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">생활정보기
+   &#160;<span id="projectnumber">0.1</span>
    </div>
   </td>
  </tr>
@@ -194,54 +195,54 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;{</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  uint32_t i = 0, j = 0;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  uint16_t height, width;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  uint8_t offset;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  uint8_t *pchar;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  uint32_t line;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  uint16_t *lcdBuffer = (uint16_t *)(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].FBStartAdress + (2 * (Ypos * <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() + Xpos)));</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="comment">//  height = DrawProp[ActiveLayer].pFont-&gt;Height;</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment">//  width = DrawProp[ActiveLayer].pFont-&gt;Width;</span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  offset = 8 * ((width + 7) / 8) - width;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; height; i++)</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  {</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    pchar = ((uint8_t *)c + (width + 7) / 8 * i);</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordflow">switch</span> (((width + 7) / 8))</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    {</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;      line = pchar[0];</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;      line = (pchar[0] &lt;&lt; 8) | pchar[1];</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">case</span> 3:</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      line = (pchar[0] &lt;&lt; 16) | (pchar[1] &lt;&lt; 8) | pchar[2];</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    }</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; width; j++)</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    {</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;      <span class="keywordflow">if</span> (line &amp; (1 &lt;&lt; (width - j + offset - 1)))</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;      {</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga637234711335cb3a4306841ae5db4cf7">LCD_DrawPixel</a>((Xpos + j), Ypos, <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].TextColor);</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;      }</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      {</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="comment">//BSP_LCD_DrawPixel((Xpos + j), Ypos, fish[Ypos*LCD_GetXSize() + (Xpos + j)]);</span></div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      }</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    }</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    Ypos++;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  }</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;{</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  uint32_t i = 0, j = 0;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  uint16_t height, width;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  uint8_t offset;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  uint8_t *pchar;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  uint32_t line;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  uint16_t *lcdBuffer = (uint16_t *)(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].FBStartAdress + (2 * (Ypos * <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() + Xpos)));</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="comment">//  height = DrawProp[ActiveLayer].pFont-&gt;Height;</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="comment">//  width = DrawProp[ActiveLayer].pFont-&gt;Width;</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  offset = 8 * ((width + 7) / 8) - width;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; height; i++)</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  {</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    pchar = ((uint8_t *)c + (width + 7) / 8 * i);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordflow">switch</span> (((width + 7) / 8))</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    {</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;      line = pchar[0];</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      line = (pchar[0] &lt;&lt; 8) | pchar[1];</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      line = (pchar[0] &lt;&lt; 16) | (pchar[1] &lt;&lt; 8) | pchar[2];</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; width; j++)</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    {</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;      <span class="keywordflow">if</span> (line &amp; (1 &lt;&lt; (width - j + offset - 1)))</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;      {</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga637234711335cb3a4306841ae5db4cf7">LCD_DrawPixel</a>((Xpos + j), Ypos, <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].TextColor);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;      }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      {</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="comment">//BSP_LCD_DrawPixel((Xpos + j), Ypos, fish[Ypos*LCD_GetXSize() + (Xpos + j)]);</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      }</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    Ypos++;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  }</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -274,10 +275,10 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;{ </div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  <span class="comment">/* Clear the LCD */</span> </div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga846fbcfe435b2eb20d412c1793350a03">LL_FillBuffer</a>(<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>, (uint32_t *)(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].FBStartAdress), <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>(), <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaadafb98eeb93c99b8468d36e406ac90e">LCD_GetYSize</a>(), 0, Color);</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;{ </div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  <span class="comment">/* Clear the LCD */</span> </div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga846fbcfe435b2eb20d412c1793350a03">LL_FillBuffer</a>(<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>, (uint32_t *)(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].FBStartAdress), <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>(), <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaadafb98eeb93c99b8468d36e406ac90e">LCD_GetYSize</a>(), 0, Color);</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -328,9 +329,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;{</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="comment">//  DrawChar(Xpos, Ypos, &amp;DrawProp[ActiveLayer].pFont-&gt;table[(Ascii-&#39; &#39;) * DrawProp[ActiveLayer].pFont-&gt;Height * ((DrawProp[ActiveLayer].pFont-&gt;Width + 7) / 8)]);</span></div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;{</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="comment">//  DrawChar(Xpos, Ypos, &amp;DrawProp[ActiveLayer].pFont-&gt;table[(Ascii-&#39; &#39;) * DrawProp[ActiveLayer].pFont-&gt;Height * ((DrawProp[ActiveLayer].pFont-&gt;Width + 7) / 8)]);</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -382,24 +383,24 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;{</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="preprocessor">  #define XTotal 187</span></div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="preprocessor">  #define Xsize 17</span></div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="preprocessor">  #define Ysize 23</span></div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;  </div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;  uint16_t *lcdBuffer = (uint16_t *)(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].FBStartAdress + (2 * (Ypos * <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() + Xpos)));</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160; </div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iY = 0; iY &lt; <a class="code" href="lcd_8c.html#a8b5ce56e84706270c0eb57f6338a4684">Ysize</a>; iY++)</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;  {</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iX = 0; iX &lt; <a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a>; iX++)</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    {</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="17x23_n_u_m_8h.html#ab8e081826e5827888be6244836b289db">IMG_17x23NUM</a>[<a class="code" href="lcd_8c.html#a48e1817379fdd1fd52461117aa50eab3">XTotal</a> * iY + iX + <a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a> * Num] != 0xFFFF)</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;      {</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        lcdBuffer[<a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() * iY + iX] = <a class="code" href="17x23_n_u_m_8h.html#ab8e081826e5827888be6244836b289db">IMG_17x23NUM</a>[<a class="code" href="lcd_8c.html#a48e1817379fdd1fd52461117aa50eab3">XTotal</a> * iY + iX + <a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a> * Num];</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;      }</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    }</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;  }</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;{</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="preprocessor">  #define XTotal 187</span></div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="preprocessor">  #define Xsize 17</span></div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="preprocessor">  #define Ysize 23</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;  </div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;  uint16_t *lcdBuffer = (uint16_t *)(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].FBStartAdress + (2 * (Ypos * <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() + Xpos)));</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iY = 0; iY &lt; <a class="code" href="lcd_8c.html#a8b5ce56e84706270c0eb57f6338a4684">Ysize</a>; iY++)</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;  {</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iX = 0; iX &lt; <a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a>; iX++)</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    {</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;      <span class="comment">//if (IMG_17x23NUM[XTotal * iY + iX + Xsize * Num] != 0xFFFF)</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;      <span class="comment">//{</span></div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;      <span class="comment">//  lcdBuffer[LCD_GetXSize() * iY + iX] = IMG_17x23NUM[XTotal * iY + iX + Xsize * Num];</span></div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;      <span class="comment">//}</span></div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    }</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;  }</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -451,35 +452,35 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;{</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  uint16_t ref_column = 1, i = 0;</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  uint32_t size = 0; </div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  uint8_t  *ptr = Text;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  </div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160; </div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  <span class="keywordflow">while</span> (*ptr++) size ++ ;  <span class="comment">/* 텍스트 크기 */</span></div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  </div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  ref_column = Xpos;  <span class="comment">/* 1라인의 크기 */</span></div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  </div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <span class="keywordflow">if</span> ((ref_column &lt; 1) || (ref_column &gt;= 0x8000))  <span class="comment">/* 표시 할 시작 메모리에서의 위치 */</span></div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  {</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    ref_column = 1;</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  }</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  <span class="comment">/* Send the string character by character on LCD */</span></div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  <span class="comment">//while ((*Text != 0) &amp; (((LCD_GetXSize() - (i*DrawProp[ActiveLayer].pFont-&gt;Width)) &amp; 0xFFFF) &gt;= DrawProp[ActiveLayer].pFont-&gt;Width))</span></div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  <span class="comment">//{</span></div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  <span class="comment">//  /* Display one character on LCD */</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  <span class="comment">//  LCD_DisplayChar(ref_column, Ypos, *Text);</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  <span class="comment">//  /* Decrement the column position by 16 */</span></div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  <span class="comment">//  ref_column += DrawProp[ActiveLayer].pFont-&gt;Width;</span></div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  <span class="comment">//  /* Point on the next character */</span></div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  <span class="comment">//  Text++;</span></div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <span class="comment">//  i++;</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  <span class="comment">//}  </span></div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;{</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  uint16_t ref_column = 1, i = 0;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  uint32_t size = 0; </div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  uint8_t  *ptr = Text;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  </div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="keywordflow">while</span> (*ptr++) size ++ ;  <span class="comment">/* 텍스트 크기 */</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  </div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  ref_column = Xpos;  <span class="comment">/* 1라인의 크기 */</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  </div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <span class="keywordflow">if</span> ((ref_column &lt; 1) || (ref_column &gt;= 0x8000))  <span class="comment">/* 표시 할 시작 메모리에서의 위치 */</span></div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  {</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    ref_column = 1;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  }</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160; </div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  <span class="comment">/* Send the string character by character on LCD */</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  <span class="comment">//while ((*Text != 0) &amp; (((LCD_GetXSize() - (i*DrawProp[ActiveLayer].pFont-&gt;Width)) &amp; 0xFFFF) &gt;= DrawProp[ActiveLayer].pFont-&gt;Width))</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  <span class="comment">//{</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  <span class="comment">//  /* Display one character on LCD */</span></div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  <span class="comment">//  LCD_DisplayChar(ref_column, Ypos, *Text);</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  <span class="comment">//  /* Decrement the column position by 16 */</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  <span class="comment">//  ref_column += DrawProp[ActiveLayer].pFont-&gt;Width;</span></div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  <span class="comment">//  /* Point on the next character */</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  <span class="comment">//  Text++;</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  <span class="comment">//  i++;</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <span class="comment">//}  </span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -551,42 +552,42 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;{</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  uint16_t *lcdBuffer = (uint16_t *)(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].FBStartAdress + (2 * (Ypos * <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() + Xpos)));</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="comment">//for( int iY=0; iY&lt;Ysize; iY++)</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="comment">//{</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="comment">//  memcpy ((void*)&amp;lcdBuffer[480*iY],(void*)&amp;pAddress[iY*Xsize], Xsize * 2);</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="comment">//}</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> cnt = 0; cnt &lt; 2; cnt++)</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  {</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">if</span> (Color_Alpha0 != 0)</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    {</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iY = 0; iY &lt; <a class="code" href="lcd_8c.html#a8b5ce56e84706270c0eb57f6338a4684">Ysize</a>; iY++)</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      {</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iX = 0; iX &lt; <a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a>; iX++)</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        {</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;          <span class="keywordflow">if</span> (pAddress[<a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a> * iY + iX] != Color_Alpha0)</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;          {</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            lcdBuffer[<a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() * iY + iX] = pAddress[<a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a> * iY + iX];</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="comment">//LCD_DrawPixel(Xpos + iX, Ypos * LCD_GetXSize(), pAddress[Xsize * iY + iX]);</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;          }</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        }</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      }</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    {</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iY = 0; iY &lt; <a class="code" href="lcd_8c.html#a8b5ce56e84706270c0eb57f6338a4684">Ysize</a>; iY++)</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      {</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iX = 0; iX &lt; <a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a>; iX++)</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        {</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;          lcdBuffer[<a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() * iY + iX] = pAddress[<a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a> * iY + iX];</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;          <span class="comment">//LCD_DrawPixel(Xpos + iX, Ypos + (LCD_GetXSize()*iY), pAddress[Xsize * iY + iX]);</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        }</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      }</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    }</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  }</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;{</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  uint16_t *lcdBuffer = (uint16_t *)(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].FBStartAdress + (2 * (Ypos * <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() + Xpos)));</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="comment">//for( int iY=0; iY&lt;Ysize; iY++)</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="comment">//{</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="comment">//  memcpy ((void*)&amp;lcdBuffer[480*iY],(void*)&amp;pAddress[iY*Xsize], Xsize * 2);</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="comment">//}</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> cnt = 0; cnt &lt; 2; cnt++)</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">if</span> (Color_Alpha0 != 0)</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iY = 0; iY &lt; <a class="code" href="lcd_8c.html#a8b5ce56e84706270c0eb57f6338a4684">Ysize</a>; iY++)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iX = 0; iX &lt; <a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a>; iX++)</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;          <span class="keywordflow">if</span> (pAddress[<a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a> * iY + iX] != Color_Alpha0)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;          {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            lcdBuffer[<a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() * iY + iX] = pAddress[<a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a> * iY + iX];</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="comment">//LCD_DrawPixel(Xpos + iX, Ypos * LCD_GetXSize(), pAddress[Xsize * iY + iX]);</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;          }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iY = 0; iY &lt; <a class="code" href="lcd_8c.html#a8b5ce56e84706270c0eb57f6338a4684">Ysize</a>; iY++)</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iX = 0; iX &lt; <a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a>; iX++)</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;          lcdBuffer[<a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() * iY + iX] = pAddress[<a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a> * iY + iX];</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;          <span class="comment">//LCD_DrawPixel(Xpos + iX, Ypos + (LCD_GetXSize()*iY), pAddress[Xsize * iY + iX]);</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -637,9 +638,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;{</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  *(__IO uint16_t *)(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].FBStartAdress + (2 * (Ypos * <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() + Xpos))) = (uint16_t)RGB_Code;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;{</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  *(__IO uint16_t *)(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].FBStartAdress + (2 * (Ypos * <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() + Xpos))) = (uint16_t)RGB_Code;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -703,19 +704,19 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;{</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  uint16_t *lcdBuffer = (uint16_t *)(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].FBStartAdress + (2 * (Ypos * <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() + Xpos)));</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iY = 0; iY &lt; <a class="code" href="lcd_8c.html#a8b5ce56e84706270c0eb57f6338a4684">Ysize</a>; iY++)</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  {</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iX = 0; iX &lt; <a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a>; iX++)</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="comment">//lcdBuffer[LCD_GetXSize() * iY + iX] = DrawProp[ActiveLayer].pBackImage[(Ypos*LCD_GetXSize() + (Xpos))+ LCD_GetXSize() * iY + iX];</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      <span class="comment">//lcdBuffer[LCD_GetXSize() * iY + iX] = fish[(Ypos*LCD_GetXSize() + (Xpos))+ LCD_GetXSize() * iY + iX];</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> delay=0; delay&lt;100; delay++);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;{</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  uint16_t *lcdBuffer = (uint16_t *)(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].FBStartAdress + (2 * (Ypos * <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() + Xpos)));</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iY = 0; iY &lt; <a class="code" href="lcd_8c.html#a8b5ce56e84706270c0eb57f6338a4684">Ysize</a>; iY++)</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iX = 0; iX &lt; <a class="code" href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a>; iX++)</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      lcdBuffer[<a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() * iY + iX] = <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].<a class="code" href="struct_l_c_d___draw_prop_type_def.html#a32ff144f7348f18369ed5d1071946edc">pBackImage</a>[(Ypos*<a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() + (Xpos))+ <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>() * iY + iX];</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="comment">//lcdBuffer[LCD_GetXSize() * iY + iX] = fish[(Ypos*LCD_GetXSize() + (Xpos))+ LCD_GetXSize() * iY + iX];</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> delay=0; delay&lt;100; delay++);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -742,9 +743,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].<a class="code" href="struct_l_c_d___draw_prop_type_def.html#a58d98c0f1117a321fbe4c5ccb118de4d">BackColor</a>;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;{</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].<a class="code" href="struct_l_c_d___draw_prop_type_def.html#a58d98c0f1117a321fbe4c5ccb118de4d">BackColor</a>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -771,9 +772,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].<a class="code" href="struct_l_c_d___draw_prop_type_def.html#a690c4ba3c1b4800841192000b173b987">TextColor</a>;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;{</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].<a class="code" href="struct_l_c_d___draw_prop_type_def.html#a690c4ba3c1b4800841192000b173b987">TextColor</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -800,9 +801,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].ImageWidth;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].ImageWidth;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -829,9 +830,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].ImageHeight;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].ImageHeight;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -858,11 +859,11 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a> = hltdc;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="lcd_8c.html#a14127fa633546fea43b5eb7d3c963890">hDma2dHandler</a> = hdma2d;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  HAL_GPIO_WritePin(LCD_PWM_GPIO_Port, LCD_PWM_Pin, GPIO_PIN_SET);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a> = hltdc;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="lcd_8c.html#a14127fa633546fea43b5eb7d3c963890">hDma2dHandler</a> = hdma2d;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  HAL_GPIO_WritePin(LCD_PWM_GPIO_Port, LCD_PWM_Pin, GPIO_PIN_SET);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -906,32 +907,32 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{     </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  LTDC_LayerCfgTypeDef  layer_cfg;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  layer_cfg.WindowX0 = 0;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  layer_cfg.WindowX1 = <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  layer_cfg.WindowY0 = 0;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  layer_cfg.WindowY1 = <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaadafb98eeb93c99b8468d36e406ac90e">LCD_GetYSize</a>(); </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  layer_cfg.PixelFormat = LTDC_PIXEL_FORMAT_RGB565;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  layer_cfg.FBStartAdress = FB_Address;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  layer_cfg.Alpha = 255;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  layer_cfg.Alpha0 = 0;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  layer_cfg.Backcolor.Blue = 0;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  layer_cfg.Backcolor.Green = 0;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  layer_cfg.Backcolor.Red = 0;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  layer_cfg.BlendingFactor1 = LTDC_BLENDING_FACTOR1_PAxCA;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  layer_cfg.BlendingFactor2 = LTDC_BLENDING_FACTOR2_PAxCA;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  layer_cfg.ImageWidth = <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  layer_cfg.ImageHeight = <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaadafb98eeb93c99b8468d36e406ac90e">LCD_GetYSize</a>();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  HAL_LTDC_ConfigLayer(&amp;<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>, &amp;layer_cfg, LayerIndex); </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[LayerIndex].<a class="code" href="struct_l_c_d___draw_prop_type_def.html#a58d98c0f1117a321fbe4c5ccb118de4d">BackColor</a> = <a class="code" href="lcd_8h.html#acc49fc5e78780bc38a49d2ce30f02da0">LCD_COLOR_WHITE</a>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">//  DrawProp[LayerIndex].pFont     = &amp;Font24;</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[LayerIndex].<a class="code" href="struct_l_c_d___draw_prop_type_def.html#a690c4ba3c1b4800841192000b173b987">TextColor</a> = <a class="code" href="lcd_8h.html#a5a28392f0f4fc236e038a15fe468ce1b">LCD_COLOR_BLACK</a>; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="comment">//DrawProp[LayerIndex].pBackImage= (uint16_t *)FB_Address; </span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{     </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  LTDC_LayerCfgTypeDef  layer_cfg;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  layer_cfg.WindowX0 = 0;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  layer_cfg.WindowX1 = <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  layer_cfg.WindowY0 = 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  layer_cfg.WindowY1 = <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaadafb98eeb93c99b8468d36e406ac90e">LCD_GetYSize</a>(); </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  layer_cfg.PixelFormat = LTDC_PIXEL_FORMAT_RGB565;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  layer_cfg.FBStartAdress = FB_Address;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  layer_cfg.Alpha = 255;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  layer_cfg.Alpha0 = 0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  layer_cfg.Backcolor.Blue = 0;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  layer_cfg.Backcolor.Green = 0;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  layer_cfg.Backcolor.Red = 0;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  layer_cfg.BlendingFactor1 = LTDC_BLENDING_FACTOR1_PAxCA;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  layer_cfg.BlendingFactor2 = LTDC_BLENDING_FACTOR2_PAxCA;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  layer_cfg.ImageWidth = <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  layer_cfg.ImageHeight = <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaadafb98eeb93c99b8468d36e406ac90e">LCD_GetYSize</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  HAL_LTDC_ConfigLayer(&amp;<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>, &amp;layer_cfg, LayerIndex); </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[LayerIndex].<a class="code" href="struct_l_c_d___draw_prop_type_def.html#a58d98c0f1117a321fbe4c5ccb118de4d">BackColor</a> = <a class="code" href="lcd_8h.html#acc49fc5e78780bc38a49d2ce30f02da0">LCD_COLOR_WHITE</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">//  DrawProp[LayerIndex].pFont     = &amp;Font24;</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[LayerIndex].<a class="code" href="struct_l_c_d___draw_prop_type_def.html#a690c4ba3c1b4800841192000b173b987">TextColor</a> = <a class="code" href="lcd_8h.html#a5a28392f0f4fc236e038a15fe468ce1b">LCD_COLOR_BLACK</a>; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="comment">//DrawProp[LayerIndex].pBackImage= (uint16_t *)FB_Address; </span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -964,9 +965,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a> = LayerIndex;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;} </div>
+<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a> = LayerIndex;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;} </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -999,9 +1000,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;{</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].<a class="code" href="struct_l_c_d___draw_prop_type_def.html#a58d98c0f1117a321fbe4c5ccb118de4d">BackColor</a> = Color;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].<a class="code" href="struct_l_c_d___draw_prop_type_def.html#a58d98c0f1117a321fbe4c5ccb118de4d">BackColor</a> = Color;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1034,35 +1035,35 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;{</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="comment">//DrawProp[ActiveLayer].pBackImage = (uint16_t*)BackgroundImageAddress;</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  hdma2d.Init.Mode         = DMA2D_M2M;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].PixelFormat == LTDC_PIXEL_FORMAT_RGB565)</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  { <span class="comment">/* RGB565 format */</span> </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    hdma2d.Init.ColorMode    = DMA2D_RGB565;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  }</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  { <span class="comment">/* ARGB8888 format */</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    hdma2d.Init.ColorMode    = DMA2D_ARGB8888;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  hdma2d.Init.OutputOffset = 0;      </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  hdma2d.Instance = DMA2D;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="comment">/* DMA2D Initialization */</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordflow">if</span>(HAL_DMA2D_Init(&amp;hdma2d) == HAL_OK) </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">if</span>(HAL_DMA2D_ConfigLayer(&amp;hdma2d, <a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>) == HAL_OK) </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="keywordflow">if</span> (HAL_DMA2D_Start(&amp;hdma2d, BackgroundImageAddress, (uint32_t)<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].FBStartAdress, <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>(), <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaadafb98eeb93c99b8468d36e406ac90e">LCD_GetYSize</a>()) == HAL_OK)</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="comment">/* Polling For DMA transfer */</span>  </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        HAL_DMA2D_PollForTransfer(&amp;hdma2d, 10);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  } </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;{</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="comment">//DrawProp[ActiveLayer].pBackImage = (uint16_t*)BackgroundImageAddress;</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  hdma2d.Init.Mode         = DMA2D_M2M;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].PixelFormat == LTDC_PIXEL_FORMAT_RGB565)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  { <span class="comment">/* RGB565 format */</span> </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    hdma2d.Init.ColorMode    = DMA2D_RGB565;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  { <span class="comment">/* ARGB8888 format */</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    hdma2d.Init.ColorMode    = DMA2D_ARGB8888;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  hdma2d.Init.OutputOffset = 0;      </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  hdma2d.Instance = DMA2D;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="comment">/* DMA2D Initialization */</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordflow">if</span>(HAL_DMA2D_Init(&amp;hdma2d) == HAL_OK) </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">if</span>(HAL_DMA2D_ConfigLayer(&amp;hdma2d, <a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>) == HAL_OK) </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="keywordflow">if</span> (HAL_DMA2D_Start(&amp;hdma2d, BackgroundImageAddress, (uint32_t)<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].FBStartAdress, <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a>(), <a class="code" href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaadafb98eeb93c99b8468d36e406ac90e">LCD_GetYSize</a>()) == HAL_OK)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="comment">/* Polling For DMA transfer */</span>  </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        HAL_DMA2D_PollForTransfer(&amp;hdma2d, 10);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  } </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1095,9 +1096,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].<a class="code" href="struct_l_c_d___draw_prop_type_def.html#a690c4ba3c1b4800841192000b173b987">TextColor</a> = Color;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <a class="code" href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a>[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].<a class="code" href="struct_l_c_d___draw_prop_type_def.html#a690c4ba3c1b4800841192000b173b987">TextColor</a> = Color;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1141,9 +1142,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{    </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  HAL_LTDC_SetAlpha(&amp;<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>, Transparency, LayerIndex);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{    </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  HAL_LTDC_SetAlpha(&amp;<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>, Transparency, LayerIndex);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1176,9 +1177,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].ImageWidth = imageWidthPixels;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].ImageWidth = imageWidthPixels;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1211,9 +1212,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].ImageHeight = imageHeightPixels;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].ImageHeight = imageHeightPixels;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1293,52 +1294,51 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;{</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  </div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  hdma2d.Init.Mode         = DMA2D_R2M; <span class="comment">/* 레지스터에서 메모리로 복사 모드 */</span> </div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].PixelFormat == LTDC_PIXEL_FORMAT_RGB565)</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  { <span class="comment">/* RGB565 */</span> </div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    hdma2d.Init.ColorMode    = DMA2D_RGB565;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  { <span class="comment">/* ARGB8888 */</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    hdma2d.Init.ColorMode    = DMA2D_ARGB8888;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  }</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  hdma2d.Init.OutputOffset = OffLine;      </div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  hdma2d.Instance = DMA2D;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keywordflow">if</span>(HAL_DMA2D_Init(&amp;hdma2d) == HAL_OK) </div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  {</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordflow">if</span>(HAL_DMA2D_ConfigLayer(&amp;hdma2d, LayerIndex) == HAL_OK) </div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    {</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      <span class="keywordflow">if</span> (HAL_DMA2D_Start(&amp;hdma2d, ColorIndex, (uint32_t)pDst, xSize, ySize) == HAL_OK)</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        HAL_DMA2D_PollForTransfer(&amp;hdma2d, 10);        <span class="comment">/* Polling For DMA transfer */</span>  </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      }</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    }</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  } </div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;{</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  hdma2d.Init.Mode         = DMA2D_R2M; <span class="comment">/* 레지스터에서 메모리로 복사 모드 */</span> </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a>.LayerCfg[<a class="code" href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a>].PixelFormat == LTDC_PIXEL_FORMAT_RGB565)</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  { <span class="comment">/* RGB565 */</span> </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    hdma2d.Init.ColorMode    = DMA2D_RGB565;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  { <span class="comment">/* ARGB8888 */</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    hdma2d.Init.ColorMode    = DMA2D_ARGB8888;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  }</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  hdma2d.Init.OutputOffset = OffLine;      </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  hdma2d.Instance = DMA2D;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <span class="keywordflow">if</span>(HAL_DMA2D_Init(&amp;hdma2d) == HAL_OK) </div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">if</span>(HAL_DMA2D_ConfigLayer(&amp;hdma2d, LayerIndex) == HAL_OK) </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      <span class="keywordflow">if</span> (HAL_DMA2D_Start(&amp;hdma2d, ColorIndex, (uint32_t)pDst, xSize, ySize) == HAL_OK)</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        HAL_DMA2D_PollForTransfer(&amp;hdma2d, 10);        <span class="comment">/* Polling For DMA transfer */</span>  </div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  } </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="alcd_8c_html_ad781f76dabee52f2a0f804e889874669"><div class="ttname"><a href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a></div><div class="ttdeci">static LCD_DrawPropTypeDef DrawProp[MAX_LAYER_NUMBER]</div><div class="ttdef"><b>Definition:</b> lcd.c:25</div></div>
+<div class="ttc" id="astruct_l_c_d___draw_prop_type_def_html_a32ff144f7348f18369ed5d1071946edc"><div class="ttname"><a href="struct_l_c_d___draw_prop_type_def.html#a32ff144f7348f18369ed5d1071946edc">LCD_DrawPropTypeDef::pBackImage</a></div><div class="ttdeci">uint16_t * pBackImage</div><div class="ttdef"><b>Definition:</b> lcd.h:54</div></div>
+<div class="ttc" id="alcd_8c_html_ad781f76dabee52f2a0f804e889874669"><div class="ttname"><a href="lcd_8c.html#ad781f76dabee52f2a0f804e889874669">DrawProp</a></div><div class="ttdeci">static LCD_DrawPropTypeDef DrawProp[MAX_LAYER_NUMBER]</div><div class="ttdef"><b>Definition:</b> lcd.c:24</div></div>
 <div class="ttc" id="alcd_8c_html_aa973b950a5038c6cfbf8fe0a3e359fb8"><div class="ttname"><a href="lcd_8c.html#aa973b950a5038c6cfbf8fe0a3e359fb8">Xsize</a></div><div class="ttdeci">#define Xsize</div></div>
 <div class="ttc" id="astruct_l_c_d___draw_prop_type_def_html_a58d98c0f1117a321fbe4c5ccb118de4d"><div class="ttname"><a href="struct_l_c_d___draw_prop_type_def.html#a58d98c0f1117a321fbe4c5ccb118de4d">LCD_DrawPropTypeDef::BackColor</a></div><div class="ttdeci">uint32_t BackColor</div><div class="ttdef"><b>Definition:</b> lcd.h:52</div></div>
-<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_html_ga846fbcfe435b2eb20d412c1793350a03"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga846fbcfe435b2eb20d412c1793350a03">LL_FillBuffer</a></div><div class="ttdeci">static void LL_FillBuffer(uint32_t LayerIndex, void *pDst, uint32_t xSize, uint32_t ySize, uint32_t OffLine, uint32_t ColorIndex)</div><div class="ttdoc">버퍼에 특정 색상 채우기</div><div class="ttdef"><b>Definition:</b> lcd.c:304</div></div>
-<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_html_ga637234711335cb3a4306841ae5db4cf7"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga637234711335cb3a4306841ae5db4cf7">LCD_DrawPixel</a></div><div class="ttdeci">void LCD_DrawPixel(uint16_t Xpos, uint16_t Ypos, uint16_t RGB_Code)</div><div class="ttdoc">LCD에 1픽셀 표시</div><div class="ttdef"><b>Definition:</b> lcd.c:218</div></div>
+<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_html_ga846fbcfe435b2eb20d412c1793350a03"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga846fbcfe435b2eb20d412c1793350a03">LL_FillBuffer</a></div><div class="ttdeci">static void LL_FillBuffer(uint32_t LayerIndex, void *pDst, uint32_t xSize, uint32_t ySize, uint32_t OffLine, uint32_t ColorIndex)</div><div class="ttdoc">버퍼에 특정 색상 채우기</div><div class="ttdef"><b>Definition:</b> lcd.c:303</div></div>
+<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_html_ga637234711335cb3a4306841ae5db4cf7"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga637234711335cb3a4306841ae5db4cf7">LCD_DrawPixel</a></div><div class="ttdeci">void LCD_DrawPixel(uint16_t Xpos, uint16_t Ypos, uint16_t RGB_Code)</div><div class="ttdoc">LCD에 1픽셀 표시</div><div class="ttdef"><b>Definition:</b> lcd.c:217</div></div>
 <div class="ttc" id="alcd_8h_html_acc49fc5e78780bc38a49d2ce30f02da0"><div class="ttname"><a href="lcd_8h.html#acc49fc5e78780bc38a49d2ce30f02da0">LCD_COLOR_WHITE</a></div><div class="ttdeci">#define LCD_COLOR_WHITE</div><div class="ttdef"><b>Definition:</b> lcd.h:40</div></div>
-<div class="ttc" id="alcd_8c_html_a14127fa633546fea43b5eb7d3c963890"><div class="ttname"><a href="lcd_8c.html#a14127fa633546fea43b5eb7d3c963890">hDma2dHandler</a></div><div class="ttdeci">static DMA2D_HandleTypeDef hDma2dHandler</div><div class="ttdef"><b>Definition:</b> lcd.c:23</div></div>
+<div class="ttc" id="alcd_8c_html_a14127fa633546fea43b5eb7d3c963890"><div class="ttname"><a href="lcd_8c.html#a14127fa633546fea43b5eb7d3c963890">hDma2dHandler</a></div><div class="ttdeci">static DMA2D_HandleTypeDef hDma2dHandler</div><div class="ttdef"><b>Definition:</b> lcd.c:22</div></div>
 <div class="ttc" id="astruct_l_c_d___draw_prop_type_def_html_a690c4ba3c1b4800841192000b173b987"><div class="ttname"><a href="struct_l_c_d___draw_prop_type_def.html#a690c4ba3c1b4800841192000b173b987">LCD_DrawPropTypeDef::TextColor</a></div><div class="ttdeci">uint32_t TextColor</div><div class="ttdef"><b>Definition:</b> lcd.h:51</div></div>
-<div class="ttc" id="alcd_8c_html_a84af1341e42fc6661364a930af0a8dbc"><div class="ttname"><a href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a></div><div class="ttdeci">static LTDC_HandleTypeDef hLtdcHandler</div><div class="ttdef"><b>Definition:</b> lcd.c:22</div></div>
-<div class="ttc" id="alcd_8c_html_a48e1817379fdd1fd52461117aa50eab3"><div class="ttname"><a href="lcd_8c.html#a48e1817379fdd1fd52461117aa50eab3">XTotal</a></div><div class="ttdeci">#define XTotal</div></div>
-<div class="ttc" id="a17x23_n_u_m_8h_html_ab8e081826e5827888be6244836b289db"><div class="ttname"><a href="17x23_n_u_m_8h.html#ab8e081826e5827888be6244836b289db">IMG_17x23NUM</a></div><div class="ttdeci">const unsigned short IMG_17x23NUM[]</div><div class="ttdef"><b>Definition:</b> 17x23NUM.h:9</div></div>
-<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_html_gaadafb98eeb93c99b8468d36e406ac90e"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaadafb98eeb93c99b8468d36e406ac90e">LCD_GetYSize</a></div><div class="ttdeci">uint32_t LCD_GetYSize(void)</div><div class="ttdoc">LCD의 세로 크기</div><div class="ttdef"><b>Definition:</b> lcd.c:55</div></div>
-<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_html_ga6a405abda5e830f0f33dacfd21ec1e51"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a></div><div class="ttdeci">uint32_t LCD_GetXSize(void)</div><div class="ttdoc">LCD의 가로 크기</div><div class="ttdef"><b>Definition:</b> lcd.c:46</div></div>
+<div class="ttc" id="alcd_8c_html_a84af1341e42fc6661364a930af0a8dbc"><div class="ttname"><a href="lcd_8c.html#a84af1341e42fc6661364a930af0a8dbc">hLtdcHandler</a></div><div class="ttdeci">static LTDC_HandleTypeDef hLtdcHandler</div><div class="ttdef"><b>Definition:</b> lcd.c:21</div></div>
+<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_html_gaadafb98eeb93c99b8468d36e406ac90e"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#gaadafb98eeb93c99b8468d36e406ac90e">LCD_GetYSize</a></div><div class="ttdeci">uint32_t LCD_GetYSize(void)</div><div class="ttdoc">LCD의 세로 크기</div><div class="ttdef"><b>Definition:</b> lcd.c:54</div></div>
+<div class="ttc" id="agroup___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_html_ga6a405abda5e830f0f33dacfd21ec1e51"><div class="ttname"><a href="group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d.html#ga6a405abda5e830f0f33dacfd21ec1e51">LCD_GetXSize</a></div><div class="ttdeci">uint32_t LCD_GetXSize(void)</div><div class="ttdoc">LCD의 가로 크기</div><div class="ttdef"><b>Definition:</b> lcd.c:45</div></div>
 <div class="ttc" id="alcd_8c_html_a8b5ce56e84706270c0eb57f6338a4684"><div class="ttname"><a href="lcd_8c.html#a8b5ce56e84706270c0eb57f6338a4684">Ysize</a></div><div class="ttdeci">#define Ysize</div></div>
 <div class="ttc" id="alcd_8h_html_a5a28392f0f4fc236e038a15fe468ce1b"><div class="ttname"><a href="lcd_8h.html#a5a28392f0f4fc236e038a15fe468ce1b">LCD_COLOR_BLACK</a></div><div class="ttdeci">#define LCD_COLOR_BLACK</div><div class="ttdef"><b>Definition:</b> lcd.h:44</div></div>
-<div class="ttc" id="alcd_8c_html_acd3770d26b39dab77fde9d1cbfd261f9"><div class="ttname"><a href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a></div><div class="ttdeci">static uint32_t ActiveLayer</div><div class="ttdef"><b>Definition:</b> lcd.c:24</div></div>
+<div class="ttc" id="alcd_8c_html_acd3770d26b39dab77fde9d1cbfd261f9"><div class="ttname"><a href="lcd_8c.html#acd3770d26b39dab77fde9d1cbfd261f9">ActiveLayer</a></div><div class="ttdeci">static uint32_t ActiveLayer</div><div class="ttdef"><b>Definition:</b> lcd.c:23</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
