@@ -18,6 +18,7 @@
   * @section  MODIFYINFO      수정정보
     - 2020-04-19    :    문서화
     - 2020-04-21    :    Flash 제어 추가
+    - 2020-04-22    :    Flash 삭제 및 QSPI 플래쉬 Memory MAP 사용으로 변경
   
   */
 #include <stdio.h>
@@ -29,8 +30,16 @@
 #include "sound.h"
 #include "lcd.h"
 #include "led.h"
-#include "flash.h"
 #include "message.h"
+
+#include "IMG_01.h"
+#include "IMG_02.h"
+#include "IMG_03.h"
+#include "IMG_04.h"
+#include "IMG_05.h"
+#include "IMG_06.h"
+
+#include "SOUND_01.h"
 
 uint16_t ltdcBuffer[130560] = {
     0,
@@ -47,7 +56,7 @@ void user_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   {
     soundTimerCallback(htim);
     leftTime++;
-    if(leftTime == 8000)
+    if (leftTime == 8000)
     {
       LED_Toggle(LED5);
       leftTime = 0;
@@ -74,24 +83,13 @@ void userStart(void)
 
   touchInit();
   soundInit();
-  FlashInit();
   messageInit();
 
-  playSound((uint8_t *)wave, sizeof(wave));
+  playSound((uint8_t *)SOUND_01, sizeof(SOUND_01));
 
-  for (int i = 0; i < 130560; i++) /* 색 변경 도트 출력 설정 */
-  {
-    ltdcBuffer[i] = (uint16_t)i;
-  }
   LCD_Init();
   LCD_SelectLayer(0);
   LCD_LayerInit(0, (uint32_t)&ltdcBuffer);
-
-  LCD_DisplayNumPicture(100, 100, 1);
-  LCD_DisplayNumPicture(120, 100, 2);
-  LCD_DisplayNumPicture(140, 100, 10);
-  LCD_DisplayNumPicture(160, 100, 3);
-  LCD_DisplayNumPicture(180, 100, 4);
 }
 
 /**
@@ -110,12 +108,12 @@ void userWhile(void)
     }
   }
 
-  HAL_Delay(1000);
-  Flash_readImage((uint8_t *)ltdcBuffer, 10);
-  HAL_Delay(1000);
-  Flash_readImage((uint8_t *)ltdcBuffer, 11);
-  HAL_Delay(1000);
-  Flash_readImage((uint8_t *)ltdcBuffer, 12);
-	HAL_Delay(1000);
-	Flash_readImage((uint8_t *)ltdcBuffer, 13);
+  uint32_t arrImgAddr[6] = {(uint32_t)&IMG_01, (uint32_t)&IMG_02, (uint32_t)&IMG_03, (uint32_t)&IMG_04, (uint32_t)&IMG_05, (uint32_t)&IMG_06};
+  for (int i = 1; i < 6; i++)
+  {
+    LCD_SetBackImage(arrImgAddr[0]);
+    HAL_Delay(2000);
+    LCD_SetBackImage(arrImgAddr[i]);
+    HAL_Delay(2000);
+  }
 }

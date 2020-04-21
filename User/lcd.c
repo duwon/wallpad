@@ -17,7 +17,6 @@
 #include "lcd.h"
 #include "ltdc.h"
 #include "dma2d.h"
-#include "17x23NUM.h"
 
 static LTDC_HandleTypeDef  hLtdcHandler;
 static DMA2D_HandleTypeDef hDma2dHandler;
@@ -284,7 +283,7 @@ void LCD_ErasePicture(uint16_t Xpos, uint16_t Ypos, uint16_t *pAddress, uint16_t
   {
     for (int iX = 0; iX < Xsize; iX++)
     {
-      //lcdBuffer[LCD_GetXSize() * iY + iX] = DrawProp[ActiveLayer].pBackImage[(Ypos*LCD_GetXSize() + (Xpos))+ LCD_GetXSize() * iY + iX];
+      lcdBuffer[LCD_GetXSize() * iY + iX] = DrawProp[ActiveLayer].pBackImage[(Ypos*LCD_GetXSize() + (Xpos))+ LCD_GetXSize() * iY + iX];
       //lcdBuffer[LCD_GetXSize() * iY + iX] = fish[(Ypos*LCD_GetXSize() + (Xpos))+ LCD_GetXSize() * iY + iX];
       for(int delay=0; delay<100; delay++);
     }
@@ -466,10 +465,10 @@ void LCD_DisplayNumPicture(uint16_t Xpos, uint16_t Ypos, uint8_t Num)
   {
     for (int iX = 0; iX < Xsize; iX++)
     {
-      if (IMG_17x23NUM[XTotal * iY + iX + Xsize * Num] != 0xFFFF)
-      {
-        lcdBuffer[LCD_GetXSize() * iY + iX] = IMG_17x23NUM[XTotal * iY + iX + Xsize * Num];
-      }
+      //if (IMG_17x23NUM[XTotal * iY + iX + Xsize * Num] != 0xFFFF)
+      //{
+      //  lcdBuffer[LCD_GetXSize() * iY + iX] = IMG_17x23NUM[XTotal * iY + iX + Xsize * Num];
+      //}
     }
   }
 }

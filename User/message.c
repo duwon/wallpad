@@ -10,7 +10,6 @@
 #include <stdbool.h>
 #include "message.h"
 #include "usart.h"
-#include "flash.h"
 
 uartFIFO_TypeDef uart3Buffer, uart1Buffer;
 
@@ -105,25 +104,10 @@ bool getByteFromBuffer(volatile uartFIFO_TypeDef *buffer, uint8_t *ch)
   return error;
 }
 
-int32_t pxIndex = 0;
-uint8_t rxCh = 0;
-void procMessage(uint8_t *ltdcBuffer)
+
+void procMessage(void)
 {
-  ///* Image Write */
-  //if (getByteFromBuffer(&uart3Buffer, &rxCh) == true)
-  //{
-  //  ltdcBuffer[pxIndex] = rxCh;
-  //  if (pxIndex == (130559 * 2))
-  //  {
-  //    pxIndex = 0;
-  //    Flash_writeImage(ltdcBuffer,13);
-  //  }
-  //  else
-  //  {
-  //    pxIndex++;
-  //  }
-  //}
-  /* Sound Write */
+
 }
 
 /**

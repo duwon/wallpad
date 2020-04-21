@@ -20,7 +20,7 @@ typedef struct
 
 
 void messageInit(void);
-void procMessage(uint8_t* ltdcBuffer);
+void procMessage(void);
 
 
 #ifdef __cplusplus

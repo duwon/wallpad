@@ -51,7 +51,7 @@ typedef struct
   uint32_t TextColor; 
   uint32_t BackColor;  
   //sFONT    *pFont;
-  //uint16_t *pBackImage;
+  uint16_t *pBackImage;
 }LCD_DrawPropTypeDef;   
 
 void LCD_Init(void);
