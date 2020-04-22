@@ -17,7 +17,7 @@
           <Vendor>STMicroelectronics</Vendor>
           <PackID>Keil.STM32F7xx_DFP.2.12.0</PackID>
           <PackURL>https://www.keil.com/pack/</PackURL>
-          <Cpu>IRAM(0x20000000-0x2004FFFF) IROM(0x8000000-0x800FFFF)        CLOCK(12000000) FPU3(SFPU) CPUTYPE("Cortex-M7") ELITTLE</Cpu>
+          <Cpu>IRAM(0x20000000-0x2004FFFF) IROM(0x8000000-0x800FFFF)         CLOCK(12000000) FPU3(SFPU) CPUTYPE("Cortex-M7") ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
           <FlashDriverDll></FlashDriverDll>
@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F750xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;             ../Drivers/STM32F7xx_HAL_Driver/Inc;             ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;             ../Drivers/CMSIS/Device/ST/STM32F7xx/Include;             ../Drivers/CMSIS/Include;             ../User</IncludePath>
+              <IncludePath>../Core/Inc;                ../Drivers/STM32F7xx_HAL_Driver/Inc;                ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;                ../Drivers/CMSIS/Device/ST/STM32F7xx/Include;                ../Drivers/CMSIS/Include;                ../User</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -425,14 +425,14 @@
               <FilePath>../Core/Src/ltdc.c</FilePath>
             </File>
             <File>
+              <FileName>quadspi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/quadspi.c</FilePath>
+            </File>
+            <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/rtc.c</FilePath>
-            </File>
-            <File>
-              <FileName>spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Core/Src/spi.c</FilePath>
             </File>
             <File>
               <FileName>tim.c</FileName>
@@ -570,6 +570,11 @@
               <FilePath>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.c</FilePath>
             </File>
             <File>
+              <FileName>stm32f7xx_hal_qspi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_qspi.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32f7xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rtc.c</FilePath>
@@ -578,16 +583,6 @@
               <FileName>stm32f7xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rtc_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f7xx_hal_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spi.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f7xx_hal_spi_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spi_ex.c</FilePath>
             </File>
             <File>
               <FileName>stm32f7xx_hal_tim.c</FileName>
@@ -628,11 +623,6 @@
               <FileName>user.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\user.c</FilePath>
-            </File>
-            <File>
-              <FileName>flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\User\flash.c</FilePath>
             </File>
             <File>
               <FileName>lcd.c</FileName>

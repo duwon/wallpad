@@ -7,7 +7,6 @@
 
 #include <stdbool.h>
 #include "main.h"
-#include "spi.h"
 
 #define _FLASH_SPI                   hspi2
 #define _FLASH_CS_GPIO               FLASH_CS_GPIO_Port
