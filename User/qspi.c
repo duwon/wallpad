@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "qspi.h"
 #include "quadspi.h"
 
@@ -19,38 +20,12 @@ static void CPU_CACHE_Enable(void);
 static void QSPI_WriteEnable(QSPI_HandleTypeDef *QSPIHandle);
 
 
-void qspiTestFucntion2(void)
+uint8_t aRxBuffer[BUFFERSIZE];
+
+void ReadPage(uint8_t *pBuffer, uint32_t Page_Address, uint32_t NumByteToRead_up_to_PageSize)
 {
+
   QSPI_CommandTypeDef sCommand;
-  uint32_t address = 0;
-  uint16_t index;
-  __IO uint8_t step = 0;
-  
-  /* Enable the CPU Cache */
-  CPU_CACHE_Enable();
-  
-  /* Configure the system clock to 216 MHz */
-
-  /* Initialize QuadSPI ------------------------------------------------------ */
-
-  hqspi.Instance = QUADSPI;
-  HAL_QSPI_DeInit(&hqspi);
-        
-  /* ClockPrescaler set to 2, so QSPI clock = 216MHz / (2+1) = 72MHz */
-  hqspi.Init.ClockPrescaler     = 10;
-  hqspi.Init.FifoThreshold      = 4;
-  hqspi.Init.SampleShifting     = QSPI_SAMPLE_SHIFTING_HALFCYCLE;
-  hqspi.Init.FlashSize          = POSITION_VAL(0x1000000) - 1;
-  hqspi.Init.ChipSelectHighTime = QSPI_CS_HIGH_TIME_3_CYCLE;
-  hqspi.Init.ClockMode          = QSPI_CLOCK_MODE_0;
-  hqspi.Init.FlashID            = QSPI_FLASH_ID_1;
-  hqspi.Init.DualFlash          = QSPI_DUALFLASH_DISABLE;
-  
-  if (HAL_QSPI_Init(&hqspi) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
   sCommand.InstructionMode   = QSPI_INSTRUCTION_1_LINE;
   sCommand.AddressSize       = QSPI_ADDRESS_24_BITS;
   sCommand.AlternateByteMode = QSPI_ALTERNATE_BYTES_NONE;
@@ -58,95 +33,54 @@ void qspiTestFucntion2(void)
   sCommand.DdrHoldHalfCycle  = QSPI_DDR_HHC_ANALOG_DELAY;
   sCommand.SIOOMode          = QSPI_SIOO_INST_EVERY_CMD;
 
+
+  QSPI_DummyCyclesCfg(&hqspi);
+
+  sCommand.Instruction = FAST_READ_CMD;//QUAD_OUT_FAST_READ_CMD;
+  sCommand.DummyCycles = DUMMY_CLOCK_CYCLES_READ;//DUMMY_CLOCK_CYCLES_READ_QUAD;
+
+  if (HAL_QSPI_Command(&hqspi, &sCommand, HAL_QPSI_TIMEOUT_DEFAULT_VALUE) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  if (HAL_QSPI_Receive_IT(&hqspi, aRxBuffer) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  while(RxCplt != 1);
+  
+}
+
+
+
+void loadImage(uint8_t* pBuffer)
+{
+  uint8_t rxBuffer[256];
+  QSPI_CommandTypeDef sCommand;
+  uint32_t imagePageIndex = 0;;
+  __IO uint8_t step = 0;
+  int pageNum;
+  
+  /* Enable the CPU Cache */
+  CPU_CACHE_Enable();
+
   while(1)
   {
-    HAL_Delay(1000);
-    printf("step : %d\r\n",step);
+    //printf("step %d\r\n", step);
+		
     switch(step)
     {
       case 0:
-        CmdCplt = 0;
-        
-        /* Initialize Reception buffer --------------------------------------- */
-        for (index = 0; index < BUFFERSIZE; index++)
-        {
-          aRxBuffer[index] = 0;
-        }
-
-        /* Enable write operations ------------------------------------------- */
-        QSPI_WriteEnable(&hqspi);
-
-        /* Erasing Sequence -------------------------------------------------- */
-        sCommand.Instruction = SECTOR_ERASE_CMD;
-        sCommand.AddressMode = QSPI_ADDRESS_1_LINE;
-        sCommand.Address     = address;
-        sCommand.DataMode    = QSPI_DATA_NONE;
-        sCommand.DummyCycles = 0;
-
-        if (HAL_QSPI_Command_IT(&hqspi, &sCommand) != HAL_OK)
-        {
-          Error_Handler();
-        }
-
-        step++;
-        break;
-
-      case 1:
-        if(CmdCplt != 0)
-        {
-          CmdCplt = 0;
-          StatusMatch = 0;
-
-          /* Configure automatic polling mode to wait for end of erase ------- */  
-          QSPI_AutoPollingMemReady(&hqspi);
-
-          step++;
-        }
-        break;
-        
-      case 2:
-        if(StatusMatch != 0)
-        {
-          StatusMatch = 0;
-          TxCplt = 0;
-          
-          /* Enable write operations ----------------------------------------- */
-          QSPI_WriteEnable(&hqspi);
-
-          /* Writing Sequence ------------------------------------------------ */
-          sCommand.Instruction = PAGE_PROG_CMD; //QUAD_IN_FAST_PROG_CMD;
-          sCommand.AddressMode = QSPI_ADDRESS_1_LINE;
-          sCommand.DataMode    = QSPI_DATA_1_LINE; //QSPI_DATA_4_LINES;
-          sCommand.NbData      = BUFFERSIZE;
-
-          if (HAL_QSPI_Command(&hqspi, &sCommand, HAL_QPSI_TIMEOUT_DEFAULT_VALUE) != HAL_OK)
-          {
-            Error_Handler();
-          }
-
-          if (HAL_QSPI_Transmit_IT(&hqspi, aTxBuffer) != HAL_OK)
-          {
-            Error_Handler();
-          }
-
-          step++;
-        }
-        break;
-
-      case 3:
-        if(TxCplt != 0)
-        {
-          TxCplt = 0;
-          StatusMatch = 0;
-
+	      {
           /* Configure automatic polling mode to wait for end of program ----- */  
           QSPI_AutoPollingMemReady(&hqspi);
         
-          step++;
+          step = 1;
         }
         break;
-        
-      case 4:
+      case 1:
         if(StatusMatch != 0)
         {
           StatusMatch = 0;
@@ -156,7 +90,18 @@ void qspiTestFucntion2(void)
           QSPI_DummyCyclesCfg(&hqspi);
           
           /* Reading Sequence ------------------------------------------------ */
-          sCommand.Instruction = FAST_READ_CMD;//QUAD_OUT_FAST_READ_CMD;
+          sCommand.InstructionMode   = QSPI_INSTRUCTION_1_LINE;
+          sCommand.AddressSize       = QSPI_ADDRESS_24_BITS;
+          sCommand.AlternateByteMode = QSPI_ALTERNATE_BYTES_NONE;
+          sCommand.DdrMode           = QSPI_DDR_MODE_DISABLE;
+          sCommand.DdrHoldHalfCycle  = QSPI_DDR_HHC_ANALOG_DELAY;
+          sCommand.SIOOMode          = QSPI_SIOO_INST_EVERY_CMD;
+          sCommand.Instruction = PAGE_PROG_CMD; //QUAD_IN_FAST_PROG_CMD;
+          sCommand.AddressMode = QSPI_ADDRESS_1_LINE;
+          sCommand.DataMode    = QSPI_DATA_1_LINE; //QSPI_DATA_4_LINES;
+          sCommand.NbData      = 256;
+          sCommand.Address     = imagePageIndex*256;
+          sCommand.Instruction = READ_CMD;//QUAD_OUT_FAST_READ_CMD;
           sCommand.DummyCycles = DUMMY_CLOCK_CYCLES_READ;//DUMMY_CLOCK_CYCLES_READ_QUAD;
 
           if (HAL_QSPI_Command(&hqspi, &sCommand, HAL_QPSI_TIMEOUT_DEFAULT_VALUE) != HAL_OK)
@@ -164,41 +109,27 @@ void qspiTestFucntion2(void)
             Error_Handler();
           }
 
-          if (HAL_QSPI_Receive_IT(&hqspi, aRxBuffer) != HAL_OK)
+          if (HAL_QSPI_Receive_IT(&hqspi, rxBuffer) != HAL_OK)
           {
             Error_Handler();
           }
-          step++;
+          step = 2;
         }
         break;
         
-      case 5:
+      case 2:
         if (RxCplt != 0)
         {
           RxCplt = 0;
-
-
-        /* Result comparison ----------------------------------------------- */
-        for (index = 0; index < BUFFERSIZE; index++)
-        {
-            printf("%c", aTxBuffer[index]);
-        }
-        printf("\r\nTX END\r\n");
-        for (index = 0; index < BUFFERSIZE; index++)
-        {
-            printf("%c", aRxBuffer[index]);
-        }
-        printf("\r\nRX END\r\n");
-
-          address += QSPI_PAGE_SIZE;
-          if(address >= QSPI_END_ADDR)
+          memcpy((void*)&pBuffer[imagePageIndex*256],rxBuffer,256);
+          imagePageIndex++;
+          if(imagePageIndex == 1020)
           {
-            address = 0;
+            return;
           }
           step = 0;
         }
         break;
-        
       default :
         Error_Handler();
     }

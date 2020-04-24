@@ -218,6 +218,9 @@ void qspiTestFucntion2(void);
 uint8_t QSPI_Write(uint8_t* pData, uint32_t WriteAddr, uint32_t Size);
 uint8_t QSPI_Read(uint8_t *pData, uint32_t ReadAddr, uint32_t Size);
 uint8_t QSPI_Erase_Block(uint32_t BlockAddress);
+
+void loadImage(uint8_t* pBuffer);
+
 #ifdef __cplusplus
 }
 #endif

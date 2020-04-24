@@ -66,25 +66,26 @@ void userStart(void)
 {
   printf("\r\nSTART\r\n");
   // GPIO LED
-  LED_Off(LED1);
-  LED_Off(LED2);
-  LED_Off(LED3);
-  LED_Off(LED4);
-  LED_Off(LED5);
+  LED_On(LED1);
+  LED_On(LED2);
+  LED_On(LED3);
+  LED_On(LED4);
+  LED_On(LED5);
 
   touchInit();
   soundInit();
   //QSPI_Init();
   //testFunction();
-  qspiTestFucntion2();
+
   //messageInit();
 
-  playSound((uint8_t *)wave, sizeof(wave));
+  //playSound((uint8_t *)wave, sizeof(wave));
 
-  for (int i = 0; i < 130560; i++) /* 색 변경 도트 출력 설정 */
-  {
-    ltdcBuffer[i] = (uint16_t)i;
-  }
+  //for (int i = 0; i < 130560; i++) /* 색 변경 도트 출력 설정 */
+  //{
+  //  ltdcBuffer[i] = (uint16_t)i;
+  //}
+  //memset(ltdcBuffer,0xff,sizeof(ltdcBuffer));
   LCD_Init();
   LCD_SelectLayer(0);
   LCD_LayerInit(0, (uint32_t)&ltdcBuffer);
@@ -94,6 +95,8 @@ void userStart(void)
   LCD_DisplayNumPicture(140, 100, 10);
   LCD_DisplayNumPicture(160, 100, 3);
   LCD_DisplayNumPicture(180, 100, 4);
+
+  loadImage((uint8_t *)ltdcBuffer);
 
   //QSPI_Erase_Block(0x10000);
   ////QSPI_Write((uint8_t*)&ltdcBuffer,0x10000,0x10000);
@@ -121,7 +124,7 @@ void userStart(void)
 void userWhile(void)
 {
   uint8_t touchValue = getTouchValue();
-  printf("touch 0x%x\r\n", touchValue);
+  //printf("touch 0x%x\r\n", touchValue);
   for (int i = 0; i < 4; i++)
   {
     if (((touchValue >> i) & 0x01) == 1)
@@ -130,5 +133,5 @@ void userWhile(void)
     }
   }
 
-  HAL_Delay(1000);
+  HAL_Delay(500);
 }
