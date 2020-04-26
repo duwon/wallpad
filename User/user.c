@@ -31,6 +31,7 @@
 #include "led.h"
 #include "message.h"
 #include "qspi.h"
+#include "tim.h"
 
 uint16_t ltdcBuffer[130560] = {
     0,
@@ -55,6 +56,7 @@ void user_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   }
   if (htim->Instance == TIM7)
   {
+		LED_Toggle(LED4);
   }
 }
 
@@ -65,56 +67,36 @@ void user_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 void userStart(void)
 {
   printf("\r\nSTART\r\n");
+	//timer7 start - 2Hz
+	HAL_TIM_Base_Start_IT(&htim7);
+	
   // GPIO LED
   LED_On(LED1);
   LED_On(LED2);
   LED_On(LED3);
   LED_On(LED4);
   LED_On(LED5);
-
+  
   touchInit();
   soundInit();
-  //QSPI_Init();
-  //testFunction();
-
+  QSPI_EnableMemoryMapped();
+  
   //messageInit();
-
-  //playSound((uint8_t *)wave, sizeof(wave));
-
-  //for (int i = 0; i < 130560; i++) /* 색 변경 도트 출력 설정 */
-  //{
-  //  ltdcBuffer[i] = (uint16_t)i;
-  //}
-  //memset(ltdcBuffer,0xff,sizeof(ltdcBuffer));
+  
+  playSound(0x91000000, 1440000);
+  
   LCD_Init();
   LCD_SelectLayer(0);
   LCD_LayerInit(0, (uint32_t)&ltdcBuffer);
-
+  
   LCD_DisplayNumPicture(100, 100, 1);
   LCD_DisplayNumPicture(120, 100, 2);
   LCD_DisplayNumPicture(140, 100, 10);
   LCD_DisplayNumPicture(160, 100, 3);
   LCD_DisplayNumPicture(180, 100, 4);
 
-  loadImage((uint8_t *)ltdcBuffer);
 
-  //QSPI_Erase_Block(0x10000);
-  ////QSPI_Write((uint8_t*)&ltdcBuffer,0x10000,0x10000);
-  ////for (int index = 0; index < 0x200; index++)
-  ////{
-  ////    printf("%x ", ltdcBuffer[index]);
-  ////}
-	//printf("\r\n");
-  //
-  //QSPI_Read((uint8_t*)&ltdcBuffer,0,256);
-	//for (int index = 0; index < 0x200; index++)
-  //{
-  //    printf("%c", ltdcBuffer[index]);
-  //}
-  //for (int index = 0; index < 0x200; index++)
-  //{
-  //    printf("%x ", ltdcBuffer[index]);
-  //}
+	LCD_SetBackImage(0x90000000);
 }
 
 /**
@@ -124,7 +106,6 @@ void userStart(void)
 void userWhile(void)
 {
   uint8_t touchValue = getTouchValue();
-  //printf("touch 0x%x\r\n", touchValue);
   for (int i = 0; i < 4; i++)
   {
     if (((touchValue >> i) & 0x01) == 1)

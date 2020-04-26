@@ -51,9 +51,9 @@ void soundInit(void)
   * @param  soundLen: 샘플레이트 * 시간(초)
   * @retval None
   */
-void playSound(uint8_t* soundAddr, uint32_t soundLen)
+void playSound(uint32_t soundAddr, uint32_t soundLen)
 {
-  playSoundAddr = soundAddr;
+  playSoundAddr = (uint8_t*)soundAddr;
   sampleRateMax = soundLen;
   flagPlaySound = true;
   HAL_DAC_Start(&hdac, DAC_CHANNEL_2);
