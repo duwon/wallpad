@@ -51,7 +51,7 @@ typedef struct
   uint32_t TextColor; 
   uint32_t BackColor;  
   //sFONT    *pFont;
-  //uint16_t *pBackImage;
+  uint16_t *pBackImage;
 }LCD_DrawPropTypeDef;   
 
 void LCD_Init(void);
@@ -60,8 +60,8 @@ void LCD_SelectLayer(uint32_t LayerIndex);
 void LCD_SetXSize(uint32_t imageWidthPixels);
 void LCD_SetYSize(uint32_t imageHeightPixels);
 void LCD_SetTransparency(uint32_t LayerIndex, uint8_t Transparency);
-void LCD_DrawPicture(uint16_t Xpos, uint16_t Ypos, uint16_t *pAddress, uint16_t Xsize, uint16_t Ysize, uint16_t Color_Alpha0);
-void LCD_ErasePicture(uint16_t Xpos, uint16_t Ypos, uint16_t* pAddress, uint16_t Xsize, uint16_t Ysize);
+void LCD_DrawPicture(uint16_t Xpos, uint16_t Ypos, uint32_t ImageAddress, uint16_t Xsize, uint16_t Ysize, uint16_t Color_Alpha0);
+void LCD_ErasePicture(uint16_t Xpos, uint16_t Ypos, uint16_t Xsize, uint16_t Ysize);
 
 void LCD_SetTextColor(uint32_t Color);
 void LCD_SetBackColor(uint32_t Color);

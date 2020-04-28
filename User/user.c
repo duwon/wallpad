@@ -29,34 +29,28 @@
 #include "sound.h"
 #include "lcd.h"
 #include "led.h"
-#include "message.h"
 #include "qspi.h"
 #include "tim.h"
+#include "message.h"
 
 uint16_t ltdcBuffer[130560] = {
     0,
 }; /* LCD 버퍼 */
 
-int leftTime = 0;
+
 /**
   * @brief  타이머 인터럽트
   * @retval None
   */
 void user_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-  if (htim->Instance == TIM6)
+  if (htim->Instance == TIM6) /* 8000Hz */
   {
     soundTimerCallback(htim);
-    leftTime++;
-    if (leftTime == 8000)
-    {
-      LED_Toggle(LED5);
-      leftTime = 0;
-    }
   }
-  if (htim->Instance == TIM7)
+  if (htim->Instance == TIM7) /* 2Hz */
   {
-		LED_Toggle(LED4);
+    LED_Toggle(LED5);
   }
 }
 
@@ -67,8 +61,7 @@ void user_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 void userStart(void)
 {
   printf("\r\nSTART\r\n");
-	//timer7 start - 2Hz
-	HAL_TIM_Base_Start_IT(&htim7);
+  HAL_TIM_Base_Start_IT(&htim7); /* timer7 start - 2Hz */
 	
   // GPIO LED
   LED_On(LED1);
@@ -80,7 +73,6 @@ void userStart(void)
   touchInit();
   soundInit();
   QSPI_EnableMemoryMapped();
-  
   //messageInit();
   
   playSound(0x91000000, 1440000);
@@ -88,15 +80,8 @@ void userStart(void)
   LCD_Init();
   LCD_SelectLayer(0);
   LCD_LayerInit(0, (uint32_t)&ltdcBuffer);
-  
-  LCD_DisplayNumPicture(100, 100, 1);
-  LCD_DisplayNumPicture(120, 100, 2);
-  LCD_DisplayNumPicture(140, 100, 10);
-  LCD_DisplayNumPicture(160, 100, 3);
-  LCD_DisplayNumPicture(180, 100, 4);
 
-
-	LCD_SetBackImage(0x90000000);
+  LCD_SetBackImage(0x90000000);
 }
 
 /**
@@ -114,5 +99,8 @@ void userWhile(void)
     }
   }
 
-  HAL_Delay(500);
+  HAL_Delay(2000);
+  //LCD_DrawPicture(100,100,0x93000000,100,200,0);
+  HAL_Delay(2000);
+  //LCD_ErasePicture(100,100,100,200);
 }

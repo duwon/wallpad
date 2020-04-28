@@ -10,7 +10,6 @@
 #include <stdbool.h>
 #include "message.h"
 #include "usart.h"
-#include "flash.h"
 
 uartFIFO_TypeDef uart3Buffer, uart1Buffer;
 

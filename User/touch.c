@@ -51,11 +51,11 @@ void touchInit(void)
   touchWriteRegData(0x04, 0x08); /* 소프트웨어 리셋 */
   HAL_Delay(100);
 
-  for (int i = 0; i < 0x16; i++)
-  {
-    printf("%x %x\r\n", i, touchReadRegData(i));
-  }
-  //
+  //for (int i = 0; i < 0x16; i++)
+  //{
+  //  printf("%x %x\r\n", i, touchReadRegData(i));
+  //}
+
   touchWriteRegData(0x00, 0xFF);
   touchWriteRegData(0x01, 0xFF);
   touchWriteRegData(0x02, 0xFF);

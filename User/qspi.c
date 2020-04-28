@@ -13,7 +13,10 @@ static void QSPI_AutoPollingMemReady(QSPI_HandleTypeDef *QSPIHandle);
 static void QSPI_DummyCyclesCfg(QSPI_HandleTypeDef *QSPIHandle);
 static void CPU_CACHE_Enable(void);
 
-
+/**
+ * @brief QSPI 메모리 맵 방식 사용 설정
+ * 
+ */
 void QSPI_EnableMemoryMapped(void)
 {
   QSPI_CommandTypeDef      sCommand;
@@ -22,14 +25,14 @@ void QSPI_EnableMemoryMapped(void)
 	
 	CPU_CACHE_Enable();
 	
-	/* Initialize QuadSPI ------------------------------------------------ */
+	/* Init */
 	HAL_QSPI_DeInit(&hqspi);
 	if (HAL_QSPI_Init(&hqspi) != HAL_OK)
 	{
 		Error_Handler();
 	}
 
-		/* Configure automatic polling mode to wait for end of program ----- */  
+		/* wait for end of program */  
 		QSPI_AutoPollingMemReady(&hqspi);
 
 	while(StatusMatch != 1)
@@ -37,10 +40,10 @@ void QSPI_EnableMemoryMapped(void)
 		StatusMatch = 0;
 		RxCplt = 0;
 
-		/* Configure Volatile Configuration register (with new dummy cycles) */
+		/* dummy */
 		QSPI_DummyCyclesCfg(&hqspi);
 		
-		/* Reading Sequence ------------------------------------------------ */
+		/* READ Command */
 		sCommand.Instruction 				= READ_CMD;
 		sCommand.DummyCycles 				= DUMMY_CLOCK_CYCLES_READ;
 		sCommand.AddressMode 				= QSPI_ADDRESS_1_LINE;
@@ -56,6 +59,7 @@ void QSPI_EnableMemoryMapped(void)
 		sMemMappedCfg.TimeOutActivation = QSPI_TIMEOUT_COUNTER_DISABLE;
 		sMemMappedCfg.TimeOutPeriod     = 0;
 		
+    /* Convert Memory Mapped Mode */
 		HAL_QSPI_MemoryMapped(&hqspi, &sCommand, &sMemMappedCfg);
 	}
 }
@@ -74,7 +78,6 @@ void HAL_QSPI_CmdCpltCallback(QSPI_HandleTypeDef *hqspi)
 /**
   * @brief  Rx Transfer completed callbacks.
   * @param  hqspi: QSPI handle
-  * @retval None
   */
 void HAL_QSPI_RxCpltCallback(QSPI_HandleTypeDef *hqspi)
 {
@@ -84,7 +87,6 @@ void HAL_QSPI_RxCpltCallback(QSPI_HandleTypeDef *hqspi)
 /**
   * @brief  Tx Transfer completed callbacks.
   * @param  hqspi: QSPI handle
-  * @retval None
   */
 void HAL_QSPI_TxCpltCallback(QSPI_HandleTypeDef *hqspi)
 {
@@ -94,7 +96,6 @@ void HAL_QSPI_TxCpltCallback(QSPI_HandleTypeDef *hqspi)
 /**
   * @brief  Status Match callbacks
   * @param  hqspi: QSPI handle
-  * @retval None
   */
 void HAL_QSPI_StatusMatchCallback(QSPI_HandleTypeDef *hqspi)
 {
@@ -104,7 +105,6 @@ void HAL_QSPI_StatusMatchCallback(QSPI_HandleTypeDef *hqspi)
 /**
   * @brief  This function sends a Write Enable and waits until it is effective.
   * @param  hqspi: QSPI handle
-  * @retval None
   */
 static void QSPI_WriteEnable(QSPI_HandleTypeDef *QSPIHandle)
 {
@@ -230,8 +230,7 @@ static void QSPI_DummyCyclesCfg(QSPI_HandleTypeDef *QSPIHandle)
 
 /**
   * @brief  CPU L1-Cache enable.
-  * @param  None
-  * @retval None
+  * 
   */
 static void CPU_CACHE_Enable(void)
 {

@@ -17,7 +17,6 @@
 #include "lcd.h"
 #include "ltdc.h"
 #include "dma2d.h"
-#include "17x23NUM.h"
 
 static LTDC_HandleTypeDef  hLtdcHandler;
 static DMA2D_HandleTypeDef hDma2dHandler;
@@ -178,19 +177,12 @@ uint32_t LCD_GetBackColor(void)
   */
 void LCD_SetBackImage(uint32_t BackgroundImageAddress)
 {
-  //DrawProp[ActiveLayer].pBackImage = (uint16_t*)BackgroundImageAddress;
+  DrawProp[ActiveLayer].pBackImage = (uint16_t*)BackgroundImageAddress;
 
+  /* RGB565 format */
   hdma2d.Init.Mode         = DMA2D_M2M;
-  if(hLtdcHandler.LayerCfg[ActiveLayer].PixelFormat == LTDC_PIXEL_FORMAT_RGB565)
-  { /* RGB565 format */ 
-    hdma2d.Init.ColorMode    = DMA2D_RGB565;
-  }
-  else
-  { /* ARGB8888 format */
-    hdma2d.Init.ColorMode    = DMA2D_ARGB8888;
-  }
-  hdma2d.Init.OutputOffset = 0;      
-  
+  hdma2d.Init.ColorMode    = DMA2D_RGB565;
+  hdma2d.Init.OutputOffset = 0;
   hdma2d.Instance = DMA2D;
   
   /* DMA2D Initialization */
@@ -224,16 +216,16 @@ void LCD_DrawPixel(uint16_t Xpos, uint16_t Ypos, uint16_t RGB_Code)
   * @brief  LCD 그림 표시
   * @param  Xpos: 시작 X 위치
   * @param  Ypos: 시작 Y 위치
-  * @param  pAddress: 그림 시작 주소
+  * @param  ImageAddress: 그림 시작 주소
   * @param  Xsize: 표시할 그림 가로축 크기 px
   * @param  Ysize: 표시할 그림 세로축 크기 px
   * @param  Color_Alpha0: 표시 할 그림의 뒷 배경 제거 색상. RGB565. 검정색 배경은 제거 불가능하며 0 입력 시 배경 제거 없이 출력
   * @retval None
   */
-void LCD_DrawPicture(uint16_t Xpos, uint16_t Ypos, uint16_t *pAddress, uint16_t Xsize, uint16_t Ysize, uint16_t Color_Alpha0)
+void LCD_DrawPicture(uint16_t Xpos, uint16_t Ypos, uint32_t ImageAddress, uint16_t Xsize, uint16_t Ysize, uint16_t Color_Alpha0)
 {
   uint16_t *lcdBuffer = (uint16_t *)(hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress + (2 * (Ypos * LCD_GetXSize() + Xpos)));
-
+  uint16_t *pAddress = (uint16_t*)ImageAddress;
   //for( int iY=0; iY<Ysize; iY++)
   //{
   //	memcpy ((void*)&lcdBuffer[480*iY],(void*)&pAddress[iY*Xsize], Xsize * 2);
@@ -261,7 +253,7 @@ void LCD_DrawPicture(uint16_t Xpos, uint16_t Ypos, uint16_t *pAddress, uint16_t 
         for (int iX = 0; iX < Xsize; iX++)
         {
           lcdBuffer[LCD_GetXSize() * iY + iX] = pAddress[Xsize * iY + iX];
-					//LCD_DrawPixel(Xpos + iX, Ypos + (LCD_GetXSize()*iY), pAddress[Xsize * iY + iX]);
+          //LCD_DrawPixel(Xpos + iX, Ypos + (LCD_GetXSize()*iY), pAddress[Xsize * iY + iX]);
         }
       }
     }
@@ -276,16 +268,16 @@ void LCD_DrawPicture(uint16_t Xpos, uint16_t Ypos, uint16_t *pAddress, uint16_t 
   * @param  Ysize: 삭제 할 그림 세로축 크기 px
   * @retval None
   */
-void LCD_ErasePicture(uint16_t Xpos, uint16_t Ypos, uint16_t *pAddress, uint16_t Xsize, uint16_t Ysize)
+void LCD_ErasePicture(uint16_t Xpos, uint16_t Ypos, uint16_t Xsize, uint16_t Ysize)
 {
   uint16_t *lcdBuffer = (uint16_t *)(hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress + (2 * (Ypos * LCD_GetXSize() + Xpos)));
+  //uint16_t *pAddress = (uint16_t*)ImageAddress;
 
   for (int iY = 0; iY < Ysize; iY++)
   {
     for (int iX = 0; iX < Xsize; iX++)
     {
-      //lcdBuffer[LCD_GetXSize() * iY + iX] = DrawProp[ActiveLayer].pBackImage[(Ypos*LCD_GetXSize() + (Xpos))+ LCD_GetXSize() * iY + iX];
-      //lcdBuffer[LCD_GetXSize() * iY + iX] = fish[(Ypos*LCD_GetXSize() + (Xpos))+ LCD_GetXSize() * iY + iX];
+      lcdBuffer[LCD_GetXSize() * iY + iX] = DrawProp[ActiveLayer].pBackImage[(Ypos*LCD_GetXSize() + (Xpos))+ LCD_GetXSize() * iY + iX];
       for(int delay=0; delay<100; delay++);
     }
   }
@@ -339,11 +331,11 @@ static void LL_FillBuffer(uint32_t LayerIndex, void *pDst, uint32_t xSize, uint3
 static void DrawChar(uint16_t Xpos, uint16_t Ypos, const uint8_t *c)
 {
   uint32_t i = 0, j = 0;
-  uint16_t height, width;
+  uint16_t height = 0, width = 0;
   uint8_t offset;
   uint8_t *pchar;
   uint32_t line;
-  uint16_t *lcdBuffer = (uint16_t *)(hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress + (2 * (Ypos * LCD_GetXSize() + Xpos)));
+//  uint16_t *lcdBuffer = (uint16_t *)(hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress + (2 * (Ypos * LCD_GetXSize() + Xpos)));
 
 //  height = DrawProp[ActiveLayer].pFont->Height;
 //  width = DrawProp[ActiveLayer].pFont->Width;
@@ -407,7 +399,8 @@ void LCD_DisplayChar(uint16_t Xpos, uint16_t Ypos, uint8_t Ascii)
   */
 void LCD_DisplayString(uint16_t Xpos, uint16_t Ypos, uint8_t *Text)
 {
-  uint16_t ref_column = 1, i = 0;
+  uint16_t ref_column = 1;
+  //uint16_t i = 0;
   uint32_t size = 0; 
   uint8_t  *ptr = Text;
   
@@ -445,33 +438,6 @@ void LCD_Clear(uint32_t Color)
 { 
   /* Clear the LCD */ 
   LL_FillBuffer(ActiveLayer, (uint32_t *)(hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress), LCD_GetXSize(), LCD_GetYSize(), 0, Color);
-}
-
-/**
-  * @brief  LCD에 그림 숫자 출력
-  * @param  Xpos: X 위치 (pixel)
-  * @param  Ypos: Y 위치 (pixel)   
-  * @param  Num: 출력 할 숫자 (17x23 px 크기, 표시 문자 : 0~9 :)
-  * @retval None
-  */
-void LCD_DisplayNumPicture(uint16_t Xpos, uint16_t Ypos, uint8_t Num)
-{
-  #define XTotal 187
-  #define Xsize 17
-  #define Ysize 23
-	
-  uint16_t *lcdBuffer = (uint16_t *)(hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress + (2 * (Ypos * LCD_GetXSize() + Xpos)));
-
-  for (int iY = 0; iY < Ysize; iY++)
-  {
-    for (int iX = 0; iX < Xsize; iX++)
-    {
-      if (IMG_17x23NUM[XTotal * iY + iX + Xsize * Num] != 0xFFFF)
-      {
-        lcdBuffer[LCD_GetXSize() * iY + iX] = IMG_17x23NUM[XTotal * iY + iX + Xsize * Num];
-      }
-    }
-  }
 }
 
 /**

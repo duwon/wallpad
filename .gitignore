@@ -50,7 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-
+LCD Debug.cfg
+LCD Debug.launch
+.mxproject
 
 .vscode/
 .settings/
