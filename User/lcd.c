@@ -190,13 +190,13 @@ void LCD_SetBackImage(uint32_t BackgroundImageAddress)
   {
     if(HAL_DMA2D_ConfigLayer(&hdma2d, ActiveLayer) == HAL_OK) 
     {
-      if (HAL_DMA2D_Start(&hdma2d, BackgroundImageAddress, (uint32_t)hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress, LCD_GetXSize(), LCD_GetYSize()) == HAL_OK)
+      if (HAL_DMA2D_Start(&hdma2d, BackgroundImageAddress, (uint32_t)hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress, LCD_WIDTH, LCD_HEIGHT) == HAL_OK)
       {
         /* Polling For DMA transfer */  
-        HAL_DMA2D_PollForTransfer(&hdma2d, 10);
+        HAL_DMA2D_PollForTransfer(&hdma2d, 100);
       }
     }
-  } 
+  }
 }
 
 
@@ -209,7 +209,7 @@ void LCD_SetBackImage(uint32_t BackgroundImageAddress)
   */
 void LCD_DrawPixel(uint16_t Xpos, uint16_t Ypos, uint16_t RGB_Code)
 {
-  *(__IO uint16_t *)(hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress + (2 * (Ypos * LCD_GetXSize() + Xpos))) = (uint16_t)RGB_Code;
+  *(__IO uint16_t *)(hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress + (2 * (Ypos * LCD_GetXSize() + Xpos))) = RGB_Code;
 }
 
 /**
@@ -224,40 +224,68 @@ void LCD_DrawPixel(uint16_t Xpos, uint16_t Ypos, uint16_t RGB_Code)
   */
 void LCD_DrawPicture(uint16_t Xpos, uint16_t Ypos, uint32_t ImageAddress, uint16_t Xsize, uint16_t Ysize, uint16_t Color_Alpha0)
 {
-  uint16_t *lcdBuffer = (uint16_t *)(hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress + (2 * (Ypos * LCD_GetXSize() + Xpos)));
+  __IO uint16_t *lcdBuffer = (uint16_t *)(hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress + (2 * (Ypos * LCD_WIDTH + Xpos)));
   uint16_t *pAddress = (uint16_t*)ImageAddress;
   //for( int iY=0; iY<Ysize; iY++)
   //{
   //	memcpy ((void*)&lcdBuffer[480*iY],(void*)&pAddress[iY*Xsize], Xsize * 2);
   //}
-  for (int cnt = 0; cnt < 2; cnt++)
+
+  if((Xpos+Xsize) > LCD_WIDTH)
   {
-    if (Color_Alpha0 != 0)
+    Xsize = LCD_WIDTH - Xpos;
+  }
+
+  if((Ypos+Ysize) > LCD_HEIGHT)
+  {
+    Ysize = LCD_HEIGHT - Ypos;
+  }
+
+  if (Color_Alpha0 != 0)
+  {
+    for (int iY = 0; iY < Ysize; iY++)
     {
-      for (int iY = 0; iY < Ysize; iY++)
+      for (int iX = 0; iX < Xsize; iX++)
       {
-        for (int iX = 0; iX < Xsize; iX++)
+        if (pAddress[Xsize * iY + iX] != Color_Alpha0)
         {
-          if (pAddress[Xsize * iY + iX] != Color_Alpha0)
-          {
-            lcdBuffer[LCD_GetXSize() * iY + iX] = pAddress[Xsize * iY + iX];
-            //LCD_DrawPixel(Xpos + iX, Ypos * LCD_GetXSize(), pAddress[Xsize * iY + iX]);
-          }
-        }
-      }
-    }
-    else
-    {
-      for (int iY = 0; iY < Ysize; iY++)
-      {
-        for (int iX = 0; iX < Xsize; iX++)
-        {
-          lcdBuffer[LCD_GetXSize() * iY + iX] = pAddress[Xsize * iY + iX];
-          //LCD_DrawPixel(Xpos + iX, Ypos + (LCD_GetXSize()*iY), pAddress[Xsize * iY + iX]);
+          lcdBuffer[LCD_WIDTH * iY + iX] = pAddress[Xsize * iY + iX];
+          //LCD_DrawPixel(Xpos + iX, Ypos +iY, pAddress[Xsize * iY + iX]);
         }
       }
     }
   }
+  else
+  {
+    for (int iY = 0; iY < Ysize; iY++)
+    {
+      for (int iX = 0; iX < Xsize; iX++)
+      {
+        lcdBuffer[LCD_WIDTH * iY + iX] = pAddress[Xsize * iY + iX];
+        //LCD_DrawPixel(Xpos + iX, Ypos + iY, pAddress[Xsize * iY + iX]);
+      }
+    }
+  }
+
+  
+  ///* RGB565 format */
+  //hdma2d.Init.Mode         = DMA2D_M2M;
+  //hdma2d.Init.ColorMode    = DMA2D_RGB565;
+  //hdma2d.Init.OutputOffset = 0;
+  //hdma2d.Instance = DMA2D;
+  //
+  ///* DMA2D Initialization */
+  //if(HAL_DMA2D_Init(&hdma2d) == HAL_OK) 
+  //{
+  //  if(HAL_DMA2D_ConfigLayer(&hdma2d, ActiveLayer) == HAL_OK) 
+  //  {
+  //    if (HAL_DMA2D_Start(&hdma2d, ImageAddress, hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress + (2 * (Ypos * LCD_WIDTH + Xpos)), Xsize, Ysize) == HAL_OK)
+  //    {
+  //      /* Polling For DMA transfer */  
+  //      HAL_DMA2D_PollForTransfer(&hdma2d, 10);
+  //    }
+  //  }
+  //}
 }
 
 /**
@@ -270,15 +298,25 @@ void LCD_DrawPicture(uint16_t Xpos, uint16_t Ypos, uint32_t ImageAddress, uint16
   */
 void LCD_ErasePicture(uint16_t Xpos, uint16_t Ypos, uint16_t Xsize, uint16_t Ysize)
 {
-  uint16_t *lcdBuffer = (uint16_t *)(hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress + (2 * (Ypos * LCD_GetXSize() + Xpos)));
-  //uint16_t *pAddress = (uint16_t*)ImageAddress;
+
+  if((Xpos+Xsize) > LCD_WIDTH)
+  {
+    Xsize = LCD_WIDTH - Xpos;
+  }
+
+  if((Ypos+Ysize) > LCD_HEIGHT)
+  {
+    Ysize = LCD_WIDTH - Ypos;
+  }
+
+  __IO uint16_t *lcdBuffer = (uint16_t *)(hLtdcHandler.LayerCfg[ActiveLayer].FBStartAdress + (2 * (Ypos * LCD_WIDTH + Xpos)));
 
   for (int iY = 0; iY < Ysize; iY++)
   {
     for (int iX = 0; iX < Xsize; iX++)
     {
-      lcdBuffer[LCD_GetXSize() * iY + iX] = DrawProp[ActiveLayer].pBackImage[(Ypos*LCD_GetXSize() + (Xpos))+ LCD_GetXSize() * iY + iX];
-      for(int delay=0; delay<100; delay++);
+      lcdBuffer[LCD_WIDTH * iY + iX] = DrawProp[ActiveLayer].pBackImage[(Ypos*LCD_WIDTH + (Xpos))+ LCD_WIDTH * iY + iX];
+      //for(int delay=0; delay<100; delay++);
     }
   }
 }

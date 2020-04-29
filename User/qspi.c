@@ -1,3 +1,11 @@
+/** 
+ ******************************************************************************
+  * @file    qspi.c
+  * @author  정두원
+  * @date    2020-04-24
+  * @brif    QSPI Flash 메모리 맵 방식 사용 설정
+  */
+
 #include <stdio.h>
 #include <string.h>
 #include "qspi.h"

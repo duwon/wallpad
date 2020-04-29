@@ -16,6 +16,9 @@ extern "C" {
 #define LCD_ERROR              ((uint8_t)0x01)
 #define LCD_TIMEOUT            ((uint8_t)0x02)
 
+#define LCD_HEIGHT             (272)
+#define LCD_WIDTH              (480)
+
 /** 
   * @brief  LCD color  
   */ 

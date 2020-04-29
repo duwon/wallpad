@@ -14,11 +14,11 @@
     - 생활정보기 제어 API
   * @section  CREATEINFO      작성정보
     - 작성자      :   정두원
-    - 작성일      :   2020-04-21
+    - 작성일      :   2020-04-29
   * @section  MODIFYINFO      수정정보
     - 2020-04-19    :    문서화
     - 2020-04-21    :    Flash 제어 추가
-  
+    - 2020-04-29    :    QSPI Memory-map 방식 사용
   */
 #include <stdio.h>
 #include <string.h>
@@ -75,7 +75,7 @@ void userStart(void)
   QSPI_EnableMemoryMapped();
   //messageInit();
   
-  playSound(0x91000000, 1440000);
+  playSound(0x90200000, 1440000); //playSound((uint32_t)&WAVE, 1440000);
   
   LCD_Init();
   LCD_SelectLayer(0);
@@ -99,8 +99,18 @@ void userWhile(void)
     }
   }
 
+  uint32_t arrImgAddr[6] = {(uint32_t)IMG_01, (uint32_t)IMG_02, (uint32_t)IMG_03, (uint32_t)IMG_04, (uint32_t)IMG_05, (uint32_t)IMG_06};
+  //uint32_t arrImgAddr[6] = {0x90000000, 0x90050000, 0x900A0000, 0x90100000, 0x90150000, 0x901A0000};
+  for (int i = 1; i < 6; i++)
+  {
+    HAL_Delay(2000);
+    LCD_SetBackImage(arrImgAddr[0]);
+    HAL_Delay(2000);
+    LCD_SetBackImage(arrImgAddr[i]);
+  }
+
   HAL_Delay(2000);
-  //LCD_DrawPicture(100,100,0x93000000,100,200,0);
+  LCD_DrawPicture(100,100,0x90050000,200,100,0);
   HAL_Delay(2000);
-  //LCD_ErasePicture(100,100,100,200);
+  LCD_ErasePicture(100,100,200,100);
 }
