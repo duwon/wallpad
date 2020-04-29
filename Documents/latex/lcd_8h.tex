@@ -1,5 +1,5 @@
-\hypertarget{lcd_8h}{}\doxysection{C\+:/\+Users/duwon/\+One\+Drive/\+Documents/\+Git/\+L\+C\+D/\+User/lcd.h 파일 참조}
-\label{lcd_8h}\index{C:/Users/duwon/OneDrive/Documents/Git/LCD/User/lcd.h@{C:/Users/duwon/OneDrive/Documents/Git/LCD/User/lcd.h}}
+\hypertarget{lcd_8h}{}\doxysection{C\+:/\+Users/duwon/\+Documents/\+Git\+Hub/\+L\+C\+D/\+User/lcd.h 파일 참조}
+\label{lcd_8h}\index{C:/Users/duwon/Documents/GitHub/LCD/User/lcd.h@{C:/Users/duwon/Documents/GitHub/LCD/User/lcd.h}}
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
 lcd.\+h에 대한 include 의존 그래프
@@ -25,6 +25,10 @@ struct \mbox{\hyperlink{struct_l_c_d___draw_prop_type_def}{L\+C\+D\+\_\+\+Draw\+
 \#define \mbox{\hyperlink{lcd_8h_ac639f5b04db49abc3ad579c3ae342adb}{L\+C\+D\+\_\+\+E\+R\+R\+OR}}~((uint8\+\_\+t)0x01)
 \item 
 \#define \mbox{\hyperlink{lcd_8h_a68e1235b7ce21c42f5c85e22d9331e0a}{L\+C\+D\+\_\+\+T\+I\+M\+E\+O\+UT}}~((uint8\+\_\+t)0x02)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a53a8b2a971de4b88047192655a48b651}{L\+C\+D\+\_\+\+H\+E\+I\+G\+HT}}~(272)
+\item 
+\#define \mbox{\hyperlink{lcd_8h_a19693eac3018d3e7800fde141921b812}{L\+C\+D\+\_\+\+W\+I\+D\+TH}}~(480)
 \item 
 \#define \mbox{\hyperlink{lcd_8h_a5647ec8a40b49d6662226601eb9eb452}{L\+C\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+UE}}~((uint32\+\_\+t)0x\+F\+F0000\+FF)
 \begin{DoxyCompactList}\small\item\em L\+CD color ~\newline
@@ -94,9 +98,9 @@ void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xE
 \begin{DoxyCompactList}\small\item\em L\+C\+D의 세로 크기 설정. 초기값 272px \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga0568836139e5177b6ce37e470e255c77}{L\+C\+D\+\_\+\+Set\+Transparency}} (uint32\+\_\+t Layer\+Index, uint8\+\_\+t Transparency)
 \begin{DoxyCompactList}\small\item\em 레이어의 투명도 설정. 기본값 255 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga29dd5609c60845657a8fb6e64b9ecca9}{L\+C\+D\+\_\+\+Draw\+Picture}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t $\ast$p\+Address, uint16\+\_\+t \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}, uint16\+\_\+t \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}}, uint16\+\_\+t Color\+\_\+\+Alpha0)
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga0baeaf94751f690887f28710df329768}{L\+C\+D\+\_\+\+Draw\+Picture}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint32\+\_\+t Image\+Address, uint16\+\_\+t Xsize, uint16\+\_\+t Ysize, uint16\+\_\+t Color\+\_\+\+Alpha0)
 \begin{DoxyCompactList}\small\item\em L\+CD 그림 표시 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga9bf87417ff2e3e2a6a35729dfafc1725}{L\+C\+D\+\_\+\+Erase\+Picture}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t $\ast$p\+Address, uint16\+\_\+t \mbox{\hyperlink{lcd_8c_aa973b950a5038c6cfbf8fe0a3e359fb8}{Xsize}}, uint16\+\_\+t \mbox{\hyperlink{lcd_8c_a8b5ce56e84706270c0eb57f6338a4684}{Ysize}})
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gadcf22744471a2068eb86e5dbd07b75cd}{L\+C\+D\+\_\+\+Erase\+Picture}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Xsize, uint16\+\_\+t Ysize)
 \begin{DoxyCompactList}\small\item\em L\+CD 그림 삭제 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga31a4bb3bde55452bbb8370f5d935e41d}{L\+C\+D\+\_\+\+Set\+Text\+Color}} (uint32\+\_\+t Color)
 \begin{DoxyCompactList}\small\item\em 픽셀 또는 폰트 색상 설정 \end{DoxyCompactList}\item 
@@ -110,8 +114,8 @@ void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xE
 \begin{DoxyCompactList}\small\item\em L\+C\+D에 문자열 표시 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gae57144a5b4342ddd500fb50018123dc6}{L\+C\+D\+\_\+\+Clear}} (uint32\+\_\+t Color)
 \begin{DoxyCompactList}\small\item\em L\+CD 표시된 색상 전체 변경 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga8de8fec410906e9a34e4416739402216}{L\+C\+D\+\_\+\+Display\+Num\+Picture}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t Num)
-\begin{DoxyCompactList}\small\item\em L\+C\+D에 그림 숫자 출력 \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{lcd_8h_a8de8fec410906e9a34e4416739402216}{L\+C\+D\+\_\+\+Display\+Num\+Picture}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t Num)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{매크로 문서화}
@@ -288,6 +292,12 @@ L\+CD color ~\newline
 \doxysubsubsection{\texorpdfstring{LCD\_FB\_START\_ADDRESS}{LCD\_FB\_START\_ADDRESS}}
 {\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+F\+B\+\_\+\+S\+T\+A\+R\+T\+\_\+\+A\+D\+D\+R\+E\+SS~((uint32\+\_\+t)0x\+C0000000)}
 
+\mbox{\Hypertarget{lcd_8h_a53a8b2a971de4b88047192655a48b651}\label{lcd_8h_a53a8b2a971de4b88047192655a48b651}} 
+\index{lcd.h@{lcd.h}!LCD\_HEIGHT@{LCD\_HEIGHT}}
+\index{LCD\_HEIGHT@{LCD\_HEIGHT}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_HEIGHT}{LCD\_HEIGHT}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+H\+E\+I\+G\+HT~(272)}
+
 \mbox{\Hypertarget{lcd_8h_a7246e715a8e53f519569b649e6ce733d}\label{lcd_8h_a7246e715a8e53f519569b649e6ce733d}} 
 \index{lcd.h@{lcd.h}!LCD\_OK@{LCD\_OK}}
 \index{LCD\_OK@{LCD\_OK}!lcd.h@{lcd.h}}
@@ -300,6 +310,12 @@ L\+CD color ~\newline
 \doxysubsubsection{\texorpdfstring{LCD\_TIMEOUT}{LCD\_TIMEOUT}}
 {\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+T\+I\+M\+E\+O\+UT~((uint8\+\_\+t)0x02)}
 
+\mbox{\Hypertarget{lcd_8h_a19693eac3018d3e7800fde141921b812}\label{lcd_8h_a19693eac3018d3e7800fde141921b812}} 
+\index{lcd.h@{lcd.h}!LCD\_WIDTH@{LCD\_WIDTH}}
+\index{LCD\_WIDTH@{LCD\_WIDTH}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_WIDTH}{LCD\_WIDTH}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+W\+I\+D\+TH~(480)}
+
 \mbox{\Hypertarget{lcd_8h_a5fa41785a8748c49b61639f4ddd8610b}\label{lcd_8h_a5fa41785a8748c49b61639f4ddd8610b}} 
 \index{lcd.h@{lcd.h}!LTDC\_ACTIVE\_LAYER@{LTDC\_ACTIVE\_LAYER}}
 \index{LTDC\_ACTIVE\_LAYER@{LTDC\_ACTIVE\_LAYER}!lcd.h@{lcd.h}}
@@ -311,4 +327,13 @@ L\+CD color ~\newline
 \index{MAX\_LAYER\_NUMBER@{MAX\_LAYER\_NUMBER}!lcd.h@{lcd.h}}
 \doxysubsubsection{\texorpdfstring{MAX\_LAYER\_NUMBER}{MAX\_LAYER\_NUMBER}}
 {\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+N\+U\+M\+B\+ER~((uint32\+\_\+t)2)}
+
+
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{lcd_8h_a8de8fec410906e9a34e4416739402216}\label{lcd_8h_a8de8fec410906e9a34e4416739402216}} 
+\index{lcd.h@{lcd.h}!LCD\_DisplayNumPicture@{LCD\_DisplayNumPicture}}
+\index{LCD\_DisplayNumPicture@{LCD\_DisplayNumPicture}!lcd.h@{lcd.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DisplayNumPicture()}{LCD\_DisplayNumPicture()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Display\+Num\+Picture (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint8\+\_\+t}]{Num }\end{DoxyParamCaption})}
 

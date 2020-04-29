@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['_5fflash_5fcs_5fgpio_348',['_FLASH_CS_GPIO',['../flash_8h.html#a5fcb87f27bac0f481b7249edeff63e78',1,'flash.h']]],
-  ['_5fflash_5fcs_5fpin_349',['_FLASH_CS_PIN',['../flash_8h.html#a5ef56be7d2387303c41656671951350a',1,'flash.h']]],
-  ['_5fflash_5fdebug_350',['_FLASH_DEBUG',['../flash_8h.html#aa7812a3cde99515ba52d1bec814bdfe0',1,'flash.h']]],
-  ['_5fflash_5fspi_351',['_FLASH_SPI',['../flash_8h.html#a0a4c11784fcf7cb41c0329b680371c1b',1,'flash.h']]]
+  ['buffersize_331',['BUFFERSIZE',['../qspi_8h.html#ac3146f1e9227301bb4aa518f4d336cee',1,'qspi.h']]],
+  ['bulk_5ferase_5fcmd_332',['BULK_ERASE_CMD',['../qspi_8h.html#a66456d73cb4185955c6c7e663a85c8da',1,'qspi.h']]]
 ];

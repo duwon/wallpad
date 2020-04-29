@@ -1,4 +1,19 @@
 var searchData=
 [
-  ['ysize_391',['Ysize',['../lcd_8c.html#a8b5ce56e84706270c0eb57f6338a4684',1,'lcd.c']]]
+  ['qspi_5fbulk_5ferase_5fmax_5ftime_397',['QSPI_BULK_ERASE_MAX_TIME',['../qspi_8h.html#a3f9c84c0a33ca994006af7c58638fa55',1,'qspi.h']]],
+  ['qspi_5fend_5faddr_398',['QSPI_END_ADDR',['../qspi_8h.html#a513b37b950d72a3287402054f770da1e',1,'qspi.h']]],
+  ['qspi_5fflash_5fsize_399',['QSPI_FLASH_SIZE',['../qspi_8h.html#aaf91d03055ecda6cfea6084e89b16f32',1,'qspi.h']]],
+  ['qspi_5fpage_5fsize_400',['QSPI_PAGE_SIZE',['../qspi_8h.html#a4103d018e4ba51e21debefefb6ae89ee',1,'qspi.h']]],
+  ['qspi_5fsector_5ferase_5fmax_5ftime_401',['QSPI_SECTOR_ERASE_MAX_TIME',['../qspi_8h.html#a5e5dadaebc3c5e1df1f80caacc446fc4',1,'qspi.h']]],
+  ['qspi_5fsector_5fsize_402',['QSPI_SECTOR_SIZE',['../qspi_8h.html#a4f6b758e5e53324d3328cf3c6cccf19d',1,'qspi.h']]],
+  ['qspi_5fsubsector_5ferase_5fmax_5ftime_403',['QSPI_SUBSECTOR_ERASE_MAX_TIME',['../qspi_8h.html#a8697c1d7c5083c520bb0ce58d6a42efb',1,'qspi.h']]],
+  ['qspi_5fsubsector_5fsize_404',['QSPI_SUBSECTOR_SIZE',['../qspi_8h.html#adfafa8a9d0119e13c2a14e4a12d59a9d',1,'qspi.h']]],
+  ['quad_5fin_5ffast_5fprog_5f4_5fbyte_5faddr_5fcmd_405',['QUAD_IN_FAST_PROG_4_BYTE_ADDR_CMD',['../qspi_8h.html#a70807d7328f16f72e5c795c08263d60a',1,'qspi.h']]],
+  ['quad_5fin_5ffast_5fprog_5fcmd_406',['QUAD_IN_FAST_PROG_CMD',['../qspi_8h.html#a76788543a6f62f40f2fa8ee9873aec94',1,'qspi.h']]],
+  ['quad_5finout_5ffast_5fread_5f4_5fbyte_5faddr_5fcmd_407',['QUAD_INOUT_FAST_READ_4_BYTE_ADDR_CMD',['../qspi_8h.html#a28973b22e9ed6824c4c998fea01aa83d',1,'qspi.h']]],
+  ['quad_5finout_5ffast_5fread_5fcmd_408',['QUAD_INOUT_FAST_READ_CMD',['../qspi_8h.html#a7b3458f6b1276a94e7a51f0e32ff2ee0',1,'qspi.h']]],
+  ['quad_5finout_5ffast_5fread_5fdtr_5fcmd_409',['QUAD_INOUT_FAST_READ_DTR_CMD',['../qspi_8h.html#a450502c8fe6f02e6bb5756714a39220b',1,'qspi.h']]],
+  ['quad_5fout_5ffast_5fread_5f4_5fbyte_5faddr_5fcmd_410',['QUAD_OUT_FAST_READ_4_BYTE_ADDR_CMD',['../qspi_8h.html#ace8b3ffedcce8418c0664cddb5953cdb',1,'qspi.h']]],
+  ['quad_5fout_5ffast_5fread_5fcmd_411',['QUAD_OUT_FAST_READ_CMD',['../qspi_8h.html#ae0201dca2cb0722b1df933241f41fb0d',1,'qspi.h']]],
+  ['quad_5fout_5ffast_5fread_5fdtr_5fcmd_412',['QUAD_OUT_FAST_READ_DTR_CMD',['../qspi_8h.html#a8367537fdd0373297a4d741ee34db52f',1,'qspi.h']]]
 ];

@@ -5,7 +5,7 @@
 \item 
 void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_ga894808277b202630f4bf26be941fdb4e}{sound\+Init}} (void)
 \begin{DoxyCompactList}\small\item\em 사운드 초기화 함수. 인터럽트 시작 및 D\+AC 설정 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_ga62b7eb28a066b82ef3155bd14520369d}{play\+Sound}} (uint8\+\_\+t $\ast$sound\+Addr, uint32\+\_\+t sound\+Len)
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_ga71e06b9f5a304aee8dc43bb587dad8f9}{play\+Sound}} (uint32\+\_\+t sound\+Addr, uint32\+\_\+t sound\+Len)
 \begin{DoxyCompactList}\small\item\em 사운드 재생 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_ga998cf4b1f88c20705801d100dc084b43}{sound\+Timer\+Callback}} (T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$htim)
 \begin{DoxyCompactList}\small\item\em 사운드 재생을 위한 8000Hz 인터럽트 \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -15,11 +15,11 @@ void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xE
 
 
 \doxysubsection{함수 문서화}
-\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_ga62b7eb28a066b82ef3155bd14520369d}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_ga62b7eb28a066b82ef3155bd14520369d}} 
+\mbox{\Hypertarget{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_ga71e06b9f5a304aee8dc43bb587dad8f9}\label{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_ga71e06b9f5a304aee8dc43bb587dad8f9}} 
 \index{소리 재생 함수@{소리 재생 함수}!playSound@{playSound}}
 \index{playSound@{playSound}!소리 재생 함수@{소리 재생 함수}}
 \doxysubsubsection{\texorpdfstring{playSound()}{playSound()}}
-{\footnotesize\ttfamily void play\+Sound (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{sound\+Addr,  }\item[{uint32\+\_\+t}]{sound\+Len }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void play\+Sound (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{sound\+Addr,  }\item[{uint32\+\_\+t}]{sound\+Len }\end{DoxyParamCaption})}
 
 
 
@@ -40,7 +40,7 @@ void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xE
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{55 \{}
-\DoxyCodeLine{56   \mbox{\hyperlink{sound_8c_ab775656a668d95fd27660fef30eda55a}{playSoundAddr}} = soundAddr;}
+\DoxyCodeLine{56   \mbox{\hyperlink{sound_8c_ab775656a668d95fd27660fef30eda55a}{playSoundAddr}} = (uint8\_t*)soundAddr;}
 \DoxyCodeLine{57   \mbox{\hyperlink{sound_8c_aa7c9bd3cdd96c72711f156f9717f73e8}{sampleRateMax}} = soundLen;}
 \DoxyCodeLine{58   \mbox{\hyperlink{sound_8c_a07bc4639ffe53c9465fc74f11a98078f}{flagPlaySound}} = \textcolor{keyword}{true};}
 \DoxyCodeLine{59   HAL\_DAC\_Start(\&hdac, DAC\_CHANNEL\_2);}

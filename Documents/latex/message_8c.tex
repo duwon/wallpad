@@ -1,10 +1,9 @@
-\hypertarget{message_8c}{}\doxysection{C\+:/\+Users/duwon/\+One\+Drive/\+Documents/\+Git/\+L\+C\+D/\+User/message.c 파일 참조}
-\label{message_8c}\index{C:/Users/duwon/OneDrive/Documents/Git/LCD/User/message.c@{C:/Users/duwon/OneDrive/Documents/Git/LCD/User/message.c}}
+\hypertarget{message_8c}{}\doxysection{C\+:/\+Users/duwon/\+Documents/\+Git\+Hub/\+L\+C\+D/\+User/message.c 파일 참조}
+\label{message_8c}\index{C:/Users/duwon/Documents/GitHub/LCD/User/message.c@{C:/Users/duwon/Documents/GitHub/LCD/User/message.c}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}usart.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}flash.\+h\char`\"{}}\newline
 message.\+c에 대한 include 의존 그래프
 % FIG 0
 \doxysubsection*{매크로}
@@ -78,19 +77,19 @@ U\+A\+RT RX 인터럽트
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{37 \{}
-\DoxyCodeLine{38 }
-\DoxyCodeLine{39   \textcolor{keywordflow}{if} (huart-\/>Instance == USART3)}
-\DoxyCodeLine{40   \{ \textcolor{comment}{/* RS485 */}}
-\DoxyCodeLine{41     HAL\_UART\_Receive\_DMA(huart, (uint8\_t *)\&\mbox{\hyperlink{message_8c_aed1d3430d79be36c0a24bc410a75fd78}{uart3Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}}, 1);}
-\DoxyCodeLine{42     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga4c554787dc5196e18c0d2f5eab6a5254}{putByteToBuffer}}(\&\mbox{\hyperlink{message_8c_aed1d3430d79be36c0a24bc410a75fd78}{uart3Buffer}}, \mbox{\hyperlink{message_8c_aed1d3430d79be36c0a24bc410a75fd78}{uart3Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}});}
-\DoxyCodeLine{43   \}}
-\DoxyCodeLine{44   \textcolor{keywordflow}{if} (huart-\/>Instance == USART1)}
-\DoxyCodeLine{45   \{ \textcolor{comment}{/* Debug */}}
-\DoxyCodeLine{46     HAL\_UART\_Receive\_DMA(huart, (uint8\_t *)\&\mbox{\hyperlink{message_8c_ac8100bb141db19912399a3c1bd92b2ed}{uart1Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}}, 1);}
-\DoxyCodeLine{47     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga4c554787dc5196e18c0d2f5eab6a5254}{putByteToBuffer}}(\&\mbox{\hyperlink{message_8c_ac8100bb141db19912399a3c1bd92b2ed}{uart1Buffer}}, \mbox{\hyperlink{message_8c_ac8100bb141db19912399a3c1bd92b2ed}{uart1Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}});}
-\DoxyCodeLine{48   \}}
-\DoxyCodeLine{49 \}}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38   \textcolor{keywordflow}{if} (huart-\/>Instance == USART3)}
+\DoxyCodeLine{39   \{ \textcolor{comment}{/* RS485 */}}
+\DoxyCodeLine{40     HAL\_UART\_Receive\_DMA(huart, (uint8\_t *)\&\mbox{\hyperlink{message_8c_aed1d3430d79be36c0a24bc410a75fd78}{uart3Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}}, 1);}
+\DoxyCodeLine{41     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga4c554787dc5196e18c0d2f5eab6a5254}{putByteToBuffer}}(\&\mbox{\hyperlink{message_8c_aed1d3430d79be36c0a24bc410a75fd78}{uart3Buffer}}, \mbox{\hyperlink{message_8c_aed1d3430d79be36c0a24bc410a75fd78}{uart3Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}});}
+\DoxyCodeLine{42   \}}
+\DoxyCodeLine{43   \textcolor{keywordflow}{if} (huart-\/>Instance == USART1)}
+\DoxyCodeLine{44   \{ \textcolor{comment}{/* Debug */}}
+\DoxyCodeLine{45     HAL\_UART\_Receive\_DMA(huart, (uint8\_t *)\&\mbox{\hyperlink{message_8c_ac8100bb141db19912399a3c1bd92b2ed}{uart1Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}}, 1);}
+\DoxyCodeLine{46     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga4c554787dc5196e18c0d2f5eab6a5254}{putByteToBuffer}}(\&\mbox{\hyperlink{message_8c_ac8100bb141db19912399a3c1bd92b2ed}{uart1Buffer}}, \mbox{\hyperlink{message_8c_ac8100bb141db19912399a3c1bd92b2ed}{uart1Buffer}}.\mbox{\hyperlink{structuart_f_i_f_o___type_def_acbcf5f8de7895ca456bb39fbcccde1d1}{ch}});}
+\DoxyCodeLine{47   \}}
+\DoxyCodeLine{48 \}}
 
 \end{DoxyCode}
 

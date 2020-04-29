@@ -1,11 +1,21 @@
 var searchData=
 [
-  ['pagecount_156',['PageCount',['../struct_n25qxx__t.html#aca9e581e01a1f7e2d5e792c40e9b31ac',1,'N25qxx_t']]],
-  ['pagesize_157',['PageSize',['../struct_n25qxx__t.html#af15685480917d0693a0861de3a2bf784',1,'N25qxx_t']]],
-  ['playsound_158',['playSound',['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga62b7eb28a066b82ef3155bd14520369d',1,'playSound(uint8_t *soundAddr, uint32_t soundLen):&#160;sound.c'],['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d.html#ga62b7eb28a066b82ef3155bd14520369d',1,'playSound(uint8_t *soundAddr, uint32_t soundLen):&#160;sound.c']]],
-  ['playsoundaddr_159',['playSoundAddr',['../sound_8c.html#ab775656a668d95fd27660fef30eda55a',1,'sound.c']]],
-  ['procmessage_160',['procMessage',['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e.html#gafb2a4ed7b6014472d0b09de7159e3d64',1,'procMessage(uint8_t *ltdcBuffer):&#160;message.c'],['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e.html#gafb2a4ed7b6014472d0b09de7159e3d64',1,'procMessage(uint8_t *ltdcBuffer):&#160;message.c']]],
-  ['putbytetobuffer_161',['putByteToBuffer',['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e.html#ga4c554787dc5196e18c0d2f5eab6a5254',1,'message.c']]],
-  ['putchar_5fprototype_162',['PUTCHAR_PROTOTYPE',['../message_8c.html#ac040eb6679fed6e591776425aa7abd9d',1,'PUTCHAR_PROTOTYPE():&#160;message.c'],['../message_8c.html#a6b71e3c5cd86d6941c8f4a8beb1b354f',1,'PUTCHAR_PROTOTYPE():&#160;message.c']]],
-  ['pxindex_163',['pxIndex',['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e.html#gac10c148705bec3c6e93b4eebc40130c4',1,'message.c']]]
+  ['read_5f4_5fbyte_5faddr_5fcmd_164',['READ_4_BYTE_ADDR_CMD',['../qspi_8h.html#acd18079f42d17453abf474e763d8105c',1,'qspi.h']]],
+  ['read_5fcfg_5freg_5fcmd_165',['READ_CFG_REG_CMD',['../qspi_8h.html#a9acc2d4bc9b49b2b52835a80e3b16595',1,'qspi.h']]],
+  ['read_5fcmd_166',['READ_CMD',['../qspi_8h.html#a21623e2a5501c821da54dd76ffc1d077',1,'qspi.h']]],
+  ['read_5fenhanced_5fvol_5fcfg_5freg_5fcmd_167',['READ_ENHANCED_VOL_CFG_REG_CMD',['../qspi_8h.html#ac8e3b007445c147c12164f37c589172a',1,'qspi.h']]],
+  ['read_5fext_5faddr_5freg_5fcmd_168',['READ_EXT_ADDR_REG_CMD',['../qspi_8h.html#a54e4a16b84d7b9e5576e4f347a41b9c0',1,'qspi.h']]],
+  ['read_5fflag_5fstatus_5freg_5fcmd_169',['READ_FLAG_STATUS_REG_CMD',['../qspi_8h.html#ad350f673a8557dbd627ee714403a9ffc',1,'qspi.h']]],
+  ['read_5fid_5fcmd_170',['READ_ID_CMD',['../qspi_8h.html#afad735439bdb43ab280755aa4f129e05',1,'qspi.h']]],
+  ['read_5fid_5fcmd2_171',['READ_ID_CMD2',['../qspi_8h.html#ac5ec3b44ff1efb54410cac6d360d50db',1,'qspi.h']]],
+  ['read_5flock_5freg_5fcmd_172',['READ_LOCK_REG_CMD',['../qspi_8h.html#a04728241c82e46e0e2eb9792ca0e4371',1,'qspi.h']]],
+  ['read_5fnonvol_5fcfg_5freg_5fcmd_173',['READ_NONVOL_CFG_REG_CMD',['../qspi_8h.html#a05b11116844d26f7949f5abcaaa9c2e1',1,'qspi.h']]],
+  ['read_5fotp_5farray_5fcmd_174',['READ_OTP_ARRAY_CMD',['../qspi_8h.html#af08642aa956f6e200088bc670966b137',1,'qspi.h']]],
+  ['read_5fserial_5fflash_5fdisco_5fparam_5fcmd_175',['READ_SERIAL_FLASH_DISCO_PARAM_CMD',['../qspi_8h.html#a216fff040d8bab7b5df5591ebfc2c5d6',1,'qspi.h']]],
+  ['read_5fstatus_5freg_5fcmd_176',['READ_STATUS_REG_CMD',['../qspi_8h.html#aa3c6b4a899c5b0875dfcf503f1e41b63',1,'READ_STATUS_REG_CMD():&#160;qspi.h'],['../qspi_8h.html#aa3c6b4a899c5b0875dfcf503f1e41b63',1,'READ_STATUS_REG_CMD():&#160;qspi.h']]],
+  ['read_5fvol_5fcfg_5freg_5fcmd_177',['READ_VOL_CFG_REG_CMD',['../qspi_8h.html#ad62fe31b412caa3fe5d5454bb6a5f5d4',1,'qspi.h']]],
+  ['reset_5fenable_5fcmd_178',['RESET_ENABLE_CMD',['../qspi_8h.html#aaa9f0b43b7e4f0f5caf4aa703dc794eb',1,'qspi.h']]],
+  ['reset_5fmemory_5fcmd_179',['RESET_MEMORY_CMD',['../qspi_8h.html#ad8f71231a1b5f3324659e18aa1c84658',1,'qspi.h']]],
+  ['rxch_180',['rxCh',['../group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e.html#ga17cf3733a2cdd91082e85c39c94facb3',1,'message.c']]],
+  ['rxcplt_181',['RxCplt',['../qspi_8c.html#a7aab1750012daaa80fcd92fdb5c4068e',1,'qspi.c']]]
 ];

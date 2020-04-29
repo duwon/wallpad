@@ -1,0 +1,434 @@
+\hypertarget{qspi_8c}{}\doxysection{C\+:/\+Users/duwon/\+Documents/\+Git\+Hub/\+L\+C\+D/\+User/qspi.c 파일 참조}
+\label{qspi_8c}\index{C:/Users/duwon/Documents/GitHub/LCD/User/qspi.c@{C:/Users/duwon/Documents/GitHub/LCD/User/qspi.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}qspi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}quadspi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}led.\+h\char`\"{}}\newline
+qspi.\+c에 대한 include 의존 그래프
+% FIG 0
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{qspi_8c_ac7d06119574879bcfb74bdba7041b074}{Q\+S\+P\+I\+\_\+\+Write\+Enable}} (Q\+S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$Q\+S\+P\+I\+Handle)
+\begin{DoxyCompactList}\small\item\em This function sends a Write Enable and waits until it is effective. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{qspi_8c_a06e91e6d71c1fe7d6bb95941d057ad69}{Q\+S\+P\+I\+\_\+\+Auto\+Polling\+Mem\+Ready}} (Q\+S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$Q\+S\+P\+I\+Handle)
+\begin{DoxyCompactList}\small\item\em This function reads the SR of the memory and awaits the E\+OP. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{qspi_8c_a71e8c1724e7998a37e4bb7b9e55b3fbc}{Q\+S\+P\+I\+\_\+\+Dummy\+Cycles\+Cfg}} (Q\+S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$Q\+S\+P\+I\+Handle)
+\begin{DoxyCompactList}\small\item\em This function configures the dummy cycles on memory side. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{qspi_8c_ad38fe6643424bf9422b9d08d061fcaff}{C\+P\+U\+\_\+\+C\+A\+C\+H\+E\+\_\+\+Enable}} (void)
+\begin{DoxyCompactList}\small\item\em C\+PU L1-\/\+Cache enable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{qspi_8c_afb6c63aee25007cfc9a6d74c87f519f0}{Q\+S\+P\+I\+\_\+\+Enable\+Memory\+Mapped}} (void)
+\begin{DoxyCompactList}\small\item\em Q\+S\+PI 메모리 맵 방식 사용 설정 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{qspi_8c_a4693f580289ab8cd64396550f082d76e}{H\+A\+L\+\_\+\+Q\+S\+P\+I\+\_\+\+Cmd\+Cplt\+Callback}} (Q\+S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$hqspi)
+\begin{DoxyCompactList}\small\item\em Command completed callbacks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{qspi_8c_a891a686ec5df3be83efcad41e77928cd}{H\+A\+L\+\_\+\+Q\+S\+P\+I\+\_\+\+Rx\+Cplt\+Callback}} (Q\+S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$hqspi)
+\begin{DoxyCompactList}\small\item\em Rx Transfer completed callbacks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{qspi_8c_a213e253a22bc10223f62fcf02a40f893}{H\+A\+L\+\_\+\+Q\+S\+P\+I\+\_\+\+Tx\+Cplt\+Callback}} (Q\+S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$hqspi)
+\begin{DoxyCompactList}\small\item\em Tx Transfer completed callbacks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{qspi_8c_a403cb395dfe508d174b0b55efdc4b8b4}{H\+A\+L\+\_\+\+Q\+S\+P\+I\+\_\+\+Status\+Match\+Callback}} (Q\+S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$hqspi)
+\begin{DoxyCompactList}\small\item\em Status Match callbacks \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+IO uint8\+\_\+t \mbox{\hyperlink{qspi_8c_a4fa5354f175f1ae80acf652d5b8b0795}{Cmd\+Cplt}}
+\item 
+\+\_\+\+\_\+\+IO uint8\+\_\+t \mbox{\hyperlink{qspi_8c_a7aab1750012daaa80fcd92fdb5c4068e}{Rx\+Cplt}}
+\item 
+\+\_\+\+\_\+\+IO uint8\+\_\+t \mbox{\hyperlink{qspi_8c_a451d3608b5ea2612f0d35af934ed587d}{Tx\+Cplt}}
+\item 
+\+\_\+\+\_\+\+IO uint8\+\_\+t \mbox{\hyperlink{qspi_8c_a1e376b5ff9c06b1e2b5965a7fa1262fc}{Status\+Match}}
+\item 
+\+\_\+\+\_\+\+IO uint8\+\_\+t \mbox{\hyperlink{qspi_8c_a2e01b19c572d9ee41962c094ba8821d7}{Time\+Out}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+\begin{DoxyAuthor}{작성자}
+정두원 
+\end{DoxyAuthor}
+\begin{DoxyDate}{날짜}
+2020-\/04-\/24 @brif Q\+S\+PI Flash 메모리 맵 방식 사용 설정 
+\end{DoxyDate}
+
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{qspi_8c_ad38fe6643424bf9422b9d08d061fcaff}\label{qspi_8c_ad38fe6643424bf9422b9d08d061fcaff}} 
+\index{qspi.c@{qspi.c}!CPU\_CACHE\_Enable@{CPU\_CACHE\_Enable}}
+\index{CPU\_CACHE\_Enable@{CPU\_CACHE\_Enable}!qspi.c@{qspi.c}}
+\doxysubsubsection{\texorpdfstring{CPU\_CACHE\_Enable()}{CPU\_CACHE\_Enable()}}
+{\footnotesize\ttfamily static void C\+P\+U\+\_\+\+C\+A\+C\+H\+E\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+C\+PU L1-\/\+Cache enable. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{244 \{}
+\DoxyCodeLine{245   \textcolor{comment}{/* Enable I-\/Cache */}}
+\DoxyCodeLine{246   SCB\_EnableICache();}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248   \textcolor{comment}{/* Enable D-\/Cache */}}
+\DoxyCodeLine{249   SCB\_EnableDCache();}
+\DoxyCodeLine{250 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{qspi_8c_a4693f580289ab8cd64396550f082d76e}\label{qspi_8c_a4693f580289ab8cd64396550f082d76e}} 
+\index{qspi.c@{qspi.c}!HAL\_QSPI\_CmdCpltCallback@{HAL\_QSPI\_CmdCpltCallback}}
+\index{HAL\_QSPI\_CmdCpltCallback@{HAL\_QSPI\_CmdCpltCallback}!qspi.c@{qspi.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_QSPI\_CmdCpltCallback()}{HAL\_QSPI\_CmdCpltCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Q\+S\+P\+I\+\_\+\+Cmd\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{Q\+S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$}]{hqspi }\end{DoxyParamCaption})}
+
+
+
+Command completed callbacks. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em hqspi} & Q\+S\+PI handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82 \{}
+\DoxyCodeLine{83   \mbox{\hyperlink{qspi_8c_a4fa5354f175f1ae80acf652d5b8b0795}{CmdCplt}}++;}
+\DoxyCodeLine{84 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{qspi_8c_a891a686ec5df3be83efcad41e77928cd}\label{qspi_8c_a891a686ec5df3be83efcad41e77928cd}} 
+\index{qspi.c@{qspi.c}!HAL\_QSPI\_RxCpltCallback@{HAL\_QSPI\_RxCpltCallback}}
+\index{HAL\_QSPI\_RxCpltCallback@{HAL\_QSPI\_RxCpltCallback}!qspi.c@{qspi.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_QSPI\_RxCpltCallback()}{HAL\_QSPI\_RxCpltCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Q\+S\+P\+I\+\_\+\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{Q\+S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$}]{hqspi }\end{DoxyParamCaption})}
+
+
+
+Rx Transfer completed callbacks. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em hqspi} & Q\+S\+PI handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91 \{}
+\DoxyCodeLine{92   \mbox{\hyperlink{qspi_8c_a7aab1750012daaa80fcd92fdb5c4068e}{RxCplt}}++;}
+\DoxyCodeLine{93 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{qspi_8c_a403cb395dfe508d174b0b55efdc4b8b4}\label{qspi_8c_a403cb395dfe508d174b0b55efdc4b8b4}} 
+\index{qspi.c@{qspi.c}!HAL\_QSPI\_StatusMatchCallback@{HAL\_QSPI\_StatusMatchCallback}}
+\index{HAL\_QSPI\_StatusMatchCallback@{HAL\_QSPI\_StatusMatchCallback}!qspi.c@{qspi.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_QSPI\_StatusMatchCallback()}{HAL\_QSPI\_StatusMatchCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Q\+S\+P\+I\+\_\+\+Status\+Match\+Callback (\begin{DoxyParamCaption}\item[{Q\+S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$}]{hqspi }\end{DoxyParamCaption})}
+
+
+
+Status Match callbacks 
+
+
+\begin{DoxyParams}{매개변수}
+{\em hqspi} & Q\+S\+PI handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109 \{}
+\DoxyCodeLine{110   \mbox{\hyperlink{qspi_8c_a1e376b5ff9c06b1e2b5965a7fa1262fc}{StatusMatch}}++;}
+\DoxyCodeLine{111 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{qspi_8c_a213e253a22bc10223f62fcf02a40f893}\label{qspi_8c_a213e253a22bc10223f62fcf02a40f893}} 
+\index{qspi.c@{qspi.c}!HAL\_QSPI\_TxCpltCallback@{HAL\_QSPI\_TxCpltCallback}}
+\index{HAL\_QSPI\_TxCpltCallback@{HAL\_QSPI\_TxCpltCallback}!qspi.c@{qspi.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_QSPI\_TxCpltCallback()}{HAL\_QSPI\_TxCpltCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Q\+S\+P\+I\+\_\+\+Tx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{Q\+S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$}]{hqspi }\end{DoxyParamCaption})}
+
+
+
+Tx Transfer completed callbacks. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em hqspi} & Q\+S\+PI handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{100 \{}
+\DoxyCodeLine{101   \mbox{\hyperlink{qspi_8c_a451d3608b5ea2612f0d35af934ed587d}{TxCplt}}++; }
+\DoxyCodeLine{102 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{qspi_8c_a06e91e6d71c1fe7d6bb95941d057ad69}\label{qspi_8c_a06e91e6d71c1fe7d6bb95941d057ad69}} 
+\index{qspi.c@{qspi.c}!QSPI\_AutoPollingMemReady@{QSPI\_AutoPollingMemReady}}
+\index{QSPI\_AutoPollingMemReady@{QSPI\_AutoPollingMemReady}!qspi.c@{qspi.c}}
+\doxysubsubsection{\texorpdfstring{QSPI\_AutoPollingMemReady()}{QSPI\_AutoPollingMemReady()}}
+{\footnotesize\ttfamily static void Q\+S\+P\+I\+\_\+\+Auto\+Polling\+Mem\+Ready (\begin{DoxyParamCaption}\item[{Q\+S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$}]{Q\+S\+P\+I\+Handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This function reads the SR of the memory and awaits the E\+OP. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em hqspi} & Q\+S\+PI handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{161 \{}
+\DoxyCodeLine{162   QSPI\_CommandTypeDef     sCommand;}
+\DoxyCodeLine{163   QSPI\_AutoPollingTypeDef sConfig;}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165   \textcolor{comment}{/* Configure automatic polling mode to wait for memory ready -\/-\/-\/-\/-\/-\/ */}  }
+\DoxyCodeLine{166   sCommand.InstructionMode   = QSPI\_INSTRUCTION\_1\_LINE;}
+\DoxyCodeLine{167   sCommand.Instruction       = \mbox{\hyperlink{qspi_8h_aa3c6b4a899c5b0875dfcf503f1e41b63}{READ\_STATUS\_REG\_CMD}};}
+\DoxyCodeLine{168   sCommand.AddressMode       = QSPI\_ADDRESS\_NONE;}
+\DoxyCodeLine{169   sCommand.AlternateByteMode = QSPI\_ALTERNATE\_BYTES\_NONE;}
+\DoxyCodeLine{170   sCommand.DataMode          = QSPI\_DATA\_1\_LINE;}
+\DoxyCodeLine{171   sCommand.DummyCycles       = 0;}
+\DoxyCodeLine{172   sCommand.DdrMode           = QSPI\_DDR\_MODE\_DISABLE;}
+\DoxyCodeLine{173   sCommand.DdrHoldHalfCycle  = QSPI\_DDR\_HHC\_ANALOG\_DELAY;}
+\DoxyCodeLine{174   sCommand.SIOOMode         = QSPI\_SIOO\_INST\_EVERY\_CMD;}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176   sConfig.Match           = 0x00;}
+\DoxyCodeLine{177   sConfig.Mask            = 0x01;}
+\DoxyCodeLine{178   sConfig.MatchMode       = QSPI\_MATCH\_MODE\_AND;}
+\DoxyCodeLine{179   sConfig.StatusBytesSize = 1;}
+\DoxyCodeLine{180   sConfig.Interval        = 0x10;}
+\DoxyCodeLine{181   sConfig.AutomaticStop   = QSPI\_AUTOMATIC\_STOP\_ENABLE;}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183   \textcolor{keywordflow}{if} (HAL\_QSPI\_AutoPolling\_IT(\&hqspi, \&sCommand, \&sConfig) != HAL\_OK)}
+\DoxyCodeLine{184   \{}
+\DoxyCodeLine{185     Error\_Handler();}
+\DoxyCodeLine{186   \}}
+\DoxyCodeLine{187 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{qspi_8c_a71e8c1724e7998a37e4bb7b9e55b3fbc}\label{qspi_8c_a71e8c1724e7998a37e4bb7b9e55b3fbc}} 
+\index{qspi.c@{qspi.c}!QSPI\_DummyCyclesCfg@{QSPI\_DummyCyclesCfg}}
+\index{QSPI\_DummyCyclesCfg@{QSPI\_DummyCyclesCfg}!qspi.c@{qspi.c}}
+\doxysubsubsection{\texorpdfstring{QSPI\_DummyCyclesCfg()}{QSPI\_DummyCyclesCfg()}}
+{\footnotesize\ttfamily static void Q\+S\+P\+I\+\_\+\+Dummy\+Cycles\+Cfg (\begin{DoxyParamCaption}\item[{Q\+S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$}]{Q\+S\+P\+I\+Handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This function configures the dummy cycles on memory side. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em hqspi} & Q\+S\+PI handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{반환값}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{195 \{}
+\DoxyCodeLine{196   QSPI\_CommandTypeDef sCommand;}
+\DoxyCodeLine{197   uint8\_t reg;}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199   \textcolor{comment}{/* Read Volatile Configuration register -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{200   sCommand.InstructionMode   = QSPI\_INSTRUCTION\_1\_LINE;}
+\DoxyCodeLine{201   sCommand.Instruction       = \mbox{\hyperlink{qspi_8h_ad62fe31b412caa3fe5d5454bb6a5f5d4}{READ\_VOL\_CFG\_REG\_CMD}};}
+\DoxyCodeLine{202   sCommand.AddressMode       = QSPI\_ADDRESS\_NONE;}
+\DoxyCodeLine{203   sCommand.AlternateByteMode = QSPI\_ALTERNATE\_BYTES\_NONE;}
+\DoxyCodeLine{204   sCommand.DataMode          = QSPI\_DATA\_1\_LINE;}
+\DoxyCodeLine{205   sCommand.DummyCycles       = 0;}
+\DoxyCodeLine{206   sCommand.DdrMode           = QSPI\_DDR\_MODE\_DISABLE;}
+\DoxyCodeLine{207   sCommand.DdrHoldHalfCycle  = QSPI\_DDR\_HHC\_ANALOG\_DELAY;}
+\DoxyCodeLine{208   sCommand.SIOOMode         = QSPI\_SIOO\_INST\_EVERY\_CMD;}
+\DoxyCodeLine{209   sCommand.NbData            = 1;}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211   \textcolor{keywordflow}{if} (HAL\_QSPI\_Command(\&hqspi, \&sCommand, HAL\_QPSI\_TIMEOUT\_DEFAULT\_VALUE) != HAL\_OK)}
+\DoxyCodeLine{212   \{}
+\DoxyCodeLine{213     Error\_Handler();}
+\DoxyCodeLine{214   \}}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216   \textcolor{keywordflow}{if} (HAL\_QSPI\_Receive(\&hqspi, \&reg, HAL\_QPSI\_TIMEOUT\_DEFAULT\_VALUE) != HAL\_OK)}
+\DoxyCodeLine{217   \{}
+\DoxyCodeLine{218     Error\_Handler();}
+\DoxyCodeLine{219   \}}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221   \textcolor{comment}{/* Enable write operations -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{222   \mbox{\hyperlink{qspi_8c_ac7d06119574879bcfb74bdba7041b074}{QSPI\_WriteEnable}}(\&hqspi);}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{224   \textcolor{comment}{/* Write Volatile Configuration register (with new dummy cycles) -\/-\/ */}  }
+\DoxyCodeLine{225   sCommand.Instruction = \mbox{\hyperlink{qspi_8h_adf5a02113ed0594c1c1f6333f0c6be45}{WRITE\_VOL\_CFG\_REG\_CMD}};}
+\DoxyCodeLine{226   MODIFY\_REG(reg, 0xF0, (\mbox{\hyperlink{qspi_8h_a15ce7674a44eeed1de4d817fa616e845}{DUMMY\_CLOCK\_CYCLES\_READ\_QUAD}} << POSITION\_VAL(0xF0)));}
+\DoxyCodeLine{227       }
+\DoxyCodeLine{228   \textcolor{keywordflow}{if} (HAL\_QSPI\_Command(\&hqspi, \&sCommand, HAL\_QPSI\_TIMEOUT\_DEFAULT\_VALUE) != HAL\_OK)}
+\DoxyCodeLine{229   \{}
+\DoxyCodeLine{230     Error\_Handler();}
+\DoxyCodeLine{231   \}}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233   \textcolor{keywordflow}{if} (HAL\_QSPI\_Transmit(\&hqspi, \&reg, HAL\_QPSI\_TIMEOUT\_DEFAULT\_VALUE) != HAL\_OK)}
+\DoxyCodeLine{234   \{}
+\DoxyCodeLine{235     Error\_Handler();}
+\DoxyCodeLine{236   \}}
+\DoxyCodeLine{237 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{qspi_8c_afb6c63aee25007cfc9a6d74c87f519f0}\label{qspi_8c_afb6c63aee25007cfc9a6d74c87f519f0}} 
+\index{qspi.c@{qspi.c}!QSPI\_EnableMemoryMapped@{QSPI\_EnableMemoryMapped}}
+\index{QSPI\_EnableMemoryMapped@{QSPI\_EnableMemoryMapped}!qspi.c@{qspi.c}}
+\doxysubsubsection{\texorpdfstring{QSPI\_EnableMemoryMapped()}{QSPI\_EnableMemoryMapped()}}
+{\footnotesize\ttfamily void Q\+S\+P\+I\+\_\+\+Enable\+Memory\+Mapped (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Q\+S\+PI 메모리 맵 방식 사용 설정 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{30   QSPI\_CommandTypeDef      sCommand;}
+\DoxyCodeLine{31   QSPI\_MemoryMappedTypeDef sMemMappedCfg;}
+\DoxyCodeLine{32   \_\_IO uint8\_t step = 0;}
+\DoxyCodeLine{33   }
+\DoxyCodeLine{34   \mbox{\hyperlink{qspi_8c_ad38fe6643424bf9422b9d08d061fcaff}{CPU\_CACHE\_Enable}}();}
+\DoxyCodeLine{35   }
+\DoxyCodeLine{36   \textcolor{comment}{/* Init */}}
+\DoxyCodeLine{37   HAL\_QSPI\_DeInit(\&hqspi);}
+\DoxyCodeLine{38   \textcolor{keywordflow}{if} (HAL\_QSPI\_Init(\&hqspi) != HAL\_OK)}
+\DoxyCodeLine{39   \{}
+\DoxyCodeLine{40     Error\_Handler();}
+\DoxyCodeLine{41   \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{comment}{/* wait for end of program */}  }
+\DoxyCodeLine{44     \mbox{\hyperlink{qspi_8c_a06e91e6d71c1fe7d6bb95941d057ad69}{QSPI\_AutoPollingMemReady}}(\&hqspi);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46   \textcolor{keywordflow}{while}(\mbox{\hyperlink{qspi_8c_a1e376b5ff9c06b1e2b5965a7fa1262fc}{StatusMatch}} != 1)}
+\DoxyCodeLine{47   \{}
+\DoxyCodeLine{48     \mbox{\hyperlink{qspi_8c_a1e376b5ff9c06b1e2b5965a7fa1262fc}{StatusMatch}} = 0;}
+\DoxyCodeLine{49     \mbox{\hyperlink{qspi_8c_a7aab1750012daaa80fcd92fdb5c4068e}{RxCplt}} = 0;}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{comment}{/* dummy */}}
+\DoxyCodeLine{52     \mbox{\hyperlink{qspi_8c_a71e8c1724e7998a37e4bb7b9e55b3fbc}{QSPI\_DummyCyclesCfg}}(\&hqspi);}
+\DoxyCodeLine{53     }
+\DoxyCodeLine{54     \textcolor{comment}{/* READ Command */}}
+\DoxyCodeLine{55     sCommand.Instruction        = \mbox{\hyperlink{qspi_8h_a21623e2a5501c821da54dd76ffc1d077}{READ\_CMD}};}
+\DoxyCodeLine{56     sCommand.DummyCycles        = \mbox{\hyperlink{qspi_8h_ab44138b4262b7fe734300348f942e511}{DUMMY\_CLOCK\_CYCLES\_READ}};}
+\DoxyCodeLine{57     sCommand.AddressMode        = QSPI\_ADDRESS\_1\_LINE;}
+\DoxyCodeLine{58     sCommand.DataMode           = QSPI\_DATA\_1\_LINE;}
+\DoxyCodeLine{59     }
+\DoxyCodeLine{60     sCommand.InstructionMode    = QSPI\_INSTRUCTION\_1\_LINE;}
+\DoxyCodeLine{61     sCommand.AddressSize        = QSPI\_ADDRESS\_24\_BITS;}
+\DoxyCodeLine{62     sCommand.AlternateByteMode  = QSPI\_ALTERNATE\_BYTES\_NONE;}
+\DoxyCodeLine{63     sCommand.DdrMode            = QSPI\_DDR\_MODE\_DISABLE;}
+\DoxyCodeLine{64     sCommand.DdrHoldHalfCycle   = QSPI\_DDR\_HHC\_ANALOG\_DELAY;}
+\DoxyCodeLine{65     sCommand.SIOOMode           = QSPI\_SIOO\_INST\_EVERY\_CMD;       }
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     sMemMappedCfg.TimeOutActivation = QSPI\_TIMEOUT\_COUNTER\_DISABLE;}
+\DoxyCodeLine{68     sMemMappedCfg.TimeOutPeriod     = 0;}
+\DoxyCodeLine{69     }
+\DoxyCodeLine{70     \textcolor{comment}{/* Convert Memory Mapped Mode */}}
+\DoxyCodeLine{71     HAL\_QSPI\_MemoryMapped(\&hqspi, \&sCommand, \&sMemMappedCfg);}
+\DoxyCodeLine{72   \}}
+\DoxyCodeLine{73 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{qspi_8c_ac7d06119574879bcfb74bdba7041b074}\label{qspi_8c_ac7d06119574879bcfb74bdba7041b074}} 
+\index{qspi.c@{qspi.c}!QSPI\_WriteEnable@{QSPI\_WriteEnable}}
+\index{QSPI\_WriteEnable@{QSPI\_WriteEnable}!qspi.c@{qspi.c}}
+\doxysubsubsection{\texorpdfstring{QSPI\_WriteEnable()}{QSPI\_WriteEnable()}}
+{\footnotesize\ttfamily static void Q\+S\+P\+I\+\_\+\+Write\+Enable (\begin{DoxyParamCaption}\item[{Q\+S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$}]{Q\+S\+P\+I\+Handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This function sends a Write Enable and waits until it is effective. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em hqspi} & Q\+S\+PI handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{118 \{}
+\DoxyCodeLine{119   QSPI\_CommandTypeDef     sCommand;}
+\DoxyCodeLine{120   QSPI\_AutoPollingTypeDef sConfig;}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122   \textcolor{comment}{/* Enable write operations -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{123   sCommand.InstructionMode   = QSPI\_INSTRUCTION\_1\_LINE;}
+\DoxyCodeLine{124   sCommand.Instruction       = \mbox{\hyperlink{qspi_8h_a778f641f7a12aabbe1ffd0c948f8e1f9}{WRITE\_ENABLE\_CMD}};}
+\DoxyCodeLine{125   sCommand.AddressMode       = QSPI\_ADDRESS\_NONE;}
+\DoxyCodeLine{126   sCommand.AlternateByteMode = QSPI\_ALTERNATE\_BYTES\_NONE;}
+\DoxyCodeLine{127   sCommand.DataMode          = QSPI\_DATA\_NONE;}
+\DoxyCodeLine{128   sCommand.DummyCycles       = 0;}
+\DoxyCodeLine{129   sCommand.DdrMode           = QSPI\_DDR\_MODE\_DISABLE;}
+\DoxyCodeLine{130   sCommand.DdrHoldHalfCycle  = QSPI\_DDR\_HHC\_ANALOG\_DELAY;}
+\DoxyCodeLine{131   sCommand.SIOOMode          = QSPI\_SIOO\_INST\_EVERY\_CMD;}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133   \textcolor{keywordflow}{if} (HAL\_QSPI\_Command(\&hqspi, \&sCommand, HAL\_QPSI\_TIMEOUT\_DEFAULT\_VALUE) != HAL\_OK)}
+\DoxyCodeLine{134   \{}
+\DoxyCodeLine{135     Error\_Handler();}
+\DoxyCodeLine{136   \}}
+\DoxyCodeLine{137   }
+\DoxyCodeLine{138   \textcolor{comment}{/* Configure automatic polling mode to wait for write enabling -\/-\/-\/-\/ */}  }
+\DoxyCodeLine{139   sConfig.Match           = 0x02;}
+\DoxyCodeLine{140   sConfig.Mask            = 0x02;}
+\DoxyCodeLine{141   sConfig.MatchMode       = QSPI\_MATCH\_MODE\_AND;}
+\DoxyCodeLine{142   sConfig.StatusBytesSize = 1;}
+\DoxyCodeLine{143   sConfig.Interval        = 0x10;}
+\DoxyCodeLine{144   sConfig.AutomaticStop   = QSPI\_AUTOMATIC\_STOP\_ENABLE;}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146   sCommand.Instruction    = \mbox{\hyperlink{qspi_8h_aa3c6b4a899c5b0875dfcf503f1e41b63}{READ\_STATUS\_REG\_CMD}};}
+\DoxyCodeLine{147   sCommand.DataMode       = QSPI\_DATA\_1\_LINE;}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149   \textcolor{keywordflow}{if} (HAL\_QSPI\_AutoPolling(\&hqspi, \&sCommand, \&sConfig, HAL\_QPSI\_TIMEOUT\_DEFAULT\_VALUE) != HAL\_OK)}
+\DoxyCodeLine{150   \{}
+\DoxyCodeLine{151     Error\_Handler();}
+\DoxyCodeLine{152   \}}
+\DoxyCodeLine{153 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{변수 문서화}
+\mbox{\Hypertarget{qspi_8c_a4fa5354f175f1ae80acf652d5b8b0795}\label{qspi_8c_a4fa5354f175f1ae80acf652d5b8b0795}} 
+\index{qspi.c@{qspi.c}!CmdCplt@{CmdCplt}}
+\index{CmdCplt@{CmdCplt}!qspi.c@{qspi.c}}
+\doxysubsubsection{\texorpdfstring{CmdCplt}{CmdCplt}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint8\+\_\+t Cmd\+Cplt}
+
+\mbox{\Hypertarget{qspi_8c_a7aab1750012daaa80fcd92fdb5c4068e}\label{qspi_8c_a7aab1750012daaa80fcd92fdb5c4068e}} 
+\index{qspi.c@{qspi.c}!RxCplt@{RxCplt}}
+\index{RxCplt@{RxCplt}!qspi.c@{qspi.c}}
+\doxysubsubsection{\texorpdfstring{RxCplt}{RxCplt}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint8\+\_\+t Rx\+Cplt}
+
+\mbox{\Hypertarget{qspi_8c_a1e376b5ff9c06b1e2b5965a7fa1262fc}\label{qspi_8c_a1e376b5ff9c06b1e2b5965a7fa1262fc}} 
+\index{qspi.c@{qspi.c}!StatusMatch@{StatusMatch}}
+\index{StatusMatch@{StatusMatch}!qspi.c@{qspi.c}}
+\doxysubsubsection{\texorpdfstring{StatusMatch}{StatusMatch}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint8\+\_\+t Status\+Match}
+
+\mbox{\Hypertarget{qspi_8c_a2e01b19c572d9ee41962c094ba8821d7}\label{qspi_8c_a2e01b19c572d9ee41962c094ba8821d7}} 
+\index{qspi.c@{qspi.c}!TimeOut@{TimeOut}}
+\index{TimeOut@{TimeOut}!qspi.c@{qspi.c}}
+\doxysubsubsection{\texorpdfstring{TimeOut}{TimeOut}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint8\+\_\+t Time\+Out}
+
+\mbox{\Hypertarget{qspi_8c_a451d3608b5ea2612f0d35af934ed587d}\label{qspi_8c_a451d3608b5ea2612f0d35af934ed587d}} 
+\index{qspi.c@{qspi.c}!TxCplt@{TxCplt}}
+\index{TxCplt@{TxCplt}!qspi.c@{qspi.c}}
+\doxysubsubsection{\texorpdfstring{TxCplt}{TxCplt}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint8\+\_\+t Tx\+Cplt}
+
