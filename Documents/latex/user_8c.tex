@@ -57,16 +57,16 @@ uint16\+\_\+t \mbox{\hyperlink{user_8c_ad487255bdea276b437623c963984b6c7}{ltdc\+
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{46 \{}
-\DoxyCodeLine{47   \textcolor{keywordflow}{if} (htim-\/>Instance == TIM6) \textcolor{comment}{/* 8000Hz */}}
-\DoxyCodeLine{48   \{}
-\DoxyCodeLine{49     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_ga998cf4b1f88c20705801d100dc084b43}{soundTimerCallback}}(htim);}
-\DoxyCodeLine{50   \}}
-\DoxyCodeLine{51   \textcolor{keywordflow}{if} (htim-\/>Instance == TIM7) \textcolor{comment}{/* 2Hz */}}
-\DoxyCodeLine{52   \{}
-\DoxyCodeLine{53     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gaa33fbaa898acf10b4d46171b086eab92}{LED\_Toggle}}(\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecdaf4ea6611b98f83a6e1ec4ce823bf9217}{LED5}});}
-\DoxyCodeLine{54   \}}
-\DoxyCodeLine{55 \}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48   \textcolor{keywordflow}{if} (htim-\/>Instance == TIM6) \textcolor{comment}{/* 8000Hz */}}
+\DoxyCodeLine{49   \{}
+\DoxyCodeLine{50     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_ga998cf4b1f88c20705801d100dc084b43}{soundTimerCallback}}(htim);}
+\DoxyCodeLine{51   \}}
+\DoxyCodeLine{52   \textcolor{keywordflow}{if} (htim-\/>Instance == TIM7) \textcolor{comment}{/* 2Hz */}}
+\DoxyCodeLine{53   \{}
+\DoxyCodeLine{54     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gaa33fbaa898acf10b4d46171b086eab92}{LED\_Toggle}}(\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecdaf4ea6611b98f83a6e1ec4ce823bf9217}{LED5}});}
+\DoxyCodeLine{55   \}}
+\DoxyCodeLine{56 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{user_8c_a940fbac2c2da16a8b3b8a0220586a72b}\label{user_8c_a940fbac2c2da16a8b3b8a0220586a72b}} 
@@ -86,30 +86,30 @@ uint16\+\_\+t \mbox{\hyperlink{user_8c_ad487255bdea276b437623c963984b6c7}{ltdc\+
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{62 \{}
-\DoxyCodeLine{63   printf(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)nSTART\(\backslash\)r\(\backslash\)n"});}
-\DoxyCodeLine{64   HAL\_TIM\_Base\_Start\_IT(\&htim7); \textcolor{comment}{/* timer7 start -\/ 2Hz */}}
-\DoxyCodeLine{65   }
-\DoxyCodeLine{66   \textcolor{comment}{// GPIO LED}}
-\DoxyCodeLine{67   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gad39b20626424b24cf847a9b35186776b}{LED\_On}}(\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecdadac6477842247cab1a8c02c65f431b44}{LED1}});}
-\DoxyCodeLine{68   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gad39b20626424b24cf847a9b35186776b}{LED\_On}}(\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecda8379bbaa96d151e6adac488b2a147b7a}{LED2}});}
-\DoxyCodeLine{69   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gad39b20626424b24cf847a9b35186776b}{LED\_On}}(\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecda5dec293e081e0fc78369c842fab8452b}{LED3}});}
-\DoxyCodeLine{70   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gad39b20626424b24cf847a9b35186776b}{LED\_On}}(\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecdad60e39b8d1701d30aa64f80343217342}{LED4}});}
-\DoxyCodeLine{71   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gad39b20626424b24cf847a9b35186776b}{LED\_On}}(\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecdaf4ea6611b98f83a6e1ec4ce823bf9217}{LED5}});}
-\DoxyCodeLine{72   }
-\DoxyCodeLine{73   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_gae38e9d631b156b3d7f04c8af00db5540}{touchInit}}();}
-\DoxyCodeLine{74   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_ga894808277b202630f4bf26be941fdb4e}{soundInit}}();}
-\DoxyCodeLine{75   \mbox{\hyperlink{qspi_8c_afb6c63aee25007cfc9a6d74c87f519f0}{QSPI\_EnableMemoryMapped}}();}
-\DoxyCodeLine{76   \textcolor{comment}{//messageInit();}}
-\DoxyCodeLine{77   }
-\DoxyCodeLine{78   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_ga71e06b9f5a304aee8dc43bb587dad8f9}{playSound}}(0x90200000, 1440000); \textcolor{comment}{//playSound((uint32\_t)\&WAVE, 1440000);}}
-\DoxyCodeLine{79   }
-\DoxyCodeLine{80   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaa53c9d40f3aa552a9974cd55ac510cb3}{LCD\_Init}}();}
-\DoxyCodeLine{81   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf1420ea7b39dd570d4d6edbf789f7640}{LCD\_SelectLayer}}(0);}
-\DoxyCodeLine{82   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga13a46d9d0387d7dfa97167fc30e064d2}{LCD\_LayerInit}}(0, (uint32\_t)\&\mbox{\hyperlink{user_8c_ad487255bdea276b437623c963984b6c7}{ltdcBuffer}});}
-\DoxyCodeLine{83 }
-\DoxyCodeLine{84   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf7865c8fa0299567a0bebeca881ace45}{LCD\_SetBackImage}}(0x90000000);}
-\DoxyCodeLine{85 \}}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64   printf(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)nSTART\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{65   HAL\_TIM\_Base\_Start\_IT(\&htim7); \textcolor{comment}{/* timer7 start -\/ 2Hz */}}
+\DoxyCodeLine{66   }
+\DoxyCodeLine{67   \textcolor{comment}{// GPIO LED}}
+\DoxyCodeLine{68   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gad39b20626424b24cf847a9b35186776b}{LED\_On}}(\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecdadac6477842247cab1a8c02c65f431b44}{LED1}});}
+\DoxyCodeLine{69   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gad39b20626424b24cf847a9b35186776b}{LED\_On}}(\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecda8379bbaa96d151e6adac488b2a147b7a}{LED2}});}
+\DoxyCodeLine{70   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gad39b20626424b24cf847a9b35186776b}{LED\_On}}(\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecda5dec293e081e0fc78369c842fab8452b}{LED3}});}
+\DoxyCodeLine{71   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gad39b20626424b24cf847a9b35186776b}{LED\_On}}(\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecdad60e39b8d1701d30aa64f80343217342}{LED4}});}
+\DoxyCodeLine{72   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gad39b20626424b24cf847a9b35186776b}{LED\_On}}(\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecdaf4ea6611b98f83a6e1ec4ce823bf9217}{LED5}});}
+\DoxyCodeLine{73   }
+\DoxyCodeLine{74   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_gae38e9d631b156b3d7f04c8af00db5540}{touchInit}}();}
+\DoxyCodeLine{75   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_ga894808277b202630f4bf26be941fdb4e}{soundInit}}();}
+\DoxyCodeLine{76   \mbox{\hyperlink{qspi_8c_afb6c63aee25007cfc9a6d74c87f519f0}{QSPI\_EnableMemoryMapped}}(); \textcolor{comment}{/* QSPI Flash을 메모리 맵 방식으로 사용 설정 */}}
+\DoxyCodeLine{77   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga9b8e356f7ac4e4ba929f0e782e50329e}{messageInit}}(); \textcolor{comment}{/* UART 인터럽트 시작 함수 호출 */}}
+\DoxyCodeLine{78   }
+\DoxyCodeLine{79   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___s_o_u_n_d_ga71e06b9f5a304aee8dc43bb587dad8f9}{playSound}}(0x90200000, 1440000); \textcolor{comment}{//playSound((uint32\_t)\&WAVE, 1440000);}}
+\DoxyCodeLine{80   }
+\DoxyCodeLine{81   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaa53c9d40f3aa552a9974cd55ac510cb3}{LCD\_Init}}();}
+\DoxyCodeLine{82   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf1420ea7b39dd570d4d6edbf789f7640}{LCD\_SelectLayer}}(0);}
+\DoxyCodeLine{83   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga13a46d9d0387d7dfa97167fc30e064d2}{LCD\_LayerInit}}(0, (uint32\_t)\&\mbox{\hyperlink{user_8c_ad487255bdea276b437623c963984b6c7}{ltdcBuffer}});}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf7865c8fa0299567a0bebeca881ace45}{LCD\_SetBackImage}}(0x90000000);}
+\DoxyCodeLine{86 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{user_8c_a3024e1f7fb83d8fb569e7d2bcea75302}\label{user_8c_a3024e1f7fb83d8fb569e7d2bcea75302}} 
@@ -129,31 +129,33 @@ uint16\+\_\+t \mbox{\hyperlink{user_8c_ad487255bdea276b437623c963984b6c7}{ltdc\+
 \end{DoxyRetVals}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{92 \{}
-\DoxyCodeLine{93   uint8\_t touchValue = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_ga88144ebcf10a44777798ed68515798c9}{getTouchValue}}();}
-\DoxyCodeLine{94   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 4; i++)}
-\DoxyCodeLine{95   \{}
-\DoxyCodeLine{96     \textcolor{keywordflow}{if} (((touchValue >> i) \& 0x01) == 1)}
-\DoxyCodeLine{97     \{}
-\DoxyCodeLine{98       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gaa33fbaa898acf10b4d46171b086eab92}{LED\_Toggle}}((\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecd}{Led\_TypeDef}})i);}
-\DoxyCodeLine{99     \}}
-\DoxyCodeLine{100   \}}
-\DoxyCodeLine{101 }
-\DoxyCodeLine{102   uint32\_t arrImgAddr[6] = \{(uint32\_t)\mbox{\hyperlink{user_8h_a04273a4a2fba4eb13cb2a07cc721a6ae}{IMG\_01}}, (uint32\_t)\mbox{\hyperlink{user_8h_ad59802ba505f3dabde344e2ca49338a8}{IMG\_02}}, (uint32\_t)\mbox{\hyperlink{user_8h_afdd2d8d468465fc413d38ac77f9ad527}{IMG\_03}}, (uint32\_t)\mbox{\hyperlink{user_8h_aa00879b7e169b4f0a681c3b91c1ba719}{IMG\_04}}, (uint32\_t)\mbox{\hyperlink{user_8h_a0a66220d9e90f3a2cf76cc1f293f8f45}{IMG\_05}}, (uint32\_t)\mbox{\hyperlink{user_8h_a96d998ca650fbeed9cb700f6a14144fd}{IMG\_06}}\};}
-\DoxyCodeLine{103   \textcolor{comment}{//uint32\_t arrImgAddr[6] = \{0x90000000, 0x90050000, 0x900A0000, 0x90100000, 0x90150000, 0x901A0000\};}}
-\DoxyCodeLine{104   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i < 6; i++)}
-\DoxyCodeLine{105   \{}
-\DoxyCodeLine{106     HAL\_Delay(2000);}
-\DoxyCodeLine{107     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf7865c8fa0299567a0bebeca881ace45}{LCD\_SetBackImage}}(arrImgAddr[0]);}
-\DoxyCodeLine{108     HAL\_Delay(2000);}
-\DoxyCodeLine{109     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf7865c8fa0299567a0bebeca881ace45}{LCD\_SetBackImage}}(arrImgAddr[i]);}
-\DoxyCodeLine{110   \}}
-\DoxyCodeLine{111 }
-\DoxyCodeLine{112   HAL\_Delay(2000);}
-\DoxyCodeLine{113   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga0baeaf94751f690887f28710df329768}{LCD\_DrawPicture}}(100,100,0x90050000,200,100,0);}
-\DoxyCodeLine{114   HAL\_Delay(2000);}
-\DoxyCodeLine{115   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gadcf22744471a2068eb86e5dbd07b75cd}{LCD\_ErasePicture}}(100,100,200,100);}
-\DoxyCodeLine{116 \}}
+\DoxyCodeLine{93 \{}
+\DoxyCodeLine{94   uint8\_t touchValue = \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___t_o_u_c_h_ga88144ebcf10a44777798ed68515798c9}{getTouchValue}}();}
+\DoxyCodeLine{95   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 4; i++)}
+\DoxyCodeLine{96   \{}
+\DoxyCodeLine{97     \textcolor{keywordflow}{if} (((touchValue >> i) \& 0x01) == 1)}
+\DoxyCodeLine{98     \{}
+\DoxyCodeLine{99       \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_e_d_gaa33fbaa898acf10b4d46171b086eab92}{LED\_Toggle}}((\mbox{\hyperlink{led_8h_aa059704b7ca945eb9c1e7f2c3d03fecd}{Led\_TypeDef}})i);}
+\DoxyCodeLine{100     \}}
+\DoxyCodeLine{101   \}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103   uint32\_t arrImgAddr[6] = \{(uint32\_t)\mbox{\hyperlink{user_8h_a04273a4a2fba4eb13cb2a07cc721a6ae}{IMG\_01}}, (uint32\_t)\mbox{\hyperlink{user_8h_ad59802ba505f3dabde344e2ca49338a8}{IMG\_02}}, (uint32\_t)\mbox{\hyperlink{user_8h_afdd2d8d468465fc413d38ac77f9ad527}{IMG\_03}}, (uint32\_t)\mbox{\hyperlink{user_8h_aa00879b7e169b4f0a681c3b91c1ba719}{IMG\_04}}, (uint32\_t)\mbox{\hyperlink{user_8h_a0a66220d9e90f3a2cf76cc1f293f8f45}{IMG\_05}}, (uint32\_t)\mbox{\hyperlink{user_8h_a96d998ca650fbeed9cb700f6a14144fd}{IMG\_06}}\};}
+\DoxyCodeLine{104   \textcolor{comment}{//uint32\_t arrImgAddr[6] = \{0x90000000, 0x90050000, 0x900A0000, 0x90100000, 0x90150000, 0x901A0000\};}}
+\DoxyCodeLine{105   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i < 6; i++)}
+\DoxyCodeLine{106   \{}
+\DoxyCodeLine{107     HAL\_Delay(2000);}
+\DoxyCodeLine{108     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf7865c8fa0299567a0bebeca881ace45}{LCD\_SetBackImage}}(arrImgAddr[0]);}
+\DoxyCodeLine{109     HAL\_Delay(2000);}
+\DoxyCodeLine{110     \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gaf7865c8fa0299567a0bebeca881ace45}{LCD\_SetBackImage}}(arrImgAddr[i]);}
+\DoxyCodeLine{111   \}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113   HAL\_Delay(2000);}
+\DoxyCodeLine{114   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_ga0baeaf94751f690887f28710df329768}{LCD\_DrawPicture}}(100,100,0x90050000,200,100,0); \textcolor{comment}{/* 200x100 이미지를 100,100 위치에 출력 */}}
+\DoxyCodeLine{115   HAL\_Delay(2000);}
+\DoxyCodeLine{116   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___l_c_d_gadcf22744471a2068eb86e5dbd07b75cd}{LCD\_ErasePicture}}(100,100,200,100); \textcolor{comment}{/* 100,100 위치의 200x100 이미지를 지우고 LCD\_SetBackImage에서 지정한 배경으로 다시 채움 */}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118   \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_gaf8775fb88222c3239809acee4b6fe538}{procMessage}}(); \textcolor{comment}{//상기 Delay로 인해 24초에 1번 호출되어 UART 메시지 loopback */}}
+\DoxyCodeLine{119 \}}
 
 \end{DoxyCode}
 

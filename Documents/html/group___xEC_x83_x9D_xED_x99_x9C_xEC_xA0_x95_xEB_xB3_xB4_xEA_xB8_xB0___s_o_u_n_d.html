@@ -196,18 +196,19 @@ $(function() {
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="sound_8c.html#a07bc4639ffe53c9465fc74f11a98078f">flagPlaySound</a>)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    HAL_DAC_SetValue(&amp;hdac, DAC_CHANNEL_2, DAC_ALIGN_8B_R, <a class="code" href="sound_8c.html#ab775656a668d95fd27660fef30eda55a">playSoundAddr</a>[<a class="code" href="sound_8c.html#a981d908ff2635ad4256b8bd5b3dbc42e">sampleRateIndex</a>++]);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="sound_8c.html#a981d908ff2635ad4256b8bd5b3dbc42e">sampleRateIndex</a> == <a class="code" href="sound_8c.html#aa7c9bd3cdd96c72711f156f9717f73e8">sampleRateMax</a>)</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <a class="code" href="sound_8c.html#a981d908ff2635ad4256b8bd5b3dbc42e">sampleRateIndex</a> = 0;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <a class="code" href="sound_8c.html#a07bc4639ffe53c9465fc74f11a98078f">flagPlaySound</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      HAL_DAC_Stop(&amp;hdac, DAC_CHANNEL_2);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<p>소리 크기를 조절하려면 playSoundAddr[sampleRateIndex++]값을 나누기하여 사용 </p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="sound_8c.html#a07bc4639ffe53c9465fc74f11a98078f">flagPlaySound</a>)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    HAL_DAC_SetValue(&amp;hdac, DAC_CHANNEL_2, DAC_ALIGN_8B_R, <a class="code" href="sound_8c.html#ab775656a668d95fd27660fef30eda55a">playSoundAddr</a>[<a class="code" href="sound_8c.html#a981d908ff2635ad4256b8bd5b3dbc42e">sampleRateIndex</a>++]);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="sound_8c.html#a981d908ff2635ad4256b8bd5b3dbc42e">sampleRateIndex</a> == <a class="code" href="sound_8c.html#aa7c9bd3cdd96c72711f156f9717f73e8">sampleRateMax</a>)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <a class="code" href="sound_8c.html#a981d908ff2635ad4256b8bd5b3dbc42e">sampleRateIndex</a> = 0;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <a class="code" href="sound_8c.html#a07bc4639ffe53c9465fc74f11a98078f">flagPlaySound</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      HAL_DAC_Stop(&amp;hdac, DAC_CHANNEL_2);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>

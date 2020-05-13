@@ -20,8 +20,14 @@ struct \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+T
 \item 
 void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga9b8e356f7ac4e4ba929f0e782e50329e}{message\+Init}} (void)
 \item 
-void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_gafb2a4ed7b6014472d0b09de7159e3d64}{proc\+Message}} (uint8\+\_\+t $\ast$\mbox{\hyperlink{user_8h_ad487255bdea276b437623c963984b6c7}{ltdc\+Buffer}})
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_gaf8775fb88222c3239809acee4b6fe538}{proc\+Message}} (void)
+\begin{DoxyCompactList}\small\item\em 메시지 처리 예제 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga4c554787dc5196e18c0d2f5eab6a5254}{put\+Byte\+To\+Buffer}} (volatile \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} $\ast$buffer, uint8\+\_\+t \mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}})
+\begin{DoxyCompactList}\small\item\em U\+A\+RT 버퍼 1Byte 저장 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_gac6432ce1f2fa79fd11b6aee1254ed39c}{get\+Byte\+From\+Buffer}} (volatile \mbox{\hyperlink{structuart_f_i_f_o___type_def}{uart\+F\+I\+F\+O\+\_\+\+Type\+Def}} $\ast$buffer, uint8\+\_\+t $\ast$\mbox{\hyperlink{message_8c_a0523c05685d59544dca911cb6a3db77d}{ch}})
+\begin{DoxyCompactList}\small\item\em Get the Byte From Buffer object \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xEA_xB8_xB0___m_e_s_s_a_g_e_ga3bf9e40b58d4b54c85623b74b27ba23d}{send\+Message}} (uint8\+\_\+t $\ast$data, uint8\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em R\+S485로 메시지 송신 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{매크로 문서화}

@@ -96,19 +96,19 @@ void \mbox{\hyperlink{group___xEC_x83_x9D_xED_x99_x9C_xEC_xA0_x95_xEB_xB3_xB4_xE
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-
+소리 크기를 조절하려면 play\+Sound\+Addr\mbox{[}sample\+Rate\+Index++\mbox{]}값을 나누기하여 사용 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{68 \{}
-\DoxyCodeLine{69   \textcolor{keywordflow}{if} (\mbox{\hyperlink{sound_8c_a07bc4639ffe53c9465fc74f11a98078f}{flagPlaySound}})}
-\DoxyCodeLine{70   \{}
-\DoxyCodeLine{71     HAL\_DAC\_SetValue(\&hdac, DAC\_CHANNEL\_2, DAC\_ALIGN\_8B\_R, \mbox{\hyperlink{sound_8c_ab775656a668d95fd27660fef30eda55a}{playSoundAddr}}[\mbox{\hyperlink{sound_8c_a981d908ff2635ad4256b8bd5b3dbc42e}{sampleRateIndex}}++]);}
-\DoxyCodeLine{72     \textcolor{keywordflow}{if} (\mbox{\hyperlink{sound_8c_a981d908ff2635ad4256b8bd5b3dbc42e}{sampleRateIndex}} == \mbox{\hyperlink{sound_8c_aa7c9bd3cdd96c72711f156f9717f73e8}{sampleRateMax}})}
-\DoxyCodeLine{73     \{}
-\DoxyCodeLine{74       \mbox{\hyperlink{sound_8c_a981d908ff2635ad4256b8bd5b3dbc42e}{sampleRateIndex}} = 0;}
-\DoxyCodeLine{75       \mbox{\hyperlink{sound_8c_a07bc4639ffe53c9465fc74f11a98078f}{flagPlaySound}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{76       HAL\_DAC\_Stop(\&hdac, DAC\_CHANNEL\_2);}
-\DoxyCodeLine{77     \}}
-\DoxyCodeLine{78   \}}
-\DoxyCodeLine{79 \}}
+\DoxyCodeLine{70 \{}
+\DoxyCodeLine{71   \textcolor{keywordflow}{if} (\mbox{\hyperlink{sound_8c_a07bc4639ffe53c9465fc74f11a98078f}{flagPlaySound}})}
+\DoxyCodeLine{72   \{}
+\DoxyCodeLine{73     HAL\_DAC\_SetValue(\&hdac, DAC\_CHANNEL\_2, DAC\_ALIGN\_8B\_R, \mbox{\hyperlink{sound_8c_ab775656a668d95fd27660fef30eda55a}{playSoundAddr}}[\mbox{\hyperlink{sound_8c_a981d908ff2635ad4256b8bd5b3dbc42e}{sampleRateIndex}}++]);}
+\DoxyCodeLine{74     \textcolor{keywordflow}{if} (\mbox{\hyperlink{sound_8c_a981d908ff2635ad4256b8bd5b3dbc42e}{sampleRateIndex}} == \mbox{\hyperlink{sound_8c_aa7c9bd3cdd96c72711f156f9717f73e8}{sampleRateMax}})}
+\DoxyCodeLine{75     \{}
+\DoxyCodeLine{76       \mbox{\hyperlink{sound_8c_a981d908ff2635ad4256b8bd5b3dbc42e}{sampleRateIndex}} = 0;}
+\DoxyCodeLine{77       \mbox{\hyperlink{sound_8c_a07bc4639ffe53c9465fc74f11a98078f}{flagPlaySound}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{78       HAL\_DAC\_Stop(\&hdac, DAC\_CHANNEL\_2);}
+\DoxyCodeLine{79     \}}
+\DoxyCodeLine{80   \}}
+\DoxyCodeLine{81 \}}
 
 \end{DoxyCode}
