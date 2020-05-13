@@ -20,8 +20,10 @@ typedef struct
 
 
 void messageInit(void);
-void procMessage(uint8_t* ltdcBuffer);
-
+void procMessage(void);
+void putByteToBuffer(volatile uartFIFO_TypeDef *buffer, uint8_t ch);
+bool getByteFromBuffer(volatile uartFIFO_TypeDef *buffer, uint8_t *ch);
+uint8_t sendMessage(uint8_t* data, uint8_t len);
 
 #ifdef __cplusplus
 }

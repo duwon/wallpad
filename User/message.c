@@ -13,9 +13,6 @@
 
 uartFIFO_TypeDef uart3Buffer, uart1Buffer;
 
-void putByteToBuffer(volatile uartFIFO_TypeDef *buffer, uint8_t ch);
-bool getByteFromBuffer(volatile uartFIFO_TypeDef *buffer, uint8_t *ch);
-
 /* printf IO 사용을 위한 설정 */
 #ifdef __GNUC__
 #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
@@ -52,7 +49,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   */
 void messageInit(void)
 {
-  HAL_UART_Receive_DMA(&huart3, (uint8_t *)&uart3Buffer.ch, 1); /* UART DMA 인터럽트 시작 */
+  HAL_UART_Receive_DMA(&huart3, (uint8_t *)&uart3Buffer.ch, 1); /* UART3(RS485) DMA 인터럽트 시작 */
   HAL_UART_Receive_DMA(&huart1, (uint8_t *)&uart1Buffer.ch, 1);
 }
 
@@ -103,26 +100,34 @@ bool getByteFromBuffer(volatile uartFIFO_TypeDef *buffer, uint8_t *ch)
   }
   return error;
 }
-
-int32_t pxIndex = 0;
-uint8_t rxCh = 0;
-void procMessage(uint8_t *ltdcBuffer)
+/**
+ * @brief RS485로 메시지 송신
+ * 
+ * @param data  : 전송할 데이터 포인터
+ * @param len : 메시지 길이 0~255
+ * @return uint8_t :   0 OK, 1 ERROR, 2 BUSY, 3 Timeout
+ */
+uint8_t sendMessage(uint8_t* data, uint8_t len)
 {
-  ///* Image Write */
-  //if (getByteFromBuffer(&uart3Buffer, &rxCh) == true)
-  //{
-  //  ltdcBuffer[pxIndex] = rxCh;
-  //  if (pxIndex == (130559 * 2))
-  //  {
-  //    pxIndex = 0;
-  //    Flash_writeImage(ltdcBuffer,13);
-  //  }
-  //  else
-  //  {
-  //    pxIndex++;
-  //  }
-  //}
-  /* Sound Write */
+  return (uint8_t)HAL_UART_Transmit(&huart3, data, len, 0xFFFF);
+}
+
+/**
+ * @brief 메시지 처리 예제
+ * 
+ */
+void procMessage(void)
+{
+  /* UART3(RS485) 데이터가 uart3Buffer 버퍼에 있으면 아스키 값 출력 */
+  uint8_t rxCh = 0;
+  while (getByteFromBuffer(&uart3Buffer, &rxCh) == true)
+  {
+    printf("%c",rxCh);
+  }
+
+  /* OK 메시지 송신 */
+  uint8_t *txData = "OK\r\n";
+  sendMessage(txData,4);
 }
 
 /**

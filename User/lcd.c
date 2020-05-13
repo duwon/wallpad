@@ -107,7 +107,7 @@ void LCD_LayerInit(uint16_t LayerIndex, uint32_t FB_Address)
   DrawProp[LayerIndex].BackColor = LCD_COLOR_WHITE;
 //  DrawProp[LayerIndex].pFont     = &Font24;
   DrawProp[LayerIndex].TextColor = LCD_COLOR_BLACK; 
-  //DrawProp[LayerIndex].pBackImage= (uint16_t *)FB_Address; 
+  DrawProp[LayerIndex].pBackImage= (uint16_t *)FB_Address; 
 }
 
 /**

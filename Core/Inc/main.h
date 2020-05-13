@@ -53,6 +53,7 @@ extern "C" {
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
+
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
@@ -68,16 +69,16 @@ void Error_Handler(void);
 #define LCD_PWM_GPIO_Port GPIOC
 #define FLASH_CS_Pin GPIO_PIN_12
 #define FLASH_CS_GPIO_Port GPIOB
-#define LED1_Pin GPIO_PIN_15
-#define LED1_GPIO_Port GPIOA
-#define LED2_Pin GPIO_PIN_10
-#define LED2_GPIO_Port GPIOC
+#define LED5_Pin GPIO_PIN_15
+#define LED5_GPIO_Port GPIOA
+#define LED4_Pin GPIO_PIN_10
+#define LED4_GPIO_Port GPIOC
 #define LED3_Pin GPIO_PIN_11
 #define LED3_GPIO_Port GPIOC
-#define LED4_Pin GPIO_PIN_12
-#define LED4_GPIO_Port GPIOC
-#define LED5_Pin GPIO_PIN_0
-#define LED5_GPIO_Port GPIOD
+#define LED2_Pin GPIO_PIN_12
+#define LED2_GPIO_Port GPIOC
+#define LED1_Pin GPIO_PIN_0
+#define LED1_GPIO_Port GPIOD
 #define ZERO_Pin GPIO_PIN_0
 #define ZERO_GPIO_Port GPIOE
 /* USER CODE BEGIN Private defines */

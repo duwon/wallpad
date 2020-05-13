@@ -14,11 +14,12 @@
     - 생활정보기 제어 API
   * @section  CREATEINFO      작성정보
     - 작성자      :   정두원
-    - 작성일      :   2020-04-29
+    - 작성일      :   2020-04-13
   * @section  MODIFYINFO      수정정보
     - 2020-04-19    :    문서화
     - 2020-04-21    :    Flash 제어 추가
     - 2020-04-29    :    QSPI Memory-map 방식 사용
+    - 2020-05-13    :    LED1~5 순서 재정렬, 내부 클럭 사용 설정
   */
 #include <stdio.h>
 #include <string.h>
@@ -72,8 +73,8 @@ void userStart(void)
   
   touchInit();
   soundInit();
-  QSPI_EnableMemoryMapped();
-  //messageInit();
+  QSPI_EnableMemoryMapped(); /* QSPI Flash을 메모리 맵 방식으로 사용 설정 */
+  messageInit(); /* UART 인터럽트 시작 함수 호출 */
   
   playSound(0x90200000, 1440000); //playSound((uint32_t)&WAVE, 1440000);
   
@@ -110,7 +111,9 @@ void userWhile(void)
   }
 
   HAL_Delay(2000);
-  LCD_DrawPicture(100,100,0x90050000,200,100,0);
+  LCD_DrawPicture(100,100,0x90050000,200,100,0); /* 200x100 이미지를 100,100 위치에 출력 */
   HAL_Delay(2000);
-  LCD_ErasePicture(100,100,200,100);
+  LCD_ErasePicture(100,100,200,100); /* 100,100 위치의 200x100 이미지를 지우고 LCD_SetBackImage에서 지정한 배경으로 다시 채움 */
+
+  procMessage(); //상기 Delay로 인해 24초에 1번 호출되어 UART 메시지 loopback */
 }

@@ -63,6 +63,8 @@ void playSound(uint32_t soundAddr, uint32_t soundLen)
   * @brief  사운드 재생을 위한 8000Hz 인터럽트
   * @param  htim: 타이머 인터럽트
   * @retval None
+  * @details
+  *       소리 크기를 조절하려면 playSoundAddr[sampleRateIndex++]값을 나누기하여 사용
   */
 void soundTimerCallback(TIM_HandleTypeDef *htim)
 {
