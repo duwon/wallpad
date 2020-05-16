@@ -91,5 +91,5 @@ void userStart(void)
   */
 void userWhile(void)
 {
-  procMessage(); //상기 Delay로 인해 24초에 1번 호출되어 UART 메시지 loopback */
+  procMessage(); 
 }

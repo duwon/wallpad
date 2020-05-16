@@ -31,12 +31,6 @@ PUTCHAR_PROTOTYPE
   */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-
-  if (huart->Instance == USART3)
-  { /* RS485 */
-    HAL_UART_Receive_IT(huart, (uint8_t *)&uart3Buffer.ch, 1);
-    putByteToBuffer(&uart3Buffer, uart3Buffer.ch);
-  }
   if (huart->Instance == USART1)
   { /* Debug */
     HAL_UART_Receive_DMA(huart, (uint8_t *)&uart1Buffer.ch, 1);
@@ -49,7 +43,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   */
 void messageInit(void)
 {
-  HAL_UART_Receive_IT(&huart3, (uint8_t *)&uart3Buffer.ch, 1); /* UART3(RS485) 인터럽트 시작 */
   HAL_UART_Receive_DMA(&huart1, (uint8_t *)&uart1Buffer.ch, 1);
 }
 
@@ -118,12 +111,11 @@ uint8_t sendMessage(uint8_t* data, uint8_t len)
  */
 void procMessage(void)
 {
-  /* UART3(RS485) 데이터가 uart3Buffer 버퍼에 있으면 아스키 값 출력 */
-  uint8_t rxCh = 0;
-  while (getByteFromBuffer(&uart3Buffer, &rxCh) == true)
-  {
-    printf("%c",rxCh);
-  }
+	uint8_t rxCh = 0;
+	if(HAL_UART_Receive(&huart3, &rxCh, 1, 0xFFFF) == HAL_OK)
+	{
+		printf("%c",rxCh);
+	}
 }
 
 /**
