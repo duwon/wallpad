@@ -91,29 +91,5 @@ void userStart(void)
   */
 void userWhile(void)
 {
-  uint8_t touchValue = getTouchValue();
-  for (int i = 0; i < 4; i++)
-  {
-    if (((touchValue >> i) & 0x01) == 1)
-    {
-      LED_Toggle((Led_TypeDef)i);
-    }
-  }
-
-  uint32_t arrImgAddr[6] = {(uint32_t)IMG_01, (uint32_t)IMG_02, (uint32_t)IMG_03, (uint32_t)IMG_04, (uint32_t)IMG_05, (uint32_t)IMG_06};
-  //uint32_t arrImgAddr[6] = {0x90000000, 0x90050000, 0x900A0000, 0x90100000, 0x90150000, 0x901A0000};
-  for (int i = 1; i < 6; i++)
-  {
-    HAL_Delay(2000);
-    LCD_SetBackImage(arrImgAddr[0]);
-    HAL_Delay(2000);
-    LCD_SetBackImage(arrImgAddr[i]);
-  }
-
-  HAL_Delay(2000);
-  LCD_DrawPicture(100,100,0x90050000,200,100,0); /* 200x100 이미지를 100,100 위치에 출력 */
-  HAL_Delay(2000);
-  LCD_ErasePicture(100,100,200,100); /* 100,100 위치의 200x100 이미지를 지우고 LCD_SetBackImage에서 지정한 배경으로 다시 채움 */
-
   procMessage(); //상기 Delay로 인해 24초에 1번 호출되어 UART 메시지 loopback */
 }
