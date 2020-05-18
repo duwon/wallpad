@@ -8,8 +8,14 @@ extern "C"
 
 #include "main.h"
 
+typedef enum
+{
+    OFF,
+    ON
+}muteTypeDef;
+
 void soundInit(void); /* 초기화 함수 */
-void playSound(uint32_t soundAddr, uint32_t soundLen); /* Flash에 위치한 소리 재생 */
+void playSound(uint32_t soundAddr, uint32_t soundLen, uint8_t soundLevel); /* Flash에 위치한 소리 재생 */
 void soundTimerCallback(TIM_HandleTypeDef *htim); /* 소리 재생 인터럽트 */
 
 

@@ -67,6 +67,8 @@ void Error_Handler(void);
 #define RK043FN48H_VFP 2
 #define LCD_PWM_Pin GPIO_PIN_0
 #define LCD_PWM_GPIO_Port GPIOC
+#define MUTE_Pin GPIO_PIN_7
+#define MUTE_GPIO_Port GPIOA
 #define FLASH_CS_Pin GPIO_PIN_12
 #define FLASH_CS_GPIO_Port GPIOB
 #define LED5_Pin GPIO_PIN_15

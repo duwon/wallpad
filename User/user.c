@@ -20,6 +20,7 @@
     - 2020-04-21    :    Flash 제어 추가
     - 2020-04-29    :    QSPI Memory-map 방식 사용
     - 2020-05-13    :    LED1~5 순서 재정렬, 내부 클럭 사용 설정
+    - 2020-05-18    :    UART3 RX Interrupt 방식으로 변경, 사운드 재생시 레벨 조절 기능 추가
   */
 #include <stdio.h>
 #include <string.h>
@@ -38,6 +39,7 @@ uint16_t ltdcBuffer[130560] = {
     0,
 }; /* LCD 버퍼 */
 
+void changeLCDImage(void);
 
 /**
   * @brief  타이머 인터럽트
@@ -52,6 +54,7 @@ void user_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   if (htim->Instance == TIM7) /* 2Hz */
   {
     LED_Toggle(LED5);
+		changeLCDImage();
   }
 }
 
@@ -76,7 +79,7 @@ void userStart(void)
   QSPI_EnableMemoryMapped(); /* QSPI Flash을 메모리 맵 방식으로 사용 설정 */
   messageInit(); /* UART 인터럽트 시작 함수 호출 */
   
-  playSound(0x90200000, 1440000); //playSound((uint32_t)&WAVE, 1440000);
+  playSound(0x90200000, 20720, 3); //playSound((uint32_t)&WAVE, 1440000);
   
   LCD_Init();
   LCD_SelectLayer(0);
@@ -91,5 +94,51 @@ void userStart(void)
   */
 void userWhile(void)
 {
-  procMessage(); 
+  uint8_t touchValue = getTouchValue();
+  for (int i = 0; i < 4; i++)
+  {
+    if (((touchValue >> i) & 0x01) == 1)
+    {
+      LED_Toggle((Led_TypeDef)i);
+    }
+  }
+  //
+  //uint32_t arrImgAddr[6] = {(uint32_t)IMG_01, (uint32_t)IMG_02, (uint32_t)IMG_03, (uint32_t)IMG_04, (uint32_t)IMG_05, (uint32_t)IMG_06};
+  ////uint32_t arrImgAddr[6] = {0x90000000, 0x90050000, 0x900A0000, 0x90100000, 0x90150000, 0x901A0000};
+  //for (int i = 1; i < 6; i++)
+  //{
+  //  HAL_Delay(2000);
+  //  LCD_SetBackImage(arrImgAddr[0]);
+  //  HAL_Delay(2000);
+  //  LCD_SetBackImage(arrImgAddr[i]);
+  //}
+  //
+  //HAL_Delay(2000);
+  //LCD_DrawPicture(100,100,0x90050000,200,100,0); /* 200x100 이미지를 100,100 위치에 출력 */
+  //HAL_Delay(2000);
+  //LCD_ErasePicture(100,100,200,100); /* 100,100 위치의 200x100 이미지를 지우고 LCD_SetBackImage에서 지정한 배경으로 다시 채움 */
+
+  procMessage();
+}
+
+
+void changeLCDImage(void)
+{
+	static uint8_t imageNum = 0;
+	static uint8_t changeLCDImageCnt = 0;
+	changeLCDImageCnt++;
+
+	if(changeLCDImageCnt == 3)
+	{
+		changeLCDImageCnt = 0;
+		uint32_t arrImgAddr[6] = {(uint32_t)IMG_01, (uint32_t)IMG_02, (uint32_t)IMG_03, (uint32_t)IMG_04, (uint32_t)IMG_05, (uint32_t)IMG_06};
+		//uint32_t arrImgAddr[6] = {0x90000000, 0x90050000, 0x900A0000, 0x90100000, 0x90150000, 0x901A0000};
+				
+		LCD_SetBackImage(arrImgAddr[imageNum++]);
+		if(imageNum == 6)
+		{
+			imageNum = 0;
+		}
+	}
+ 
 }
