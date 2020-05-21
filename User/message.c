@@ -27,6 +27,7 @@ PUTCHAR_PROTOTYPE
 
 /**
   * @brief  UART RX 인터럽트
+  * @param huart
   * @retval None
   */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
@@ -41,6 +42,19 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   { /* Debug */
     putByteToBuffer(&uart1Buffer, uart1Buffer.ch);
     HAL_UART_Receive_DMA(huart, (uint8_t *)&uart1Buffer.ch, 1);
+  }
+}
+
+/**
+ * @brief UART 에러 발생 인터럽트
+ * @param huart 
+ * @retval None
+ */
+void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
+{
+  if(huart->ErrorCode == HAL_UART_ERROR_ORE)
+  {
+    /* Overrun error 처리 */
   }
 }
 
