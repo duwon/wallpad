@@ -38,6 +38,15 @@ void LCD_Init(void)
   HAL_GPIO_WritePin(LCD_PWM_GPIO_Port, LCD_PWM_Pin, GPIO_PIN_SET);
 }
 
+void LCD_Sleep(int8_t flag)
+{
+	if (flag)
+		HAL_GPIO_WritePin(LCD_PWM_GPIO_Port, LCD_PWM_Pin, GPIO_PIN_SET);
+	else	
+		HAL_GPIO_WritePin(LCD_PWM_GPIO_Port, LCD_PWM_Pin, GPIO_PIN_RESET);
+}
+
+
 /**
   * @brief  LCD의 가로 크기
   * @retval LCD X size
@@ -438,7 +447,7 @@ void LCD_DisplayChar(uint16_t Xpos, uint16_t Ypos, uint8_t Ascii)
 void LCD_DisplayString(uint16_t Xpos, uint16_t Ypos, uint8_t *Text)
 {
   uint16_t ref_column = 1;
-  //uint16_t i = 0;
+  uint16_t i = 0;
   uint32_t size = 0; 
   uint8_t  *ptr = Text;
   
@@ -455,16 +464,16 @@ void LCD_DisplayString(uint16_t Xpos, uint16_t Ypos, uint8_t *Text)
   }
 
   /* Send the string character by character on LCD */
-  //while ((*Text != 0) & (((LCD_GetXSize() - (i*DrawProp[ActiveLayer].pFont->Width)) & 0xFFFF) >= DrawProp[ActiveLayer].pFont->Width))
-  //{
-  //  /* Display one character on LCD */
-  //  LCD_DisplayChar(ref_column, Ypos, *Text);
-  //  /* Decrement the column position by 16 */
-  //  ref_column += DrawProp[ActiveLayer].pFont->Width;
-  //  /* Point on the next character */
-  //  Text++;
-  //  i++;
-  //}  
+//  while ((*Text != 0) & (((LCD_GetXSize() - (i*DrawProp[ActiveLayer].pFont->Width)) & 0xFFFF) >= DrawProp[ActiveLayer].pFont->Width))
+//  {
+//    /* Display one character on LCD */
+//    LCD_DisplayChar(ref_column, Ypos, *Text);
+    /* Decrement the column position by 16 */
+//    ref_column += DrawProp[ActiveLayer].pFont->Width;
+//    /* Point on the next character */
+//    Text++;
+//    i++;
+//  }  
 }
 
 /**

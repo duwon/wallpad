@@ -114,25 +114,12 @@ bool getByteFromBuffer(volatile uartFIFO_TypeDef *buffer, uint8_t *ch)
   }
   return error;
 }
-/**
- * @brief RS485로 메시지 송신
- * 
- * @param data  : 전송할 데이터 포인터
- * @param len : 메시지 길이 0~255
- * @return uint8_t :   0 OK, 1 ERROR, 2 BUSY, 3 Timeout
- */
-uint8_t sendMessage(uint8_t* data, uint8_t len)
-{
-  return (uint8_t)HAL_UART_Transmit(&huart3, data, len, 0xFFFF);
-}
 
 /**
  * @brief 메시지 처리 예제
  * 
- */
 void procMessage(void)
 {
-  /* UART3(RS485) 데이터가 uart3Buffer 버퍼에 있으면 아스키 값 출력 */
   uint8_t rxCh = 0;
   while (getByteFromBuffer(&uart3Buffer, &rxCh) == true)
   {
@@ -140,7 +127,35 @@ void procMessage(void)
     HAL_UART_Transmit(&huart3, &rxCh, 1, 0xFFFF);
   }
 }
+*/
 
-/**
-  * @}
+
+
+uint8_t Read_Data (uint8_t *buff)
+{
+uint8_t cnt=0;
+
+	while (1)
+		{
+		if (getByteFromBuffer(&uart3Buffer, buff++) == true)	
+			cnt ++;
+		else
+			break;	
+		}
+	return cnt;
+
+
+/*	
+  uint8_t rxCh = 0;
+  while (getByteFromBuffer(&uart3Buffer, &rxCh) == true)
+  {
+    HAL_UART_Transmit(&huart3, &rxCh, 1, 0xFFFF);
+  }	
+  	return 0;
   */
+}	
+
+void Send_Data(uint8_t *data, uint8_t len)
+{
+  HAL_UART_Transmit(&huart3, data, len, 0xFFFF);
+}

@@ -82,7 +82,7 @@ void playSound(uint32_t soundAddr, uint32_t soundLen, uint8_t soundLevel)
   }
   else
   {
-    playSoundLevel = soundLevel;
+    playSoundLevel = 5 - soundLevel;
   }
 }
 
