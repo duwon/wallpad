@@ -24,6 +24,8 @@ void procMessage(void);
 void putByteToBuffer(volatile uartFIFO_TypeDef *buffer, uint8_t ch);
 bool getByteFromBuffer(volatile uartFIFO_TypeDef *buffer, uint8_t *ch);
 uint8_t sendMessage(uint8_t* data, uint8_t len);
+void Send_Data(uint8_t *data, uint8_t len);
+uint8_t Read_Data (uint8_t *buff);
 
 #ifdef __cplusplus
 }

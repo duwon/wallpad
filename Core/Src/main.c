@@ -24,6 +24,7 @@
 #include "dma.h"
 #include "dma2d.h"
 #include "i2c.h"
+#include "iwdg.h"
 #include "ltdc.h"
 #include "quadspi.h"
 #include "rtc.h"
@@ -109,6 +110,8 @@ int main(void)
   MX_DMA2D_Init();
   MX_QUADSPI_Init();
   MX_RTC_Init();
+  MX_IWDG_Init();
+  MX_TIM10_Init();
   /* USER CODE BEGIN 2 */
 
   userStart();

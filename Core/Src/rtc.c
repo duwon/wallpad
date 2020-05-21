@@ -48,7 +48,18 @@ void MX_RTC_Init(void)
   }
 
   /* USER CODE BEGIN Check_RTC_BKUP */
-    
+  if(HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR0) == 0xAAAA)
+  {
+    __HAL_RTC_WRITEPROTECTION_DISABLE(&hrtc);
+    HAL_RTC_WaitForSynchro(&hrtc);
+    __HAL_RTC_WRITEPROTECTION_ENABLE(&hrtc);
+    return;
+  }
+  else
+  {
+    HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR0, 0xAAAA);
+  }
+  
   /* USER CODE END Check_RTC_BKUP */
 
   /** Initialize RTC and set the Time and Date 
