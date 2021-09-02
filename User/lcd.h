@@ -63,17 +63,21 @@ void LCD_SelectLayer(uint32_t LayerIndex);
 void LCD_SetXSize(uint32_t imageWidthPixels);
 void LCD_SetYSize(uint32_t imageHeightPixels);
 void LCD_SetTransparency(uint32_t LayerIndex, uint8_t Transparency);
-void LCD_DrawPicture(uint16_t Xpos, uint16_t Ypos, uint32_t ImageAddress, uint16_t Xsize, uint16_t Ysize, uint16_t Color_Alpha0);
+//void LCD_DrawPicture(uint16_t Xpos, uint16_t Ypos, uint8_t no, uint16_t Color_Alpha0);
+void LCD_DrawPicture(uint16_t Xpos, uint16_t Ypos, uint8_t no, uint16_t Xsize, uint16_t Ysize, uint16_t Color_Alpha0);
+//void LCD_DrawPicture(uint16_t Xpos, uint16_t Ypos, uint32_t Addr, uint16_t Xsize, uint16_t Ysize, uint16_t Color_Alpha0);
+//void LCD_DrawPicture(uint16_t Xpos, uint16_t Ypos, uint32_t Addr, uint16_t Color_Alpha0);
 void LCD_ErasePicture(uint16_t Xpos, uint16_t Ypos, uint16_t Xsize, uint16_t Ysize);
 
 void LCD_SetTextColor(uint32_t Color);
 void LCD_SetBackColor(uint32_t Color);
-void LCD_SetBackImage(uint32_t BackgroundImageAddress);
+//void LCD_SetBackImage(uint32_t BackgroundImageAddress);
+void LCD_SetBackImage(uint8_t no);
 void LCD_DisplayChar(uint16_t Xpos, uint16_t Ypos, uint8_t Ascii);
 void LCD_DisplayString(uint16_t Xpos, uint16_t Ypos, uint8_t *Text);
 void LCD_Clear(uint32_t Color);
-
 void LCD_DisplayNumPicture(uint16_t Xpos, uint16_t Ypos, uint8_t Num);
+void LCD_Power_Set (int8_t flag);
 
 #ifdef __cplusplus
 }

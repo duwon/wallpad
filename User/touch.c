@@ -56,9 +56,13 @@ void touchInit(void)
   //  printf("%x %x\r\n", i, touchReadRegData(i));
   //}
 
-  touchWriteRegData(0x00, 0xFF);
-  touchWriteRegData(0x01, 0xFF);
-  touchWriteRegData(0x02, 0xFF);
+  touchWriteRegData(0x00, 0x00);			// 감도 00~FF  00=11T, ff=2.5T
+  touchWriteRegData(0x01, 0x00);			// 감도 00~FF  00=11T, ff=2.5T
+  touchWriteRegData(0x02, 0x00);			// 감도 00~FF  00=11T, ff=2.5T	
+
+//  touchWriteRegData(0x00, 0x55);			// 감도 00~FF  00=11T, ff=2.5T
+//  touchWriteRegData(0x01, 0x55);			// 감도 00~FF  00=11T, ff=2.5T
+//  touchWriteRegData(0x02, 0x55);			// 감도 00~FF  00=11T, ff=2.5T	
   touchWriteRegData(0x03, 0x05);
   touchWriteRegData(0x04, 0x13);
   touchWriteRegData(0x05, 0x00);
@@ -70,7 +74,7 @@ void touchInit(void)
   * @brief  터치센서의 값 읽기
   * @retval 터치 값
   */
-uint8_t getTouchValue(void)
+uint8_t Get_Touch (void)
 {
   return touchReadRegData(0x25);
 }

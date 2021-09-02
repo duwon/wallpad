@@ -56,7 +56,7 @@ void MX_TIM7_Init(void)
   TIM_MasterConfigTypeDef sMasterConfig = {0};
 
   htim7.Instance = TIM7;
-  htim7.Init.Prescaler = 10000-1;
+  htim7.Init.Prescaler = 100-1;
   htim7.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim7.Init.Period = 10000-1;
   htim7.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -77,11 +77,11 @@ void MX_TIM10_Init(void)
 {
 
   htim10.Instance = TIM10;
-  htim10.Init.Prescaler = 200-1;
+  htim10.Init.Prescaler = 100-1;
   htim10.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim10.Init.Period = 1000-1;
-  htim10.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim10.Init.AutoReloadPreload = TIM_MASTERSLAVEMODE_DISABLE;
+  htim10.Init.Period = 2000-1;
+  htim10.Init.ClockDivision = TIM_CLOCKDIVISION_DIV2;
+  htim10.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim10) != HAL_OK)
   {
     Error_Handler();

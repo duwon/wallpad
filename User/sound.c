@@ -18,6 +18,7 @@
 #include "sound.h"
 #include "tim.h"
 #include "dac.h"
+#include "user.h"
 
 bool flagPlaySound = false;
 uint32_t sampleRateIndex = 0;
@@ -49,16 +50,12 @@ void soundInit(void)
  * @brief 사운드 Mute
  * @param mute : ON, OFF
  */
-void muteSound(muteTypeDef mute)
+void muteSound(uint8_t mute)
 {
-  if(mute == OFF)
-  {
+  if(mute)
     HAL_GPIO_WritePin(MUTE_GPIO_Port,MUTE_Pin,GPIO_PIN_SET);
-  }
   else
-  {
     HAL_GPIO_WritePin(MUTE_GPIO_Port,MUTE_Pin,GPIO_PIN_RESET);
-  }
 }
 
 /**
@@ -67,14 +64,62 @@ void muteSound(muteTypeDef mute)
   * @param  soundLen: 샘플레이트 * 시간(초)
   * @param  soundLevel: 음량 크기 0~5, 최대 0, 최소 5
   * @retval None
-  */
-void playSound(uint32_t soundAddr, uint32_t soundLen, uint8_t soundLevel)
+*/
+int8_t playSound (uint8_t no, uint8_t soundLevel)
 {
-  playSoundAddr = (uint8_t*)soundAddr;
-  sampleRateMax = soundLen;
+uint32_t soundAddr, soundLen;
+
+
+	if (soundLevel == 0) return;
+
+	if (flagPlaySound == true) return 1;
+
+	soundAddr = Get_Address (Flash_Image_Base, no, &soundLen);
+	if (soundAddr==0 || soundLen==0) return 0;			// 없음
+	
+	playSoundAddr = (uint8_t*)soundAddr;
+//	printf ("addr=%x len=%d\r\n", playSoundAddr, soundLen);
+
+	if (soundLen == 0) return;			// 에러
+	sampleRateMax = soundLen;						
+
+	flagPlaySound = true;
+	HAL_DAC_Start(&hdac, DAC_CHANNEL_2);
+	muteSound (0);
+
+	if(soundLevel > 5)
+		playSoundLevel = 5;
+	else
+		playSoundLevel = 5 - soundLevel;
+
+	return 2;
+}
+/*
+void playSound (uint8_t no, uint32_t soundLen, uint8_t soundLevel)
+{
+union { uint32_t l;  uint8_t c[4]; } q;
+uint32_t soundAddr;
+
+	soundAddr = Get_Address (Flash_Sound_Base, no);
+	playSoundAddr = (uint8_t*)soundAddr;
+	
+	if (*playSoundAddr)								//  첫바이트가 있으면 음원만 있으므로 사이즈대로
+		{
+		sampleRateMax = soundLen;						
+		}
+	else
+		{	
+		memcpy (q.c, (uint8_t*)playSoundAddr, 4);
+		sampleRateMax = q.l;
+		playSoundAddr += 4;
+		}
+
+	if (sampleRateMax > 1000000) 
+		sampleRateMax = 1000000;
+
   flagPlaySound = true;
   HAL_DAC_Start(&hdac, DAC_CHANNEL_2);
-  muteSound(ON);
+  muteSound (0);
 
   if(soundLevel > 5)
   {
@@ -85,7 +130,7 @@ void playSound(uint32_t soundAddr, uint32_t soundLen, uint8_t soundLevel)
     playSoundLevel = 5 - soundLevel;
   }
 }
-
+  */
 /**
   * @brief  사운드 재생을 위한 8000Hz 인터럽트
   * @param  htim: 타이머 인터럽트
@@ -96,16 +141,16 @@ void playSound(uint32_t soundAddr, uint32_t soundLen, uint8_t soundLevel)
 void soundTimerCallback(TIM_HandleTypeDef *htim)
 {
   if (flagPlaySound)
-  {
+  	{
     HAL_DAC_SetValue(&hdac, DAC_CHANNEL_2, DAC_ALIGN_8B_R, playSoundAddr[sampleRateIndex++]>>playSoundLevel);
     if (sampleRateIndex == sampleRateMax)
-    {
-      sampleRateIndex = 0;
-      flagPlaySound = false;
-      HAL_DAC_Stop(&hdac, DAC_CHANNEL_2);
-      muteSound(OFF);
-    }
-  }
+    	{
+      	sampleRateIndex = 0;
+      	flagPlaySound = false;
+      	HAL_DAC_Stop(&hdac, DAC_CHANNEL_2);
+      	muteSound(1);
+    	}
+  	}
 }
 
 /**

@@ -49,16 +49,16 @@ void MX_RTC_Init(void)
 
   /* USER CODE BEGIN Check_RTC_BKUP */
   if(HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR0) == 0xAAAA)
-  {
-    __HAL_RTC_WRITEPROTECTION_DISABLE(&hrtc);
+  	{
+    __HAL_RTC_WRITEPROTECTION_DISABLE(&hrtc);					
     HAL_RTC_WaitForSynchro(&hrtc);
     __HAL_RTC_WRITEPROTECTION_ENABLE(&hrtc);
-    return;
-  }
+    return;														// 0xaaaa 이면 초기화 과정을 생략한다.
+  	}
   else
-  {
-    HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR0, 0xAAAA);
-  }
+  	{
+    HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR0, 0xAAAA);				// dR0~31 까지 있음
+  	}
   
   /* USER CODE END Check_RTC_BKUP */
 
@@ -134,6 +134,48 @@ void HAL_RTC_MspDeInit(RTC_HandleTypeDef* rtcHandle)
 } 
 
 /* USER CODE BEGIN 1 */
+
+// DR0 ~ DR31 까지 사용
+// 4바이트 단위로 최대 31개 까지 저장한다.   DR0 는 초기화 해지 로 사용중
+void HAL_RTC_Write_Config (uint8_t *Buff)
+{
+uint32_t *p;
+
+	p = (uint32_t *)Buff;
+
+	HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR1, *p++);
+	HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR2, *p++);
+	HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR3, *p++);
+	HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR4, *p++);
+	HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR5, *p++);
+	HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR6, *p++);
+	HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR7, *p++);
+	HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR8, *p++);
+	HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR9, *p++);
+	HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR10, *p++);
+	HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR11, *p++);
+	HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR12, *p++);
+}
+
+void HAL_RTC_Read_Config (uint8_t *Buff)
+{
+uint32_t *p;
+
+	p = (uint32_t *)Buff;
+
+	*p++ = HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR1);
+	*p++ = HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR2);
+	*p++ = HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR3);
+	*p++ = HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR4);
+	*p++ = HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR5);			
+	*p++ = HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR6);
+	*p++ = HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR7);
+	*p++ = HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR8);
+	*p++ = HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR9);
+	*p++ = HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR10);
+	*p++ = HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR11);
+	*p++ = HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR12);
+}
 
 /* USER CODE END 1 */
 
