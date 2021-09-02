@@ -38,7 +38,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   if (huart->Instance == USART3)
 	  	{	 /* RS485 */
     	putByteToBuffer(&uart3Buffer, uart3Buffer.ch);
-    	HAL_UART_Receive_IT (huart, (uint8_t *)&uart3Buffer.ch, 1);
+    	HAL_UART_Receive_DMA (huart, (uint8_t *)&uart3Buffer.ch, 1);
   		}
   		
   if (huart->Instance == USART1)
@@ -67,7 +67,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
   */
 void messageInit(void)
 {
-	HAL_UART_Receive_IT (&huart3, (uint8_t *)&uart3Buffer.ch, 1); /* UART3(RS485) 인터럽트 시작 */
+	HAL_UART_Receive_DMA (&huart3, (uint8_t *)&uart3Buffer.ch, 1); /* UART3(RS485) 인터럽트 시작 */
 	HAL_UART_Receive_DMA(&huart1, (uint8_t *)&uart1Buffer.ch, 1);
 
   uart3Buffer.Head = 0;

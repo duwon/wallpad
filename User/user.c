@@ -90,7 +90,7 @@ void user_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 void userStart(void)
 {
 	HAL_TIM_Base_Start_IT(&htim7); 	/* timer7 start - 2Hz */
-	HAL_TIM_Base_Start_IT(&htim10); /* timer7 start - 2Hz */
+	HAL_TIM_Base_Start_IT(&htim10); /* timer10 start - 2Hz */
 
 	touchInit();
 	soundInit();
